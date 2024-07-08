@@ -1,6 +1,0 @@
-(declare-const delta_ix Int)
-(assert (exists ((|ix'?1| Int) (cxm?2 Int) (ix?3 Int))
-         (and (<= (- ix?3) 0) (< (+ (- cxm?2) ix?3) 0)
-                (= (+ |ix'?1| (- ix?3) -1) 0)
-                (= delta_ix (+ |ix'?1| (- ix?3))))))
-(check-sat)

@@ -1,0 +1,10 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|y'?1| Int) (|__cost'?2| Int) (y?3 Int) (x?4 Int) (__cost?5 Int))
+         (and (<= (+ (- x?4) y?3 1) 0) (<= (- __cost?5) 0)
+                (<= (+ (- __cost?5) -1) 0) (= (+ |y'?1| (- y?3) -1) 0)
+                (= (+ |__cost'?2| (- __cost?5) -1) 0)
+                (= term_to_project_onto0 (+ |__cost'?2| (- __cost?5)))
+                (= term_to_project_onto (+ |y'?1| (- y?3))))))
+(check-sat)

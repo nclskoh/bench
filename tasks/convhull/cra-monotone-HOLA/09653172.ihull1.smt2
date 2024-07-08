@@ -1,0 +1,7 @@
+(declare-const term_to_project_onto Real)
+(declare-const tmp___1 Int)
+(assert (exists ((|tmp___1'?1| Int) (havoc?2 Int))
+         (and (or (<= (+ havoc?2 1) 0) (<= (+ (- havoc?2) 1) 0))
+                (= (+ |tmp___1'?1| (- havoc?2)) 0)
+                (= term_to_project_onto (+ |tmp___1'?1| (- tmp___1))))))
+(check-sat)

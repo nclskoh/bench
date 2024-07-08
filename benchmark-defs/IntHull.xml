@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.18//EN" "https://www.sosy-lab.org/benchexec/benchmark-1.18.dtd">
+<benchmark tool="tools.inthull"
+           displayName="Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic."
+           timelimit="5min">
+
+  <tasks name="polybench">
+    <includesfile>../tasks/convhull/polybench/polybench.set</includesfile>
+  </tasks>
+  <tasks name="c4b">
+    <includesfile>../tasks/convhull/C4B/C4B.set</includesfile>
+  </tasks>
+  <tasks name="hola">
+    <includesfile>../tasks/convhull/HOLA/hola.set</includesfile>
+  </tasks>
+  <tasks name="svcomploops">
+    <includesfile>../tasks/convhull/svcomp-loops/all.set</includesfile>
+  </tasks>
+  <tasks name="svcomploopinvariants">
+    <includesfile>../tasks/convhull/svcomp-loop-invariants/all.set</includesfile>
+  </tasks>
+  <tasks name="cra-monotone-svcomp">
+    <includesfile>../tasks/convhull/cra-monotone/ReachSafety-Loops-convhull.set</includesfile>
+  </tasks>
+  <tasks name="cra-vass-svcomp">
+    <includesfile>../tasks/convhull/cra-vass-obligations/ReachSafety-Loops-convhull.set</includesfile>
+  </tasks>
+  <tasks name="qflra">
+    <includesfile>../tasks/qflra.set</includesfile>
+  </tasks>
+  <tasks name="polybench-integralized">
+    <includesfile>../tasks/convhull/polybench-integralized/polybench.set</includesfile>
+  </tasks>
+  <tasks name="c4b-integralized">
+    <includesfile>../tasks/convhull/C4B-integralized/C4B.set</includesfile>
+  </tasks>
+  <tasks name="hola-integralized">
+    <includesfile>../tasks/convhull/HOLA-integralized/hola.set</includesfile>
+  </tasks>
+  <tasks name="cra-monotone-svcomp-integralized">
+    <includesfile>../tasks/convhull/cra-monotone-integralized/ReachSafety-Loops-convhull.set</includesfile>
+  </tasks>
+
+  <rundefinition name="lira-convex-hull-sc">
+    <option name="-lira-convex-hull-sc" />
+  </rundefinition>
+
+  <rundefinition name="lira-convex-hull-sc-accelerated">
+    <option name="-lira-convex-hull-sc-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="lira-convex-hull-sc-accelerated-no-projection">
+    <option name="-no-projection" />
+    <option name="-lira-convex-hull-sc-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="lira-convex-hull-intfrac">
+    <option name="-lira-convex-hull-intfrac" />
+  </rundefinition>
+
+  <rundefinition name="lira-convex-hull-intfrac-accelerated">
+    <option name="-lira-convex-hull-intfrac-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-vs-lw">
+    <option name="-compare-convex-hull-sc-vs-lw" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-lw">
+    <option name="-compare-convex-hull-sc-accelerated-vs-lw" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-intfrac-vs-lw">
+    <option name="-compare-convex-hull-intfrac-vs-lw" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-intfrac-accelerated-vs-lw">
+    <option name="-compare-convex-hull-intfrac-accelerated-vs-lw" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-vs-intfrac">
+    <option name="-compare-convex-hull-sc-vs-intfrac" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated">
+    <option name="-compare-convex-hull-sc-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-intfrac-accelerated">
+    <option name="-compare-convex-hull-intfrac-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-intfrac-accelerated">
+    <option name="-compare-convex-hull-sc-accelerated-vs-intfrac-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-intfrac">
+    <option name="-compare-convex-hull-sc-accelerated-vs-intfrac" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-lwcooper">
+    <option name="-compare-convex-hull-sc-accelerated-vs-lwcooper" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-lwcooper-inthull">
+    <option name="-compare-convex-hull-sc-accelerated-vs-lwcooper-inthull" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull">
+    <option name="-compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-vs-lwcooper">
+    <option name="-compare-convex-hull-sc-vs-lwcooper" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-subspace">
+    <option name="-compare-convex-hull-sc-accelerated-vs-subspace" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-gc">
+    <option name="-compare-convex-hull-sc-accelerated-vs-gc" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-real">
+    <option name="-compare-convex-hull-sc-accelerated-vs-real" />
+  </rundefinition>
+
+  <rundefinition name="lira-convex-hull-run-only-for-pure-int">
+    <option name="-lira-convex-hull-run-only-for-pure-int" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-gc">
+    <option name="-convex-hull-by-gc" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-gc-terms">
+    <option name="-convex-hull-by-gc-terms" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-normaliz">
+    <option name="-convex-hull-by-normaliz" />
+  </rundefinition>
+
+</benchmark>

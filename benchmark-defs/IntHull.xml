@@ -13,21 +13,10 @@
   <tasks name="cra-monotone-hola">
     <includesfile>../tasks/convhull/cra-monotone-HOLA/hola.set</includesfile>
   </tasks>
-  <tasks name="svcomploops">
-    <includesfile>../tasks/convhull/svcomp-loops/all.set</includesfile>
-  </tasks>
-  <tasks name="svcomploopinvariants">
-    <includesfile>../tasks/convhull/svcomp-loop-invariants/all.set</includesfile>
-  </tasks>
   <tasks name="cra-monotone-svcomp">
     <includesfile>../tasks/convhull/cra-monotone-svcomp-reach-safety/ReachSafety-Loops-convhull.set</includesfile>
   </tasks>
-  <tasks name="cra-vass-svcomp">
-    <includesfile>../tasks/convhull/cra-vass-obligations/ReachSafety-Loops-convhull.set</includesfile>
-  </tasks>
-  <tasks name="qflra">
-    <includesfile>../tasks/qflra.set</includesfile>
-  </tasks>
+
   <tasks name="polybench-integralized">
     <includesfile>../tasks/convhull/polybench-integralized/polybench.set</includesfile>
   </tasks>
@@ -40,6 +29,20 @@
   <tasks name="cra-monotone-svcomp-integralized">
     <includesfile>../tasks/convhull/cra-monotone-reach-safety-integralized/ReachSafety-Loops-convhull.set</includesfile>
   </tasks>
+
+  <tasks name="svcomploops">
+    <includesfile>../tasks/convhull/svcomp-loops/all.set</includesfile>
+  </tasks>
+  <tasks name="svcomploopinvariants">
+    <includesfile>../tasks/convhull/svcomp-loop-invariants/all.set</includesfile>
+  </tasks>
+  <tasks name="cra-vass-svcomp">
+    <includesfile>../tasks/convhull/cra-vass-obligations/ReachSafety-Loops-convhull.set</includesfile>
+  </tasks>
+  <tasks name="qflra">
+    <includesfile>../tasks/qflra.set</includesfile>
+  </tasks>
+
 
   <rundefinition name="lira-convex-hull-sc">
     <option name="-lira-convex-hull-sc" />

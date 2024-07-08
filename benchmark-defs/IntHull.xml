@@ -4,8 +4,8 @@
            displayName="Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic."
            timelimit="5min">
 
-  <tasks name="cra-monotone-polybench">
-    <includesfile>../tasks/convhull/cra-monotone-polybench/polybench.set</includesfile>
+  <tasks name="polybench">
+    <includesfile>../tasks/convhull/polybench/polybench.set</includesfile>
   </tasks>
   <tasks name="cra-monotone-c4b">
     <includesfile>../tasks/convhull/cra-monotone-C4B/C4B.set</includesfile>

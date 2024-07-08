@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'hard-ll_valuebound100df5f90.ihull1.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

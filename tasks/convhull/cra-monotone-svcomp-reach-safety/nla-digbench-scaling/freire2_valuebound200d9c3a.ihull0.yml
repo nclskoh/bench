@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'freire2_valuebound200d9c3a.ihull0.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

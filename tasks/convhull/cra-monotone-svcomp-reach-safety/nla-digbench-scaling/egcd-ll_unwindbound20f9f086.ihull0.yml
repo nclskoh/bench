@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'egcd-ll_unwindbound20f9f086.ihull0.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

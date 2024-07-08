@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'geo2-ll_unwindbound106e4c1f.ihull0.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

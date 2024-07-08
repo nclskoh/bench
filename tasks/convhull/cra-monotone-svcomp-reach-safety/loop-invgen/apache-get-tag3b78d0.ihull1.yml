@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'apache-get-tag3b78d0.ihull1.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

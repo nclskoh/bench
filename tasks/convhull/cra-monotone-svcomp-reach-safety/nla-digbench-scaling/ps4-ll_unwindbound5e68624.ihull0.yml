@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'ps4-ll_unwindbound5e68624.ihull0.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

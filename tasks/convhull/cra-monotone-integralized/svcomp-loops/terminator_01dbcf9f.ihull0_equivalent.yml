@@ -1,9 +1,0 @@
-
-format_version: '2.0'
-
-input_files: 'terminator_01dbcf9f.ihull0_equivalent.smt2'
-
-properties:
-  - property_file: ../../../properties/sat_smt.prp
-    expected_verdict:
-

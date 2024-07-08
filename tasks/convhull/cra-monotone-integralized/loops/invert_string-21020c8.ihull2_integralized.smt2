@@ -1,8 +1,0 @@
-(declare-const |i'| Int)
-(declare-const i Int)
-(declare-const MAX Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (<= (- i) 0) (<= (- MAX) 0) (<= (+ (- MAX) i 1) 0)
-               (= (+ |i'| (- i) -1) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |i'| (- i)))) 0)))
-(check-sat)

@@ -1,5 +1,0 @@
-(declare-const delta_i Int)
-(assert (exists ((|i'?1?1| Int) (p_len?2?2 Int) (i?3?3 Int))
-         (and (< (- p_len?2?2) 0) (<= (- i?3?3) 0) (= (+ p_len?2?2 -5) 0)
-                (< (+ i?3?3 (- p_len?2?2)) 0) (= (+ |i'?1?1| (- i?3?3) -1) 0)
-                (= (+ delta_i (- (+ |i'?1?1| (- i?3?3)))) 0))))

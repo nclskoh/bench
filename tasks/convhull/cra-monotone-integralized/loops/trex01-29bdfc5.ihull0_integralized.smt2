@@ -1,7 +1,0 @@
-(declare-const |z'| Int)
-(declare-const z Int)
-(declare-const k Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (<= (+ (- z) 1) 0) (<= (+ (- k) z 1) 0) (= (+ |z'| (* -2 z)) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |z'| (- z)))) 0)))
-(check-sat)

@@ -1,8 +1,0 @@
-(declare-const |j'| Int)
-(declare-const j Int)
-(declare-const i Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (<= (- j) 0) (<= (+ (- i) 1) 0) (<= (+ j -9) 0) (<= (- i) 0)
-               (<= (+ i -10) 0) (= (+ |j'| (- j) -1) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |j'| (- j)))) 0)))
-(check-sat)

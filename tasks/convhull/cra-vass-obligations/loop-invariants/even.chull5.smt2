@@ -1,8 +1,0 @@
-(declare-const |x'| Int)
-(declare-const K Int)
-(declare-const |tmp'| Int)
-(assert (exists ((x?1 Int) (tmp?2 Int))
-         (and (<= 0 (+ -2 x?1)) (= (* -2 K) (- (+ |x'| (- x?1))))
-                (or (and (= K 0) (= tmp?2 |tmp'|) (= x?1 |x'|)) (<= 1 K))
-                (<= 0 K))))
-(check-sat)

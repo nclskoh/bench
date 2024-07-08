@@ -1,5 +1,0 @@
-(declare-const |n_caracter'| Int)
-(assert (exists ((n_caracter?1 Int))
-         (and (<= (- n_caracter?1) 0) (= |n_caracter'| (+ n_caracter?1 1))
-                (<= (- |n_caracter'|) 0))))
-(check-sat)

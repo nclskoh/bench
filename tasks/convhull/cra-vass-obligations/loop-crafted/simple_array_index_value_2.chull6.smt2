@@ -1,7 +1,0 @@
-(declare-const |param0'| Int)
-(declare-const |index'| Int)
-(assert (exists ((index?1 Int))
-         (and (< (+ index?1 -10000) 0) (<= (- index?1) 0) (= |param0'| 1)
-                (= |index'| (+ index?1 1)) (< (+ |index'| -10000) 0)
-                (<= (- |index'|) 0))))
-(check-sat)

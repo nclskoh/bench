@@ -1,5 +1,0 @@
-(declare-const |a'| Int)
-(assert (exists ((a?1 Int))
-         (and (<= (- a?1) 0) (< (+ a?1 -6) 0) (= |a'| (+ a?1 1))
-                (<= (- |a'|) 0) (< (+ |a'| -6) 0))))
-(check-sat)

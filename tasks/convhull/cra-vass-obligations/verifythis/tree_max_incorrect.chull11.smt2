@@ -1,5 +1,0 @@
-(declare-const |param0'| Int)
-(declare-const |param1'| Int)
-(assert (exists ((param1?1 Int) (param0?2 Int))
-         (and (< (- param0?2) 0) (= |param1'| param1?1) (< |param0'| 0))))
-(check-sat)

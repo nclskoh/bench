@@ -1,5 +1,0 @@
-(declare-const s Int)
-(assert (exists ((|s'?1| Int))
-         (or (and (= |s'?1| s) (= |s'?1| 0) (= |s'?1| s) (= |s'?1| 0))
-               (and (= |s'?1| 0) (= |s'?1| 0) (= |s'?1| s) (= |s'?1| s)))))
-(check-sat)

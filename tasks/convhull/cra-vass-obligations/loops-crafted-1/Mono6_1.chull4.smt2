@@ -1,6 +1,0 @@
-(declare-const delta_x Int)
-(declare-const delta_z Int)
-(assert (exists ((|z'?1| Int) (|x'?2| Int) (z?3 Int) (x?4 Int))
-         (and (= |x'?2| (+ x?4 1)) (= |z'?1| (+ z?3 1))
-                (= delta_x (+ |x'?2| (- x?4))) (= delta_z (+ |z'?1| (- z?3))))))
-(check-sat)

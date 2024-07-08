@@ -1,7 +1,0 @@
-(declare-const delta_i Int)
-(declare-const delta_n Int)
-(assert (exists ((|n'?1| Int) (|i'?2| Int) (n?3 Int) (i?4 Int))
-         (and (or (and (= |i'?2| (+ i?4 1)) (= |n'?1| n?3))
-                    (and (= |i'?2| (+ i?4 1)) (= |n'?1| (+ n?3 1))))
-                (= delta_i (+ |i'?2| (- i?4))) (= delta_n (+ |n'?1| (- n?3))))))
-(check-sat)

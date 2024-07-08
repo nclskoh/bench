@@ -1,7 +1,0 @@
-(declare-const counter Int)
-(declare-const c Int)
-(assert (exists ((|tmp'?1| Int) (|c'?2| Int) (|counter'?3| Int))
-         (and (= |counter'?3| (+ counter 1)) (= |c'?2| (+ c 1))
-                (= (+ |counter'?3| (- |c'?2|)) -1)
-                (= (+ |c'?2| (- |tmp'?1|)) 2))))
-(check-sat)

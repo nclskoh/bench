@@ -1,5 +1,0 @@
-(declare-const z Int)
-(declare-const x Int)
-(assert (exists ((|x'?1| Int) (|z'?2| Int))
-         (and (= |z'?2| (+ z -1)) (= |x'?1| (+ x 1)))))
-(check-sat)

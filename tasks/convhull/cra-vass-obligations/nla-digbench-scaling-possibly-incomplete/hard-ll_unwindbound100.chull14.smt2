@@ -1,6 +1,0 @@
-(declare-const |counter'| Int)
-(declare-const |tmp___0'| Int)
-(assert (exists ((counter?1 Int))
-         (and (= (+ |counter'| (- |tmp___0'|)) 1)
-                (= |counter'| (+ counter?1 1)))))
-(check-sat)

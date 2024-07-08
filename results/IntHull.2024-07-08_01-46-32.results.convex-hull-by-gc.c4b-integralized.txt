@@ -1,0 +1,193 @@
+   BENCHMARK INFORMATION
+Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic.
+benchmark definition:    benchmark-defs/IntHull.xml
+name:                    IntHull
+run sets:                convex-hull-by-gc.c4b-integralized
+date:                    Mon, 2024-07-08 01:46:32 EDT
+tool:                    Projection of integer hull 1.0
+tool executable:         /home/diagram/src/research/projects/duet/duet-nk-local-projection/_build/default/srk/src/bigtop.exe
+options:
+resource limits:
+- time:                  300 s
+hardware requirements:
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    ins7570
+os:                      Linux-5.15.0-113-generic-x86_64-with-glibc2.35
+cpu:                     Intel Core i7-8550U CPU @ 1.80GHz
+- cores:                 8
+- max frequency:         4000.0 MHz
+- turbo boost enabled:   True
+ram:                     16492.580864 MB
+------------------------------------------------------------
+
+
+
+lira-convex-hull-sc.c4b-integralized
+Run set 1 of 25: skipped
+
+
+lira-convex-hull-sc-accelerated.c4b-integralized
+Run set 2 of 25: skipped
+
+
+lira-convex-hull-sc-accelerated-no-projection.c4b-integralized
+Run set 3 of 25: skipped
+
+
+lira-convex-hull-intfrac.c4b-integralized
+Run set 4 of 25: skipped
+
+
+lira-convex-hull-intfrac-accelerated.c4b-integralized
+Run set 5 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lw.c4b-integralized
+Run set 6 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lw.c4b-integralized
+Run set 7 of 25: skipped
+
+
+compare-convex-hull-intfrac-vs-lw.c4b-integralized
+Run set 8 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated-vs-lw.c4b-integralized
+Run set 9 of 25: skipped
+
+
+compare-convex-hull-sc-vs-intfrac.c4b-integralized
+Run set 10 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated.c4b-integralized
+Run set 11 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated.c4b-integralized
+Run set 12 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac-accelerated.c4b-integralized
+Run set 13 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac.c4b-integralized
+Run set 14 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper.c4b-integralized
+Run set 15 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-inthull.c4b-integralized
+Run set 16 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull.c4b-integralized
+Run set 17 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lwcooper.c4b-integralized
+Run set 18 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-subspace.c4b-integralized
+Run set 19 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-gc.c4b-integralized
+Run set 20 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-real.c4b-integralized
+Run set 21 of 25: skipped
+
+
+lira-convex-hull-run-only-for-pure-int.c4b-integralized
+Run set 22 of 25: skipped
+
+
+convex-hull-by-gc.c4b-integralized
+Run set 23 of 25 with options '-convex-hull-by-gc' and propertyfile 'None'
+
+inputfile                                               status                       cpu time   wall time        host
+---------------------------------------------------------------------------------------------------------------------
+gcd.chull0_equivalent.yml                               done                             0.04        0.04        None
+kmp.chull0_equivalent.yml                               done                             0.06        0.06        None
+kmp.chull1_integralized.yml                             done                             0.07        0.07        None
+kmp.chull2_equivalent.yml                               done                             0.04        0.04        None
+kmp.chull3_equivalent.yml                               done                             0.05        0.05        None
+kmp.chull4_equivalent.yml                               done                             0.04        0.04        None
+qsort.chull0_equivalent.yml                             done                             0.03        0.04        None
+speed_pldi09_fig1.chull0_equivalent.yml                 done                             0.05        0.05        None
+speed_pldi09_fig4_2.chull0_equivalent.yml               done                             0.05        0.05        None
+speed_pldi09_fig4_4.chull0_equivalent.yml               done                             0.04        0.04        None
+speed_pldi09_fig4_5.chull0_equivalent.yml               done                             0.05        0.05        None
+speed_pldi10_ex1.chull0_equivalent.yml                  done                             0.04        0.04        None
+speed_pldi10_ex1.chull1_integralized.yml                done                             0.04        0.04        None
+speed_pldi10_ex3.chull0_equivalent.yml                  done                             0.05        0.05        None
+speed_pldi10_ex3.chull1_integralized.yml                done                             0.06        0.06        None
+speed_pldi10_ex4.chull0_equivalent.yml                  done                             0.04        0.04        None
+speed_pldi10_ex4.chull1_integralized.yml                done                             0.05        0.06        None
+speed_popl10_fig2_1.chull0_equivalent.yml               done                             0.04        0.04        None
+speed_popl10_fig2_2.chull0_equivalent.yml               done                             0.06        0.06        None
+speed_popl10_nested_multiple.chull0_equivalent.yml      done                             0.04        0.04        None
+speed_popl10_nested_multiple.chull1_integralized.yml    done                             0.05        0.05        None
+speed_popl10_nested_single.chull0_equivalent.yml        done                             0.04        0.04        None
+speed_popl10_nested_single.chull1_integralized.yml      done                             0.05        0.05        None
+speed_popl10_sequential_single.chull0_equivalent.yml    done                             0.04        0.04        None
+speed_popl10_sequential_single.chull1_equivalent.yml    done                             0.04        0.04        None
+speed_popl10_simple_multiple.chull0_equivalent.yml      done                             0.04        0.04        None
+speed_popl10_simple_single.chull0_equivalent.yml        done                             0.04        0.04        None
+speed_popl10_simple_single_2.chull0_equivalent.yml      done                             0.04        0.04        None
+t07.chull0_equivalent.yml                               done                             0.04        0.04        None
+t07.chull1_equivalent.yml                               done                             0.04        0.04        None
+t07.chull2_equivalent.yml                               done                             0.06        0.06        None
+t08.chull0_equivalent.yml                               done                             0.04        0.04        None
+t08.chull1_equivalent.yml                               done                             0.04        0.04        None
+t09.chull0_equivalent.yml                               done                             0.04        0.04        None
+t10.chull0_equivalent.yml                               done                             0.05        0.05        None
+t11.chull0_equivalent.yml                               done                             0.04        0.04        None
+t13.chull0_equivalent.yml                               done                             0.06        0.06        None
+t13.chull1_integralized.yml                             done                             0.05        0.05        None
+t15.chull0_equivalent.yml                               done                             0.04        0.04        None
+t15.chull1_integralized.yml                             done                             0.04        0.04        None
+t16.chull0_equivalent.yml                               done                             0.05        0.06        None
+t16.chull1_integralized.yml                             done                             0.04        0.04        None
+t19.chull0_equivalent.yml                               done                             0.04        0.04        None
+t19.chull1_equivalent.yml                               done                             0.04        0.04        None
+t20.chull0_equivalent.yml                               done                             0.04        0.05        None
+t20.chull1_equivalent.yml                               done                             0.04        0.04        None
+t27.chull0_equivalent.yml                               done                             0.04        0.04        None
+t27.chull1_integralized.yml                             done                             0.04        0.04        None
+t28.chull0_equivalent.yml                               done                             0.04        0.04        None
+t28.chull1_equivalent.yml                               done                             0.04        0.04        None
+t28.chull2_equivalent.yml                               done                             0.04        0.04        None
+t30.chull0_equivalent.yml                               done                             0.04        0.04        None
+t46.chull0_equivalent.yml                               done                             0.05        0.05        None
+t46.chull1_equivalent.yml                               done                             0.03        0.04        None
+t47.chull0_equivalent.yml                               done                             0.04        0.04        None
+---------------------------------------------------------------------------------------------------------------------
+Run set 23                                              done                             3.83       11.05           -
+
+
+convex-hull-by-gc-terms.c4b-integralized
+Run set 24 of 25: skipped
+
+
+convex-hull-by-normaliz.c4b-integralized
+Run set 25 of 25: skipped
+
+Statistics:             55 Files
+  correct:               0
+    correct true:        0
+    correct false:       0
+  incorrect:             0
+    incorrect true:      0
+    incorrect false:     0
+  unknown:               0

@@ -1,8 +1,0 @@
-(declare-const |b'| Int)
-(declare-const b Int)
-(declare-const r Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (<= (+ (- b) 1) 0) (<= (- r) 0) (<= (+ (- r) b) 0)
-               (= (+ |b'| (* -2 b)) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |b'| (- b)))) 0)))
-(check-sat)

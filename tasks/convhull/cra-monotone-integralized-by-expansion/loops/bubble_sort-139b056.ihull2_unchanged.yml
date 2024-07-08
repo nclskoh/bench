@@ -1,9 +1,0 @@
-
-format_version: '2.0'
-
-input_files: 'bubble_sort-139b056.ihull2_unchanged.smt2'
-
-properties:
-  - property_file: ../../../properties/sat_smt.prp
-    expected_verdict:
-

@@ -1,7 +1,0 @@
-(declare-const |x'| Int)
-(declare-const x Int)
-(declare-const d Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (<= (+ (- x) 1) 0) (= (+ d |x'| (- x)) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |x'| (- x)))) 0)))
-(check-sat)

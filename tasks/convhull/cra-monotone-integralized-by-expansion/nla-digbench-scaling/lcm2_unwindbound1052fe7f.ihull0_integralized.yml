@@ -1,9 +1,0 @@
-
-format_version: '2.0'
-
-input_files: 'lcm2_unwindbound1052fe7f.ihull0_integralized.smt2'
-
-properties:
-  - property_file: ../../../properties/sat_smt.prp
-    expected_verdict:
-

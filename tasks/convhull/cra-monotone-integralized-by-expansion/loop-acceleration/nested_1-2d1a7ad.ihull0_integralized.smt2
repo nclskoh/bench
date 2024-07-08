@@ -1,6 +1,0 @@
-(declare-const y Int)
-(declare-const |y'| Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (<= (- y) 0) (<= (+ y -9) 0) (= (+ |y'| (- y) -1) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |y'| (- y)))) 0)))
-(check-sat)

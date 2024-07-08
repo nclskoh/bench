@@ -1,8 +1,0 @@
-(declare-const x Int)
-(declare-const |x'| Int)
-(declare-const term_to_project_onto_integralized Int)
-(assert (and (is_int (/ x 2)) (<= (- x) 0) (<= (+ (- x) 2) 0)
-               (= (+ (ite (and (<= (- x) 0) (<= (- x) 0)) (mod x 2)
-                          (+ (mod x 2) -2)) (* 2 |x'|) (- x)) 0)
-               (= (+ term_to_project_onto_integralized (- (+ |x'| (- x)))) 0)))
-(check-sat)

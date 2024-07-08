@@ -1,9 +1,0 @@
-
-format_version: '2.0'
-
-input_files: 'in-de418a2121.ihull3_integralized.smt2'
-
-properties:
-  - property_file: ../../../properties/sat_smt.prp
-    expected_verdict:
-

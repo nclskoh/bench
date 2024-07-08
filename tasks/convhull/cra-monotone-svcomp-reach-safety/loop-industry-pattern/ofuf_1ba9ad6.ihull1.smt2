@@ -1,0 +1,22 @@
+(declare-const Id_MCDC_134@width Int)
+(declare-const term_to_project_onto0 Real)
+(declare-const Id_MCDC_134@pos Int)
+(declare-const term_to_project_onto Real)
+(declare-const Id_MCDC_134 Int)
+(declare-const term_to_project_onto1 Real)
+(assert (exists
+         ((|Id_MCDC_134@width'?1| Int) (|Id_MCDC_134@pos'?2| Int)
+            (|Id_MCDC_134'?3| Int) (type_err?4 Int) (type_err?5 Int)
+            (tr?6 Int) (tr?7 Int) (tr?8 Int) (Id_MCDC_100?9 Int))
+         (and (or (<= (+ (- Id_MCDC_100?9) tr?7 1) 0)
+                    (<= (+ (- tr?8) Id_MCDC_100?9 1) 0))
+                (or (<= (+ tr?6 1) 0) (<= (+ (- tr?6) 1) 0))
+                (= (+ (- type_err?4) |Id_MCDC_134@width'?1|) 0)
+                (= (+ (- type_err?5) |Id_MCDC_134@pos'?2|) 0)
+                (= (+ |Id_MCDC_134'?3| (- tr?6)) 0)
+                (= term_to_project_onto1 (+ |Id_MCDC_134'?3| (- Id_MCDC_134)))
+                (= term_to_project_onto0 (+ |Id_MCDC_134@pos'?2|
+                                              (- Id_MCDC_134@pos)))
+                (= term_to_project_onto (+ |Id_MCDC_134@width'?1|
+                                             (- Id_MCDC_134@width))))))
+(check-sat)

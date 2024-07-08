@@ -1,7 +1,0 @@
-(declare-const index Int)
-(declare-const |index'| Int)
-(declare-const term_to_project_onto Real)
-(assert (and (<= (- index) 0) (<= (+ index -999) 0)
-               (= (+ |index'| (- index) -1) 0)
-               (= term_to_project_onto (+ |index'| (- index)))))
-(check-sat)

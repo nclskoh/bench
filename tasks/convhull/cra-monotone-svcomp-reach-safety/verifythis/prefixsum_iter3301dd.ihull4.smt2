@@ -1,0 +1,7 @@
+(declare-const term_to_project_onto Real)
+(assert (exists ((|left'?1| Int) (left?2 Int) (n?3 Int) (space?4 Int))
+         (and (<= (- left?2) 0) (<= (+ (- n?3) 1) 0) (<= (+ (- space?4) 1) 0)
+                (<= (+ (- n?3) left?2 1) 0)
+                (= (+ |left'?1| (* -2 space?4) (- left?2)) 0)
+                (= term_to_project_onto (+ |left'?1| (- left?2))))))
+(check-sat)

@@ -1,9 +1,0 @@
-
-format_version: '2.0'
-
-input_files: 'gj2007b59e6e3.ihull0.smt2'
-
-properties:
-  - property_file: ../../../properties/sat_smt.prp
-    expected_verdict:
-

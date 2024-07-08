@@ -4,14 +4,14 @@
            displayName="Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic."
            timelimit="5min">
 
-  <tasks name="polybench">
-    <includesfile>../tasks/convhull/polybench/polybench.set</includesfile>
+  <tasks name="cra-monotone-polybench">
+    <includesfile>../tasks/convhull/cra-monotone-polybench/polybench.set</includesfile>
   </tasks>
-  <tasks name="c4b">
-    <includesfile>../tasks/convhull/C4B/C4B.set</includesfile>
+  <tasks name="cra-monotone-c4b">
+    <includesfile>../tasks/convhull/cra-monotone-C4B/C4B.set</includesfile>
   </tasks>
-  <tasks name="hola">
-    <includesfile>../tasks/convhull/HOLA/hola.set</includesfile>
+  <tasks name="cra-monotone-hola">
+    <includesfile>../tasks/convhull/cra-monotone-HOLA/hola.set</includesfile>
   </tasks>
   <tasks name="svcomploops">
     <includesfile>../tasks/convhull/svcomp-loops/all.set</includesfile>
@@ -20,7 +20,7 @@
     <includesfile>../tasks/convhull/svcomp-loop-invariants/all.set</includesfile>
   </tasks>
   <tasks name="cra-monotone-svcomp">
-    <includesfile>../tasks/convhull/cra-monotone/ReachSafety-Loops-convhull.set</includesfile>
+    <includesfile>../tasks/convhull/cra-monotone-svcomp-reach-safety/ReachSafety-Loops-convhull.set</includesfile>
   </tasks>
   <tasks name="cra-vass-svcomp">
     <includesfile>../tasks/convhull/cra-vass-obligations/ReachSafety-Loops-convhull.set</includesfile>
@@ -38,7 +38,7 @@
     <includesfile>../tasks/convhull/HOLA-integralized/hola.set</includesfile>
   </tasks>
   <tasks name="cra-monotone-svcomp-integralized">
-    <includesfile>../tasks/convhull/cra-monotone-integralized/ReachSafety-Loops-convhull.set</includesfile>
+    <includesfile>../tasks/convhull/cra-monotone-reach-safety-integralized/ReachSafety-Loops-convhull.set</includesfile>
   </tasks>
 
   <rundefinition name="lira-convex-hull-sc">

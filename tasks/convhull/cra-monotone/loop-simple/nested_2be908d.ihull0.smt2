@@ -1,6 +1,0 @@
-(declare-const b Int)
-(declare-const term_to_project_onto Real)
-(declare-const |b'| Int)
-(assert (and (<= (- b) 0) (<= (+ b -5) 0) (= (+ |b'| (- b) -1) 0)
-               (= term_to_project_onto (+ |b'| (- b)))))
-(check-sat)

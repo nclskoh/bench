@@ -1,9 +1,0 @@
-
-format_version: '2.0'
-
-input_files: 'mine2017-ex4.7c62521.ihull0.smt2'
-
-properties:
-  - property_file: ../../../properties/sat_smt.prp
-    expected_verdict:
-

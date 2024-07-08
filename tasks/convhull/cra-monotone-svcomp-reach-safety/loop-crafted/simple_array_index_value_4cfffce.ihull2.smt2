@@ -1,0 +1,12 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((tr?1 Int) (tr?2 Int) (|index2'?3| Int) (|index1'?4| Int)
+            (index2?5 Int) (index1?6 Int))
+         (and (<= (- index2?5) 0) (<= (- index1?6) 0)
+                (<= (+ (- index1?6) index2?5 1) 0) (= (+ (- tr?1) tr?2) 0)
+                (= (+ |index2'?3| (- index2?5) -1) 0)
+                (= (+ |index1'?4| (- index1?6) 1) 0)
+                (= term_to_project_onto0 (+ |index1'?4| (- index1?6)))
+                (= term_to_project_onto (+ |index2'?3| (- index2?5))))))
+(check-sat)

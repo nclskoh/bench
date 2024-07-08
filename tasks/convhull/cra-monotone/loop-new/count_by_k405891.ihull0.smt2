@@ -1,8 +1,0 @@
-(declare-const i Int)
-(declare-const k Int)
-(declare-const term_to_project_onto Real)
-(declare-const |i'| Int)
-(assert (and (<= (- i) 0) (<= (- k) 0) (<= (+ (* -1000000 k) i 1) 0)
-               (= (+ |i'| (- k) (- i)) 0)
-               (= term_to_project_onto (+ |i'| (- i)))))
-(check-sat)

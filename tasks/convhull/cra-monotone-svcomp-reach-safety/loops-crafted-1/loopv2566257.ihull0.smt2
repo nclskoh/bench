@@ -1,0 +1,8 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists ((|k'?1| Int) (|j'?2| Int) (k?3 Int) (j?4 Int))
+         (and (is_int (/ j?4 2)) (<= (- j?4) 0) (= (+ (- k?3) |k'?1| 4) 0)
+                (= (+ |j'?2| (- j?4) 4) 0)
+                (= term_to_project_onto0 (+ |j'?2| (- j?4)))
+                (= term_to_project_onto (+ |k'?1| (- k?3))))))
+(check-sat)

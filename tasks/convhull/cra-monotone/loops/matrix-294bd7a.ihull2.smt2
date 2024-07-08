@@ -1,8 +1,0 @@
-(declare-const k Int)
-(declare-const |k'| Int)
-(declare-const term_to_project_onto Real)
-(declare-const N_LIN Int)
-(assert (and (<= (- N_LIN) 0) (<= (- k) 0) (<= (+ k (- N_LIN) 1) 0)
-               (= (+ |k'| (- k) -1) 0)
-               (= term_to_project_onto (+ |k'| (- k)))))
-(check-sat)

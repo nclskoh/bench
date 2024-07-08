@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'ps6-ll_unwindbound10575644.ihull0_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

@@ -1,0 +1,10 @@
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists ((|x'?1?1| Int) (phi_x?2?2 Int) (x?3?3 Int))
+         (and (<= (- x?3?3) 0) (<= (+ x?3?3 -268435454) 0)
+                (or (and (<= (+ (- x?3?3) 65521) 0)
+                           (= (+ (- phi_x?2?2) x?3?3 2) 0))
+                      (and (<= (+ x?3?3 -65520) 0)
+                             (= (+ (- phi_x?2?2) x?3?3 1) 0)))
+                (= (+ |x'?1?1| (- phi_x?2?2)) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |x'?1?1| (- x?3?3)))) 0))))

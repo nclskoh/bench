@@ -1,0 +1,46 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const tmp Int)
+(assert (exists
+         ((|tmp'?1?1| Int) (|w'?2?2| Int) (|y'?3?3| Int) (|x'?4?4| Int)
+            (|z'?5?5| Int) (phi_x?6?6 Int) (rem?7?7 Int) (havoc?8?8 Int)
+            (z?9?9 Int) (x?10?10 Int) (y?11?11 Int) (w?12?12 Int)
+            (standardize_int?13 Int) (standardize_int?14 Int)
+            (quotient_integralized?15 Int) (quotient_integralized?16 Int))
+         (and (<= (+ (- z?9?9) 1) 0) (<= (- x?10?10) 0) (<= (- y?11?11) 0)
+                (<= (- w?12?12) 0)
+                (or (<= (+ havoc?8?8 1) 0) (<= (+ (- havoc?8?8) 1) 0))
+                (or (and (or (<= (+ w?12?12 y?11?11 x?10?10 z?9?9) 0)
+                               (and (<= (- rem?7?7) 0)
+                                      (or (<= rem?7?7 0)
+                                            (<= (+ (- rem?7?7) 2) 0))
+                                      (or (<= (+ rem?7?7 -1) 0)
+                                            (<= (+ rem?7?7 1) 0))
+                                      (= standardize_int?13 quotient_integralized?15)))
+                           (= (+ (- phi_x?6?6) x?10?10) 0))
+                      (and (= standardize_int?14 quotient_integralized?16)
+                             (<= (+ (- w?12?12) (- y?11?11) (- x?10?10)
+                                      (- z?9?9)) 0)
+                             (= (+ (- phi_x?6?6) x?10?10 1) 0)))
+                (= (+ |tmp'?1?1| (- havoc?8?8)) 0)
+                (= (+ |w'?2?2| (- w?12?12) -2) 0)
+                (= (+ |y'?3?3| (- y?11?11) -1) 0)
+                (= (+ |x'?4?4| (- phi_x?6?6)) 0)
+                (= (+ |z'?5?5| (- w?12?12) (- y?11?11) (- x?10?10) (- z?9?9)) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |z'?5?5| (- z?9?9)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |x'?4?4| (- x?10?10)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |y'?3?3| (- y?11?11)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |w'?2?2| (- w?12?12)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp'?1?1| (- tmp)))) 0)
+                (= (+ (+ z?9?9 (+ (+ x?10?10 y?11?11) w?12?12)) -1) (* 
+                   2 quotient_integralized?16))
+                (= (+ (+ z?9?9 (+ (+ x?10?10 y?11?11) w?12?12)) (- rem?7?7)) (* 
+                   2 quotient_integralized?15)))))

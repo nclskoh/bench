@@ -1,0 +1,7 @@
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists ((|i'?1?1| Int) (i?2?2 Int) (n?3?3 Int) (k?4?4 Int))
+         (and (<= (+ (- i?2?2) 1) 0) (<= (+ (- n?3?3) 1) 0)
+                (<= (+ (- k?4?4) 1) 0) (<= (+ (- n?3?3) i?2?2 1) 0)
+                (<= (+ (- k?4?4) 1) 0) (= (+ |i'?1?1| (- i?2?2) -1) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |i'?1?1| (- i?2?2)))) 0))))

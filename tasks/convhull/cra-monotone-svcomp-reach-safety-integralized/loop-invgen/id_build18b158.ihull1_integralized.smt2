@@ -1,0 +1,22 @@
+(declare-const j Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists
+         ((|i'?1?1| Int) (|j'?2?2| Int) (K?3?3 Int) (|j'?4?4| Int)
+            (nlen?5?5 Int) (i?6?6 Int))
+         (and (<= (- i?6?6) 0) (<= (+ (- nlen?5?5) i?6?6 1) 0)
+                (= (+ (- |j'?2?2|) K?3?3) 0)
+                (or (and (= K?3?3 0) (= (- |j'?2?2|) 0))
+                      (and (<= (+ (- K?3?3) 1) 0)
+                             (<= (+ (- nlen?5?5) i?6?6 1) 0) (<= (- i?6?6) 0)
+                             (<= (+ (- nlen?5?5) i?6?6 1) 0)
+                             (<= (+ |j'?2?2| -8) 0) (<= (+ (- |j'?2?2|) 1) 0)
+                             (<= (- i?6?6) 0))) (<= (- K?3?3) 0)
+                (<= (- |j'?2?2|) 0) (<= (+ (- nlen?5?5) 1) 0)
+                (<= (- i?6?6) 0) (<= (+ (- |j'?2?2|) 8) 0)
+                (= (+ |j'?4?4| (- |j'?2?2|)) 0)
+                (= (+ |i'?1?1| (- i?6?6) -1) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |i'?1?1| (- i?6?6)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |j'?4?4| (- j)))) 0))))

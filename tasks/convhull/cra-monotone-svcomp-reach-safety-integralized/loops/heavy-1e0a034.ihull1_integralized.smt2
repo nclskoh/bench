@@ -1,0 +1,31 @@
+(declare-const k Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(assert (exists
+         ((|j'?1?1| Int) (|array'?2?2| Int) (|array.100'?3?3| Int)
+            (|k'?4?4| Int) (K?5?5 Int) (|k'?6?6| Int) (|array.100'?7?7| Int)
+            (|array'?8?8| Int) (array.100?9?9 Int) (array?10?10 Int)
+            (j?11?11 Int))
+         (and (<= (- j?11?11) 0) (<= (+ j?11?11 -1048575) 0)
+                (= (+ (- |k'?4?4|) K?5?5) 0)
+                (or (and (= K?5?5 0) (= (- |k'?4?4|) 0)
+                           (= (+ (- |array.100'?3?3|) array.100?9?9) 0)
+                           (= (+ (- |array'?2?2|) array?10?10) 0))
+                      (and (<= (+ (- K?5?5) 1) 0)
+                             (<= (+ |k'?4?4| -1048576) 0)
+                             (<= (+ (- |k'?4?4|) 1) 0))) (<= (- K?5?5) 0)
+                (<= (- |k'?4?4|) 0) (<= (+ (- |k'?4?4|) 1048576) 0)
+                (= (+ |k'?6?6| (- |k'?4?4|)) 0)
+                (= (+ |j'?1?1| (- j?11?11) -1) 0)
+                (= (+ |array.100'?7?7| (- |array.100'?3?3|)) 0)
+                (= (+ |array'?8?8| (- |array'?2?2|)) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |array'?8?8| (- array?10?10)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |array.100'?7?7| (- array.100?9?9)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |j'?1?1| (- j?11?11)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |k'?6?6| (- k)))) 0))))

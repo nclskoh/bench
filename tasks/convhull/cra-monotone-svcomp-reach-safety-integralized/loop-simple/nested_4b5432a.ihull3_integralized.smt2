@@ -1,0 +1,33 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(assert (exists
+         ((|a'?1?1| Int) (|c'?2?2| Int) (|d'?3?3| Int) (|b'?4?4| Int)
+            (K?5?5 Int) (|b'?6?6| Int) (|c'?7?7| Int) (|d'?8?8| Int)
+            (d?9?9 Int) (c?10?10 Int) (b?11?11 Int) (a?12?12 Int))
+         (and (<= (+ (- d?9?9) 1) 0) (<= (+ (- c?10?10) 1) 0)
+                (<= (+ (- b?11?11) 1) 0) (<= (- a?12?12) 0)
+                (<= (+ a?12?12 -5) 0) (= (+ (- |b'?4?4|) K?5?5) 0)
+                (<= (+ |d'?3?3| (* -5 K?5?5) (- d?9?9)) 0)
+                (<= (+ |c'?2?2| (* -5 K?5?5) (- c?10?10)) 0)
+                (or (and (= K?5?5 0) (= (+ (- |d'?3?3|) d?9?9) 0)
+                           (= (+ (- |c'?2?2|) c?10?10) 0) (= (- |b'?4?4|) 0))
+                      (and (<= (+ (- K?5?5) 1) 0) (<= (+ (- d?9?9) 1) 0)
+                             (<= (+ (- c?10?10) 1) 0) (= (+ |c'?2?2| -6) 0)
+                             (= (+ |d'?3?3| -6) 0) (<= (+ |b'?4?4| -6) 0)
+                             (<= (+ (- |b'?4?4|) 1) 0))) (<= (- K?5?5) 0)
+                (<= (+ (- |d'?3?3|) 1) 0) (<= (+ (- |c'?2?2|) 1) 0)
+                (<= (- |b'?4?4|) 0) (<= (+ (- |b'?4?4|) 6) 0)
+                (= (+ |d'?8?8| (- |d'?3?3|)) 0)
+                (= (+ |c'?7?7| (- |c'?2?2|)) 0)
+                (= (+ |b'?6?6| (- |b'?4?4|)) 0)
+                (= (+ |a'?1?1| (- a?12?12) -1) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |a'?1?1| (- a?12?12)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |b'?6?6| (- b?11?11)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |c'?7?7| (- c?10?10)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |d'?8?8| (- d?9?9)))) 0))))

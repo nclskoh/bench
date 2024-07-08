@@ -1,0 +1,37 @@
+(declare-const j Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(assert (exists
+         ((|i'?1?1| Int) (|array'?2?2| Int) (|array.100'?3?3| Int)
+            (|k'?4?4| Int) (|j'?5?5| Int) (K?6?6 Int) (|j'?7?7| Int)
+            (|k'?8?8| Int) (|array.100'?9?9| Int) (|array'?10?10| Int)
+            (array.100?11?11 Int) (array?12?12 Int) (k?13?13 Int)
+            (i?14?14 Int))
+         (and (<= (- i?14?14) 0) (<= (+ i?14?14 -1048575) 0)
+                (= (+ (- |j'?5?5|) K?6?6) 0)
+                (or (and (= K?6?6 0) (= (+ (- |k'?4?4|) k?13?13) 0)
+                           (= (- |j'?5?5|) 0)
+                           (= (+ (- |array.100'?3?3|) array.100?11?11) 0)
+                           (= (+ (- |array'?2?2|) array?12?12) 0))
+                      (and (<= (+ (- K?6?6) 1) 0) (= (+ |k'?4?4| -1048576) 0)
+                             (<= (+ |j'?5?5| -1048576) 0)
+                             (<= (+ (- |j'?5?5|) 1) 0))) (<= (- K?6?6) 0)
+                (<= (- |j'?5?5|) 0) (<= (+ (- |j'?5?5|) 1048576) 0)
+                (= (+ |k'?8?8| (- |k'?4?4|)) 0)
+                (= (+ |j'?7?7| (- |j'?5?5|)) 0)
+                (= (+ |i'?1?1| (- i?14?14) -1) 0)
+                (= (+ |array.100'?9?9| (- |array.100'?3?3|)) 0)
+                (= (+ |array'?10?10| (- |array'?2?2|)) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |array'?10?10| (- array?12?12)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |array.100'?9?9| (- array.100?11?11)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |i'?1?1| (- i?14?14)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |j'?7?7| (- j)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |k'?8?8| (- k?13?13)))) 0))))

@@ -1,0 +1,48 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(assert (exists
+         ((|c2'?1?1| Int) (|c1'?2?2| Int) (|x3'?3?3| Int) (|x2'?4?4| Int)
+            (|x1'?5?5| Int) (havoc?6?6 Int) (havoc?7?7 Int) (phi_x3?8?8 Int)
+            (phi_x2?9?9 Int) (phi_x1?10?10 Int) (phi_x3?11?11 Int)
+            (phi_x2?12?12 Int) (c1?13?13 Int) (d1?14?14 Int) (c2?15?15 Int)
+            (d2?16?16 Int) (d3?17?17 Int) (x1?18?18 Int) (x2?19?19 Int)
+            (x3?20?20 Int))
+         (and (<= (+ (- d1?14?14) 1) 0) (<= (+ (- d2?16?16) 1) 0)
+                (<= (+ (- d3?17?17) 1) 0) (<= (+ (- x1?18?18) 1) 0)
+                (<= (+ (- x2?19?19) 1) 0) (<= (+ (- x3?20?20) 1) 0)
+                (or (and (= c1?13?13 0)
+                           (or (and (= c2?15?15 0)
+                                      (= (+ (- phi_x2?12?12) x2?19?19) 0)
+                                      (= (+ (- phi_x3?11?11) x3?20?20
+                                              (- d3?17?17)) 0))
+                                 (and (or (<= (+ c2?15?15 1) 0)
+                                            (<= (+ (- c2?15?15) 1) 0))
+                                        (= (+ (- phi_x2?12?12) x2?19?19
+                                                (- d2?16?16)) 0)
+                                        (= (+ (- phi_x3?11?11) x3?20?20) 0)))
+                           (= (+ (- phi_x1?10?10) x1?18?18) 0)
+                           (= (+ (- phi_x2?9?9) phi_x2?12?12) 0)
+                           (= (+ (- phi_x3?8?8) phi_x3?11?11) 0))
+                      (and (or (<= (+ c1?13?13 1) 0)
+                                 (<= (+ (- c1?13?13) 1) 0))
+                             (= (+ (- phi_x1?10?10) x1?18?18 (- d1?14?14)) 0)
+                             (= (+ (- phi_x2?9?9) x2?19?19) 0)
+                             (= (+ (- phi_x3?8?8) x3?20?20) 0)))
+                (= (+ (- havoc?6?6) |c2'?1?1|) 0)
+                (= (+ (- havoc?7?7) |c1'?2?2|) 0)
+                (= (+ |x3'?3?3| (- phi_x3?8?8)) 0)
+                (= (+ |x2'?4?4| (- phi_x2?9?9)) 0)
+                (= (+ |x1'?5?5| (- phi_x1?10?10)) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |x1'?5?5| (- x1?18?18)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |x2'?4?4| (- x2?19?19)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |x3'?3?3| (- x3?20?20)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |c1'?2?2| (- c1?13?13)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |c2'?1?1| (- c2?15?15)))) 0))))

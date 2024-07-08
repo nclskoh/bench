@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'mono-crafted_940e77e.ihull0_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

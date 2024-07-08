@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'apache-escape-absolute.i.v+cfa-reducer5c91f2.ihull1_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

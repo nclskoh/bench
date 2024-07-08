@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'tree_del_iter_incorrect7e439c.ihull1_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

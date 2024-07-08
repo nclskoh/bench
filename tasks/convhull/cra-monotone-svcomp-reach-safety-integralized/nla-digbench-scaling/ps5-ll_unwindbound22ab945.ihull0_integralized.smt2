@@ -1,0 +1,35 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const tmp Int)
+(declare-const term_to_project_onto2_integralized Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (uninterp?3?3 Int)
+            (uninterp?4?4 Int) (|tmp'?5?5| Int) (|c'?6?6| Int) (|x'?7?7| Int)
+            (|y'?8?8| Int) (|counter'?9?9| Int) (c?10?10 Int) (x?11?11 Int)
+            (y?12?12 Int) (counter?13?13 Int) (k?14?14 Int))
+         (and (<= (- c?10?10) 0) (<= (- y?12?12) 0)
+                (= (+ y?12?12 (- c?10?10)) 0) (<= (+ counter?13?13 -1) 0)
+                (= (+ (* -30 x?11?11) (* 6 uninterp?2?2) (* 15 uninterp?3?3)
+                        (* 10 uninterp?1?1) (- y?12?12)) 0)
+                (<= (+ (- k?14?14) c?10?10 1) 0)
+                (= (+ |tmp'?5?5| (- counter?13?13)) 0)
+                (= (+ |c'?6?6| (- c?10?10) -1) 0)
+                (= (+ |x'?7?7| (- x?11?11) (- uninterp?3?3)
+                        (* -4 uninterp?1?1) (* -6 uninterp?4?4)
+                        (* -4 y?12?12) -1) 0)
+                (= (+ |y'?8?8| (- y?12?12) -1) 0)
+                (= (+ |counter'?9?9| (- counter?13?13) -1) 0)
+                (<= (- uninterp?1?1) 0) (<= (- uninterp?2?2) 0)
+                (<= (- uninterp?3?3) 0) (<= (- uninterp?4?4) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |counter'?9?9| (- counter?13?13)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |y'?8?8| (- y?12?12)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |x'?7?7| (- x?11?11)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |c'?6?6| (- c?10?10)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp'?5?5| (- tmp)))) 0))))

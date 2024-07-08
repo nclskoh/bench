@@ -1,0 +1,21 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(assert (exists
+         ((|z'?1?1| Int) (|v'?2?2| Int) (K?3?3 Int) (|v'?4?4| Int)
+            (v?5?5 Int) (z?6?6 Int) (standardize_int?7 Int)
+            (quotient_integralized?8 Int))
+         (and (<= (- v?5?5) 0) (<= (- z?6?6) 0) (<= (+ z?6?6 -9) 0)
+                (= (+ (- |v'?2?2|) K?3?3) 0)
+                (or (and (= K?3?3 0) (= (- |v'?2?2|) 0))
+                      (and (<= (+ (- K?3?3) 1) 0)
+                             (<= (+ |v'?2?2| -268435455) 0)
+                             (<= (+ (- |v'?2?2|) 1) 0))) (<= (- K?3?3) 0)
+                (<= (- |v'?2?2|) 0) (<= (+ (- |v'?2?2|) 268435455) 0)
+                (= standardize_int?7 quotient_integralized?8)
+                (<= (- |v'?2?2|) 0) (= (+ |v'?4?4| (- |v'?2?2|)) 0)
+                (= (+ |z'?1?1| (- z?6?6) -1) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |z'?1?1| (- z?6?6)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |v'?4?4| (- v?5?5)))) 0)
+                (= |v'?2?2| (* 4 quotient_integralized?8)))))

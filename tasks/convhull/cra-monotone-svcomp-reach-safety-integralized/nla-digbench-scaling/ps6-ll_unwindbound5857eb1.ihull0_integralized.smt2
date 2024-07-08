@@ -1,0 +1,37 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const tmp Int)
+(declare-const term_to_project_onto3_integralized Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (uninterp?3?3 Int)
+            (uninterp?4?4 Int) (uninterp?5?5 Int) (|tmp'?6?6| Int)
+            (|c'?7?7| Int) (|x'?8?8| Int) (|y'?9?9| Int)
+            (|counter'?10?10| Int) (c?11?11 Int) (y?12?12 Int) (x?13?13 Int)
+            (counter?14?14 Int) (k?15?15 Int))
+         (and (<= (- c?11?11) 0) (<= (- y?12?12) 0)
+                (= (+ y?12?12 (- c?11?11)) 0) (<= (+ counter?14?14 -4) 0)
+                (= (+ (* 12 x?13?13) (* -2 uninterp?3?3) (* -6 uninterp?1?1)
+                        (* -5 uninterp?2?2) uninterp?5?5) 0)
+                (<= (+ (- k?15?15) c?11?11 1) 0)
+                (= (+ |tmp'?6?6| (- counter?14?14)) 0)
+                (= (+ |c'?7?7| (- c?11?11) -1) 0)
+                (= (+ |x'?8?8| (- x?13?13) (- uninterp?1?1)
+                        (* -5 uninterp?2?2) (* -10 uninterp?4?4)
+                        (* -10 uninterp?5?5) (* -5 y?12?12) -1) 0)
+                (= (+ |y'?9?9| (- y?12?12) -1) 0)
+                (= (+ |counter'?10?10| (- counter?14?14) -1) 0)
+                (<= (- uninterp?1?1) 0) (<= (- uninterp?2?2) 0)
+                (<= (- uninterp?3?3) 0) (<= (- uninterp?4?4) 0)
+                (<= (- uninterp?5?5) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |counter'?10?10| (- counter?14?14)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |y'?9?9| (- y?12?12)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |x'?8?8| (- x?13?13)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |c'?7?7| (- c?11?11)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp'?6?6| (- tmp)))) 0))))

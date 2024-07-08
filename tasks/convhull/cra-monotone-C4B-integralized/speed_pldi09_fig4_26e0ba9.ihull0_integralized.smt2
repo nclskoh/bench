@@ -1,0 +1,32 @@
+(declare-const tmp___0 Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(assert (exists
+         ((|tmp___0'?1?1| Int) (|vb'?2?2| Int) (|va'?3?3| Int)
+            (|__cost'?4?4| Int) (phi_vb?5?5 Int) (phi_va?6?6 Int)
+            (havoc?7?7 Int) (vb?8?8 Int) (va?9?9 Int) (m?10?10 Int)
+            (__cost?11?11 Int))
+         (and (<= (- vb?8?8) 0) (<= (- va?9?9) 0) (<= (+ (- m?10?10) 1) 0)
+                (<= (+ (- va?9?9) 1) 0)
+                (or (<= (+ havoc?7?7 1) 0) (<= (+ (- havoc?7?7) 1) 0))
+                (<= (- __cost?11?11) 0) (<= (+ (- __cost?11?11) -1) 0)
+                (or (and (<= (+ m?10?10 (- vb?8?8)) 0)
+                           (= (+ (- phi_va?6?6) va?9?9) 0)
+                           (= (- phi_vb?5?5) 0))
+                      (and (<= (+ (- m?10?10) vb?8?8 1) 0)
+                             (= (+ (- phi_va?6?6) va?9?9 -1) 0)
+                             (= (+ (- phi_vb?5?5) vb?8?8 1) 0)))
+                (= (+ |tmp___0'?1?1| (- havoc?7?7)) 0)
+                (= (+ |vb'?2?2| (- phi_vb?5?5)) 0)
+                (= (+ |va'?3?3| (- phi_va?6?6)) 0)
+                (= (+ |__cost'?4?4| (- __cost?11?11) -1) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |__cost'?4?4| (- __cost?11?11)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |va'?3?3| (- va?9?9)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |vb'?2?2| (- vb?8?8)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp___0'?1?1| (- tmp___0)))) 0))))

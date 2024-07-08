@@ -1,0 +1,27 @@
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists
+         ((|j'?1?1| Int) (material_length?2?2 Int) (j?3?3 Int)
+            (idBitLength?4?4 Int) (nlen?5?5 Int) (remainder?6 Int)
+            (remainder?7 Int) (quotient?8 Int) (quotient?9 Int))
+         (and (<= (- j?3?3) 0)
+                (<= (+ 8
+                         (ite (and (<= (- idBitLength?4?4) 0)
+                                     (<= (- idBitLength?4?4) 0))
+                              remainder?6 (+ remainder?6 -8))
+                         (- idBitLength?4?4) (* 8 j?3?3)) 0)
+                (<= (+ (- material_length?2?2) j?3?3 1) 0) (<= (- j?3?3) 0)
+                (<= (+ (- material_length?2?2) j?3?3 1) 0)
+                (<= (+ (ite (and (<= (- j?3?3) 0) (<= (- j?3?3) 0))
+                            remainder?7 (+ remainder?7 -4)) (- j?3?3)) 0)
+                (<= (+ (- (* 4 nlen?5?5)) 4
+                         (- (ite (and (<= (- j?3?3) 0) (<= (- j?3?3) 0))
+                                 remainder?7 (+ remainder?7 -4))) j?3?3) 0)
+                (= (+ |j'?1?1| (- j?3?3) -1) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |j'?1?1| (- j?3?3)))) 0)
+                (= j?3?3 (+ (* 4 quotient?9) remainder?7)) (<= 0 remainder?7)
+                (or (<= remainder?7 (+ 4 -1)) (<= remainder?7 (+ -4 -1)))
+                (= idBitLength?4?4 (+ (* 8 quotient?8) remainder?6))
+                (<= 0 remainder?6)
+                (or (<= remainder?6 (+ 8 -1)) (<= remainder?6 (+ -8 -1))))))
+(check-sat)

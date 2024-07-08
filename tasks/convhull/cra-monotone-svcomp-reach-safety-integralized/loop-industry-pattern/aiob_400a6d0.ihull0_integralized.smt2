@@ -1,0 +1,28 @@
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const Id_MCDC_93 Int)
+(declare-const tmp Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(assert (exists
+         ((|tmp'?1?1| Int) (|Id_MCDC_96'?2?2| Int) (|Id_MCDC_93'?3?3| Int)
+            (tr?4?4 Int) (tr?5?5 Int) (phi_tmp?6?6 Int) (phi_tmp?7?7 Int)
+            (Id_MCDC_96?8?8 Int))
+         (and (<= (- Id_MCDC_96?8?8) 0)
+                (or (and (<= (- Id_MCDC_96?8?8) 0)
+                           (or (and (<= (+ (- Id_MCDC_96?8?8) 42) 0)
+                                      (= (- phi_tmp?7?7) 0))
+                                 (and (<= (+ Id_MCDC_96?8?8 -41) 0)
+                                        (= (+ (- phi_tmp?7?7) 1) 0)))
+                           (= (+ (- phi_tmp?6?6) phi_tmp?7?7) 0))
+                      (and (<= (+ Id_MCDC_96?8?8 1) 0) (= (- phi_tmp?6?6) 0)))
+                (or (<= (+ phi_tmp?6?6 1) 0) (<= (+ (- phi_tmp?6?6) 1) 0))
+                (or (< tr?5?5 0) (< (- tr?4?4) 0))
+                (= (+ |tmp'?1?1| (- phi_tmp?6?6)) 0)
+                (= (+ |Id_MCDC_96'?2?2| (- Id_MCDC_96?8?8) -1) 0)
+                (= (+ |Id_MCDC_93'?3?3| (- Id_MCDC_96?8?8)) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |Id_MCDC_93'?3?3| (- Id_MCDC_93)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |Id_MCDC_96'?2?2| (- Id_MCDC_96?8?8)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp'?1?1| (- tmp)))) 0))))

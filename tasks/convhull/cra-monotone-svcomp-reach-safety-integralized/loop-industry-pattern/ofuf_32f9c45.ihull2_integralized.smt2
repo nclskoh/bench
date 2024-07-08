@@ -1,0 +1,125 @@
+(declare-const |Id_MCDC_118'| Int)
+(declare-const term_to_project_onto8_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const param0 Int)
+(declare-const |Id_MCDC_119'| Int)
+(declare-const |Id_MCDC_120'| Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const return@pos Int)
+(declare-const term_to_project_onto9_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const tmp Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const Id_MCDC_120 Int)
+(declare-const return@width Int)
+(declare-const term_to_project_onto5_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const return Int)
+(declare-const param0@pos Int)
+(declare-const param0@width Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (uninterp?3?3 Int)
+            (uninterp?4?4 Int) (uninterp?5?5 Int) (uninterp?6?6 Int)
+            (|param0@width'?7?7| Int) (|return@width'?8?8| Int)
+            (|param0@pos'?9?9| Int) (|return@pos'?10?10| Int)
+            (|param0'?11?11| Int) (|return'?12?12| Int) (|tmp'?13?13| Int)
+            (|Id_MCDC_117'?14?14| Int) (phi_tmp?15?15 Int)
+            (phi_tmp?16?16 Int) (type_err?17?17 Int) (type_err?18?18 Int)
+            (havoc?19?19 Int) (type_err?20?20 Int) (type_err?21?21 Int)
+            (Id_MCDC_117?22?22 Int) (Id_MCDC_118?23?23 Int)
+            (Id_MCDC_119?24?24 Int))
+         (and (or (<= (+ Id_MCDC_119?24?24 1) 0)
+                    (<= (+ (- Id_MCDC_119?24?24) 1) 0))
+                (or (<= (+ (ite (or (<= (+ Id_MCDC_118?23?23 1) 0)
+                                      (<= (+ (- Id_MCDC_118?23?23) 1) 0))
+                                1 0) 1) 0)
+                      (<= (+ (- (ite (or (<= (+ Id_MCDC_118?23?23 1) 0)
+                                           (<= (+ (- Id_MCDC_118?23?23) 1) 0))
+                                     1 0)) 1) 0))
+                (or (and (or (and (<= (+ uninterp?5?5 (- uninterp?4?4)) 0)
+                                    (< (- Id_MCDC_118?23?23) 0))
+                               (and (<= (- (+ uninterp?5?5 (- uninterp?4?4))) 0)
+                                      (< Id_MCDC_118?23?23 0)))
+                           (or (and (or (and (<= (+ uninterp?5?5
+                                                      (- uninterp?4?4)
+                                                      (* 4294967296
+                                                           Id_MCDC_118?23?23)) 0)
+                                               (< (- Id_MCDC_118?23?23) 0))
+                                          (and (<= (- (+ uninterp?5?5
+                                                           (- uninterp?4?4)
+                                                           (* 4294967296
+                                                                Id_MCDC_118?23?23))) 0)
+                                                 (< Id_MCDC_118?23?23 0)))
+                                      (= (- phi_tmp?16?16) 0))
+                                 (and (or (and (<= (+ (- uninterp?5?5)
+                                                        uninterp?4?4
+                                                        (* -4294967295
+                                                             Id_MCDC_118?23?23)) 0)
+                                                 (< (- Id_MCDC_118?23?23) 0))
+                                            (and (<= (- (+ (- uninterp?5?5)
+                                                             uninterp?4?4
+                                                             (* -4294967295
+                                                                  Id_MCDC_118?23?23))) 0)
+                                                   (< Id_MCDC_118?23?23 0)))
+                                        (= (+ (- phi_tmp?16?16) 1) 0)))
+                           (= (+ (- phi_tmp?15?15) phi_tmp?16?16) 0))
+                      (and (or (and (<= (+ (- uninterp?5?5) uninterp?4?4
+                                             Id_MCDC_118?23?23) 0)
+                                      (< (- Id_MCDC_118?23?23) 0))
+                                 (and (<= (- (+ (- uninterp?5?5) uninterp?4?4
+                                                  Id_MCDC_118?23?23)) 0)
+                                        (< Id_MCDC_118?23?23 0)))
+                             (= (- phi_tmp?15?15) 0)))
+                (or (<= (+ phi_tmp?15?15 1) 0) (<= (+ (- phi_tmp?15?15) 1) 0))
+                (= (+ (- type_err?20?20) |param0@width'?7?7|) 0)
+                (= (+ (- type_err?17?17) |return@width'?8?8|) 0)
+                (= (+ (- type_err?21?21) |param0@pos'?9?9|) 0)
+                (= (+ (- type_err?18?18) |return@pos'?10?10|) 0)
+                (= (+ |param0'?11?11|
+                        (- (ite (or (<= (+ Id_MCDC_118?23?23 1) 0)
+                                      (<= (+ (- Id_MCDC_118?23?23) 1) 0))
+                                1 0))) 0)
+                (= (+ (- havoc?19?19) |return'?12?12|) 0)
+                (= (+ |tmp'?13?13| (- phi_tmp?15?15)) 0)
+                (= (+ (ite (and (<= (- Id_MCDC_117?22?22) 0)
+                                  (<= (- Id_MCDC_117?22?22) 0))
+                           uninterp?6?6
+                           (ite (and (<= (- Id_MCDC_118?23?23) 0)
+                                       (<= (- Id_MCDC_118?23?23) 0))
+                                (+ uninterp?6?6 (- Id_MCDC_118?23?23))
+                                (+ uninterp?6?6 Id_MCDC_118?23?23)))
+                        (- Id_MCDC_117?22?22) uninterp?3?3) 0)
+                (or (< (- Id_MCDC_118?23?23) 0) (< Id_MCDC_118?23?23 0))
+                (= (+ uninterp?2?2 (- uninterp?5?5)) 0)
+                (or (< (- Id_MCDC_118?23?23) 0) (< Id_MCDC_118?23?23 0))
+                (= (+ uninterp?1?1 (- uninterp?5?5)) 0)
+                (or (< (- Id_MCDC_118?23?23) 0) (< Id_MCDC_118?23?23 0))
+                (= (+ |Id_MCDC_117'?14?14| (- Id_MCDC_118?23?23)) 0)
+                (= (- (+ (- uninterp?5?5) uninterp?2?2)) 0)
+                (= (- (+ (- uninterp?5?5) uninterp?1?1)) 0)
+                (= (+ term_to_project_onto9_integralized
+                        (- (+ |Id_MCDC_117'?14?14| (- Id_MCDC_117?22?22)))) 0)
+                (= (+ term_to_project_onto8_integralized
+                        (- (+ |Id_MCDC_118'| (- Id_MCDC_118?23?23)))) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ |Id_MCDC_119'| (- Id_MCDC_119?24?24)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ |Id_MCDC_120'| (- Id_MCDC_120)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ |tmp'?13?13| (- tmp)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ |return'?12?12| (- return)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |param0'?11?11| (- param0)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |return@pos'?10?10| (- return@pos)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |param0@pos'?9?9| (- param0@pos)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |return@width'?8?8| (- return@width)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |param0@width'?7?7| (- param0@width)))) 0))))
+(check-sat)

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'count_up_down-274f917.ihull0_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

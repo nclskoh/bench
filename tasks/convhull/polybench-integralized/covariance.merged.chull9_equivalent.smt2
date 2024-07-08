@@ -1,0 +1,5 @@
+(declare-const delta_j Int)
+(assert (exists ((|j'?1?1| Int) (j?2?2 Int))
+         (and (<= (- j?2?2) 0) (< (+ j?2?2 -1000) 0)
+                (= (+ |j'?1?1| (- j?2?2) -1) 0)
+                (= (+ delta_j (- (+ |j'?1?1| (- j?2?2)))) 0))))

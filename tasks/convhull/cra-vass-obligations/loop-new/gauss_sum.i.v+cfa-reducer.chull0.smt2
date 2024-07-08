@@ -1,0 +1,12 @@
+(declare-const delta_main__i Int)
+(declare-const delta_main__sum Int)
+(assert (exists
+         ((|main__i'?1| Int) (|main__sum'?2| Int) (main__i?3 Int)
+            (main__n?4 Int) (main__sum?5 Int))
+         (and (< (- main__i?3) 0) (< (- main__n?4) 0) (<= (- main__sum?5) 0)
+                (<= (+ (- main__n?4) main__i?3) 0)
+                (= (+ |main__i'?1| (- main__i?3) -1) 0)
+                (= (+ |main__sum'?2| (- main__sum?5) (- main__i?3)) 0)
+                (= delta_main__sum (+ |main__sum'?2| (- main__sum?5)))
+                (= delta_main__i (+ |main__i'?1| (- main__i?3))))))
+(check-sat)

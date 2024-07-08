@@ -1,0 +1,11 @@
+(declare-const delta_j Int)
+(assert (exists
+         ((|j'?1| Int) (phi_j?2 Int) (tr?3 Int) (tr?4 Int) (n?5 Int)
+            (q?6 Int) (j?7 Int))
+         (and (<= (- j?7) 0) (<= (+ (- n?5) j?7 1) 0)
+                (or (<= (+ (- q?6) tr?4 1) 0) (<= (+ (- tr?3) q?6 1) 0))
+                (or (and (or (<= (+ j?7 -18) 0) (<= (+ (- j?7) 20) 0))
+                           (= (+ (- phi_j?2) j?7 1) 0))
+                      (and (= (+ j?7 -19) 0) (= (+ (- phi_j?2) 4294967295) 0)))
+                (= (+ |j'?1| (- phi_j?2)) 0) (= delta_j (+ |j'?1| (- j?7))))))
+(check-sat)

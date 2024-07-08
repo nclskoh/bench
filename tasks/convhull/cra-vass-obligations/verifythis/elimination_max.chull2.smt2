@@ -1,0 +1,6 @@
+(declare-const x Int)
+(declare-const y Int)
+(assert (exists ((|y'?1| Int) (|x'?2| Int))
+         (or (and (= |x'?2| (+ x 1)) (= |y'?1| y))
+               (and (= |x'?2| x) (= |y'?1| (+ y -1))))))
+(check-sat)

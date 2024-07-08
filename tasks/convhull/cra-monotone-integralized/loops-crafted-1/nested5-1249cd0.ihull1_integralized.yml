@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'nested5-1249cd0.ihull1_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

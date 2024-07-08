@@ -1,0 +1,13 @@
+(declare-const delta_i Int)
+(declare-const delta_sn Int)
+(assert (exists
+         ((|sn'?1| Int) (|i'?2| Int) (phi_sn?3 Int) (sn?4 Int) (n?5 Int)
+            (i?6 Int))
+         (and (<= (- n?5) 0) (<= (+ (- i?6) 1) 0) (<= (+ i?6 (- n?5)) 0)
+                (or (and (or (<= (+ i?6 -3) 0) (<= (+ (- i?6) 5) 0))
+                           (= (+ (- phi_sn?3) sn?4 2) 0))
+                      (and (= (+ i?6 -4) 0) (= (+ (- phi_sn?3) -10) 0)))
+                (= (+ |sn'?1| (- phi_sn?3)) 0) (= (+ |i'?2| (- i?6) -1) 0)
+                (= delta_i (+ |i'?2| (- i?6)))
+                (= delta_sn (+ |sn'?1| (- sn?4))))))
+(check-sat)

@@ -1,0 +1,6 @@
+(declare-const delta_j Int)
+(assert (exists ((|j'?1?1| Int) (j?2?2 Int) (maxgrid?3?3 Int))
+         (and (<= (- j?2?2) 0) (< (- maxgrid?3?3) 0)
+                (< (+ (- maxgrid?3?3) j?2?2) 0)
+                (= (+ |j'?1?1| (- j?2?2) -1) 0)
+                (= (+ delta_j (- (+ |j'?1?1| (- j?2?2)))) 0))))

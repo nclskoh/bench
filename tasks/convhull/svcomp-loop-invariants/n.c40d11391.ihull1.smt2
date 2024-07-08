@@ -1,0 +1,5 @@
+(declare-const |i'| Int)
+(assert (exists ((tr?1 Int) (tr?2 Int) (i?3 Int))
+         (and (<= (- i?3) 0) (or (<= (+ tr?2 1) 0) (<= (+ (- tr?1) 1) 0))
+                (= (+ |i'| (- i?3) -1) 0))))
+(check-sat)

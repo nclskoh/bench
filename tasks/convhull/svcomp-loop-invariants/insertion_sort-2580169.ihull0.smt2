@@ -1,0 +1,6 @@
+(declare-const SIZE Int)
+(declare-const k Int)
+(assert (exists ((|k'?1| Int) (tr?2 Int) (tr?3 Int))
+         (and (<= (+ (- k) 1) 0) (<= (- SIZE) 0) (<= (+ (- SIZE) k 1) 0)
+                (<= (+ (- tr?2) tr?3) 0) (= (+ |k'?1| (- k) -1) 0))))
+(check-sat)

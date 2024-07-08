@@ -1,0 +1,7 @@
+(declare-const K Int)
+(declare-const |e'| Int)
+(assert (exists ((e?1 Int))
+         (and (<= 0 (+ 5 (- e?1))) (<= 0 (+ -1 e?1))
+                (= (- K) (- (+ |e'| (- e?1))))
+                (or (and (= K 0) (= e?1 |e'|)) (<= 1 K)) (<= 0 K))))
+(check-sat)

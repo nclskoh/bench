@@ -1,0 +1,6 @@
+(declare-const |i'| Int)
+(declare-const |j'| Int)
+(assert (exists ((j?1 Int) (i?2 Int))
+         (and (<= (- j?1) 0) (<= (- i?2) 0) (= (+ |j'| (- j?1) -1) 0)
+                (= (+ |i'| (- i?2) 1) 0))))
+(check-sat)

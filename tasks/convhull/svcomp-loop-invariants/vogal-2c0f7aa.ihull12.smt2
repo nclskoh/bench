@@ -1,0 +1,6 @@
+(declare-const n_caracter Int)
+(assert (exists ((|n_caracter'?1| Int) (tr?2 Int) (tr?3 Int))
+         (and (<= (- n_caracter) 0)
+                (or (<= (+ tr?3 1) 0) (<= (+ (- tr?2) 1) 0))
+                (= (+ |n_caracter'?1| (- n_caracter) -1) 0))))
+(check-sat)

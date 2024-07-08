@@ -1,0 +1,6 @@
+(declare-const MAX Int)
+(declare-const i Int)
+(assert (exists ((|i'?1| Int))
+         (and (<= (- i) 0) (<= (- MAX) 0) (<= (+ (- MAX) i 1) 0)
+                (= (+ |i'?1| (- i) -1) 0))))
+(check-sat)

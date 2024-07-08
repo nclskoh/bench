@@ -1,0 +1,5 @@
+(declare-const delta_glob2_p_off Int)
+(assert (exists ((|glob2_p_off'?1| Int) (glob2_p_off?2 Int))
+         (and (= |glob2_p_off'?1| (+ glob2_p_off?2 1))
+                (= delta_glob2_p_off (+ |glob2_p_off'?1| (- glob2_p_off?2))))))
+(check-sat)

@@ -1,0 +1,7 @@
+(declare-const start Int)
+(assert (exists ((|start'?1| Int) (tr?2 Int) (tr?3 Int) (tr?4 Int))
+         (and (or (= (+ tr?4 -32) 0)
+                    (and (or (<= (+ tr?3 -31) 0) (<= (+ (- tr?3) 33) 0))
+                           (= (+ tr?2 -9) 0)))
+                (= (+ (- start) |start'?1| -1) 0))))
+(check-sat)

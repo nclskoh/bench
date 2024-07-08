@@ -1,0 +1,5 @@
+(declare-const |y'| Int)
+(declare-const |z'| Int)
+(assert (exists ((z?1 Int) (y?2 Int))
+         (and (= |y'| (+ y?2 1)) (= |z'| (+ z?1 1)) (= (+ |y'| (- |z'|)) 0))))
+(check-sat)

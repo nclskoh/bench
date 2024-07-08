@@ -1,0 +1,8 @@
+(declare-const |main__index1'| Int)
+(declare-const |main__index2'| Int)
+(declare-const |__VERIFIER_assert__cond___1'| Int)
+(assert (exists ((main__index2?1 Int) (main__index1?2 Int))
+         (and (= |main__index1'| (+ main__index1?2 -1))
+                (= |main__index2'| (+ main__index2?1 1))
+                (= |__VERIFIER_assert__cond___1'| 1))))
+(check-sat)

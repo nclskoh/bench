@@ -1,0 +1,12 @@
+(declare-const z Int)
+(declare-const x Int)
+(assert (exists
+         ((|z'?1| Int) (|x'?2| Int) (phi_z?3 Int) (phi_x?4 Int) (havoc?5 Int))
+         (and (<= (+ x -99) 0) (<= (+ (- z) 101) 0)
+                (or (and (= havoc?5 0) (= (+ (- phi_x?4) x -1) 0)
+                           (= (+ (- phi_z?3) z -1) 0))
+                      (and (or (<= (+ havoc?5 1) 0) (<= (+ (- havoc?5) 1) 0))
+                             (= (+ (- phi_x?4) x 1) 0)
+                             (= (+ (- phi_z?3) z) 0)))
+                (= (+ |z'?1| (- phi_z?3)) 0) (= (+ |x'?2| (- phi_x?4)) 0))))
+(check-sat)

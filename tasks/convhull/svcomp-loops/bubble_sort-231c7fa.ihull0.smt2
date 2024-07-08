@@ -1,0 +1,13 @@
+(declare-const head Int)
+(declare-const node Int)
+(assert (exists
+         ((|head@width'?1| Int) (|head@pos'?2| Int) (|head'?3| Int)
+            (|__cil_tmp110'?4| Int) (|__cil_tmp106'?5| Int) (type_err?6 Int)
+            (type_err?7 Int) (tr?8 Int))
+         (and (or (<= (+ (- head) node 5) 0) (<= (+ head (- node) -3) 0))
+                (= (+ (- type_err?6) |head@width'?1|) 0)
+                (= (+ (- type_err?7) |head@pos'?2|) 0)
+                (= (+ (- tr?8) |head'?3|) 0)
+                (= (+ |__cil_tmp110'?4| (- node) -4) 0)
+                (= (+ |__cil_tmp106'?5| (- head)) 0))))
+(check-sat)

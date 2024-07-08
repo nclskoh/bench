@@ -1,0 +1,10 @@
+(declare-const n Int)
+(declare-const right Int)
+(declare-const space Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const |right'| Int)
+(assert (and (<= (+ (- right) 1) 0) (<= (+ (- space) 1) 0)
+               (<= (+ (- n) right 1) 0)
+               (= (+ |right'| (* -2 space) (- right)) 0)
+               (= (+ term_to_project_onto_integralized
+                       (- (+ |right'| (- right)))) 0)))

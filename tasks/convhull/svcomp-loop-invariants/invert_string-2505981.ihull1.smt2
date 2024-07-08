@@ -1,0 +1,8 @@
+(declare-const MAX Int)
+(declare-const |i'| Int)
+(declare-const |j'| Int)
+(assert (exists ((tr?1 Int) (tr?2 Int) (j?3 Int) (i?4 Int))
+         (and (<= (- i?4) 0) (<= (- MAX) 0) (= (+ j?3 (- MAX) i?4 1) 0)
+                (<= (+ (- MAX) i?4 1) 0) (= (+ (- tr?1) tr?2) 0)
+                (= (+ |j'| (- j?3) 1) 0) (= (+ |i'| (- i?4) -1) 0))))
+(check-sat)

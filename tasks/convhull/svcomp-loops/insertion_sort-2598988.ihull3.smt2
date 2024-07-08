@@ -1,0 +1,5 @@
+(declare-const i Int)
+(declare-const key Int)
+(assert (exists ((|i'?1| Int) (tr?2 Int))
+         (and (<= (- i) 0) (<= (+ (- tr?2) key 1) 0) (= (+ |i'?1| (- i) 1) 0))))
+(check-sat)

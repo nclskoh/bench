@@ -1,0 +1,15 @@
+(declare-const main__sum Int)
+(declare-const main__i Int)
+(declare-const main__n Int)
+(declare-const |main__sum'| Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const |main__i'| Int)
+(assert (and (<= (+ (- main__i) 1) 0) (<= (+ (- main__n) 1) 0)
+               (<= (- main__sum) 0) (<= (+ (- main__n) main__i) 0)
+               (= (+ |main__i'| (- main__i) -1) 0)
+               (= (+ |main__sum'| (- main__sum) (- main__i)) 0)
+               (= (+ term_to_project_onto0_integralized
+                       (- (+ |main__sum'| (- main__sum)))) 0)
+               (= (+ term_to_project_onto_integralized
+                       (- (+ |main__i'| (- main__i)))) 0)))

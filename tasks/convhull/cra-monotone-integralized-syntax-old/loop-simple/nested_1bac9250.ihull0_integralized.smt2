@@ -1,0 +1,6 @@
+(declare-const a Int)
+(declare-const |a'| Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (and (<= (- a) 0) (<= (+ a -5) 0) (= (+ |a'| (- a) -1) 0)
+               (= (+ term_to_project_onto_integralized (- (+ |a'| (- a)))) 0)))
+(check-sat)

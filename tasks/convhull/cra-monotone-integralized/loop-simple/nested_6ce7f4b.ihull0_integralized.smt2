@@ -1,0 +1,6 @@
+(declare-const f Int)
+(declare-const |f'| Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (and (<= (- f) 0) (<= (+ f -5) 0) (= (+ |f'| (- f) -1) 0)
+               (= (+ term_to_project_onto_integralized (- (+ |f'| (- f)))) 0)))
+(check-sat)

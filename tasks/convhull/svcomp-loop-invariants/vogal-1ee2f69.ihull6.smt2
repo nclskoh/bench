@@ -1,0 +1,13 @@
+(declare-const cont Int)
+(declare-const j Int)
+(assert (exists
+         ((|cont'?1| Int) (tr?2 Int) (tr?3 Int) (phi_cont?4 Int) (tr?5 Int)
+            (tr?6 Int) (|j'?7| Int))
+         (and (<= (- cont) 0) (<= (- j) 0) (<= (+ j -1) 0)
+                (or (and (or (<= (+ (- tr?5) tr?6 1) 0)
+                               (<= (+ tr?5 (- tr?6) 1) 0))
+                           (= (+ (- phi_cont?4) cont) 0))
+                      (and (= (+ (- tr?2) tr?3) 0)
+                             (= (+ (- phi_cont?4) cont 1) 0)))
+                (= (+ |cont'?1| (- phi_cont?4)) 0) (= (+ |j'?7| (- j) -1) 0))))
+(check-sat)

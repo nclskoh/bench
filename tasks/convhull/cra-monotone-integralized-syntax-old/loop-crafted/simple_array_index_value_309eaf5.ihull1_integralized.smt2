@@ -1,0 +1,13 @@
+(declare-const |tmp'| Int)
+(declare-const tmp Int)
+(declare-const index Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const |index'| Int)
+(assert (and (<= (- tmp) 0) (<= (- index) 0) (= (+ (* 2 index) (- tmp)) 0)
+               (<= (+ index -9999) 0) (= (+ |tmp'| (- tmp) -2) 0)
+               (= (+ |index'| (- index) -1) 0)
+               (= (+ term_to_project_onto0_integralized
+                       (- (+ |index'| (- index)))) 0)
+               (= (+ term_to_project_onto_integralized (- (+ |tmp'| (- tmp)))) 0)))
+(check-sat)

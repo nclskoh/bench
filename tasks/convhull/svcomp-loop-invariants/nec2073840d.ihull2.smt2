@@ -1,0 +1,8 @@
+(declare-const delta_j Int)
+(declare-const delta_i Int)
+(assert (exists ((|j'?1| Int) (|i'?2| Int) (n?3 Int) (i?4 Int) (j?5 Int))
+         (and (<= (- n?3) 0) (<= (- i?4) 0) (<= (- j?5) 0)
+                (<= (+ i?4 (- n?3)) 0) (= (+ |j'?1| (- j?5) -2) 0)
+                (= (+ |i'?2| (- i?4) -1) 0) (= delta_i (+ |i'?2| (- i?4)))
+                (= delta_j (+ |j'?1| (- j?5))))))
+(check-sat)

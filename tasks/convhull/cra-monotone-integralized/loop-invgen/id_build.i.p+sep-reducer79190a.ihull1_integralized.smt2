@@ -1,0 +1,51 @@
+(declare-const main__i Int)
+(declare-const __VERIFIER_assert__cond___134 Int)
+(declare-const main__j Int)
+(declare-const main__nlen Int)
+(declare-const K Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const |__VERIFIER_assert__cond___151'| Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const __VERIFIER_assert__cond___151 Int)
+(declare-const |main__i'| Int)
+(declare-const |__VERIFIER_assert__cond___134'| Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const |main__j'| Int)
+(declare-const |main__j'0| Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const |main__i'0| Int)
+(assert (and (<= (- main__j) 0) (<= (+ (- main__nlen) 1) 0)
+               (<= (+ (- main__i) 1) 0) (= (+ (- |main__i'0|) K main__i) 0)
+               (<= (+ |main__j'0| (* 8 K) (- main__j) -1) 0)
+               (or (and (= K 0) (= (+ (- |main__j'0|) main__j 1) 0)
+                          (= (+ (- |main__i'0|) main__i) 0))
+                     (and (<= (+ (- K) 1) 0)
+                            (<= (+ main__i (- main__nlen) 2) 0)
+                            (<= (+ (- main__j) 7) 0) (<= (+ (- main__i) 1) 0)
+                            (= |main__j'0| 0) (<= (+ (- |main__i'0|) 2) 0)
+                            (<= (+ |main__i'0| (- main__nlen) 1) 0)))
+               (<= (- K) 0) (<= (- |main__j'0|) 0)
+               (<= (+ (- main__nlen) 1) 0) (<= (+ (- |main__i'0|) 1) 0)
+               (<= (+ |main__j'0| -7) 0)
+               (or (<= (+ (ite (<= (+ |main__i'0| (- main__nlen) 1) 0) 1 0) 1) 0)
+                     (<= (+ (- (ite (<= (+ |main__i'0| (- main__nlen) 1) 0) 1
+                                    0)) 1) 0))
+               (or (<= (+ (ite (<= (- |main__i'0|) 0) 1 0) 1) 0)
+                     (<= (+ (- (ite (<= (- |main__i'0|) 0) 1 0)) 1) 0))
+               (= (+ |__VERIFIER_assert__cond___151'|
+                       (- (ite (<= (+ |main__i'0| (- main__nlen) 1) 0) 1 0))) 0)
+               (= (+ |__VERIFIER_assert__cond___134'|
+                       (- (ite (<= (- |main__i'0|) 0) 1 0))) 0)
+               (= (+ |main__j'| (- |main__j'0|)) 0)
+               (= (+ |main__i'| (- |main__i'0|)) 0)
+               (= (+ term_to_project_onto2_integralized
+                       (- (+ |main__i'| (- main__i)))) 0)
+               (= (+ term_to_project_onto1_integralized
+                       (- (+ |main__j'| (- main__j)))) 0)
+               (= (+ term_to_project_onto0_integralized
+                       (- (+ |__VERIFIER_assert__cond___134'|
+                               (- __VERIFIER_assert__cond___134)))) 0)
+               (= (+ term_to_project_onto_integralized
+                       (- (+ |__VERIFIER_assert__cond___151'|
+                               (- __VERIFIER_assert__cond___151)))) 0)))
+(check-sat)

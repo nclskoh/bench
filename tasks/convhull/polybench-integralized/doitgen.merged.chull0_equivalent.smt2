@@ -1,0 +1,5 @@
+(declare-const delta_p Int)
+(assert (exists ((|p'?1?1| Int) (np?2?2 Int) (p?3?3 Int))
+         (and (<= (- p?3?3) 0) (< (+ (- np?2?2) p?3?3) 0)
+                (= (+ |p'?1?1| (- p?3?3) -1) 0)
+                (= (+ delta_p (- (+ |p'?1?1| (- p?3?3)))) 0))))

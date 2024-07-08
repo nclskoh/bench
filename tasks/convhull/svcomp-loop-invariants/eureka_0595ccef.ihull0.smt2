@@ -1,0 +1,13 @@
+(declare-const i Int)
+(declare-const n Int)
+(declare-const rh Int)
+(assert (exists
+         ((|i'?1| Int) (|rh'?2| Int) (tr?3 Int) (tr?4 Int) (phi_rh?5 Int)
+            (tr?6 Int) (tr?7 Int))
+         (and (<= (- rh) 0) (<= (+ (- i) 1) 0) (<= (+ (- n) 1) 0)
+                (<= (+ (- n) i 1) 0)
+                (or (and (<= (+ (- tr?6) tr?7) 0) (= (+ (- phi_rh?5) rh) 0))
+                      (and (<= (+ (- tr?3) tr?4 1) 0)
+                             (= (+ (- phi_rh?5) i) 0)))
+                (= (+ |i'?1| (- i) -1) 0) (= (+ |rh'?2| (- phi_rh?5)) 0))))
+(check-sat)

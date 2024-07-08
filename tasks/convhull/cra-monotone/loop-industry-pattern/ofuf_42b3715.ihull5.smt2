@@ -1,0 +1,7 @@
+(declare-const |Id_MCDC_132'| Int)
+(declare-const Id_MCDC_132 Int)
+(declare-const term_to_project_onto Real)
+(assert (and (<= (- Id_MCDC_132) 0) (<= (+ Id_MCDC_132 -3) 0)
+               (= (+ |Id_MCDC_132'| (- Id_MCDC_132) -1) 0)
+               (= term_to_project_onto (+ |Id_MCDC_132'| (- Id_MCDC_132)))))
+(check-sat)

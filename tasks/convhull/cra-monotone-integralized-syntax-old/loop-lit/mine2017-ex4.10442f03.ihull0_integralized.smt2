@@ -1,0 +1,7 @@
+(declare-const v Int)
+(declare-const |v'| Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (and (<= (+ (- v) 1) 0) (<= (+ v -50) 0) (<= (+ (- v) 1) 0)
+               (<= (+ v -50) 0) (= (+ |v'| (- v) -2) 0)
+               (= (+ term_to_project_onto_integralized (- (+ |v'| (- v)))) 0)))
+(check-sat)

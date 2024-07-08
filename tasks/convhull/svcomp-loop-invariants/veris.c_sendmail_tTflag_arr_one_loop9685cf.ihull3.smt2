@@ -1,0 +1,10 @@
+(declare-const i Int)
+(declare-const in.10 Int)
+(assert (exists
+         ((|in.10'?1| Int) (havoc?2 Int) (phi_in.10?3 Int) (|i'?4| Int))
+         (and (<= (- i) 0) (<= (+ i -9) 0)
+                (or (= (+ (- phi_in.10?3) in.10) 0)
+                      (= (+ havoc?2 (- phi_in.10?3)) 0))
+                (= (+ |i'?4| (- i) -1) 0)
+                (= (+ |in.10'?1| (- phi_in.10?3)) 0))))
+(check-sat)

@@ -1,0 +1,7 @@
+(declare-const i Int)
+(declare-const |w'| Real)
+(declare-const |k'| Int)
+(assert (exists ((uninterp?1 Int) (w?2 Real) (k?3 Int))
+         (and (<= (- k?3) 0) (<= (+ (- i) 1) 0) (<= (+ (- i) k?3 1) 0)
+                (= (+ uninterp?1 (- w?2) |w'|) 0) (= (+ |k'| (- k?3) -1) 0))))
+(check-sat)

@@ -1,0 +1,8 @@
+(declare-const |k'| Int)
+(declare-const N_LIN Int)
+(declare-const k Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (and (<= (+ (- N_LIN) 1) 0) (<= (- k) 0) (= (+ (- N_LIN) 1) 0)
+               (<= (+ k (- N_LIN) 1) 0) (= (+ |k'| (- k) -1) 0)
+               (= (+ term_to_project_onto_integralized (- (+ |k'| (- k)))) 0)))
+(check-sat)

@@ -1,0 +1,6 @@
+(declare-const SIZE Int)
+(declare-const |j'| Int)
+(assert (exists ((j?1 Int))
+         (and (<= (- j?1) 0) (<= (- SIZE) 0) (<= (+ (- SIZE) j?1 1) 0)
+                (= (+ |j'| (- j?1) -1) 0))))
+(check-sat)

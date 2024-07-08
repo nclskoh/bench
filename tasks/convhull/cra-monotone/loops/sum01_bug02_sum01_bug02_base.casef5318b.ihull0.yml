@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'sum01_bug02_sum01_bug02_base.casef5318b.ihull0.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

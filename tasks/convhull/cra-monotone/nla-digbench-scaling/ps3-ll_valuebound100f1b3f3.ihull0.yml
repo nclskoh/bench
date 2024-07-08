@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'ps3-ll_valuebound100f1b3f3.ihull0.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

@@ -1,0 +1,6 @@
+(declare-const k Int)
+(declare-const |z'| Int)
+(assert (exists ((z?1 Int))
+         (and (<= (+ (- z?1) 1) 0) (<= (+ (- k) z?1 1) 0)
+                (= (+ |z'| (* -2 z?1)) 0))))
+(check-sat)

@@ -1,0 +1,13 @@
+(declare-const delta_c Int)
+(declare-const delta_idx_in Int)
+(declare-const delta_i Int)
+(assert (exists
+         ((|idx_in'?1| Int) (|i'?2| Int) (|c'?3| Int) (tr?4 Int) (c?5 Int)
+            (idx_in?6 Int) (i?7 Int))
+         (and (<= (- idx_in?6) 0) (<= (+ (- c?5) 48) 0) (<= (+ c?5 -57) 0)
+                (= (+ |idx_in'?1| (- idx_in?6) -1) 0)
+                (= (+ (* -10 i?7) |i'?2| (- c?5) 48) 0)
+                (= (+ (- tr?4) |c'?3|) 0) (= delta_c (+ |c'?3| (- c?5)))
+                (= delta_i (+ |i'?2| (- i?7)))
+                (= delta_idx_in (+ |idx_in'?1| (- idx_in?6))))))
+(check-sat)

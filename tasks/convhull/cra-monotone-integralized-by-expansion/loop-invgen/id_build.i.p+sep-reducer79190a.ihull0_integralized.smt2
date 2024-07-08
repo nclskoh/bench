@@ -1,0 +1,15 @@
+(declare-const main__i Int)
+(declare-const main__j Int)
+(declare-const main__nlen Int)
+(declare-const |main__i'| Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const |main__j'| Int)
+(assert (and (<= (- main__j) 0) (<= (+ (- main__nlen) 1) 0)
+               (<= (+ (- main__i) 1) 0) (<= (+ (- main__j) 8) 0)
+               (<= (+ main__i (- main__nlen) 2) 0) (= |main__j'| 0)
+               (= (+ |main__i'| (- main__i) -1) 0)
+               (= (+ term_to_project_onto0_integralized
+                       (- (+ |main__i'| (- main__i)))) 0)
+               (= (+ term_to_project_onto_integralized
+                       (- (+ |main__j'| (- main__j)))) 0)))

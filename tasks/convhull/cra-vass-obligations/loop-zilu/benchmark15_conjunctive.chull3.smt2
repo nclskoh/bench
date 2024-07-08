@@ -1,0 +1,8 @@
+(declare-const |mid'| Int)
+(declare-const |high'| Int)
+(declare-const |low'| Int)
+(assert (exists ((low?1 Int) (mid?2 Int) (high?3 Int))
+         (and (= |low'| (+ low?1 1)) (= |mid'| (+ mid?2 -1))
+                (= |high'| (+ high?3 -1))
+                (= (+ |low'| (* 2 |mid'|) (- |high'|)) 0))))
+(check-sat)

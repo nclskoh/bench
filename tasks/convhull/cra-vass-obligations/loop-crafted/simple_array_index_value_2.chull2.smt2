@@ -1,0 +1,5 @@
+(declare-const index Int)
+(assert (exists ((|param0'?1| Int) (|index'?2| Int))
+         (or (and (= |param0'?1| 1) (= |index'?2| (+ index 1)))
+               (and (= |param0'?1| 0) (= |index'?2| (+ index 1))))))
+(check-sat)

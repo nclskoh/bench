@@ -1,0 +1,6 @@
+(declare-const |d'| Int)
+(declare-const term_to_project_onto Real)
+(declare-const d Int)
+(assert (and (<= (- d) 0) (<= (+ d -5) 0) (= (+ |d'| (- d) -1) 0)
+               (= term_to_project_onto (+ |d'| (- d)))))
+(check-sat)

@@ -1,0 +1,11 @@
+(declare-const i Int)
+(declare-const string_A.4 Int)
+(assert (exists
+         ((|string_A.4'?1| Int) (havoc?2 Int) (phi_string_A.4?3 Int)
+            (|i'?4| Int))
+         (and (<= (- i) 0) (<= (+ i -4) 0)
+                (or (= (+ (- phi_string_A.4?3) string_A.4) 0)
+                      (= (+ havoc?2 (- phi_string_A.4?3)) 0))
+                (= (+ |i'?4| (- i) -1) 0)
+                (= (+ |string_A.4'?1| (- phi_string_A.4?3)) 0))))
+(check-sat)

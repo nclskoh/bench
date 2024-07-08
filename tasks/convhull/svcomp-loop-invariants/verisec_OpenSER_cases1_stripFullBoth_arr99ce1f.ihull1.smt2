@@ -1,0 +1,7 @@
+(declare-const |j'| Int)
+(assert (exists ((tr?1 Int) (tr?2 Int) (tr?3 Int) (j?4 Int))
+         (and (<= (+ (- j?4) 1) 0)
+                (or (= (+ tr?3 -32) 0)
+                      (and (or (<= (+ tr?2 -31) 0) (<= (+ (- tr?2) 33) 0))
+                             (= (+ tr?1 -9) 0))) (= (+ |j'| (- j?4) 1) 0))))
+(check-sat)

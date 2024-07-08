@@ -1,0 +1,7 @@
+(declare-const |j'| Int)
+(declare-const n Int)
+(declare-const |w'| Real)
+(assert (exists ((uninterp?1 Real) (w?2 Real) (j?3 Int))
+         (and (<= (+ (- j?3) 1) 0) (<= (+ (- n) j?3) 0)
+                (= (+ uninterp?1 (- w?2) |w'|) 0) (= (+ |j'| (- j?3) -1) 0))))
+(check-sat)

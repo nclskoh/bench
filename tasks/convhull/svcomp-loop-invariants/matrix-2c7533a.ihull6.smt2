@@ -1,0 +1,6 @@
+(declare-const k Int)
+(declare-const N_LIN Int)
+(assert (exists ((|k'?1| Int))
+         (and (<= (- N_LIN) 0) (<= (- k) 0) (<= (+ k (- N_LIN) 1) 0)
+                (= (+ |k'?1| (- k) -1) 0))))
+(check-sat)

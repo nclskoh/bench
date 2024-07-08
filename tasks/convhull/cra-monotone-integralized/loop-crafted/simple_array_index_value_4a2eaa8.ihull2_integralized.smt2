@@ -1,0 +1,16 @@
+(declare-const tr0 Int)
+(declare-const index2 Int)
+(declare-const index1 Int)
+(declare-const |index2'| Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const |index1'| Int)
+(declare-const tr Int)
+(assert (and (<= (- index2) 0) (<= (- index1) 0)
+               (<= (+ (- index1) index2 1) 0) (= (+ (- tr0) tr) 0)
+               (= (+ |index2'| (- index2) -1) 0)
+               (= (+ |index1'| (- index1) 1) 0)
+               (= (+ term_to_project_onto0_integralized
+                       (- (+ |index1'| (- index1)))) 0)
+               (= (+ term_to_project_onto_integralized
+                       (- (+ |index2'| (- index2)))) 0)))

@@ -1,0 +1,6 @@
+(declare-const delta_nc_B Int)
+(assert (exists ((|nc_B'?1| Int) (tr?2 Int) (tr?3 Int) (nc_B?4 Int))
+         (and (<= (- nc_B?4) 0) (or (<= (+ tr?3 1) 0) (<= (+ (- tr?2) 1) 0))
+                (= (+ |nc_B'?1| (- nc_B?4) -1) 0)
+                (= delta_nc_B (+ |nc_B'?1| (- nc_B?4))))))
+(check-sat)

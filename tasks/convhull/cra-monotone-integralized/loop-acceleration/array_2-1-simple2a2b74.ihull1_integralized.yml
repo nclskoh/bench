@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'array_2-1-simple2a2b74.ihull1_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

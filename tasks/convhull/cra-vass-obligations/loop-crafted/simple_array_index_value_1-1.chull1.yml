@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'simple_array_index_value_1-1.chull1.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

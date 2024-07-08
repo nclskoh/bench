@@ -1,0 +1,5 @@
+(declare-const x Int)
+(declare-const d Int)
+(assert (exists ((|x'?1| Int))
+         (and (<= (+ (- x) 1) 0) (= (+ d |x'?1| (- x)) 0))))
+(check-sat)

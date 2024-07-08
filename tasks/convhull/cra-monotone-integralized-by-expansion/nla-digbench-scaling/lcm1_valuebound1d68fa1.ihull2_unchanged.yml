@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'lcm1_valuebound1d68fa1.ihull2_unchanged.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

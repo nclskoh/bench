@@ -1,0 +1,7 @@
+(declare-const term_to_project_onto Real)
+(declare-const v Int)
+(declare-const |v'| Int)
+(assert (and (<= (+ (- v) 1) 0) (<= (+ v -50) 0) (<= (+ (- v) 1) 0)
+               (<= (+ v -50) 0) (= (+ |v'| (- v) -2) 0)
+               (= term_to_project_onto (+ |v'| (- v)))))
+(check-sat)

@@ -1,0 +1,6 @@
+(declare-const M Int)
+(declare-const |i'| Int)
+(assert (exists ((tr?1 Int) (i?2 Int))
+         (and (<= (- i?2) 0) (<= (- M) 0) (<= (+ (- M) i?2 1) 0)
+                (<= (+ tr?1 -1000000) 0) (= (+ |i'| (- i?2) -1) 0))))
+(check-sat)

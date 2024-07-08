@@ -1,0 +1,7 @@
+(declare-const |A.4092'| Int)
+(declare-const |i'| Int)
+(assert (exists ((A.4092?1 Int) (i?2 Int))
+         (or (and (= |i'| (+ i?2 1)) (= (+ |A.4092'| (- |i'|)) -1))
+               (and (= |i'| (+ i?2 1))
+                      (= (+ |A.4092'| (- |i'|)) (+ (+ A.4092?1 (- i?2)) -1))))))
+(check-sat)

@@ -1,0 +1,34 @@
+(declare-const tr Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const Id_MCDC_89__Id_MCDC_96 Int)
+(declare-const phi_Id_MCDC_89____CPAchecker_TMP_1 Int)
+(declare-const |__VERIFIER_assert__Id_MCDC_92'| Int)
+(declare-const |Id_MCDC_93'| Int)
+(declare-const Id_MCDC_93 Int)
+(declare-const __VERIFIER_assert__Id_MCDC_92 Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const |Id_MCDC_89__Id_MCDC_96'| Int)
+(declare-const tr0 Int)
+(assert (and (<= (- Id_MCDC_89__Id_MCDC_96) 0)
+               (<= (- Id_MCDC_89__Id_MCDC_96) 0)
+               (or (and (<= (+ (- Id_MCDC_89__Id_MCDC_96) 42) 0)
+                          (= (- phi_Id_MCDC_89____CPAchecker_TMP_1) 0))
+                     (and (<= (+ Id_MCDC_89__Id_MCDC_96 -41) 0)
+                            (= (+ (- phi_Id_MCDC_89____CPAchecker_TMP_1) 1) 0)))
+               (or (<= (+ phi_Id_MCDC_89____CPAchecker_TMP_1 1) 0)
+                     (<= (+ (- phi_Id_MCDC_89____CPAchecker_TMP_1) 1) 0))
+               (or (<= (+ tr 1) 0) (<= (+ (- tr0) 1) 0))
+               (= (+ |__VERIFIER_assert__Id_MCDC_92'|
+                       (- phi_Id_MCDC_89____CPAchecker_TMP_1)) 0)
+               (= (+ |Id_MCDC_89__Id_MCDC_96'| (- Id_MCDC_89__Id_MCDC_96) -1) 0)
+               (= (+ |Id_MCDC_93'| (- Id_MCDC_89__Id_MCDC_96)) 0)
+               (= (+ term_to_project_onto1_integralized
+                       (- (+ |Id_MCDC_93'| (- Id_MCDC_93)))) 0)
+               (= (+ term_to_project_onto0_integralized
+                       (- (+ |Id_MCDC_89__Id_MCDC_96'|
+                               (- Id_MCDC_89__Id_MCDC_96)))) 0)
+               (= (+ term_to_project_onto_integralized
+                       (- (+ |__VERIFIER_assert__Id_MCDC_92'|
+                               (- __VERIFIER_assert__Id_MCDC_92)))) 0)))
+(check-sat)

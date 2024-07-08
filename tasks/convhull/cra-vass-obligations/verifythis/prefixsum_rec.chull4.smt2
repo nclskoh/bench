@@ -1,0 +1,6 @@
+(declare-const delta_sum Int)
+(declare-const delta_i Int)
+(assert (exists ((|sum'?1| Int) (|i'?2| Int) (sum?3 Int) (i?4 Int))
+         (and (= |i'?2| (+ i?4 1)) (= delta_i (+ |i'?2| (- i?4)))
+                (= delta_sum (+ |sum'?1| (- sum?3))))))
+(check-sat)

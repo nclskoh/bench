@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'Mono4_1b83161.ihull0_integralized.smt2'
+
+properties:
+  - property_file: ../../../properties/sat_smt.prp
+    expected_verdict:
+

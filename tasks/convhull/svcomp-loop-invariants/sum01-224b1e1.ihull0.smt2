@@ -1,0 +1,8 @@
+(declare-const n Int)
+(declare-const sn Int)
+(declare-const i Int)
+(assert (exists ((|sn'?1| Int) (|i'?2| Int))
+         (and (<= (- sn) 0) (<= (+ (- i) 1) 0) (= (+ (* -2 i) sn 2) 0)
+                (<= (+ (- n) i) 0) (= (+ |sn'?1| (- sn) -2) 0)
+                (= (+ |i'?2| (- i) -1) 0))))
+(check-sat)

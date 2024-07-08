@@ -1,0 +1,13 @@
+(declare-const delta_p@pos Int)
+(declare-const delta_p@width Int)
+(declare-const delta_p Int)
+(assert (exists
+         ((|p@width'?1| Int) (|p@pos'?2| Int) (|p'?3| Int) (pathlim?4 Int)
+            (p?5 Int) (p@pos?6 Int) (p@width?7 Int) (tmp?8 Int))
+         (and (<= (+ (- pathlim?4) p?5) 0) (<= (+ (- tmp?8) p?5) 0)
+                (= (+ (- p@width?7) |p@width'?1|) 0)
+                (= (+ (- p@pos?6) |p@pos'?2| -4) 0)
+                (= (+ |p'?3| (- p?5) -4) 0) (= delta_p (+ |p'?3| (- p?5)))
+                (= delta_p@pos (+ |p@pos'?2| (- p@pos?6)))
+                (= delta_p@width (+ |p@width'?1| (- p@width?7))))))
+(check-sat)

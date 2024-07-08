@@ -1,0 +1,11 @@
+(declare-const |x'| Int)
+(declare-const |y'| Int)
+(declare-const |i'| Int)
+(declare-const edgecount Int)
+(assert (exists
+         ((tr?1 Int) (tr?2 Int) (tr?3 Int) (tr?4 Int) (tr?5 Int) (i?6 Int))
+         (and (<= (- i?6) 0) (<= (- edgecount) 0)
+                (<= (+ (- edgecount) i?6 1) 0)
+                (<= (+ (- tr?1) (- tr?2) tr?3) 0) (= (+ |i'| (- i?6) -1) 0)
+                (= (+ (- tr?4) |y'|) 0) (= (+ (- tr?5) |x'|) 0))))
+(check-sat)

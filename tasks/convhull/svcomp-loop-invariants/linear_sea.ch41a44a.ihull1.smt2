@@ -1,0 +1,8 @@
+(declare-const q Int)
+(declare-const n Int)
+(declare-const |j'| Int)
+(assert (exists ((tr?1 Int) (tr?2 Int) (j?3 Int))
+         (and (<= (- j?3) 0) (<= (+ (- n) j?3 1) 0)
+                (or (<= (+ (- q) tr?2 1) 0) (<= (+ (- tr?1) q 1) 0))
+                (= (+ |j'| (- j?3) -1) 0))))
+(check-sat)

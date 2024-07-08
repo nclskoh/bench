@@ -1,0 +1,8 @@
+(declare-const i Int)
+(declare-const c Int)
+(declare-const idx_in Int)
+(assert (exists ((|idx_in'?1| Int) (|i'?2| Int) (|c'?3| Int) (tr?4 Int))
+         (and (<= (- idx_in) 0) (<= (+ (- c) 48) 0) (<= (+ c -57) 0)
+                (= (+ |idx_in'?1| (- idx_in) -1) 0)
+                (= (+ (* -10 i) |i'?2| (- c) 48) 0) (= (+ (- tr?4) |c'?3|) 0))))
+(check-sat)

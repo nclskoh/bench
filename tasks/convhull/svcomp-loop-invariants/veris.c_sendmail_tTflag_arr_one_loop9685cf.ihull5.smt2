@@ -1,0 +1,13 @@
+(declare-const delta_i Int)
+(declare-const delta_in.10 Int)
+(assert (exists
+         ((|in.10'?1| Int) (havoc?2 Int) (phi_in.10?3 Int) (|i'?4| Int)
+            (in.10?5 Int) (i?6 Int))
+         (and (<= (- i?6) 0) (<= (+ i?6 -9) 0)
+                (or (= (+ (- phi_in.10?3) in.10?5) 0)
+                      (= (+ havoc?2 (- phi_in.10?3)) 0))
+                (= (+ |i'?4| (- i?6) -1) 0)
+                (= (+ |in.10'?1| (- phi_in.10?3)) 0)
+                (= delta_in.10 (+ |in.10'?1| (- in.10?5)))
+                (= delta_i (+ |i'?4| (- i?6))))))
+(check-sat)

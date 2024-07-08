@@ -1,0 +1,8 @@
+(declare-const |i'| Int)
+(declare-const |A.8'| Int)
+(assert (exists ((havoc?1 Int) (phi_A.8?2 Int) (A.8?3 Int) (i?4 Int))
+         (and (<= (- i?4) 0) (<= (+ i?4 -7) 0)
+                (or (= (+ (- phi_A.8?2) A.8?3) 0)
+                      (= (+ havoc?1 (- phi_A.8?2)) 0))
+                (= (+ |i'| (- i?4) -1) 0) (= (+ |A.8'| (- phi_A.8?2)) 0))))
+(check-sat)

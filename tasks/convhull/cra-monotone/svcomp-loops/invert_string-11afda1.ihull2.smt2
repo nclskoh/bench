@@ -1,0 +1,8 @@
+(declare-const MAX Int)
+(declare-const i Int)
+(declare-const |i'| Int)
+(declare-const term_to_project_onto Real)
+(assert (and (<= (- i) 0) (<= (+ (- MAX) 1) 0) (<= (+ (- MAX) i 1) 0)
+               (= (+ |i'| (- i) -1) 0)
+               (= term_to_project_onto (+ |i'| (- i)))))
+(check-sat)

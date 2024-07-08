@@ -1,0 +1,7 @@
+(declare-const i Int)
+(declare-const nodecount Int)
+(assert (exists ((|i'?1| Int) (tr?2 Int))
+         (and (<= (+ (- nodecount) 1) 0) (<= (- i) 0) (= (+ nodecount -5) 0)
+                (<= (+ i (- nodecount) 1) 0) (<= (- tr?2) 0)
+                (= (+ |i'?1| (- i) -1) 0))))
+(check-sat)

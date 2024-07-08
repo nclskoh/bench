@@ -1,0 +1,13 @@
+(declare-const delta_n Int)
+(declare-const delta___cost Int)
+(declare-const delta_flag Int)
+(assert (exists
+         ((|n'?1?1| Int) (|flag'?2?2| Int) (|__cost'?3?3| Int) (n?4?4 Int)
+            (flag?5?5 Int) (__cost?6?6 Int))
+         (and (<= (- flag?5?5) 0) (< (- n?4?4) 0) (<= (- __cost?6?6) 0)
+                (<= (+ (- __cost?6?6) -1) 0) (= (+ |n'?1?1| (- n?4?4) 1) 0)
+                (= (+ |flag'?2?2| -1) 0)
+                (= (+ |__cost'?3?3| (- __cost?6?6) -1) 0)
+                (= (+ delta___cost (- (+ |__cost'?3?3| (- __cost?6?6)))) 0)
+                (= (+ delta_flag (- (+ |flag'?2?2| (- flag?5?5)))) 0)
+                (= (+ delta_n (- (+ |n'?1?1| (- n?4?4)))) 0))))

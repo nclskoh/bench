@@ -1,0 +1,5 @@
+(declare-const |nc_B'| Int)
+(assert (exists ((tr?1 Int) (tr?2 Int) (nc_B?3 Int))
+         (and (<= (- nc_B?3) 0) (or (<= (+ tr?2 1) 0) (<= (+ (- tr?1) 1) 0))
+                (= (+ |nc_B'| (- nc_B?3) -1) 0))))
+(check-sat)

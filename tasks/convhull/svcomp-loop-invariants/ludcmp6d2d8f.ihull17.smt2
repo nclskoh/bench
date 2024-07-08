@@ -1,0 +1,10 @@
+(declare-const delta_w Real)
+(declare-const delta_j Int)
+(assert (exists
+         ((uninterp?1 Real) (|j'?2| Int) (|w'?3| Real) (w?4 Real) (j?5 Int)
+            (n?6 Int))
+         (and (<= (+ (- j?5) 1) 0) (<= (+ (- n?6) j?5) 0)
+                (= (+ uninterp?1 (- w?4) |w'?3|) 0)
+                (= (+ |j'?2| (- j?5) -1) 0) (= delta_j (+ |j'?2| (- j?5)))
+                (= delta_w (+ |w'?3| (- w?4))))))
+(check-sat)

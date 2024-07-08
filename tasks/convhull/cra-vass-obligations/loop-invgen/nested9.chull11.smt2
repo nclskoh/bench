@@ -1,0 +1,13 @@
+(declare-const i Int)
+(declare-const |j'| Int)
+(declare-const K Int)
+(declare-const n Int)
+(declare-const |k'| Int)
+(assert (exists ((k?1 Int) (j?2 Int))
+         (and (= (+ (+ -1 (- k?1)) j?2) 0) (<= 0 (+ (+ -1 (- i)) k?1))
+                (<= 0 (+ (+ -2 (* 3 i)) (- k?1))) (<= 0 (+ -1 n))
+                (= (- K) (- (+ |j'| (- j?2))))
+                (or (and (= K 0) (= k?1 |k'|) (= j?2 |j'|))
+                      (and (<= 1 K) (= (+ (+ -1 (- |k'|)) |j'|) 0))) (<= 
+                0 K))))
+(check-sat)

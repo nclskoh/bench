@@ -16,6 +16,12 @@
   <tasks name="cra-monotone-svcomp">
     <includesfile>../tasks/convhull/cra-monotone-svcomp-reach-safety/ReachSafety-Loops-convhull.set</includesfile>
   </tasks>
+  <tasks name="cra-monotone-nla-digbench-only">
+    <includesfile>../tasks/convhull/cra-monotone-svcomp-reach-safety/nla-digbench.set</includesfile>
+  </tasks>
+  <tasks name="cra-monotone-sc-more-precise">
+    <includesfile>../tasks/convhull/sc_more_precise.set</includesfile>
+  </tasks>
 
   <tasks name="polybench-integralized">
     <includesfile>../tasks/convhull/polybench-integralized/polybench.set</includesfile>
@@ -50,6 +56,10 @@
 
   <rundefinition name="lira-convex-hull-sc-accelerated">
     <option name="-lira-convex-hull-sc-accelerated" />
+  </rundefinition>
+
+  <rundefinition name="lira-convex-hull-sc-precond-accelerate">
+    <option name="-lira-convex-hull-sc-precond-accelerate" />
   </rundefinition>
 
   <rundefinition name="lira-convex-hull-sc-accelerated-no-projection">
@@ -109,6 +119,10 @@
     <option name="-compare-convex-hull-sc-accelerated-vs-lwcooper-inthull" />
   </rundefinition>
 
+  <rundefinition name="compare-convex-hull-cooper-vs-gc">
+    <option name="-compare-convex-hull-cooper-vs-gc" />
+  </rundefinition>
+
   <rundefinition name="compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull">
     <option name="-compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull" />
   </rundefinition>
@@ -125,8 +139,16 @@
     <option name="-compare-convex-hull-sc-accelerated-vs-gc" />
   </rundefinition>
 
-  <rundefinition name="compare-convex-hull-sc-accelerated-vs-real-relaxation">
-    <option name="-compare-convex-hull-sc-accelerated-vs-real-relaxation" />
+  <rundefinition name="compare-convex-hull-sc-vs-precond-accelerate">
+    <option name="-compare-convex-hull-sc-vs-precond-accelerate" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-relax-real-lw">
+    <option name="-compare-convex-hull-sc-accelerated-vs-relax-real-lw" />
+  </rundefinition>
+
+  <rundefinition name="compare-convex-hull-sc-precond-accelerate-vs-relax-real-lw">
+    <option name="-compare-convex-hull-sc-precond-accelerate-vs-relax-real-lw" />
   </rundefinition>
 
   <rundefinition name="lira-convex-hull-run-only-for-pure-int">
@@ -143,6 +165,22 @@
 
   <rundefinition name="convex-hull-by-normaliz">
     <option name="-convex-hull-by-normaliz" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-relax-real-lw">
+    <option name="-convex-hull-by-relax-real-lw" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-relax-real-hull-then-project">
+    <option name="-convex-hull-by-relax-real-hull-then-project" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-relax-real-project-then-hull">
+    <option name="-convex-hull-by-relax-real-project-then-hull" />
+  </rundefinition>
+
+  <rundefinition name="convex-hull-by-cooper">
+    <option name="-lira-convex-hull-lwcooper-inthull" />
   </rundefinition>
 
 </benchmark>

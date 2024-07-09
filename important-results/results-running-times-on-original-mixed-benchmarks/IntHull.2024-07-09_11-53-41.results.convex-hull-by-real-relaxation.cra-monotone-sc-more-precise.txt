@@ -1,0 +1,220 @@
+   BENCHMARK INFORMATION
+Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic.
+benchmark definition:    benchmark-defs/IntHull.xml
+name:                    IntHull
+run sets:                convex-hull-by-real-relaxation.cra-monotone-sc-more-precise
+date:                    Tue, 2024-07-09 11:53:41 EDT
+tool:                    Projection of integer hull 1.0
+tool executable:         /home/diagram/src/research/projects/duet/duet-nk-local-projection/_build/default/srk/src/bigtop.exe
+options:
+resource limits:
+- time:                  300 s
+hardware requirements:
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    ins7570
+os:                      Linux-5.15.0-113-generic-x86_64-with-glibc2.35
+cpu:                     Intel Core i7-8550U CPU @ 1.80GHz
+- cores:                 8
+- max frequency:         4000.0 MHz
+- turbo boost enabled:   True
+ram:                     16492.572672000002 MB
+------------------------------------------------------------
+
+
+
+lira-convex-hull-sc.cra-monotone-sc-more-precise
+Run set 1 of 30: skipped
+
+
+lira-convex-hull-sc-accelerated.cra-monotone-sc-more-precise
+Run set 2 of 30: skipped
+
+
+lira-convex-hull-sc-precond-accelerate.cra-monotone-sc-more-precise
+Run set 3 of 30: skipped
+
+
+lira-convex-hull-sc-accelerated-no-projection.cra-monotone-sc-more-precise
+Run set 4 of 30: skipped
+
+
+lira-convex-hull-intfrac.cra-monotone-sc-more-precise
+Run set 5 of 30: skipped
+
+
+lira-convex-hull-intfrac-accelerated.cra-monotone-sc-more-precise
+Run set 6 of 30: skipped
+
+
+compare-convex-hull-sc-vs-lw.cra-monotone-sc-more-precise
+Run set 7 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lw.cra-monotone-sc-more-precise
+Run set 8 of 30: skipped
+
+
+compare-convex-hull-intfrac-vs-lw.cra-monotone-sc-more-precise
+Run set 9 of 30: skipped
+
+
+compare-convex-hull-intfrac-accelerated-vs-lw.cra-monotone-sc-more-precise
+Run set 10 of 30: skipped
+
+
+compare-convex-hull-sc-vs-intfrac.cra-monotone-sc-more-precise
+Run set 11 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated.cra-monotone-sc-more-precise
+Run set 12 of 30: skipped
+
+
+compare-convex-hull-intfrac-accelerated.cra-monotone-sc-more-precise
+Run set 13 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac-accelerated.cra-monotone-sc-more-precise
+Run set 14 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac.cra-monotone-sc-more-precise
+Run set 15 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper.cra-monotone-sc-more-precise
+Run set 16 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-inthull.cra-monotone-sc-more-precise
+Run set 17 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull.cra-monotone-sc-more-precise
+Run set 18 of 30: skipped
+
+
+compare-convex-hull-sc-vs-lwcooper.cra-monotone-sc-more-precise
+Run set 19 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-subspace.cra-monotone-sc-more-precise
+Run set 20 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-gc.cra-monotone-sc-more-precise
+Run set 21 of 30: skipped
+
+
+compare-convex-hull-sc-vs-precond-accelerate.cra-monotone-sc-more-precise
+Run set 22 of 30: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-real-relaxation.cra-monotone-sc-more-precise
+Run set 23 of 30: skipped
+
+
+compare-convex-hull-sc-precond-accelerate-vs-real-relaxation.cra-monotone-sc-more-precise
+Run set 24 of 30: skipped
+
+
+compare-convex-hull-sc-precond-accelerate-vs-real-relaxation.cra-monotone-sc-more-precise
+Run set 25 of 30: skipped
+
+
+lira-convex-hull-run-only-for-pure-int.cra-monotone-sc-more-precise
+Run set 26 of 30: skipped
+
+
+convex-hull-by-gc.cra-monotone-sc-more-precise
+Run set 27 of 30: skipped
+
+
+convex-hull-by-gc-terms.cra-monotone-sc-more-precise
+Run set 28 of 30: skipped
+
+
+convex-hull-by-normaliz.cra-monotone-sc-more-precise
+Run set 29 of 30: skipped
+
+
+convex-hull-by-real-relaxation.cra-monotone-sc-more-precise
+Run set 30 of 30 with options '-convex-hull-by-real-relaxation' and propertyfile 'None'
+
+inputfile                                                          status                       cpu time   wall time        host
+--------------------------------------------------------------------------------------------------------------------------------
+loop-invgen/heapsort45f98d.ihull1.yml                              done                             0.07        0.08        None
+loop-lit/bh2017-ex1-poly3c1afd.ihull1.yml                          done                             0.04        0.04        None
+loop-new/count_by_k6636db.ihull0.yml                               done                             0.04        0.04        None
+loops/lu.cmpf36ad8.ihull4.yml                                      done                             0.05        0.06        None
+loops/ludcmp94806e.ihull4.yml                                      done                             0.06        0.06        None
+loops-crafted-1/nested3-2_abstracted50fe97.ihull0.yml              done                             0.04        0.04        None
+loops-crafted-1/nested3-2bba9d6.ihull1.yml                         done                             0.04        0.04        None
+loops-crafted-1/nested5-20a6d69.ihull1.yml                         done                             0.04        0.04        None
+nla-digbench/divbindc731c.ihull0.yml                               done                             0.04        0.05        None
+nla-digbench/hard2ea7672.ihull1.yml                                done                             0.05        0.05        None
+nla-digbench/prodbin-ll5463a7.ihull0.yml                           done                             0.04        0.04        None
+nla-digbench/prodbin70533c.ihull0.yml                              done                             0.04        0.05        None
+nla-digbench-scaling/dijkstra-u_unwindbound10bb495c.ihull0.yml     done                             0.11        0.11        None
+nla-digbench-scaling/dijkstra-u_unwindbound2319c50.ihull0.yml      done                             0.10        0.10        None
+nla-digbench-scaling/dijkstra-u_unwindbound50b2482d.ihull0.yml     done                             0.10        0.10        None
+nla-digbench-scaling/dijkstra-u_unwindbound5d23f3b.ihull0.yml      done                             0.09        0.09        None
+nla-digbench-scaling/divbin_unwindbound100658e6b.ihull0.yml        done                             0.05        0.05        None
+nla-digbench-scaling/divbin_unwindbound109b57e3.ihull0.yml         done                             0.06        0.06        None
+nla-digbench-scaling/divbin_unwindbound204f03a4.ihull0.yml         done                             0.05        0.05        None
+nla-digbench-scaling/divbin_unwindbound2e2a02f.ihull0.yml          done                             0.04        0.04        None
+nla-digbench-scaling/divbin_unwindbound500e51ae.ihull0.yml         done                             0.04        0.04        None
+nla-digbench-scaling/divbin_unwindbound5c22e18.ihull0.yml          done                             0.04        0.05        None
+nla-digbench-scaling/divbin_valuebound100d7aa37.ihull0.yml         done                             0.05        0.05        None
+nla-digbench-scaling/divbin_valuebound109f9844.ihull0.yml          done                             0.06        0.06        None
+nla-digbench-scaling/divbin_valuebound2073a365.ihull0.yml          done                             0.05        0.05        None
+nla-digbench-scaling/divbin_valuebound20db30a.ihull0.yml           done                             0.05        0.05        None
+nla-digbench-scaling/divbin_valuebound507066e0.ihull0.yml          done                             0.04        0.04        None
+nla-digbench-scaling/divbin_valuebound558574a.ihull0.yml           done                             0.05        0.05        None
+nla-digbench-scaling/egcd3-ll_unwindbound5fde5d5.ihull2.yml        done                             0.08        0.08        None
+nla-digbench-scaling/hard-ll_unwindbound1000bee28.ihull1.yml       done                             0.07        0.07        None
+nla-digbench-scaling/hard-ll_unwindbound2072976a.ihull1.yml        done                             0.06        0.06        None
+nla-digbench-scaling/hard-ll_unwindbound5005d557.ihull1.yml        done                             0.08        0.08        None
+nla-digbench-scaling/hard-ll_valuebound1244f48.ihull1.yml          done                             0.05        0.06        None
+nla-digbench-scaling/hard-u_unwindbound10016d6e4.ihull1.yml        done                             0.07        0.07        None
+nla-digbench-scaling/hard-u_unwindbound20b5c088.ihull1.yml         done                             0.06        0.06        None
+nla-digbench-scaling/hard-u_unwindbound50c608d6.ihull1.yml         done                             0.08        0.08        None
+nla-digbench-scaling/hard-u_valuebound1fdef4d.ihull1.yml           done                             0.05        0.05        None
+nla-digbench-scaling/hard2_unwindbound10bdaa09.ihull1.yml          done                             0.07        0.07        None
+nla-digbench-scaling/hard2_unwindbound20238fb7.ihull1.yml          done                             0.06        0.06        None
+nla-digbench-scaling/hard2_unwindbound2424754.ihull1.yml           done                             0.06        0.07        None
+nla-digbench-scaling/hard2_valuebound100fb9f05.ihull1.yml          done                             0.05        0.06        None
+nla-digbench-scaling/hard2_valuebound10773c59.ihull1.yml           done                             0.07        0.07        None
+nla-digbench-scaling/hard2_valuebound19188f4.ihull1.yml            done                             0.06        0.06        None
+nla-digbench-scaling/hard2_valuebound20dd0c97.ihull1.yml           done                             0.09        0.09        None
+nla-digbench-scaling/hard2_valuebound22dcec2.ihull1.yml            done                             0.06        0.07        None
+nla-digbench-scaling/hard2_valuebound5024d7dc.ihull1.yml           done                             0.06        0.06        None
+nla-digbench-scaling/hard2_valuebound508bb83.ihull1.yml            done                             0.05        0.05        None
+nla-digbench-scaling/prod4br-ll_valuebound100041ea2.ihull0.yml     done                             0.07        0.07        None
+nla-digbench-scaling/prod4br-ll_valuebound105a5986.ihull0.yml      done                             0.08        0.08        None
+nla-digbench-scaling/prod4br-ll_valuebound14b39d8.ihull0.yml       done                             0.08        0.08        None
+nla-digbench-scaling/prod4br-ll_valuebound20144daa.ihull0.yml      done                             0.07        0.07        None
+nla-digbench-scaling/prod4br-ll_valuebound265edbb.ihull0.yml       done                             0.08        0.08        None
+nla-digbench-scaling/prod4br-ll_valuebound50f3156d.ihull0.yml      done                             0.07        0.07        None
+nla-digbench-scaling/prod4br-ll_valuebound53722ac.ihull0.yml       done                             0.07        0.07        None
+nla-digbench-scaling/prodbin-ll_unwindbound100fb22f2.ihull0.yml    done                             0.05        0.05        None
+nla-digbench-scaling/prodbin-ll_unwindbound10c28dd9.ihull0.yml     done                             0.05        0.05        None
+nla-digbench-scaling/prodbin-ll_unwindbound13336da.ihull0.yml      done                             0.07        0.07        None
+nla-digbench-scaling/prodbin-ll_unwindbound2032c43e.ihull0.yml     done                             0.05        0.05        None
+nla-digbench-scaling/prodbin-ll_unwindbound50332d02.ihull0.yml     done                             0.05        0.05        None
+nla-digbench-scaling/prodbin-ll_unwindbound53aa33c.ihull0.yml      done                             0.04        0.04        None
+nla-digbench-scaling/prodbin-ll_valuebound1d7d65b.ihull0.yml       done                             0.05        0.05        None
+verifythis/prefixsum_iter3301dd.ihull3.yml                         done                             0.05        0.05        None
+--------------------------------------------------------------------------------------------------------------------------------
+Run set 30                                                         done                             5.46       13.68           -
+
+Statistics:             62 Files
+  correct:               0
+    correct true:        0
+    correct false:       0
+  incorrect:             0
+    incorrect true:      0
+    incorrect false:     0
+  unknown:               0

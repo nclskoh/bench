@@ -1,0 +1,236 @@
+   BENCHMARK INFORMATION
+Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic.
+benchmark definition:    benchmark-defs/IntHull.xml
+name:                    IntHull
+run sets:                convex-hull-by-gc-terms.cra-monotone-svcomp-integralized
+date:                    Tue, 2024-07-09 01:47:12 EDT
+tool:                    Projection of integer hull 1.0
+tool executable:         /home/diagram/src/research/projects/duet/duet-nk-local-projection/_build/default/srk/src/bigtop.exe
+options:
+resource limits:
+- time:                  300 s
+hardware requirements:
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    ins7570
+os:                      Linux-5.15.0-113-generic-x86_64-with-glibc2.35
+cpu:                     Intel Core i7-8550U CPU @ 1.80GHz
+- cores:                 8
+- max frequency:         4000.0 MHz
+- turbo boost enabled:   True
+ram:                     16492.572672000002 MB
+------------------------------------------------------------
+
+
+
+lira-convex-hull-sc.cra-monotone-svcomp-integralized
+Run set 1 of 25: skipped
+
+
+lira-convex-hull-sc-accelerated.cra-monotone-svcomp-integralized
+Run set 2 of 25: skipped
+
+
+lira-convex-hull-sc-accelerated-no-projection.cra-monotone-svcomp-integralized
+Run set 3 of 25: skipped
+
+
+lira-convex-hull-intfrac.cra-monotone-svcomp-integralized
+Run set 4 of 25: skipped
+
+
+lira-convex-hull-intfrac-accelerated.cra-monotone-svcomp-integralized
+Run set 5 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lw.cra-monotone-svcomp-integralized
+Run set 6 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lw.cra-monotone-svcomp-integralized
+Run set 7 of 25: skipped
+
+
+compare-convex-hull-intfrac-vs-lw.cra-monotone-svcomp-integralized
+Run set 8 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated-vs-lw.cra-monotone-svcomp-integralized
+Run set 9 of 25: skipped
+
+
+compare-convex-hull-sc-vs-intfrac.cra-monotone-svcomp-integralized
+Run set 10 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated.cra-monotone-svcomp-integralized
+Run set 11 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated.cra-monotone-svcomp-integralized
+Run set 12 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac-accelerated.cra-monotone-svcomp-integralized
+Run set 13 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac.cra-monotone-svcomp-integralized
+Run set 14 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper.cra-monotone-svcomp-integralized
+Run set 15 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-inthull.cra-monotone-svcomp-integralized
+Run set 16 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull.cra-monotone-svcomp-integralized
+Run set 17 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lwcooper.cra-monotone-svcomp-integralized
+Run set 18 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-subspace.cra-monotone-svcomp-integralized
+Run set 19 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-gc.cra-monotone-svcomp-integralized
+Run set 20 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-real-relaxation.cra-monotone-svcomp-integralized
+Run set 21 of 25: skipped
+
+
+lira-convex-hull-run-only-for-pure-int.cra-monotone-svcomp-integralized
+Run set 22 of 25: skipped
+
+
+convex-hull-by-gc.cra-monotone-svcomp-integralized
+Run set 23 of 25: skipped
+
+
+convex-hull-by-gc-terms.cra-monotone-svcomp-integralized
+Run set 24 of 25 with options '-convex-hull-by-gc-terms' and propertyfile 'None'
+
+inputfile                                                                                status                       cpu time   wall time        host
+------------------------------------------------------------------------------------------------------------------------------------------------------
+loop-acceleration/array3a608db.ihull0_integralized.yml                                   done                             0.06        0.06        None
+loop-acceleration/array3a608db.ihull1_integralized.yml                                   done                             0.04        0.05        None
+loop-acceleration/array_1-1414c74.ihull0_integralized.yml                                done                             0.05        0.05        None
+loop-acceleration/array_1-2d56a76.ihull0_integralized.yml                                done                             0.05        0.05        None
+loop-acceleration/array_2-1-simplefb7beb.ihull0_integralized.yml                         done                             0.05        0.05        None
+loop-acceleration/array_2-1-simplefb7beb.ihull1_integralized.yml                         done                             0.04        0.04        None
+loop-acceleration/array_2-1-simplefb7beb.ihull2_integralized.yml                         done                             0.04        0.04        None
+loop-acceleration/array_2-1c715a5.ihull0_integralized.yml                                done                             0.04        0.04        None
+loop-acceleration/array_2-1c715a5.ihull1_integralized.yml                                done                             0.05        0.05        None
+loop-acceleration/array_2-2-simplef712b5.ihull0_integralized.yml                         done                             0.06        0.06        None
+loop-acceleration/array_2-2-simplef712b5.ihull1_integralized.yml                         done                             0.05        0.05        None
+loop-acceleration/array_2-2-simplef712b5.ihull2_integralized.yml                         done                             0.04        0.04        None
+loop-acceleration/array_2-20c0033.ihull0_integralized.yml                                done                             0.04        0.04        None
+loop-acceleration/array_2-20c0033.ihull1_integralized.yml                                done                             0.06        0.06        None
+loop-acceleration/array_3-15537f2.ihull0_integralized.yml                                done                             0.05        0.05        None
+loop-acceleration/array_3-15537f2.ihull1_integralized.yml                                done                             0.06        0.06        None
+loop-acceleration/array_3-29475fd.ihull0_integralized.yml                                done                             0.04        0.04        None
+loop-acceleration/array_3-29475fd.ihull1_integralized.yml                                done                             0.06        0.06        None
+loop-acceleration/array_47d3f4f.ihull0_integralized.yml                                  done                             0.05        0.05        None
+loop-acceleration/array_47d3f4f.ihull1_integralized.yml                                  done                             0.04        0.04        None
+loop-acceleration/const_1-10e1343.ihull0_integralized.yml                                done                             0.05        0.05        None
+loop-acceleration/const_1-264aafd.ihull0_integralized.yml                                done                             0.05        0.05        None
+loop-acceleration/diamond_1-1016906.ihull0_integralized.yml                              done                             0.04        0.04        None
+loop-acceleration/diamond_1-2b68c52.ihull0_integralized.yml                              done                             0.05        0.05        None
+loop-acceleration/diamond_2-2e50752.ihull0_integralized.yml                              done                             1.52        1.52        None
+loop-acceleration/functions_1-13cb15b.ihull0_integralized.yml                            done                             0.05        0.05        None
+loop-acceleration/functions_1-2750db5.ihull0_integralized.yml                            done                             0.05        0.05        None
+loop-acceleration/multivar_1-12edbe8.ihull0_integralized.yml                             done                             0.05        0.05        None
+loop-acceleration/multivar_1-279ffcf.ihull0_integralized.yml                             done                             0.05        0.05        None
+loop-acceleration/nested_1-12013c4.ihull0_integralized.yml                               done                             0.04        0.04        None
+loop-acceleration/nested_1-12013c4.ihull1_integralized.yml                               done                             0.05        0.05        None
+loop-acceleration/nested_1-2caa444.ihull0_integralized.yml                               done                             0.05        0.05        None
+loop-acceleration/nested_1-2caa444.ihull1_integralized.yml                               done                             0.04        0.04        None
+loop-acceleration/overflow_1-1a74315.ihull0_integralized.yml                             done                             0.04        0.04        None
+loop-acceleration/phases_1-1853012.ihull0_integralized.yml                               done                             0.04        0.04        None
+loop-acceleration/phases_1-2c16558.ihull0_integralized.yml                               done                             0.05        0.05        None
+loop-acceleration/phases_2-11b357d.ihull0_integralized.yml                               done                             0.05        0.05        None
+loop-acceleration/phases_2-294ed72.ihull0_integralized.yml                               done                             0.05        0.05        None
+loop-acceleration/simple_1-1160d96.ihull0_integralized.yml                               done                             0.04        0.04        None
+loop-acceleration/simple_1-2fe61a7.ihull0_integralized.yml                               done                             0.07        0.07        None
+loop-acceleration/simple_2-1d3d136.ihull0_integralized.yml                               done                             0.04        0.05        None
+loop-acceleration/simple_2-2bd840e.ihull0_integralized.yml                               done                             0.04        0.05        None
+loop-acceleration/simple_3-1082fe9.ihull0_integralized.yml                               done                             0.05        0.05        None
+loop-acceleration/simple_3-2a45c1a.ihull0_integralized.yml                               done                             0.06        0.07        None
+loop-acceleration/simple_4-128d51b.ihull0_integralized.yml                               done                             0.04        0.04        None
+loop-acceleration/simple_4-231dd64.ihull0_integralized.yml                               done                             0.04        0.05        None
+loop-acceleration/underapprox_1-15fa04f.ihull0_integralized.yml                          done                             0.05        0.05        None
+loop-acceleration/underapprox_1-24b3809.ihull0_integralized.yml                          done                             0.05        0.05        None
+loop-acceleration/underapprox_2-1db4f7e.ihull0_integralized.yml                          done                             0.05        0.05        None
+loop-acceleration/underapprox_2-29a0544.ihull0_integralized.yml                          done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_1-10a80c9.ihull0_integralized.yml                  done                             0.07        0.05        None
+loop-crafted/simple_array_index_value_1-10a80c9.ihull1_integralized.yml                  done                             0.04        0.05        None
+loop-crafted/simple_array_index_value_1-20898b8.ihull0_integralized.yml                  done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_2de44bd.ihull0_integralized.yml                    done                             0.04        0.04        None
+loop-crafted/simple_array_index_value_2de44bd.ihull1_integralized.yml                    done                             0.04        0.04        None
+loop-crafted/simple_array_index_value_31f8399.ihull0_integralized.yml                    done                             0.07        0.08        None
+loop-crafted/simple_array_index_value_31f8399.ihull1_integralized.yml                    done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_4.i.v+lhb-reducerff10b3.ihull0_integralized.yml    done                             0.06        0.07        None
+loop-crafted/simple_array_index_value_4.i.v+lhb-reducerff10b3.ihull1_integralized.yml    done                             0.04        0.04        None
+loop-crafted/simple_array_index_value_4.i.v+lhb-reducerff10b3.ihull2_integralized.yml    done                             0.06        0.06        None
+loop-crafted/simple_array_index_value_4.i.v+nlh-reducer480d5c.ihull0_integralized.yml    done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_4.i.v+nlh-reducer480d5c.ihull1_integralized.yml    done                             0.04        0.04        None
+loop-crafted/simple_array_index_value_4.i.v+nlh-reducer480d5c.ihull2_integralized.yml    done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_4cfffce.ihull0_integralized.yml                    done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_4cfffce.ihull1_integralized.yml                    done                             0.05        0.05        None
+loop-crafted/simple_array_index_value_4cfffce.ihull2_integralized.yml                    done                             0.05        0.05        None
+loop-crafted/simple_vardep_1b94736.ihull0_integralized.yml                               done                             0.10        0.06        None
+loop-crafted/simple_vardep_2ace4e3.ihull0_integralized.yml                               done                             0.17        0.08        None
+loop-industry-pattern/aiob_193a14d.ihull0_integralized.yml                               done                             0.11        0.11        None
+loop-industry-pattern/aiob_2144a14.ihull0_integralized.yml                               done                             0.10        0.11        None
+loop-industry-pattern/aiob_3ff9222.ihull0_integralized.yml                               done                             0.11        0.11        None
+loop-industry-pattern/aiob_4.c.v+cfa-reduceree2932.ihull0_integralized.yml               done                             0.06        0.06        None
+loop-industry-pattern/aiob_4.c.v+lh-reducer7471c3.ihull0_integralized.yml                done                             0.04        0.04        None
+loop-industry-pattern/aiob_4.c.v+lhb-reducer32f5f1.ihull0_integralized.yml               done                             0.09        0.09        None
+loop-industry-pattern/aiob_400a6d0.ihull0_integralized.yml                               done                             0.06        0.06        None
+loop-industry-pattern/mod3.c.v+cfa-reducer7129c2.ihull0_integralized.yml                 done                             0.06        0.06        None
+loop-industry-pattern/mod3.c.v+lhb-reducer7ac057.ihull0_integralized.yml                 done                             0.26        0.10        None
+loop-industry-pattern/mod3.c.v+lhb-reducer7ac057.ihull1_integralized.yml                 done                             0.07        0.07        None
+loop-industry-pattern/mod3.c.v+lhb-reducer7ac057.ihull2_integralized.yml                 done                             0.07        0.07        None
+loop-industry-pattern/mod3.c.v+sep-reducer48f509.ihull0_integralized.yml                 done                             0.05        0.05        None
+loop-industry-pattern/mod3.c.v+sep-reducer48f509.ihull1_integralized.yml                 done                             0.31        0.11        None
+loop-industry-pattern/mod3.c.v+sep-reducer48f509.ihull2_integralized.yml                 done                             0.07        0.07        None
+loop-industry-pattern/mod3ad52a6.ihull0_integralized.yml                                 done                             0.05        0.05        None
+loop-industry-pattern/nested-32fa673.ihull0_integralized.yml                             done                             0.05        0.05        None
+loop-industry-pattern/nested-32fa673.ihull1_integralized.yml                             done                             0.08        0.08        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull0_integralized.yml                               done                             0.04        0.04        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull1_integralized.yml                               done                             0.06        0.06        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull2_integralized.yml                               done                             0.11        0.11        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull3_integralized.yml                               done                             0.11        0.11        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull4_integralized.yml                               TIMEOUT                        300.67      300.83        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull5_integralized.yml                               done                             0.04        0.04        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull6_integralized.yml                               done                             1.09        1.09        None
+loop-industry-pattern/ofuf_1ba9ad6.ihull7_integralized.yml                               done                             0.06        0.06        None
+loop-industry-pattern/ofuf_285cbaf.ihull0_integralized.yml                               done                             0.04        0.04        None
+loop-industry-pattern/ofuf_285cbaf.ihull1_integralized.yml                               done                             0.04        0.04        None
+loop-industry-pattern/ofuf_285cbaf.ihull2_integralized.yml                               done                             0.10        0.10        None
+loop-industry-pattern/ofuf_285cbaf.ihull3_integralized.yml                               done                             0.08        0.08        None
+loop-industry-pattern/ofuf_285cbaf.ihull4_integralized.yml                               TIMEOUT                        300.62      302.80        None
+loop-industry-pattern/ofuf_285cbaf.ihull5_integralized.yml                               done                             0.05        0.06        None
+loop-industry-pattern/ofuf_285cbaf.ihull6_integralized.yml                               done                             1.02        1.02        None
+loop-industry-pattern/ofuf_285cbaf.ihull7_integralized.yml                               done                             0.06        0.06        None
+loop-industry-pattern/ofuf_32f9c45.ihull0_integralized.yml                               done                             0.07        0.07        None
+loop-industry-pattern/ofuf_32f9c45.ihull1_integralized.yml                               done                             0.08        0.08        None
+loop-industry-pattern/ofuf_32f9c45.ihull2_integralized.yml                               done                             0.12        0.12        None
+loop-industry-pattern/ofuf_32f9c45.ihull3_integralized.yml                               done                             0.10        0.10        None
+loop-industry-pattern/ofuf_32f9c45.ihull4_integralized.yml                               TIMEOUT                        300.72      300.85        None
+loop-industry-pattern/ofuf_32f9c45.ihull5_integralized.yml                               done                             0.07        0.07        None
+loop-industry-pattern/ofuf_32f9c45.ihull6_integralized.yml                               done                             1.21        1.21        None
+loop-industry-pattern/ofuf_32f9c45.ihull7_integralized.yml                               done                             0.06        0.07        None
+loop-industry-pattern/ofuf_4db4e59.ihull0_integralized.yml                               done                             0.06        0.06        None
+loop-industry-pattern/ofuf_4db4e59.ihull1_integralized.yml                               done                             0.04        0.05        None
+loop-industry-pattern/ofuf_4db4e59.ihull2_integralized.yml                               done                             0.09        0.09        None
+loop-industry-pattern/ofuf_4db4e59.ihull3_integralized.yml                               done                             0.08        0.08        None

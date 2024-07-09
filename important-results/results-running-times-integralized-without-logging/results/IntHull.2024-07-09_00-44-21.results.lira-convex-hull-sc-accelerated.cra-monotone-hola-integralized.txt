@@ -1,0 +1,224 @@
+   BENCHMARK INFORMATION
+Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic.
+benchmark definition:    benchmark-defs/IntHull.xml
+name:                    IntHull
+run sets:                lira-convex-hull-sc-accelerated.cra-monotone-hola-integralized
+date:                    Tue, 2024-07-09 00:44:21 EDT
+tool:                    Projection of integer hull 1.0
+tool executable:         /home/diagram/src/research/projects/duet/duet-nk-local-projection/_build/default/srk/src/bigtop.exe
+options:
+resource limits:
+- time:                  300 s
+hardware requirements:
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    ins7570
+os:                      Linux-5.15.0-113-generic-x86_64-with-glibc2.35
+cpu:                     Intel Core i7-8550U CPU @ 1.80GHz
+- cores:                 8
+- max frequency:         4000.0 MHz
+- turbo boost enabled:   True
+ram:                     16492.572672000002 MB
+------------------------------------------------------------
+
+
+
+lira-convex-hull-sc.cra-monotone-hola-integralized
+Run set 1 of 25: skipped
+
+
+lira-convex-hull-sc-accelerated.cra-monotone-hola-integralized
+Run set 2 of 25 with options '-lira-convex-hull-sc-accelerated' and propertyfile 'None'
+
+inputfile                                          status                       cpu time   wall time        host
+----------------------------------------------------------------------------------------------------------------
+0157b4e4.ihull0_integralized.yml                   done                             0.07        0.07        None
+0259234c.ihull0_integralized.yml                   done                             0.07        0.07        None
+036459e2.ihull0_integralized.yml                   done                             0.05        0.05        None
+036459e2.ihull1_integralized.yml                   done                             0.09        0.09        None
+036459e2.ihull2_integralized.yml                   done                             0.05        0.05        None
+0407d24f.ihull0_integralized.yml                   done                             0.04        0.04        None
+05eeafb8.ihull0_integralized.yml                   done                             0.05        0.05        None
+06fdac7c.ihull0_integralized.yml                   done                             0.06        0.06        None
+06fdac7c.ihull1_integralized.yml                   done                             0.18        0.18        None
+07a14295.ihull0_integralized.yml                   done                             0.04        0.04        None
+0878338d.ihull0_integralized.yml                   done                             0.07        0.07        None
+09653172.ihull0_integralized.yml                   done                             0.05        0.05        None
+09653172.ihull1_integralized.yml                   done                             0.06        0.07        None
+09653172.ihull2_integralized.yml                   done                             0.05        0.05        None
+09653172.ihull3_integralized.yml                   done                             0.05        0.05        None
+1053498c.ihull0_integralized.yml                   done                             0.07        0.07        None
+11edc5e1.ihull0_integralized.yml                   done                             0.05        0.05        None
+124cfc96.ihull0_integralized.yml                   done                             0.05        0.05        None
+124cfc96.ihull1_integralized.yml                   done                             0.05        0.05        None
+13e906a0.ihull0_integralized.yml                   done                             0.08        0.08        None
+14af5536.ihull0_integralized.yml                   done                             0.05        0.05        None
+1562741a.ihull0_integralized.yml                   done                             0.07        0.07        None
+161e7a6d.ihull0_integralized.yml                   done                             0.04        0.04        None
+179587ed.ihull0_integralized.yml                   done                             0.05        0.05        None
+179587ed.ihull1_integralized.yml                   done                             0.05        0.05        None
+189fa76b.ihull0_integralized.yml                   done                             0.05        0.05        None
+1908292e.ihull0_integralized.yml                   done                             0.06        0.06        None
+20a11846.ihull0_integralized.yml                   done                             0.06        0.06        None
+21acd740.ihull0_integralized.yml                   done                             0.05        0.05        None
+223fef4e.ihull0_integralized.yml                   done                             0.05        0.05        None
+23c3a5e7.ihull0_integralized.yml                   done                             0.05        0.05        None
+240f0cdb.ihull0_integralized.yml                   done                             0.05        0.05        None
+240f0cdb.ihull1_integralized.yml                   done                             0.05        0.05        None
+240f0cdb.ihull2_integralized.yml                   done                             0.05        0.05        None
+25aabfdd.ihull0_integralized.yml                   done                             0.07        0.07        None
+25aabfdd.ihull1_integralized.yml                   done                             0.08        0.08        None
+26fb6cf3.ihull0_integralized.yml                   done                             0.05        0.05        None
+26fb6cf3.ihull1_integralized.yml                   done                             0.07        0.07        None
+26fb6cf3.ihull2_integralized.yml                   done                             1.21        1.22        None
+274af2f0.ihull0_integralized.yml                   done                             0.04        0.04        None
+274af2f0.ihull1_integralized.yml                   done                             0.07        0.07        None
+274af2f0.ihull2_integralized.yml                   done                             0.05        0.05        None
+28fe0084.ihull0_integralized.yml                   done                             0.04        0.04        None
+28fe0084.ihull1_integralized.yml                   done                             0.06        0.06        None
+2916a67f.ihull0_integralized.yml                   done                             0.05        0.05        None
+2916a67f.ihull1_integralized.yml                   done                             0.09        0.09        None
+30c62f68.ihull0_integralized.yml                   done                             0.04        0.04        None
+3160613f.ihull0_integralized.yml                   done                             0.06        0.06        None
+3160613f.ihull1_integralized.yml                   done                             0.06        0.06        None
+3160613f.ihull2_integralized.yml                   done                             0.05        0.05        None
+326d2aad.ihull0_integralized.yml                   done                             0.05        0.05        None
+33d3bb2b.ihull0_integralized.yml                   done                             0.04        0.04        None
+33d3bb2b.ihull1_integralized.yml                   done                             0.04        0.05        None
+33d3bb2b.ihull2_integralized.yml                   done                             0.08        0.08        None
+34a03186.ihull0_integralized.yml                   done                             0.08        0.08        None
+352e03e3.ihull0_integralized.yml                   done                             0.04        0.04        None
+369214c0.ihull0_integralized.yml                   done                             0.06        0.06        None
+369214c0.ihull1_integralized.yml                   done                             0.05        0.05        None
+369214c0.ihull2_integralized.yml                   done                             0.04        0.04        None
+369214c0.ihull3_integralized.yml                   done                             0.19        0.19        None
+370168bf.ihull0_integralized.yml                   done                             0.09        0.09        None
+38d15e26.ihull0_integralized.yml                   done                             0.04        0.05        None
+39dd74cd.ihull0_integralized.yml                   done                             0.05        0.05        None
+405924b4.ihull0_integralized.yml                   done                             0.05        0.05        None
+405924b4.ihull1_integralized.yml                   done                             0.09        0.09        None
+41691366.ihull0_integralized.yml                   done                             0.04        0.04        None
+42a50e9b.ihull0_integralized.yml                   done                             0.08        0.08        None
+43099794.ihull0_integralized.yml                   done                             0.13        0.13        None
+448190ac.ihull0_integralized.yml                   done                             0.14        0.14        None
+4595e7ad.ihull0_integralized.yml                   done                             0.11        0.11        None
+4595e7ad.ihull1_integralized.yml                   done                             0.10        0.10        None
+4595e7ad.ihull2_integralized.yml                   done                             0.05        0.05        None
+46e3cf00.ihull0_integralized.yml                   done                             0.06        0.06        None
+fdtd-apml.merged55e171.ihull0_integralized.yml     done                             0.05        0.05        None
+fdtd-apml.merged55e171.ihull10_integralized.yml    done                             0.04        0.05        None
+fdtd-apml.merged55e171.ihull11_integralized.yml    done                             0.04        0.04        None
+fdtd-apml.merged55e171.ihull12_integralized.yml    done                             0.04        0.04        None
+fdtd-apml.merged55e171.ihull1_integralized.yml     done                             0.03        0.03        None
+fdtd-apml.merged55e171.ihull2_integralized.yml     done                             0.04        0.05        None
+fdtd-apml.merged55e171.ihull3_integralized.yml     done                             0.06        0.06        None
+fdtd-apml.merged55e171.ihull4_integralized.yml     done                             0.07        0.07        None
+fdtd-apml.merged55e171.ihull5_integralized.yml     done                             0.10        0.10        None
+fdtd-apml.merged55e171.ihull6_integralized.yml     done                             0.08        0.08        None
+fdtd-apml.merged55e171.ihull7_integralized.yml     done                             0.04        0.04        None
+fdtd-apml.merged55e171.ihull8_integralized.yml     done                             0.15        0.15        None
+fdtd-apml.merged55e171.ihull9_integralized.yml     done                             0.05        0.05        None
+----------------------------------------------------------------------------------------------------------------
+Run set 2                                          done                             9.49       21.41           -
+
+
+lira-convex-hull-sc-accelerated-no-projection.cra-monotone-hola-integralized
+Run set 3 of 25: skipped
+
+
+lira-convex-hull-intfrac.cra-monotone-hola-integralized
+Run set 4 of 25: skipped
+
+
+lira-convex-hull-intfrac-accelerated.cra-monotone-hola-integralized
+Run set 5 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lw.cra-monotone-hola-integralized
+Run set 6 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lw.cra-monotone-hola-integralized
+Run set 7 of 25: skipped
+
+
+compare-convex-hull-intfrac-vs-lw.cra-monotone-hola-integralized
+Run set 8 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated-vs-lw.cra-monotone-hola-integralized
+Run set 9 of 25: skipped
+
+
+compare-convex-hull-sc-vs-intfrac.cra-monotone-hola-integralized
+Run set 10 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated.cra-monotone-hola-integralized
+Run set 11 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated.cra-monotone-hola-integralized
+Run set 12 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac-accelerated.cra-monotone-hola-integralized
+Run set 13 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac.cra-monotone-hola-integralized
+Run set 14 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper.cra-monotone-hola-integralized
+Run set 15 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-inthull.cra-monotone-hola-integralized
+Run set 16 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull.cra-monotone-hola-integralized
+Run set 17 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lwcooper.cra-monotone-hola-integralized
+Run set 18 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-subspace.cra-monotone-hola-integralized
+Run set 19 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-gc.cra-monotone-hola-integralized
+Run set 20 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-real-relaxation.cra-monotone-hola-integralized
+Run set 21 of 25: skipped
+
+
+lira-convex-hull-run-only-for-pure-int.cra-monotone-hola-integralized
+Run set 22 of 25: skipped
+
+
+convex-hull-by-gc.cra-monotone-hola-integralized
+Run set 23 of 25: skipped
+
+
+convex-hull-by-gc-terms.cra-monotone-hola-integralized
+Run set 24 of 25: skipped
+
+
+convex-hull-by-normaliz.cra-monotone-hola-integralized
+Run set 25 of 25: skipped
+
+Statistics:             86 Files
+  correct:               0
+    correct true:        0
+    correct false:       0
+  incorrect:             0
+    incorrect true:      0
+    incorrect false:     0
+  unknown:               0

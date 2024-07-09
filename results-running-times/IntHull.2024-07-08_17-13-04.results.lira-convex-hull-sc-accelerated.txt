@@ -1,0 +1,133 @@
+   BENCHMARK INFORMATION
+Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic.
+benchmark definition:    benchmark-defs/IntHull.xml
+name:                    IntHull
+run sets:                lira-convex-hull-sc-accelerated
+date:                    Mon, 2024-07-08 17:13:04 EDT
+tool:                    Projection of integer hull 1.0
+tool executable:         /home/diagram/src/research/projects/duet/duet-nk-local-projection/_build/default/srk/src/bigtop.exe
+options:
+resource limits:
+- time:                  300 s
+hardware requirements:
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    ins7570
+os:                      Linux-5.15.0-113-generic-x86_64-with-glibc2.35
+cpu:                     Intel Core i7-8550U CPU @ 1.80GHz
+- cores:                 8
+- max frequency:         4000.0 MHz
+- turbo boost enabled:   True
+ram:                     16492.572672000002 MB
+------------------------------------------------------------
+
+
+
+lira-convex-hull-sc
+Run set 1 of 25: skipped
+
+
+lira-convex-hull-sc-accelerated
+Run set 2 of 25: skipped because it has no files
+
+
+lira-convex-hull-sc-accelerated-no-projection
+Run set 3 of 25: skipped
+
+
+lira-convex-hull-intfrac
+Run set 4 of 25: skipped
+
+
+lira-convex-hull-intfrac-accelerated
+Run set 5 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lw
+Run set 6 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lw
+Run set 7 of 25: skipped
+
+
+compare-convex-hull-intfrac-vs-lw
+Run set 8 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated-vs-lw
+Run set 9 of 25: skipped
+
+
+compare-convex-hull-sc-vs-intfrac
+Run set 10 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated
+Run set 11 of 25: skipped
+
+
+compare-convex-hull-intfrac-accelerated
+Run set 12 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac-accelerated
+Run set 13 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac
+Run set 14 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper
+Run set 15 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-inthull
+Run set 16 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull
+Run set 17 of 25: skipped
+
+
+compare-convex-hull-sc-vs-lwcooper
+Run set 18 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-subspace
+Run set 19 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-gc
+Run set 20 of 25: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-real
+Run set 21 of 25: skipped
+
+
+lira-convex-hull-run-only-for-pure-int
+Run set 22 of 25: skipped
+
+
+convex-hull-by-gc
+Run set 23 of 25: skipped
+
+
+convex-hull-by-gc-terms
+Run set 24 of 25: skipped
+
+
+convex-hull-by-normaliz
+Run set 25 of 25: skipped
+
+Statistics:              0 Files
+  correct:               0
+    correct true:        0
+    correct false:       0
+  incorrect:             0
+    incorrect true:      0
+    incorrect false:     0
+  unknown:               0

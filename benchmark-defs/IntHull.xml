@@ -20,14 +20,14 @@
   <tasks name="polybench-integralized">
     <includesfile>../tasks/convhull/polybench-integralized/polybench.set</includesfile>
   </tasks>
-  <tasks name="c4b-integralized">
-    <includesfile>../tasks/convhull/C4B-integralized/C4B.set</includesfile>
+  <tasks name="cra-monotone-c4b-integralized">
+    <includesfile>../tasks/convhull/cra-monotone-C4B-integralized/C4B.set</includesfile>
   </tasks>
-  <tasks name="hola-integralized">
-    <includesfile>../tasks/convhull/HOLA-integralized/hola.set</includesfile>
+  <tasks name="cra-monotone-hola-integralized">
+    <includesfile>../tasks/convhull/cra-monotone-HOLA-integralized/hola.set</includesfile>
   </tasks>
   <tasks name="cra-monotone-svcomp-integralized">
-    <includesfile>../tasks/convhull/cra-monotone-reach-safety-integralized/ReachSafety-Loops-convhull.set</includesfile>
+    <includesfile>../tasks/convhull/cra-monotone-svcomp-reach-safety-integralized/ReachSafety-Loops-convhull.set</includesfile>
   </tasks>
 
   <tasks name="svcomploops">
@@ -125,8 +125,8 @@
     <option name="-compare-convex-hull-sc-accelerated-vs-gc" />
   </rundefinition>
 
-  <rundefinition name="compare-convex-hull-sc-accelerated-vs-real">
-    <option name="-compare-convex-hull-sc-accelerated-vs-real" />
+  <rundefinition name="compare-convex-hull-sc-accelerated-vs-real-relaxation">
+    <option name="-compare-convex-hull-sc-accelerated-vs-real-relaxation" />
   </rundefinition>
 
   <rundefinition name="lira-convex-hull-run-only-for-pure-int">

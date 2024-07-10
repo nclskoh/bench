@@ -1,0 +1,468 @@
+   BENCHMARK INFORMATION
+Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic.
+benchmark definition:    benchmark-defs/IntHull.xml
+name:                    IntHull
+run sets:                convex-hull-by-cooper.polybench-integralized
+date:                    Tue, 2024-07-09 12:46:29 EDT
+tool:                    Projection of integer hull 1.0
+tool executable:         /home/diagram/src/research/projects/duet/duet-nk-local-projection/_build/default/srk/src/bigtop.exe
+options:
+resource limits:
+- time:                  300 s
+hardware requirements:
+------------------------------------------------------------
+
+   SYSTEM INFORMATION
+host:                    ins7570
+os:                      Linux-5.15.0-113-generic-x86_64-with-glibc2.35
+cpu:                     Intel Core i7-8550U CPU @ 1.80GHz
+- cores:                 8
+- max frequency:         4000.0 MHz
+- turbo boost enabled:   True
+ram:                     16492.572672000002 MB
+------------------------------------------------------------
+
+
+
+lira-convex-hull-sc.polybench-integralized
+Run set 1 of 31: skipped
+
+
+lira-convex-hull-sc-accelerated.polybench-integralized
+Run set 2 of 31: skipped
+
+
+lira-convex-hull-sc-precond-accelerate.polybench-integralized
+Run set 3 of 31: skipped
+
+
+lira-convex-hull-sc-accelerated-no-projection.polybench-integralized
+Run set 4 of 31: skipped
+
+
+lira-convex-hull-intfrac.polybench-integralized
+Run set 5 of 31: skipped
+
+
+lira-convex-hull-intfrac-accelerated.polybench-integralized
+Run set 6 of 31: skipped
+
+
+compare-convex-hull-sc-vs-lw.polybench-integralized
+Run set 7 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lw.polybench-integralized
+Run set 8 of 31: skipped
+
+
+compare-convex-hull-intfrac-vs-lw.polybench-integralized
+Run set 9 of 31: skipped
+
+
+compare-convex-hull-intfrac-accelerated-vs-lw.polybench-integralized
+Run set 10 of 31: skipped
+
+
+compare-convex-hull-sc-vs-intfrac.polybench-integralized
+Run set 11 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated.polybench-integralized
+Run set 12 of 31: skipped
+
+
+compare-convex-hull-intfrac-accelerated.polybench-integralized
+Run set 13 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac-accelerated.polybench-integralized
+Run set 14 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-intfrac.polybench-integralized
+Run set 15 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper.polybench-integralized
+Run set 16 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-inthull.polybench-integralized
+Run set 17 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-lwcooper-mixedhull.polybench-integralized
+Run set 18 of 31: skipped
+
+
+compare-convex-hull-sc-vs-lwcooper.polybench-integralized
+Run set 19 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-subspace.polybench-integralized
+Run set 20 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-gc.polybench-integralized
+Run set 21 of 31: skipped
+
+
+compare-convex-hull-sc-vs-precond-accelerate.polybench-integralized
+Run set 22 of 31: skipped
+
+
+compare-convex-hull-sc-accelerated-vs-real-relaxation.polybench-integralized
+Run set 23 of 31: skipped
+
+
+compare-convex-hull-sc-precond-accelerate-vs-real-relaxation.polybench-integralized
+Run set 24 of 31: skipped
+
+
+compare-convex-hull-sc-precond-accelerate-vs-real-relaxation.polybench-integralized
+Run set 25 of 31: skipped
+
+
+lira-convex-hull-run-only-for-pure-int.polybench-integralized
+Run set 26 of 31: skipped
+
+
+convex-hull-by-gc.polybench-integralized
+Run set 27 of 31: skipped
+
+
+convex-hull-by-gc-terms.polybench-integralized
+Run set 28 of 31: skipped
+
+
+convex-hull-by-normaliz.polybench-integralized
+Run set 29 of 31: skipped
+
+
+convex-hull-by-real-relaxation.polybench-integralized
+Run set 30 of 31: skipped
+
+
+convex-hull-by-cooper.polybench-integralized
+Run set 31 of 31 with options '-lira-convex-hull-lwcooper-inthull' and propertyfile 'None'
+
+inputfile                                         status                       cpu time   wall time        host
+---------------------------------------------------------------------------------------------------------------
+2mm.merged.chull0_equivalent.yml                  done                             0.13        0.29        None
+2mm.merged.chull10_equivalent.yml                 done                             0.05        0.05        None
+2mm.merged.chull11_integralized.yml               done                             0.06        0.06        None
+2mm.merged.chull12_equivalent.yml                 done                             0.05        0.05        None
+2mm.merged.chull13_integralized.yml               done                             0.05        0.05        None
+2mm.merged.chull14_equivalent.yml                 done                             0.06        0.06        None
+2mm.merged.chull15_integralized.yml               done                             0.04        0.04        None
+2mm.merged.chull1_integralized.yml                done                             0.05        0.05        None
+2mm.merged.chull2_integralized.yml                done                             0.04        0.04        None
+2mm.merged.chull3_equivalent.yml                  done                             0.05        0.05        None
+2mm.merged.chull4_integralized.yml                done                             0.05        0.05        None
+2mm.merged.chull5_integralized.yml                done                             0.05        0.05        None
+2mm.merged.chull6_equivalent.yml                  done                             0.06        0.06        None
+2mm.merged.chull7_integralized.yml                done                             0.08        0.08        None
+2mm.merged.chull8_equivalent.yml                  done                             0.03        0.04        None
+2mm.merged.chull9_integralized.yml                done                             0.04        0.04        None
+3mm.merged.chull0_equivalent.yml                  done                             0.05        0.05        None
+3mm.merged.chull10_integralized.yml               done                             0.07        0.07        None
+3mm.merged.chull11_equivalent.yml                 done                             0.04        0.04        None
+3mm.merged.chull12_integralized.yml               done                             0.05        0.05        None
+3mm.merged.chull13_equivalent.yml                 done                             0.06        0.07        None
+3mm.merged.chull14_integralized.yml               done                             0.05        0.05        None
+3mm.merged.chull15_equivalent.yml                 done                             0.05        0.05        None
+3mm.merged.chull16_integralized.yml               done                             0.04        0.04        None
+3mm.merged.chull17_equivalent.yml                 done                             0.04        0.04        None
+3mm.merged.chull18_integralized.yml               done                             0.04        0.04        None
+3mm.merged.chull1_integralized.yml                done                             0.03        0.04        None
+3mm.merged.chull2_integralized.yml                done                             0.04        0.04        None
+3mm.merged.chull3_equivalent.yml                  done                             0.03        0.03        None
+3mm.merged.chull4_integralized.yml                done                             0.06        0.06        None
+3mm.merged.chull5_integralized.yml                done                             0.04        0.04        None
+3mm.merged.chull6_equivalent.yml                  done                             0.05        0.05        None
+3mm.merged.chull7_integralized.yml                done                             0.05        0.05        None
+3mm.merged.chull8_integralized.yml                done                             0.06        0.06        None
+3mm.merged.chull9_equivalent.yml                  done                             0.06        0.06        None
+adi.merged.chull0_equivalent.yml                  done                             0.06        0.06        None
+adi.merged.chull10_integralized.yml               done                             0.06        0.06        None
+adi.merged.chull11_equivalent.yml                 done                             0.07        0.07        None
+adi.merged.chull12_integralized.yml               done                             0.08        0.08        None
+adi.merged.chull13_equivalent.yml                 done                             0.06        0.06        None
+adi.merged.chull14_integralized.yml               done                             0.04        0.04        None
+adi.merged.chull1_integralized.yml                done                             0.04        0.04        None
+adi.merged.chull2_equivalent.yml                  done                             0.05        0.05        None
+adi.merged.chull3_equivalent.yml                  done                             0.04        0.04        None
+adi.merged.chull4_integralized.yml                done                             0.06        0.06        None
+adi.merged.chull5_equivalent.yml                  done                             0.05        0.05        None
+adi.merged.chull6_integralized.yml                done                             0.06        0.06        None
+adi.merged.chull7_equivalent.yml                  done                             0.07        0.07        None
+adi.merged.chull8_equivalent.yml                  done                             0.07        0.07        None
+adi.merged.chull9_integralized.yml                done                             0.05        0.05        None
+atax.merged.chull0_equivalent.yml                 done                             0.05        0.05        None
+atax.merged.chull1_equivalent.yml                 done                             0.05        0.05        None
+atax.merged.chull2_integralized.yml               done                             0.05        0.05        None
+atax.merged.chull3_equivalent.yml                 done                             0.05        0.05        None
+atax.merged.chull4_integralized.yml               done                             0.07        0.07        None
+atax.merged.chull5_equivalent.yml                 done                             0.06        0.06        None
+atax.merged.chull6_integralized.yml               done                             0.06        0.06        None
+atax.merged.chull7_equivalent.yml                 done                             0.05        0.05        None
+bicg.merged.chull0_equivalent.yml                 done                             0.04        0.04        None
+bicg.merged.chull1_integralized.yml               done                             0.05        0.05        None
+bicg.merged.chull2_equivalent.yml                 done                             0.04        0.04        None
+bicg.merged.chull3_integralized.yml               done                             0.05        0.05        None
+bicg.merged.chull4_integralized.yml               done                             0.05        0.05        None
+bicg.merged.chull5_equivalent.yml                 done                             0.04        0.04        None
+bicg.merged.chull6_integralized.yml               done                             0.04        0.04        None
+bicg.merged.chull7_equivalent.yml                 done                             0.04        0.04        None
+cholesky.merged.chull0_integralized.yml           done                             0.04        0.04        None
+cholesky.merged.chull1_integralized.yml           done                             0.04        0.04        None
+cholesky.merged.chull2_integralized.yml           done                             0.04        0.04        None
+cholesky.merged.chull3_integralized.yml           done                             0.06        0.06        None
+cholesky.merged.chull4_equivalent.yml             done                             0.05        0.05        None
+cholesky.merged.chull5_integralized.yml           done                             0.07        0.07        None
+cholesky.merged.chull6_equivalent.yml             done                             0.04        0.04        None
+cholesky.merged.chull7_integralized.yml           done                             0.04        0.04        None
+correlation.merged.chull0_equivalent.yml          done                             0.04        0.04        None
+correlation.merged.chull10_integralized.yml       done                             0.07        0.07        None
+correlation.merged.chull11_equivalent.yml         done                             0.04        0.04        None
+correlation.merged.chull12_integralized.yml       done                             0.04        0.04        None
+correlation.merged.chull1_integralized.yml        done                             0.04        0.04        None
+correlation.merged.chull2_integralized.yml        done                             0.04        0.04        None
+correlation.merged.chull3_integralized.yml        done                             0.04        0.04        None
+correlation.merged.chull4_integralized.yml        done                             0.05        0.05        None
+correlation.merged.chull5_equivalent.yml          done                             0.04        0.04        None
+correlation.merged.chull6_integralized.yml        done                             0.04        0.04        None
+correlation.merged.chull7_equivalent.yml          done                             0.04        0.04        None
+correlation.merged.chull8_integralized.yml        done                             0.04        0.04        None
+correlation.merged.chull9_equivalent.yml          done                             0.05        0.05        None
+covariance.merged.chull0_equivalent.yml           done                             0.04        0.04        None
+covariance.merged.chull10_integralized.yml        done                             0.04        0.04        None
+covariance.merged.chull1_integralized.yml         done                             0.04        0.04        None
+covariance.merged.chull2_integralized.yml         done                             0.06        0.06        None
+covariance.merged.chull3_equivalent.yml           done                             0.04        0.04        None
+covariance.merged.chull4_integralized.yml         done                             0.05        0.05        None
+covariance.merged.chull5_equivalent.yml           done                             0.04        0.05        None
+covariance.merged.chull6_integralized.yml         done                             0.04        0.04        None
+covariance.merged.chull7_equivalent.yml           done                             0.05        0.05        None
+covariance.merged.chull8_integralized.yml         done                             0.06        0.06        None
+covariance.merged.chull9_equivalent.yml           done                             0.04        0.04        None
+doitgen.merged.chull0_equivalent.yml              done                             0.04        0.04        None
+doitgen.merged.chull10_equivalent.yml             done                             0.06        0.06        None
+doitgen.merged.chull11_integralized.yml           done                             0.04        0.04        None
+doitgen.merged.chull12_integralized.yml           done                             0.03        0.03        None
+doitgen.merged.chull1_equivalent.yml              done                             0.03        0.03        None
+doitgen.merged.chull2_integralized.yml            done                             0.03        0.03        None
+doitgen.merged.chull3_integralized.yml            done                             0.04        0.04        None
+doitgen.merged.chull4_integralized.yml            done                             0.03        0.03        None
+doitgen.merged.chull5_equivalent.yml              done                             0.04        0.04        None
+doitgen.merged.chull6_integralized.yml            done                             0.06        0.06        None
+doitgen.merged.chull7_integralized.yml            done                             0.08        0.08        None
+doitgen.merged.chull8_equivalent.yml              done                             0.04        0.04        None
+doitgen.merged.chull9_integralized.yml            done                             0.06        0.06        None
+durbin.merged.chull0_equivalent.yml               done                             0.05        0.05        None
+durbin.merged.chull1_equivalent.yml               done                             0.06        0.06        None
+durbin.merged.chull2_equivalent.yml               done                             0.05        0.05        None
+durbin.merged.chull3_integralized.yml             done                             0.06        0.06        None
+durbin.merged.chull4_integralized.yml             done                             0.07        0.07        None
+durbin.merged.chull5_equivalent.yml               done                             0.06        0.06        None
+durbin.merged.chull6_integralized.yml             done                             0.06        0.06        None
+dynprog.merged.chull0_equivalent.yml              done                             0.05        0.05        None
+dynprog.merged.chull1_integralized.yml            done                             0.06        0.06        None
+dynprog.merged.chull2_integralized.yml            done                             0.06        0.06        None
+dynprog.merged.chull3_equivalent.yml              done                             0.05        0.05        None
+dynprog.merged.chull4_integralized.yml            done                             0.06        0.06        None
+dynprog.merged.chull5_integralized.yml            done                             0.09        0.09        None
+dynprog.merged.chull6_equivalent.yml              done                             0.06        0.06        None
+dynprog.merged.chull7_integralized.yml            done                             0.04        0.04        None
+fdtd-2d.merged.chull0_equivalent.yml              done                             0.05        0.05        None
+fdtd-2d.merged.chull10_equivalent.yml             done                             0.05        0.05        None
+fdtd-2d.merged.chull11_integralized.yml           done                             0.05        0.05        None
+fdtd-2d.merged.chull12_equivalent.yml             done                             0.05        0.05        None
+fdtd-2d.merged.chull1_integralized.yml            done                             0.07        0.07        None
+fdtd-2d.merged.chull2_equivalent.yml              done                             0.04        0.04        None
+fdtd-2d.merged.chull3_integralized.yml            done                             0.06        0.06        None
+fdtd-2d.merged.chull4_equivalent.yml              done                             0.06        0.07        None
+fdtd-2d.merged.chull5_integralized.yml            done                             0.06        0.06        None
+fdtd-2d.merged.chull6_equivalent.yml              done                             0.06        0.06        None
+fdtd-2d.merged.chull7_integralized.yml            done                             0.07        0.07        None
+fdtd-2d.merged.chull8_equivalent.yml              done                             0.06        0.06        None
+fdtd-2d.merged.chull9_integralized.yml            done                             0.07        0.07        None
+fdtd-apml.merged.chull0_equivalent.yml            done                             0.06        0.06        None
+fdtd-apml.merged.chull10_equivalent.yml           done                             0.04        0.05        None
+fdtd-apml.merged.chull11_equivalent.yml           done                             0.05        0.05        None
+fdtd-apml.merged.chull12_equivalent.yml           done                             0.04        0.05        None
+fdtd-apml.merged.chull1_equivalent.yml            done                             0.03        0.03        None
+fdtd-apml.merged.chull2_integralized.yml          done                             0.05        0.05        None
+fdtd-apml.merged.chull3_integralized.yml          done                             0.04        0.04        None
+fdtd-apml.merged.chull4_equivalent.yml            done                             0.07        0.07        None
+fdtd-apml.merged.chull5_integralized.yml          done                             0.12        0.12        None
+fdtd-apml.merged.chull6_integralized.yml          done                             0.08        0.09        None
+fdtd-apml.merged.chull7_equivalent.yml            done                             0.06        0.06        None
+fdtd-apml.merged.chull8_integralized.yml          done                             0.07        0.07        None
+fdtd-apml.merged.chull9_integralized.yml          done                             0.05        0.05        None
+floyd-warshall.merged.chull0_equivalent.yml       done                             0.04        0.04        None
+floyd-warshall.merged.chull1_integralized.yml     done                             0.07        0.07        None
+floyd-warshall.merged.chull2_integralized.yml     done                             0.04        0.04        None
+floyd-warshall.merged.chull3_equivalent.yml       done                             0.09        0.09        None
+floyd-warshall.merged.chull4_integralized.yml     done                             0.10        0.10        None
+floyd-warshall.merged.chull5_equivalent.yml       done                             0.04        0.04        None
+floyd-warshall.merged.chull6_integralized.yml     done                             0.04        0.04        None
+gemm.merged.chull0_equivalent.yml                 done                             0.06        0.06        None
+gemm.merged.chull10_integralized.yml              done                             0.06        0.06        None
+gemm.merged.chull1_integralized.yml               done                             0.05        0.05        None
+gemm.merged.chull2_integralized.yml               done                             0.08        0.08        None
+gemm.merged.chull3_equivalent.yml                 done                             0.06        0.06        None
+gemm.merged.chull4_integralized.yml               done                             0.07        0.07        None
+gemm.merged.chull5_equivalent.yml                 done                             0.06        0.06        None
+gemm.merged.chull6_integralized.yml               done                             0.05        0.05        None
+gemm.merged.chull7_equivalent.yml                 done                             0.06        0.06        None
+gemm.merged.chull8_integralized.yml               done                             0.03        0.03        None
+gemm.merged.chull9_equivalent.yml                 done                             0.05        0.05        None
+gemver.merged.chull0_equivalent.yml               done                             0.07        0.07        None
+gemver.merged.chull1_integralized.yml             done                             0.05        0.05        None
+gemver.merged.chull2_equivalent.yml               done                             0.05        0.05        None
+gemver.merged.chull3_equivalent.yml               done                             0.05        0.05        None
+gemver.merged.chull4_integralized.yml             done                             0.06        0.06        None
+gemver.merged.chull5_equivalent.yml               done                             0.05        0.05        None
+gemver.merged.chull6_integralized.yml             done                             0.04        0.04        None
+gemver.merged.chull7_integralized.yml             done                             0.07        0.07        None
+gemver.merged.chull8_equivalent.yml               done                             0.08        0.08        None
+gemver.merged.chull9_integralized.yml             done                             0.04        0.04        None
+gesummv.merged.chull0_equivalent.yml              done                             0.06        0.06        None
+gesummv.merged.chull1_integralized.yml            done                             0.06        0.06        None
+gesummv.merged.chull2_integralized.yml            done                             0.06        0.06        None
+gesummv.merged.chull3_equivalent.yml              done                             0.07        0.07        None
+gesummv.merged.chull4_integralized.yml            done                             0.04        0.04        None
+gramschmidt.merged.chull0_equivalent.yml          done                             0.05        0.05        None
+gramschmidt.merged.chull10_equivalent.yml         done                             0.08        0.08        None
+gramschmidt.merged.chull11_integralized.yml       done                             0.08        0.08        None
+gramschmidt.merged.chull12_equivalent.yml         done                             0.05        0.05        None
+gramschmidt.merged.chull13_integralized.yml       done                             0.06        0.07        None
+gramschmidt.merged.chull14_equivalent.yml         done                             0.07        0.07        None
+gramschmidt.merged.chull15_integralized.yml       done                             0.04        0.04        None
+gramschmidt.merged.chull1_equivalent.yml          done                             0.05        0.05        None
+gramschmidt.merged.chull2_integralized.yml        done                             0.07        0.07        None
+gramschmidt.merged.chull3_equivalent.yml          done                             0.06        0.06        None
+gramschmidt.merged.chull4_integralized.yml        done                             0.05        0.05        None
+gramschmidt.merged.chull5_integralized.yml        done                             0.08        0.08        None
+gramschmidt.merged.chull6_equivalent.yml          done                             0.06        0.06        None
+gramschmidt.merged.chull7_integralized.yml        done                             0.08        0.08        None
+gramschmidt.merged.chull8_equivalent.yml          done                             0.07        0.07        None
+gramschmidt.merged.chull9_integralized.yml        done                             0.06        0.06        None
+jacobi-1d-imper.merged.chull0_equivalent.yml      done                             0.05        0.05        None
+jacobi-1d-imper.merged.chull1_equivalent.yml      done                             0.05        0.06        None
+jacobi-1d-imper.merged.chull2_integralized.yml    done                             0.06        0.06        None
+jacobi-1d-imper.merged.chull3_integralized.yml    done                             0.06        0.06        None
+jacobi-1d-imper.merged.chull4_equivalent.yml      done                             0.06        0.06        None
+jacobi-2d-imper.merged.chull0_equivalent.yml      done                             0.06        0.06        None
+jacobi-2d-imper.merged.chull1_integralized.yml    done                             0.05        0.05        None
+jacobi-2d-imper.merged.chull2_equivalent.yml      done                             0.07        0.07        None
+jacobi-2d-imper.merged.chull3_integralized.yml    done                             0.06        0.06        None
+jacobi-2d-imper.merged.chull4_integralized.yml    done                             0.08        0.08        None
+jacobi-2d-imper.merged.chull5_equivalent.yml      done                             0.08        0.08        None
+jacobi-2d-imper.merged.chull6_integralized.yml    done                             0.07        0.07        None
+jacobi-2d-imper.merged.chull7_equivalent.yml      done                             0.05        0.05        None
+jacobi-2d-imper.merged.chull8_integralized.yml    done                             0.08        0.08        None
+lu.merged.chull0_equivalent.yml                   done                             0.06        0.06        None
+lu.merged.chull1_integralized.yml                 done                             0.05        0.05        None
+lu.merged.chull2_equivalent.yml                   done                             0.06        0.06        None
+lu.merged.chull3_integralized.yml                 done                             0.08        0.08        None
+lu.merged.chull4_equivalent.yml                   done                             0.05        0.05        None
+lu.merged.chull5_integralized.yml                 done                             0.08        0.08        None
+lu.merged.chull6_equivalent.yml                   done                             0.05        0.05        None
+lu.merged.chull7_integralized.yml                 done                             0.04        0.04        None
+ludcmp.merged.chull0_integralized.yml             done                             0.04        0.04        None
+ludcmp.merged.chull10_equivalent.yml              done                             0.05        0.06        None
+ludcmp.merged.chull11_integralized.yml            done                             0.05        0.05        None
+ludcmp.merged.chull1_integralized.yml             done                             0.05        0.05        None
+ludcmp.merged.chull2_integralized.yml             done                             0.06        0.06        None
+ludcmp.merged.chull3_integralized.yml             done                             0.05        0.05        None
+ludcmp.merged.chull4_integralized.yml             done                             0.04        0.04        None
+ludcmp.merged.chull5_integralized.yml             done                             0.04        0.04        None
+ludcmp.merged.chull6_integralized.yml             done                             0.04        0.04        None
+ludcmp.merged.chull7_integralized.yml             done                             0.04        0.04        None
+ludcmp.merged.chull8_integralized.yml             done                             0.04        0.04        None
+ludcmp.merged.chull9_integralized.yml             done                             0.06        0.06        None
+mvt.merged.chull0_equivalent.yml                  done                             0.04        0.04        None
+mvt.merged.chull1_integralized.yml                done                             0.04        0.04        None
+mvt.merged.chull2_equivalent.yml                  done                             0.04        0.04        None
+mvt.merged.chull3_integralized.yml                done                             0.04        0.04        None
+mvt.merged.chull4_integralized.yml                done                             0.05        0.05        None
+mvt.merged.chull5_equivalent.yml                  done                             0.04        0.04        None
+mvt.merged.chull6_integralized.yml                done                             0.04        0.04        None
+reg_detect.merged.chull0_equivalent.yml           done                             0.04        0.04        None
+reg_detect.merged.chull10_equivalent.yml          done                             0.05        0.05        None
+reg_detect.merged.chull11_integralized.yml        done                             0.07        0.07        None
+reg_detect.merged.chull12_equivalent.yml          done                             0.04        0.04        None
+reg_detect.merged.chull13_integralized.yml        done                             0.04        0.04        None
+reg_detect.merged.chull1_integralized.yml         done                             0.04        0.04        None
+reg_detect.merged.chull2_equivalent.yml           done                             0.04        0.04        None
+reg_detect.merged.chull3_equivalent.yml           done                             0.04        0.04        None
+reg_detect.merged.chull4_integralized.yml         done                             0.04        0.04        None
+reg_detect.merged.chull5_integralized.yml         done                             0.04        0.04        None
+reg_detect.merged.chull6_equivalent.yml           done                             0.04        0.04        None
+reg_detect.merged.chull7_integralized.yml         done                             0.04        0.04        None
+reg_detect.merged.chull8_integralized.yml         done                             0.04        0.04        None
+reg_detect.merged.chull9_integralized.yml         done                             0.05        0.05        None
+seidel-2d.merged.chull0_equivalent.yml            done                             0.04        0.04        None
+seidel-2d.merged.chull1_integralized.yml          done                             0.04        0.04        None
+seidel-2d.merged.chull2_integralized.yml          done                             0.04        0.04        None
+seidel-2d.merged.chull3_equivalent.yml            done                             0.05        0.05        None
+seidel-2d.merged.chull4_integralized.yml          done                             0.06        0.06        None
+seidel-2d.merged.chull5_equivalent.yml            done                             0.04        0.04        None
+seidel-2d.merged.chull6_integralized.yml          done                             0.05        0.05        None
+symm.merged.chull0_integralized.yml               done                             0.05        0.05        None
+symm.merged.chull1_integralized.yml               done                             0.04        0.04        None
+symm.merged.chull2_integralized.yml               done                             0.04        0.04        None
+symm.merged.chull3_equivalent.yml                 done                             0.04        0.04        None
+symm.merged.chull4_integralized.yml               done                             0.07        0.07        None
+symm.merged.chull5_equivalent.yml                 done                             0.05        0.05        None
+symm.merged.chull6_integralized.yml               done                             0.05        0.05        None
+symm.merged.chull7_equivalent.yml                 done                             0.04        0.04        None
+symm.merged.chull8_integralized.yml               done                             0.04        0.04        None
+syr2k.merged.chull0_equivalent.yml                done                             0.04        0.04        None
+syr2k.merged.chull10_integralized.yml             done                             0.04        0.04        None
+syr2k.merged.chull1_integralized.yml              done                             0.08        0.08        None
+syr2k.merged.chull2_integralized.yml              done                             0.07        0.07        None
+syr2k.merged.chull3_equivalent.yml                done                             0.05        0.05        None
+syr2k.merged.chull4_integralized.yml              done                             0.05        0.06        None
+syr2k.merged.chull5_equivalent.yml                done                             0.06        0.06        None
+syr2k.merged.chull6_integralized.yml              done                             0.09        0.09        None
+syr2k.merged.chull7_equivalent.yml                done                             0.04        0.04        None
+syr2k.merged.chull8_integralized.yml              done                             0.06        0.06        None
+syr2k.merged.chull9_equivalent.yml                done                             0.06        0.06        None
+syrk.merged.chull0_equivalent.yml                 done                             0.05        0.05        None
+syrk.merged.chull10_integralized.yml              done                             0.04        0.04        None
+syrk.merged.chull1_integralized.yml               done                             0.06        0.06        None
+syrk.merged.chull2_integralized.yml               done                             0.05        0.05        None
+syrk.merged.chull3_equivalent.yml                 done                             0.05        0.05        None
+syrk.merged.chull4_integralized.yml               done                             0.06        0.06        None
+syrk.merged.chull5_equivalent.yml                 done                             0.08        0.08        None
+syrk.merged.chull6_integralized.yml               done                             0.08        0.08        None
+syrk.merged.chull7_equivalent.yml                 done                             0.05        0.05        None
+syrk.merged.chull8_integralized.yml               done                             0.05        0.05        None
+syrk.merged.chull9_equivalent.yml                 done                             0.05        0.05        None
+trisolv.merged.chull0_equivalent.yml              done                             0.06        0.06        None
+trisolv.merged.chull1_integralized.yml            done                             0.06        0.06        None
+trisolv.merged.chull2_integralized.yml            done                             0.05        0.06        None
+trisolv.merged.chull3_equivalent.yml              done                             0.06        0.06        None
+trisolv.merged.chull4_integralized.yml            done                             0.06        0.06        None
+trmm.merged.chull0_equivalent.yml                 done                             0.05        0.05        None
+trmm.merged.chull1_integralized.yml               done                             0.04        0.05        None
+trmm.merged.chull2_integralized.yml               done                             0.05        0.05        None
+trmm.merged.chull3_equivalent.yml                 done                             0.07        0.07        None
+trmm.merged.chull4_integralized.yml               done                             0.07        0.07        None
+trmm.merged.chull5_equivalent.yml                 done                             0.06        0.06        None
+trmm.merged.chull6_integralized.yml               done                             0.05        0.05        None
+---------------------------------------------------------------------------------------------------------------
+Run set 31                                        done                            26.06       67.97           -
+
+Statistics:            306 Files
+  correct:               0
+    correct true:        0
+    correct false:       0
+  incorrect:             0
+    incorrect true:      0
+    incorrect false:     0
+  unknown:               0

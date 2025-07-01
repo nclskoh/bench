@@ -1,0 +1,5 @@
+(declare-const term_to_project_onto Real)
+(assert (exists ((|c'?1| Int) (c?2 Int))
+         (and (<= (- c?2) 0) (<= (+ c?2 -5) 0) (= (+ |c'?1| (- c?2) -1) 0)
+                (= term_to_project_onto (+ |c'?1| (- c?2))))))
+(check-sat)

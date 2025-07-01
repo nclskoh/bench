@@ -1,0 +1,8 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists ((|i'?1| Int) (n?2 Int) (i?3 Int))
+         (and (<= (+ (- i?3) 1) 0) (<= (+ (- n?2) i?3 1) 0)
+                (= (+ |i'?1| (- i?3) -1) 0)
+                (= term_to_project_onto0 (+ i?3 (- |i'?1|)))
+                (= term_to_project_onto (+ n?2 (- n?2))))))
+(check-sat)

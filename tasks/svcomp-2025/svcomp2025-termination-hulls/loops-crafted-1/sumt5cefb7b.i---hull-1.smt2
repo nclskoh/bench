@@ -1,0 +1,137 @@
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto2 Real)
+(assert (exists
+         ((|v4'?1| Int) (|v3'?2| Int) (|l'?3| Int) (|j'?4| Int) (|k'?5| Int)
+            (|i'?6| Int) (phi_v4?7 Int) (phi_v3?8 Int) (phi_j?9 Int)
+            (phi_k?10 Int) (phi_i?11 Int) (phi_v4?12 Int) (phi_j?13 Int)
+            (phi_k?14 Int) (phi_i?15 Int) (phi_j?16 Int) (phi_k?17 Int)
+            (phi_i?18 Int) (phi_j?19 Int) (phi_k?20 Int) (v3?21 Int)
+            (v4?22 Int) (i?23 Int) (j?24 Int) (k?25 Int) (l?26 Int)
+            (n?27 Int))
+         (and (<= (- v3?21) 0) (<= (- v4?22) 0) (<= (- i?23) 0)
+                (<= (- j?24) 0) (<= (- k?25) 0) (<= (- l?26) 0)
+                (= (+ l?26 (- k?25) (- j?24) (- i?23) (- v4?22) (- v3?21)) 0)
+                (<= (+ (- n?27) l?26 1) 0)
+                (or (and (or (< (ite (and (<= (- l?26) 0) (<= 0 l?26))
+                                     (mod l?26 5) (- (mod (- l?26) 5))) 0)
+                               (< 0 (ite (and (<= (- l?26) 0) (<= 0 l?26))
+                                         (mod l?26 5) (- (mod (- l?26) 5)))))
+                           (or (and (or (< (ite (and (<= (- l?26) 0)
+                                                       (<= 0 l?26))
+                                                (mod l?26 4)
+                                                (- (mod (- l?26) 4))) 0)
+                                          (< 0 (ite (and (<= (- l?26) 0)
+                                                           (<= 0 l?26))
+                                                    (mod l?26 4)
+                                                    (- (mod (- l?26) 4)))))
+                                      (or (and (or (< (ite (and (<= (- 
+                                                                    l?26) 0)
+                                                                  (<= 
+                                                                  0 l?26))
+                                                           (mod l?26 3)
+                                                           (- (mod (- l?26) 3))) 0)
+                                                     (< 0 (ite (and (<= 
+                                                                    (- 
+                                                                    l?26) 0)
+                                                                    (<= 
+                                                                    0 l?26))
+                                                               (mod l?26 3)
+                                                               (- (mod 
+                                                                  (- 
+                                                                  l?26) 3)))))
+                                                 (or (and (or (< (ite 
+                                                                 (and 
+                                                                 (<= 
+                                                                   (- 
+                                                                   l?26) 0)
+                                                                   (<= 
+                                                                   0 l?26))
+                                                                 (mod 
+                                                                 l?26 2)
+                                                                 (- (mod 
+                                                                    (- 
+                                                                    l?26) 2))) 0)
+                                                                (< 0 (ite 
+                                                                   (and 
+                                                                   (<= 
+                                                                    (- 
+                                                                    l?26) 0)
+                                                                    (<= 
+                                                                    0 l?26))
+                                                                   (mod 
+                                                                   l?26 2)
+                                                                   (- 
+                                                                   (mod 
+                                                                   (- 
+                                                                   l?26) 2)))))
+                                                            (= (+ (- 
+                                                                    phi_k?20)
+                                                                    k?25 1) 0)
+                                                            (= (+ (- 
+                                                                    phi_j?19)
+                                                                    j?24) 0))
+                                                       (and (= (ite (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?26) 0)
+                                                                    (<= 
+                                                                    0 l?26))
+                                                                    (mod 
+                                                                    l?26 2)
+                                                                    (- 
+                                                                    (mod 
+                                                                    (- 
+                                                                    l?26) 2))) 0)
+                                                              (= (+ (- 
+                                                                    phi_k?20)
+                                                                    k?25) 0)
+                                                              (= (+ (- 
+                                                                    phi_j?19)
+                                                                    j?24 1) 0)))
+                                                 (= (+ (- phi_i?18) i?23) 0)
+                                                 (= (+ (- phi_k?17) phi_k?20) 0)
+                                                 (= (+ (- phi_j?16) phi_j?19) 0))
+                                            (and (= (ite (and (<= (- l?26) 0)
+                                                                (<= 0 l?26))
+                                                         (mod l?26 3)
+                                                         (- (mod (- l?26) 3))) 0)
+                                                   (= (+ (- phi_i?18) i?23 1) 0)
+                                                   (= (+ (- phi_k?17) k?25) 0)
+                                                   (= (+ (- phi_j?16) j?24) 0)))
+                                      (= (+ (- phi_i?15) phi_i?18) 0)
+                                      (= (+ (- phi_k?14) phi_k?17) 0)
+                                      (= (+ (- phi_j?13) phi_j?16) 0)
+                                      (= (+ (- phi_v4?12) v4?22) 0))
+                                 (and (= (ite (and (<= (- l?26) 0)
+                                                     (<= 0 l?26))
+                                              (mod l?26 4)
+                                              (- (mod (- l?26) 4))) 0)
+                                        (= (+ (- phi_i?15) i?23) 0)
+                                        (= (+ (- phi_k?14) k?25) 0)
+                                        (= (+ (- phi_j?13) j?24) 0)
+                                        (= (+ (- phi_v4?12) v4?22 1) 0)))
+                           (= (+ (- phi_i?11) phi_i?15) 0)
+                           (= (+ (- phi_k?10) phi_k?14) 0)
+                           (= (+ (- phi_j?9) phi_j?13) 0)
+                           (= (+ (- phi_v3?8) v3?21) 0)
+                           (= (+ (- phi_v4?7) phi_v4?12) 0))
+                      (and (= (ite (and (<= (- l?26) 0) (<= 0 l?26))
+                                   (mod l?26 5) (- (mod (- l?26) 5))) 0)
+                             (= (+ (- phi_i?11) i?23) 0)
+                             (= (+ (- phi_k?10) k?25) 0)
+                             (= (+ (- phi_j?9) j?24) 0)
+                             (= (+ (- phi_v3?8) v3?21 1) 0)
+                             (= (+ (- phi_v4?7) v4?22) 0)))
+                (= (+ |v4'?1| (- phi_v4?7)) 0) (= (+ |v3'?2| (- phi_v3?8)) 0)
+                (= (+ |l'?3| (- l?26) -1) 0) (= (+ |j'?4| (- phi_j?9)) 0)
+                (= (+ |k'?5| (- phi_k?10)) 0) (= (+ |i'?6| (- phi_i?11)) 0)
+                (= term_to_project_onto5 i?23) (= term_to_project_onto4 k?25)
+                (= term_to_project_onto3 j?24) (= term_to_project_onto2 l?26)
+                (= term_to_project_onto1 v3?21)
+                (= term_to_project_onto0 v4?22) (= term_to_project_onto n?27))))
+(check-sat)

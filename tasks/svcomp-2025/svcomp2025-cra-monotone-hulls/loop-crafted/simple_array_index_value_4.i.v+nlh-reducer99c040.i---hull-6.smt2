@@ -1,0 +1,56 @@
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto3 Real)
+(assert (exists
+         ((|__VERIFIER_assert__cond___0'?1| Int)
+            (|main____CPAchecker_TMP_0___0'?2| Int)
+            (|main____CPAchecker_TMP_0'?3| Int) (|main__loop_entered'?4| Int)
+            (|__tmp_155_0'?5| Int) (phi_main____CPAchecker_TMP_0___0?6 Int)
+            (tr?7 Int) (tr?8 Int) (|main__index2'?9| Int)
+            (|main__index1'?10| Int) (__VERIFIER_assert__cond___0?11 Int)
+            (main____CPAchecker_TMP_0___0?12 Int) (main__loop_entered?13 Int)
+            (__tmp_155_0?14 Int) (main____CPAchecker_TMP_0?15 Int)
+            (main__index2?16 Int) (main__index1?17 Int))
+         (and (<= (- main__loop_entered?13) 0)
+                (<= (+ (- __tmp_155_0?14) 1) 0)
+                (<= (+ (- main____CPAchecker_TMP_0?15) 1) 0)
+                (<= (+ (- main__index2?16) 1) 0) (<= (- main__index1?17) 0)
+                (= (+ (- tr?7) tr?8) 0)
+                (<= (+ main__index1?17 (- main__index2?16) 3) 0)
+                (or (and (<= (+ main__index1?17 -99998) 0)
+                           (<= (+ main__index2?16 -100000) 0)
+                           (= (+ (- phi_main____CPAchecker_TMP_0___0?6) 1) 0))
+                      (and (or (<= (+ (- main__index1?17) 99999) 0)
+                                 (and (<= (+ main__index1?17 -99998) 0)
+                                        (<= (+ (- main__index2?16) 100001) 0)))
+                             (= (- phi_main____CPAchecker_TMP_0___0?6) 0)))
+                (or (< phi_main____CPAchecker_TMP_0___0?6 0)
+                      (< 0 phi_main____CPAchecker_TMP_0___0?6))
+                (= (+ |__VERIFIER_assert__cond___0'?1|
+                        (- phi_main____CPAchecker_TMP_0___0?6)) 0)
+                (= (+ |main____CPAchecker_TMP_0___0'?2|
+                        (- phi_main____CPAchecker_TMP_0___0?6)) 0)
+                (= (+ |main____CPAchecker_TMP_0'?3| (- __tmp_155_0?14)) 0)
+                (= (+ |main__loop_entered'?4| -1) 0)
+                (= (+ |main__index2'?9| (- main__index2?16) 1) 0)
+                (= (+ |main__index1'?10| (- main__index1?17) -1) 0)
+                (= (+ |__tmp_155_0'?5| (- phi_main____CPAchecker_TMP_0___0?6)) 0)
+                (= term_to_project_onto5 (+ |__tmp_155_0'?5|
+                                              (- __tmp_155_0?14)))
+                (= term_to_project_onto4 (+ |main__index1'?10|
+                                              (- main__index1?17)))
+                (= term_to_project_onto3 (+ |main__index2'?9|
+                                              (- main__index2?16)))
+                (= term_to_project_onto2 (+ |main__loop_entered'?4|
+                                              (- main__loop_entered?13)))
+                (= term_to_project_onto1 (+ |main____CPAchecker_TMP_0'?3|
+                                              (- main____CPAchecker_TMP_0?15)))
+                (= term_to_project_onto0 (+ |main____CPAchecker_TMP_0___0'?2|
+                                              (- main____CPAchecker_TMP_0___0?12)))
+                (= term_to_project_onto (+ |__VERIFIER_assert__cond___0'?1|
+                                             (- __VERIFIER_assert__cond___0?11))))))
+(check-sat)

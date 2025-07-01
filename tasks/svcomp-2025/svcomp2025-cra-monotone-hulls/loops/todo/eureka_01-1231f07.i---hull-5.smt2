@@ -1,0 +1,8 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists ((|i'?1| Int) (tr?2 Int) (i?3 Int) (nodecount?4 Int))
+         (and (<= (- i?3) 0) (<= (- nodecount?4) 0)
+                (<= (+ (- nodecount?4) i?3 1) 0) (<= (- tr?2) 0)
+                (= (+ |i'?1| (- i?3) -1) 0) (= term_to_project_onto0 |i'?1|)
+                (= term_to_project_onto nodecount?4))))
+(check-sat)

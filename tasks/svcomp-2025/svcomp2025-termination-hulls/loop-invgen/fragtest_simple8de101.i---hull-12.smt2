@@ -1,0 +1,13 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(assert (exists
+         ((|tmp___2'?1| Int) (havoc?2 Int) (|k'?3| Int) (|i'?4| Int)
+            (k?5 Int) (tmp___2?6 Int) (i?7 Int))
+         (and (<= (- k?5) 0) (<= (- i?7) 0) (= (+ i?7 (- k?5)) 0)
+                (or (< havoc?2 0) (< 0 havoc?2)) (<= (+ i?7 -1000000) 0)
+                (= (+ |tmp___2'?1| (- havoc?2)) 0)
+                (= (+ |k'?3| (- k?5) -1) 0) (= (+ |i'?4| (- i?7) -1) 0)
+                (= term_to_project_onto1 i?7) (= term_to_project_onto0 k?5)
+                (= term_to_project_onto tmp___2?6))))
+(check-sat)

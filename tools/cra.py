@@ -21,6 +21,10 @@ class Tool(benchexec.tools.template.BaseTool):
             status = "KILLED BY SIGNAL 9"
         elif "0 errors total" in output:
             status = result.RESULT_TRUE_PROP
+        elif "errors total" in output:
+            status = result.RESULT_FALSE_PROP
+        elif "Program always terminates" in output:
+            status = result.RESULT_TRUE_PROP
         elif returncode != 0:
             status = "ERROR ({0})".format(returncode)
         else:

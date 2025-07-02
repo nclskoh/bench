@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.18//EN" "https://www.sosy-lab.org/benchexec/benchmark-1.18.dtd">
+<benchmark tool="tools.cra"
+           displayName="Prove safety or termination using convex hull primitive"
+           timelimit="5min">
+
+  <!--
+       branch: duet-popl-local-abstraction
+       commit: 92c3d9035a9f35ca46e4cd714c3d3445189bb0ba
+  -->
+
+  <tasks name="svcomp-reach-safety">
+    <includesfile>../tasks/svcomp-2025/svcomp2025-reach-safety-loops/ReachSafety-Loops.set</includesfile>
+    <propertyfile>../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/unreach-call.prp</propertyfile>
+  </tasks>
+  <tasks name="svcomp-reach-safety-termination">
+    <includesfile>../tasks/svcomp-2025/svcomp2025-reach-safety-loops/ReachSafety-Loops-Termination.set</includesfile>
+    <propertyfile>../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp</propertyfile>
+  </tasks>
+
+  <!-- PC (LP-PCone) + LPLH. This is the default, when algo-for-lira-convhull is unspecified -->
+  <rundefinition name="cra-monotone-lira-pc-lplh">
+    <option name="-cra" />
+    <option name="-monotone" />
+    <option name="-algo-for-lira-convhull">pc-lplh</option>
+  </rundefinition>
+
+  <!-- Just PC -->
+  <rundefinition name="cra-monotone-lira-pc">
+    <option name="-cra" />
+    <option name="-monotone" />
+    <option name="-algo-for-lira-convhull">pc</option>
+  </rundefinition>
+
+  <!-- LW applied to relaxation -->
+  <rundefinition name="cra-monotone-relax-to-real-lw">
+    <option name="-cra" />
+    <option name="-monotone" />
+    <option name="-algo-for-lira-convhull">lw</option>
+  </rundefinition>
+
+  <!-- FMCAD instead of LW for real relaxation -->
+  <rundefinition name="cra-monotone-relax-to-real-fmcad15">
+    <option name="-cra" />
+    <option name="-monotone" />
+    <option name="-algo-for-lira-convhull">fmcad15</option>
+  </rundefinition>
+
+  <rundefinition name="termination-monotone-only-lira-pc-lplh">
+    <option name="-termination" />
+    <option name="-monotone" />
+    <option name="-termination-no-phase" />
+    <option name="-termination-no-attractor" />
+    <option name="-termination-no-dta" />
+    <option name="-termination-no-exp" />
+    <option name="-theory">LIRA</option>
+    <option name="-algo-for-lira-convhull">pc-lplh</option>
+  </rundefinition>
+
+  <rundefinition name="termination-monotone-only-lira-pc">
+    <option name="-termination" />
+    <option name="-monotone" />
+    <option name="-termination-no-phase" />
+    <option name="-termination-no-attractor" />
+    <option name="-termination-no-dta" />
+    <option name="-termination-no-exp" />
+    <option name="-theory">LIRA</option>
+    <option name="-algo-for-lira-convhull">pc</option>
+  </rundefinition>
+
+  <rundefinition name="termination-monotone-only-relax-to-real-lw">
+    <option name="-termination" />
+    <option name="-monotone" />
+    <option name="-termination-no-phase" />
+    <option name="-termination-no-attractor" />
+    <option name="-termination-no-dta" />
+    <option name="-termination-no-exp" />
+    <option name="-theory">LIRA</option>
+    <option name="-algo-for-lira-convhull">lw</option>
+  </rundefinition>
+
+  <rundefinition name="termination-monotone-only-relax-to-real-fmcad15">
+    <option name="-termination" />
+    <option name="-monotone" />
+    <option name="-termination-no-phase" />
+    <option name="-termination-no-attractor" />
+    <option name="-termination-no-dta" />
+    <option name="-termination-no-exp" />
+    <option name="-theory">LIRA</option>
+    <option name="-algo-for-lira-convhull">fmcad15</option>
+  </rundefinition>
+
+</benchmark>

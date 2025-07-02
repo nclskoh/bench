@@ -13,6 +13,8 @@ from collections import defaultdict
 # Configuration -- can be reconfigured via the command line
 tools = ['ComPACT', 'CPAchecker', 'UAutomizer', '2ls', 'Termite']
 suites = ['Termination', 'bitprecise', 'recursive', 'polybench']
+rundefinitions = []
+result_dir = "result"
 timeout = 600
 cache = True
 replace_cached = False
@@ -47,33 +49,38 @@ def get_time(row, index):
     return float(row[3 * index + 3])
 
 
-def has_result(tool, suite):
-    return len(glob.glob("results/%s.*.%s.xml.bz2" % (tool, suite))) > 0
+def has_result(tool, suite, rundefinition):
+    return len(glob.glob(f"{result_dir}/{tool}.*.{rundefinition}.{suite}.xml.bz2")) > 0
 
 
 def run():
+    print(f"{tools}, {rundefinitions}, {suites}")
     for suite in suites:
         for tool in tools:
-            if replace_cached and has_result(tool, suite):
-                recent = recent_result(tool, suite)
-                os.remove(recent)
+            for rundef in rundefinitions:
+                if replace_cached and has_result(tool, suite, rundef):
+                    recent = recent_result(tool, suite, rundef)
+                    os.remove(recent)
 
-            if cache and has_result(tool, suite):
-                print("Result of %s on suite %s is cached" % (tool, suite))
-            else:
-                print("Running %s on suite %s" % (tool, suite))
-                # Add bench dir to PYTHONPATH so benchexec can find the
-                # tool module
-                my_env = os.environ.copy()
-                my_env["PYTHONPATH"] = os.getcwd()
-                my_env["PATH"] = my_env["PATH"] + ":" + os.path.abspath('..')
-                subprocess.call(["benchexec",
-                                 "-W", str(timeout),
-                                 "-t", suite,
-                                 "--read-only-dir", "/",
-                                 "--overlay-dir", "/home",
-                                 "benchmark-defs/%s.xml" % tool],
-                                env=my_env)
+                if cache and has_result(tool, suite, rundef):
+                    print(f"Result of {tool}.{rundef} on suite {suite} is cached")
+                else:
+                    print(f"Running {tool}.{rundef} on suite {suite}")
+                    # Add bench dir to PYTHONPATH so benchexec can find the
+                    # tool module
+                    my_env = os.environ.copy()
+                    my_env["PYTHONPATH"] = os.getcwd()
+                    my_env["PATH"] = my_env["PATH"] + ":" + os.path.abspath('..')
+                    run_cmd = ["benchexec"]
+                    run_cmd = run_cmd + ["-r", f"{rundef}"]
+                    run_cmd = run_cmd + ["-W", f"{timeout}"]
+                    run_cmd = run_cmd + ["-t", f"{suite}"]
+                    run_cmd = run_cmd + ["--read-only-dir", "/"]
+                    run_cmd = run_cmd + ["--overlay-dir", "/home"]
+                    run_cmd = run_cmd + [f"benchmark-defs/{tool}.xml"]
+                    runstring = " ".join(run_cmd)
+                    print(f"Running command: {runstring}")
+                    subprocess.run(run_cmd, env=my_env)
 
 
 def recent_result(tool, suite, which_run=1):
@@ -257,8 +264,8 @@ def summary_by_verdict(average_over_runs=1):
         print(" & \\multicolumn{4}{c|}{%s}" % tool, end='')
     print(" & \\multicolumn{4}{c}{%s}\\\\" % tools[-1])
 
-    print(" & \#tasks & %s\\\\\\midrule" % " & ".join(
-        ["\#P & \#E & t & $\\sigma$ "] * len(tools)))
+    print(" & #tasks & %s\\\\\\midrule" % " & ".join(
+        ["#P & #E & t & $\\sigma$ "] * len(tools)))
 
     for suite in suites:
         for verd in ['true', 'false', 'unknown']:
@@ -339,8 +346,8 @@ def summary(average_over_runs=1):
         print(" & \\multicolumn{2}{c|}{%s}" % tool, end='')
     print(" & \\multicolumn{2}{c}{%s}\\\\" % tools[-1])
 
-    print(" & \#tasks & %s\\\\\\midrule" %
-          " & ".join(["\#correct & time"] * len(tools)))
+    print(" & #tasks & %s\\\\\\midrule" %
+          " & ".join(["#correct & time"] * len(tools)))
 
     for suite in suites:
         print("%s & %d" % (suite, num[suite]), end='')
@@ -560,6 +567,9 @@ if __name__ == "__main__":
             opts = opts[2:]
         elif (opts[0] == "--suites"):
             suites = opts[1].split(",")
+            opts = opts[2:]
+        elif (opts[0] == "--rundefinitions"):
+            rundefinitions = opts[1].split(",")
             opts = opts[2:]
         elif (opts[0] == "--no-cache"):
             cache = False

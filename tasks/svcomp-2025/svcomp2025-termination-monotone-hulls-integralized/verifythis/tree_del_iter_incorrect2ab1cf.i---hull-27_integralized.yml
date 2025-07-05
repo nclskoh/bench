@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'tree_del_iter_incorrect2ab1cf.i---hull-27_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

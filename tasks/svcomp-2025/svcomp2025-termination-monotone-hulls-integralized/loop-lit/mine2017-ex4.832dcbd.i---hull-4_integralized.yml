@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'mine2017-ex4.832dcbd.i---hull-4_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

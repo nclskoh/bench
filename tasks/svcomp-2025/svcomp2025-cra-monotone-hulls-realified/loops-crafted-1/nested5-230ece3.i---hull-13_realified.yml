@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'nested5-230ece3.i---hull-13_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'simple_array_index_value_4.i.v+nlh-reducer99c040.i---hull-2.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'hard-u_unwindbound5015833e.i---hull-11_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

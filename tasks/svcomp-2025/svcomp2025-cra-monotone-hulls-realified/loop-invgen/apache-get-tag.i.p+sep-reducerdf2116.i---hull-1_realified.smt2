@@ -1,0 +1,149 @@
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto6 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto3 Real)
+(assert (exists
+         ((|main____CPAchecker_TMP_6___2'?1_realified?1| Real)
+            (|__VERIFIER_assert__cond___280'?2_realified?2| Real)
+            (|__VERIFIER_assert__cond___279'?3_realified?3| Real)
+            (|__VERIFIER_assert__cond___276'?4_realified?4| Real)
+            (|__VERIFIER_assert__cond___275'?5_realified?5| Real)
+            (|main____CPAchecker_TMP_4___2'?6_realified?6| Real)
+            (|main____CPAchecker_TMP_3___2'?7_realified?7| Real)
+            (|main__t'?8_realified?8| Real) (havoc?9_realified?9 Real)
+            (phi_main____CPAchecker_TMP_6___2?10_realified?10 Real)
+            (phi___VERIFIER_assert__cond___276?11_realified?11 Real)
+            (phi___VERIFIER_assert__cond___275?12_realified?12 Real)
+            (phi_main____CPAchecker_TMP_4___2?13_realified?13 Real)
+            (phi_main__t?14_realified?14 Real)
+            (phi___VERIFIER_assert__cond___276?15_realified?15 Real)
+            (phi___VERIFIER_assert__cond___275?16_realified?16 Real)
+            (phi_main__t?17_realified?17 Real) (havoc?18_realified?18 Real)
+            (havoc?19_realified?19 Real)
+            (main____CPAchecker_TMP_3___2?20_realified?20 Real)
+            (main____CPAchecker_TMP_4___2?21_realified?21 Real)
+            (__VERIFIER_assert__cond___275?22_realified?22 Real)
+            (__VERIFIER_assert__cond___276?23_realified?23 Real)
+            (__VERIFIER_assert__cond___279?24_realified?24 Real)
+            (__VERIFIER_assert__cond___280?25_realified?25 Real)
+            (main____CPAchecker_TMP_6___2?26_realified?26 Real)
+            (main__t?27_realified?27 Real)
+            (main__tagbuf_len?28_realified?28 Real))
+         (and (<= (+ (- main__t?27_realified?27) 1) 0)
+                (<= (+ (- main__tagbuf_len?28_realified?28) 1) 0)
+                (or (< (+ (- main__tagbuf_len?28_realified?28)
+                            main__t?27_realified?27) 0)
+                      (< (- (+ (- main__tagbuf_len?28_realified?28)
+                                 main__t?27_realified?27)) 0))
+                (or (and (or (< havoc?19_realified?19 0)
+                               (< (- havoc?19_realified?19) 0))
+                           (or (and (= havoc?18_realified?18 0)
+                                      (= (+ (- phi_main__t?17_realified?17)
+                                              main__t?27_realified?27) 0)
+                                      (= (+ (- phi___VERIFIER_assert__cond___275?16_realified?16)
+                                              __VERIFIER_assert__cond___275?22_realified?22) 0)
+                                      (= (+ (- phi___VERIFIER_assert__cond___276?15_realified?15)
+                                              __VERIFIER_assert__cond___276?23_realified?23) 0))
+                                 (and (or (< havoc?18_realified?18 0)
+                                            (< (- havoc?18_realified?18) 0))
+                                        (or (< (ite (<= (- main__t?27_realified?27) 0)
+                                                    1 0) 0)
+                                              (< (- (ite (<= (- main__t?27_realified?27) 0)
+                                                         1 0)) 0))
+                                        (or (< (ite (<= (+ (- main__tagbuf_len?28_realified?28)
+                                                             main__t?27_realified?27) 0)
+                                                    1 0) 0)
+                                              (< (- (ite (<= (+ (- main__tagbuf_len?28_realified?28)
+                                                                  main__t?27_realified?27) 0)
+                                                         1 0)) 0))
+                                        (or (< (+ (- main__tagbuf_len?28_realified?28)
+                                                    main__t?27_realified?27 1) 0)
+                                              (< (- (+ (- main__tagbuf_len?28_realified?28)
+                                                         main__t?27_realified?27
+                                                         1)) 0))
+                                        (= (+ (- phi_main__t?17_realified?17)
+                                                main__t?27_realified?27 1) 0)
+                                        (= (+ (ite (<= (- main__t?27_realified?27) 0)
+                                                   1 0)
+                                                (- phi___VERIFIER_assert__cond___275?16_realified?16)) 0)
+                                        (= (+ (ite (<= (+ (- main__tagbuf_len?28_realified?28)
+                                                            main__t?27_realified?27) 0)
+                                                   1 0)
+                                                (- phi___VERIFIER_assert__cond___276?15_realified?15)) 0)))
+                           (= (+ (- phi_main__t?14_realified?14)
+                                   phi_main__t?17_realified?17) 0)
+                           (= (+ (- phi_main____CPAchecker_TMP_4___2?13_realified?13)
+                                   havoc?18_realified?18) 0)
+                           (= (+ (- phi___VERIFIER_assert__cond___275?12_realified?12)
+                                   phi___VERIFIER_assert__cond___275?16_realified?16) 0)
+                           (= (+ (- phi___VERIFIER_assert__cond___276?11_realified?11)
+                                   phi___VERIFIER_assert__cond___276?15_realified?15) 0)
+                           (= (+ (- phi_main____CPAchecker_TMP_6___2?10_realified?10)
+                                   main____CPAchecker_TMP_6___2?26_realified?26) 0))
+                      (and (= havoc?19_realified?19 0)
+                             (= havoc?9_realified?9 0)
+                             (= (+ (- phi_main__t?14_realified?14)
+                                     main__t?27_realified?27) 0)
+                             (= (+ main____CPAchecker_TMP_4___2?21_realified?21
+                                     (- phi_main____CPAchecker_TMP_4___2?13_realified?13)) 0)
+                             (= (+ (- phi___VERIFIER_assert__cond___275?12_realified?12)
+                                     __VERIFIER_assert__cond___275?22_realified?22) 0)
+                             (= (+ (- phi___VERIFIER_assert__cond___276?11_realified?11)
+                                     __VERIFIER_assert__cond___276?23_realified?23) 0)
+                             (= (+ havoc?9_realified?9
+                                     (- phi_main____CPAchecker_TMP_6___2?10_realified?10)) 0)))
+                (or (< (ite (<= (- phi_main__t?14_realified?14) 0) 1 0) 0)
+                      (< (- (ite (<= (- phi_main__t?14_realified?14) 0) 1 0)) 0))
+                (or (< (ite (<= (+ phi_main__t?14_realified?14
+                                     (- main__tagbuf_len?28_realified?28)) 0)
+                            1 0) 0)
+                      (< (- (ite (<= (+ phi_main__t?14_realified?14
+                                          (- main__tagbuf_len?28_realified?28)) 0)
+                                 1 0)) 0))
+                (= (+ |main____CPAchecker_TMP_6___2'?1_realified?1|
+                        (- phi_main____CPAchecker_TMP_6___2?10_realified?10)) 0)
+                (= (+ |__VERIFIER_assert__cond___280'?2_realified?2|
+                        (- (ite (<= (+ phi_main__t?14_realified?14
+                                         (- main__tagbuf_len?28_realified?28)) 0)
+                                1 0))) 0)
+                (= (+ |__VERIFIER_assert__cond___279'?3_realified?3|
+                        (- (ite (<= (- phi_main__t?14_realified?14) 0) 1 0))) 0)
+                (= (+ |__VERIFIER_assert__cond___276'?4_realified?4|
+                        (- phi___VERIFIER_assert__cond___276?11_realified?11)) 0)
+                (= (+ |__VERIFIER_assert__cond___275'?5_realified?5|
+                        (- phi___VERIFIER_assert__cond___275?12_realified?12)) 0)
+                (= (+ |main____CPAchecker_TMP_4___2'?6_realified?6|
+                        (- phi_main____CPAchecker_TMP_4___2?13_realified?13)) 0)
+                (= (+ |main____CPAchecker_TMP_3___2'?7_realified?7|
+                        (- havoc?19_realified?19)) 0)
+                (= (+ |main__t'?8_realified?8|
+                        (- phi_main__t?14_realified?14) -1) 0)
+                (= (+ term_to_project_onto6
+                        (- (+ |main__t'?8_realified?8|
+                                (- main__t?27_realified?27)))) 0)
+                (= (+ term_to_project_onto5
+                        (- (+ |main____CPAchecker_TMP_3___2'?7_realified?7|
+                                (- main____CPAchecker_TMP_3___2?20_realified?20)))) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ |main____CPAchecker_TMP_4___2'?6_realified?6|
+                                (- main____CPAchecker_TMP_4___2?21_realified?21)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ |__VERIFIER_assert__cond___275'?5_realified?5|
+                                (- __VERIFIER_assert__cond___275?22_realified?22)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |__VERIFIER_assert__cond___276'?4_realified?4|
+                                (- __VERIFIER_assert__cond___276?23_realified?23)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |__VERIFIER_assert__cond___279'?3_realified?3|
+                                (- __VERIFIER_assert__cond___279?24_realified?24)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |__VERIFIER_assert__cond___280'?2_realified?2|
+                                (- __VERIFIER_assert__cond___280?25_realified?25)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |main____CPAchecker_TMP_6___2'?1_realified?1|
+                                (- main____CPAchecker_TMP_6___2?26_realified?26)))) 0))))
+(check-sat)

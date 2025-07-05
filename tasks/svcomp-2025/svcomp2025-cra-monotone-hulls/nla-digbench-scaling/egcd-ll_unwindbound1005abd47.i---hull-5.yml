@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'egcd-ll_unwindbound1005abd47.i---hull-5.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

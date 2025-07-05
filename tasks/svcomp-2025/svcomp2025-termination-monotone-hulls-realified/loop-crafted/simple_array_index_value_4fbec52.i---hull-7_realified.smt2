@@ -1,0 +1,43 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|tmp'?1_realified?1| Real) (|loop_entered'?2_realified?2| Real)
+            (tr?3_realified?3 Real) (tr?4_realified?4 Real)
+            (phi_tmp?5_realified?5 Real) (phi_tmp?6_realified?6 Real)
+            (|index2'?7_realified?7| Real) (|index1'?8_realified?8| Real)
+            (loop_entered?9_realified?9 Real) (tmp?10_realified?10 Real)
+            (index2?11_realified?11 Real) (index1?12_realified?12 Real))
+         (and (<= (- loop_entered?9_realified?9) 0)
+                (<= (- index2?11_realified?11) 0)
+                (<= (- index1?12_realified?12) 0)
+                (<= (+ index1?12_realified?12 (- index2?11_realified?11) 1) 0)
+                (or (and (<= (+ index1?12_realified?12 -99999) 0)
+                           (or (and (<= (+ (- index2?11_realified?11) 100000) 0)
+                                      (= (- phi_tmp?6_realified?6) 0))
+                                 (and (<= (+ index2?11_realified?11 -99999) 0)
+                                        (= (+ (- phi_tmp?6_realified?6) 1) 0)))
+                           (= (+ (- phi_tmp?5_realified?5)
+                                   phi_tmp?6_realified?6) 0))
+                      (and (<= (+ (- index1?12_realified?12) 100000) 0)
+                             (= (- phi_tmp?5_realified?5) 0)))
+                (or (< phi_tmp?5_realified?5 0)
+                      (< (- phi_tmp?5_realified?5) 0))
+                (= (+ (- tr?3_realified?3) tr?4_realified?4) 0)
+                (= (+ |tmp'?1_realified?1| (- phi_tmp?5_realified?5)) 0)
+                (= (+ |loop_entered'?2_realified?2| -1) 0)
+                (= (+ |index2'?7_realified?7| (- index2?11_realified?11) 1) 0)
+                (= (+ |index1'?8_realified?8| (- index1?12_realified?12) -1) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |index1'?8_realified?8|
+                                (- index1?12_realified?12)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |index2'?7_realified?7|
+                                (- index2?11_realified?11)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |loop_entered'?2_realified?2|
+                                (- loop_entered?9_realified?9)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |tmp'?1_realified?1| (- tmp?10_realified?10)))) 0))))
+(check-sat)

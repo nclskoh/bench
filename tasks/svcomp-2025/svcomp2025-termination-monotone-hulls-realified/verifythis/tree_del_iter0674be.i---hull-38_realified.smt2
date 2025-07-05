@@ -1,0 +1,36 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((phi_return?1_realified?1 Real) (phi_return@pos?2_realified?2 Real)
+            (phi_return@width?3_realified?3 Real)
+            (|return@width'?4_realified?4| Real)
+            (|return@pos'?5_realified?5| Real) (|return'?6_realified?6| Real)
+            (|return@width'?7_realified?7| Real)
+            (|return@pos'?8_realified?8| Real) (|return'?9_realified?9| Real)
+            (havoc?10_realified?10 Real) (return?11_realified?11 Real)
+            (return@pos?12_realified?12 Real)
+            (return@width?13_realified?13 Real))
+         (and (or (and (= havoc?10_realified?10 0)
+                         (= (+ (- phi_return?1_realified?1)
+                                 |return'?6_realified?6|) 0)
+                         (= (+ (- phi_return@pos?2_realified?2)
+                                 |return@pos'?5_realified?5|) 0)
+                         (= (+ (- phi_return@width?3_realified?3)
+                                 |return@width'?4_realified?4|) 0))
+                    (and (= havoc?10_realified?10 0)
+                           (= (+ return?11_realified?11
+                                   (- phi_return?1_realified?1)) 0)
+                           (= (+ return@pos?12_realified?12
+                                   (- phi_return@pos?2_realified?2)) 0)
+                           (= (+ return@width?13_realified?13
+                                   (- phi_return@width?3_realified?3)) 0)))
+                (= (+ |return@width'?7_realified?7|
+                        (- phi_return@width?3_realified?3)) 0)
+                (= (+ |return@pos'?8_realified?8|
+                        (- phi_return@pos?2_realified?2)) 0)
+                (= (+ |return'?9_realified?9| (- phi_return?1_realified?1)) 0)
+                (= (+ term_to_project_onto1 (- return?11_realified?11)) 0)
+                (= (+ term_to_project_onto0 (- return@pos?12_realified?12)) 0)
+                (= (+ term_to_project_onto (- return@width?13_realified?13)) 0))))
+(check-sat)

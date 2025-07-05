@@ -1,0 +1,33 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (|tmp'?3?3| Int)
+            (|c'?4?4| Int) (|x'?5?5| Int) (|y'?6?6| Int) (|counter'?7?7| Int)
+            (c?8?8 Int) (k?9?9 Int) (x?10?10 Int) (y?11?11 Int)
+            (tmp?12?12 Int) (counter?13?13 Int))
+         (and (<= (- c?8?8) 0) (<= (- y?11?11) 0) (= (+ y?11?11 (- c?8?8)) 0)
+                (<= (+ counter?13?13 -49) 0)
+                (= (+ (* 6 x?10?10) (* -2 uninterp?1?1) (* -3 uninterp?2?2)
+                        (- y?11?11)) 0) (<= (+ (- k?9?9) c?8?8 1) 0)
+                (= (+ |tmp'?3?3| (- counter?13?13)) 0)
+                (= (+ |c'?4?4| (- c?8?8) -1) 0)
+                (= (+ |x'?5?5| (- x?10?10) (- uninterp?2?2) (* -2 y?11?11) -1) 0)
+                (= (+ |y'?6?6| (- y?11?11) -1) 0)
+                (= (+ |counter'?7?7| (- counter?13?13) -1) 0)
+                (<= (- uninterp?1?1) 0) (<= (- uninterp?2?2) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ counter?13?13 (- |counter'?7?7|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ y?11?11 (- |y'?6?6|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ x?10?10 (- |x'?5?5|)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ c?8?8 (- |c'?4?4|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ tmp?12?12 (- |tmp'?3?3|)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ k?9?9 (- k?9?9)))) 0))))

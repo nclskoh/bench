@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'benchmark09_conjunctive500a7a.i---hull-4_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

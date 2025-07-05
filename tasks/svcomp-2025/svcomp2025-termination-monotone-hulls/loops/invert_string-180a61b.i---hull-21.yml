@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'invert_string-180a61b.i---hull-21.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

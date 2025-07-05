@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'array_3-2115a01.i---hull-17_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

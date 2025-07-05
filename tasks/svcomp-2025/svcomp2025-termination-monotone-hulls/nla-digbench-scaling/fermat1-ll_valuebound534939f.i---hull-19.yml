@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'fermat1-ll_valuebound534939f.i---hull-19.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

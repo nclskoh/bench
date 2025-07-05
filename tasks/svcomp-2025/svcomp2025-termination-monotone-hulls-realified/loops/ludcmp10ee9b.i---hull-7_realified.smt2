@@ -1,0 +1,54 @@
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(assert (exists
+         ((|a.Top@width'?1_realified?1| Real)
+            (|a.Top@pos'?2_realified?2| Real) (|j'?3_realified?3| Real)
+            (|a.Top'?4_realified?4| Real) (store?5_realified?5 Real)
+            (store?6_realified?6 Real) (store?7_realified?7 Real)
+            (|w'?8?8| Real) (tr?9_realified?9 Real)
+            (|k'?10_realified?10| Real) (K?11_realified?11 Real)
+            (|w'?12?12| Real) (|k'?13_realified?13| Real)
+            (a.Top@width?14_realified?14 Real)
+            (a.Top@pos?15_realified?15 Real) (a.Top?16_realified?16 Real)
+            (w?17?17 Real) (k?18_realified?18 Real) (j?19_realified?19 Real)
+            (i?20_realified?20 Real) (n?21_realified?21 Real))
+         (and (<= (+ (- j?19_realified?19) 1) 0) (<= (- i?20_realified?20) 0)
+                (<= (+ (- n?21_realified?21) 1) 0)
+                (<= (+ (- n?21_realified?21) j?19_realified?19) 0)
+                (= (+ (- |k'?10_realified?10|) K?11_realified?11) 0)
+                (or (and (= K?11_realified?11 0)
+                           (= (+ (- |w'?8?8|) tr?9_realified?9) 0)
+                           (= (- |k'?10_realified?10|) 0))
+                      (and (<= (+ (- K?11_realified?11) 1) 0)
+                             (<= (- i?20_realified?20) 0)
+                             (<= (+ (- |k'?10_realified?10|) 1) 0)
+                             (<= (+ |k'?10_realified?10|
+                                      (- i?20_realified?20) -1) 0)))
+                (<= (- K?11_realified?11) 0) (<= (- |k'?10_realified?10|) 0)
+                (<= (- i?20_realified?20) 0)
+                (<= (+ (- |k'?10_realified?10|) i?20_realified?20 1) 0)
+                (= (+ (- store?5_realified?5) |a.Top@width'?1_realified?1|) 0)
+                (= (+ (- store?6_realified?6) |a.Top@pos'?2_realified?2|) 0)
+                (= (+ |w'?12?12| (- |w'?8?8|)) 0)
+                (= (+ |k'?13_realified?13| (- |k'?10_realified?10|)) 0)
+                (= (+ |j'?3_realified?3| (- j?19_realified?19) -1) 0)
+                (= (+ (- store?7_realified?7) |a.Top'?4_realified?4|) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ |a.Top'?4_realified?4|
+                                (- a.Top?16_realified?16)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ |j'?3_realified?3| (- j?19_realified?19)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |k'?13_realified?13| (- k?18_realified?18)))) 0)
+                (= (+ term_to_project_onto1 (- (+ |w'?12?12| (- w?17?17)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |a.Top@pos'?2_realified?2|
+                                (- a.Top@pos?15_realified?15)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |a.Top@width'?1_realified?1|
+                                (- a.Top@width?14_realified?14)))) 0))))
+(check-sat)

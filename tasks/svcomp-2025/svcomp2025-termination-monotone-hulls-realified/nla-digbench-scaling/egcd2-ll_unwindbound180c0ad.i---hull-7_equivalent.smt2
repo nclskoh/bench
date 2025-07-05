@@ -1,0 +1,6 @@
+(assert (exists
+         ((|tmp'?1?1| Int) (|k'?2?2| Int) (|c'?3?3| Int) (|counter'?4?4| Int)
+            (q?5?5 Int) (s?6?6 Int) (r?7?7 Int) (p?8?8 Int) (a?9?9 Int)
+            (b?10?10 Int) (yy?11?11 Int) (xy?12?12 Int) (y?13?13 Int)
+            (x?14?14 Int))
+         false))

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'hard2_valuebound5f05e3c.i---hull-14_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

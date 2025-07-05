@@ -1,0 +1,42 @@
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(assert (exists
+         ((uninterp?1_realified?1 Real) (uninterp?2_realified?2 Real)
+            (|b'?3_realified?3| Real) (|a'?4_realified?4| Real)
+            (q?5_realified?5 Real) (r?6_realified?6 Real)
+            (a?7_realified?7 Real) (b?8_realified?8 Real)
+            (x?9_realified?9 Real) (y?10_realified?10 Real))
+         (and (<= (- q?5_realified?5) 0) (<= (+ (- r?6_realified?6) 1) 0)
+                (<= (+ (- a?7_realified?7) 1) 0)
+                (<= (+ (- b?8_realified?8) 1) 0)
+                (<= (+ (- y?10_realified?10) 1) 0)
+                (= (+ b?8_realified?8 (- uninterp?2_realified?2)) 0)
+                (= (+ x?9_realified?9 (- r?6_realified?6)
+                        (- uninterp?1_realified?1)) 0)
+                (<= (- r?6_realified?6) 0)
+                (<= (+ (* 2 b?8_realified?8) (- r?6_realified?6)) 0)
+                (<= (+ (* 2 uninterp?2_realified?2) (- r?6_realified?6)) 0)
+                (= (+ |b'?3_realified?3| (* -2 b?8_realified?8)) 0)
+                (= (+ |a'?4_realified?4| (* -2 a?7_realified?7)) 0)
+                (<= (- uninterp?1_realified?1) 0)
+                (<= (+ q?5_realified?5 (- uninterp?1_realified?1)) 0)
+                (<= (+ 1 (- uninterp?2_realified?2)) 0)
+                (<= (+ a?7_realified?7 (- uninterp?2_realified?2)) 0)
+                (<= (+ y?10_realified?10 (- uninterp?2_realified?2)) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ a?7_realified?7 (- |a'?4_realified?4|)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ b?8_realified?8 (- |b'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ y?10_realified?10 (- y?10_realified?10)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ x?9_realified?9 (- x?9_realified?9)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ r?6_realified?6 (- r?6_realified?6)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ q?5_realified?5 (- q?5_realified?5)))) 0))))
+(check-sat)

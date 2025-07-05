@@ -1,0 +1,36 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((|__VERIFIER_assert__cond___1'?1_realified?1| Real)
+            (tr?2_realified?2 Real) (tr?3_realified?3 Real)
+            (|main__index2'?4_realified?4| Real)
+            (|main__index1'?5_realified?5| Real)
+            (__VERIFIER_assert__cond___1?6_realified?6 Real)
+            (main__index2?7_realified?7 Real)
+            (main__index1?8_realified?8 Real))
+         (and (<= (- main__index2?7_realified?7) 0)
+                (<= (- main__index1?8_realified?8) 0)
+                (<= (+ (- main__index1?8_realified?8)
+                         main__index2?7_realified?7 1) 0)
+                (or (< (ite (= (+ (- tr?2_realified?2) tr?3_realified?3) 0) 1
+                            0) 0)
+                      (< (- (ite (= (+ (- tr?2_realified?2) tr?3_realified?3) 0)
+                                 1 0)) 0))
+                (= (+ |__VERIFIER_assert__cond___1'?1_realified?1|
+                        (- (ite (= (+ (- tr?2_realified?2) tr?3_realified?3) 0)
+                                1 0))) 0)
+                (= (+ |main__index2'?4_realified?4|
+                        (- main__index2?7_realified?7) -1) 0)
+                (= (+ |main__index1'?5_realified?5|
+                        (- main__index1?8_realified?8) 1) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ main__index1?8_realified?8
+                                (- |main__index1'?5_realified?5|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ main__index2?7_realified?7
+                                (- |main__index2'?4_realified?4|)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ __VERIFIER_assert__cond___1?6_realified?6
+                                (- |__VERIFIER_assert__cond___1'?1_realified?1|)))) 0))))
+(check-sat)

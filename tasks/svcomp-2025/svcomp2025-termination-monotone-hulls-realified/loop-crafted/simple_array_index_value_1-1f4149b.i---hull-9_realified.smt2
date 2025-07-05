@@ -1,0 +1,7 @@
+(declare-const term_to_project_onto Real)
+(assert (exists ((|index'?1_realified?1| Real) (index?2_realified?2 Real))
+         (and (<= (- index?2_realified?2) 0)
+                (<= (+ index?2_realified?2 -999) 0)
+                (= (+ |index'?1_realified?1| (- index?2_realified?2) -1) 0)
+                (= (+ term_to_project_onto (- index?2_realified?2)) 0))))
+(check-sat)

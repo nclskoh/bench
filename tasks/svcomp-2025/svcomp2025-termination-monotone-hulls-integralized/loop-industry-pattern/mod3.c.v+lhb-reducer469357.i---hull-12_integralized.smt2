@@ -1,0 +1,53 @@
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(assert (exists
+         ((|main____CPAchecker_TMP_0___0'?1?1| Int)
+            (|main____CPAchecker_TMP_0'?2?2| Int) (|main__y'?3?3| Int)
+            (|main__x'?4?4| Int) (|__tmp_94_0'?5?5| Int)
+            (|__tmp_93_0'?6?6| Int) (havoc?7?7 Int) (__tmp_93_0?8?8 Int)
+            (main____CPAchecker_TMP_0___0?9?9 Int) (main__y?10?10 Int)
+            (__tmp_94_0?11?11 Int) (main____CPAchecker_TMP_0?12?12 Int)
+            (main__x?13?13 Int) (remainder?14 Int) (remainder?15 Int)
+            (quotient?16 Int) (quotient?17 Int))
+         (and (= main__y?10?10 0) (<= (+ (- main__x?13?13) 1) 0)
+                (= main__y?10?10 0) (or (< havoc?7?7 0) (< (- havoc?7?7) 0))
+                (or (< (+ (ite (and (<= (- main__x?13?13) 0)
+                                      (<= (- main__x?13?13) 0))
+                               remainder?14 (- remainder?15)) -1) 0)
+                      (< (- (+ (ite (and (<= (- main__x?13?13) 0)
+                                           (<= (- main__x?13?13) 0))
+                                    remainder?14 (- remainder?15)) -1)) 0))
+                (= (+ (ite (and (<= (- main__x?13?13) 0)
+                                  (<= (- main__x?13?13) 0))
+                           remainder?14 (- remainder?15)) -2) 0)
+                (= (+ |main____CPAchecker_TMP_0___0'?1?1| (- havoc?7?7)) 0)
+                (= (+ (- __tmp_94_0?11?11) |main____CPAchecker_TMP_0'?2?2|) 0)
+                (= |main__y'?3?3| 0)
+                (= (+ |main__x'?4?4| (- main__x?13?13) -1) 0)
+                (= (+ |__tmp_94_0'?5?5| (- havoc?7?7)) 0)
+                (= (+ |__tmp_93_0'?6?6| (- havoc?7?7)) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ __tmp_93_0?8?8 (- |__tmp_93_0'?6?6|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ __tmp_94_0?11?11 (- |__tmp_94_0'?5?5|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ main__x?13?13 (- |main__x'?4?4|)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ main__y?10?10 (- |main__y'?3?3|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ main____CPAchecker_TMP_0?12?12
+                                (- |main____CPAchecker_TMP_0'?2?2|)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ main____CPAchecker_TMP_0___0?9?9
+                                (- |main____CPAchecker_TMP_0___0'?1?1|)))) 0)
+                (= (- main__x?13?13) (+ (* 3 quotient?17) remainder?15))
+                (<= 0 remainder?15)
+                (or (<= remainder?15 (+ 3 -1)) (<= remainder?15 (+ -3 -1)))
+                (= main__x?13?13 (+ (* 3 quotient?16) remainder?14))
+                (<= 0 remainder?14)
+                (or (<= remainder?14 (+ 3 -1)) (<= remainder?14 (+ -3 -1))))))
+(check-sat)

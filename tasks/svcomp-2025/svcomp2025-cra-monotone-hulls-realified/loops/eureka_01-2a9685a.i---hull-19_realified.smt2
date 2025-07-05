@@ -1,0 +1,138 @@
+(declare-const term_to_project_onto9 Real)
+(declare-const term_to_project_onto11 Real)
+(declare-const term_to_project_onto10 Real)
+(declare-const term_to_project_onto7 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto6 Real)
+(declare-const term_to_project_onto8 Real)
+(assert (exists
+         ((|x'?1_realified?1| Real) (|y'?2_realified?2| Real)
+            (|mem_20'?3_realified?3| Real) (|mem_21'?4_realified?4| Real)
+            (|mem_22'?5_realified?5| Real) (|mem_20@pos'?6_realified?6| Real)
+            (|mem_21@pos'?7_realified?7| Real)
+            (|mem_22@pos'?8_realified?8| Real)
+            (|mem_20@width'?9_realified?9| Real)
+            (|mem_21@width'?10_realified?10| Real)
+            (|mem_22@width'?11_realified?11| Real)
+            (|j'?12_realified?12| Real) (K?13_realified?13 Real)
+            (|mem_22@width'?14_realified?14| Real)
+            (|mem_21@width'?15_realified?15| Real)
+            (|mem_20@width'?16_realified?16| Real)
+            (|mem_22@pos'?17_realified?17| Real)
+            (|mem_21@pos'?18_realified?18| Real)
+            (|mem_20@pos'?19_realified?19| Real)
+            (|mem_22'?20_realified?20| Real) (|mem_21'?21_realified?21| Real)
+            (|mem_20'?22_realified?22| Real) (|j'?23_realified?23| Real)
+            (|y'?24_realified?24| Real) (|x'?25_realified?25| Real)
+            (|i'?26_realified?26| Real) (mem_20?27_realified?27 Real)
+            (mem_21?28_realified?28 Real) (mem_22?29_realified?29 Real)
+            (mem_20@pos?30_realified?30 Real)
+            (mem_21@pos?31_realified?31 Real)
+            (mem_22@pos?32_realified?32 Real)
+            (mem_20@width?33_realified?33 Real)
+            (mem_21@width?34_realified?34 Real)
+            (mem_22@width?35_realified?35 Real) (y?36_realified?36 Real)
+            (x?37_realified?37 Real) (edgecount?38_realified?38 Real)
+            (j?39_realified?39 Real) (nodecount?40_realified?40 Real)
+            (i?41_realified?41 Real))
+         (and (<= (+ (- edgecount?38_realified?38) 1) 0)
+                (<= (+ (- nodecount?40_realified?40) 1) 0)
+                (<= (- i?41_realified?41) 0)
+                (= (+ (- nodecount?40_realified?40) 5) 0)
+                (= (+ (* 4 nodecount?40_realified?40)
+                        (- edgecount?38_realified?38)) 0)
+                (<= (+ i?41_realified?41 (- nodecount?40_realified?40) 1) 0)
+                (= (+ (- |j'?12_realified?12|) K?13_realified?13) 0)
+                (or (and (= K?13_realified?13 0)
+                           (= (+ (- |mem_22@width'?11_realified?11|)
+                                   mem_22@width?35_realified?35) 0)
+                           (= (+ (- |mem_21@width'?10_realified?10|)
+                                   mem_21@width?34_realified?34) 0)
+                           (= (+ (- |mem_20@width'?9_realified?9|)
+                                   mem_20@width?33_realified?33) 0)
+                           (= (+ (- |mem_22@pos'?8_realified?8|)
+                                   mem_22@pos?32_realified?32) 0)
+                           (= (+ (- |mem_21@pos'?7_realified?7|)
+                                   mem_21@pos?31_realified?31) 0)
+                           (= (+ (- |mem_20@pos'?6_realified?6|)
+                                   mem_20@pos?30_realified?30) 0)
+                           (= (+ (- |mem_22'?5_realified?5|)
+                                   mem_22?29_realified?29) 0)
+                           (= (+ (- |mem_21'?4_realified?4|)
+                                   mem_21?28_realified?28) 0)
+                           (= (+ (- |mem_20'?3_realified?3|)
+                                   mem_20?27_realified?27) 0)
+                           (= (- |j'?12_realified?12|) 0)
+                           (= (+ (- |y'?2_realified?2|) y?36_realified?36) 0)
+                           (= (+ (- |x'?1_realified?1|) x?37_realified?37) 0))
+                      (and (<= (+ (- K?13_realified?13) 1) 0)
+                             (= (+ edgecount?38_realified?38 -20) 0)
+                             (= (+ edgecount?38_realified?38 -20) 0)
+                             (<= (+ |j'?12_realified?12| -20) 0)
+                             (<= (+ (- |j'?12_realified?12|) 1) 0)))
+                (<= (- K?13_realified?13) 0)
+                (<= (+ (- edgecount?38_realified?38) 1) 0)
+                (<= (- |j'?12_realified?12|) 0)
+                (= (+ (- edgecount?38_realified?38) 20) 0)
+                (<= (+ (- |j'?12_realified?12|) edgecount?38_realified?38) 0)
+                (= (+ |mem_22@width'?14_realified?14|
+                        (- |mem_22@width'?11_realified?11|)) 0)
+                (= (+ |mem_21@width'?15_realified?15|
+                        (- |mem_21@width'?10_realified?10|)) 0)
+                (= (+ |mem_20@width'?16_realified?16|
+                        (- |mem_20@width'?9_realified?9|)) 0)
+                (= (+ |mem_22@pos'?17_realified?17|
+                        (- |mem_22@pos'?8_realified?8|)) 0)
+                (= (+ |mem_21@pos'?18_realified?18|
+                        (- |mem_21@pos'?7_realified?7|)) 0)
+                (= (+ |mem_20@pos'?19_realified?19|
+                        (- |mem_20@pos'?6_realified?6|)) 0)
+                (= (+ |mem_22'?20_realified?20| (- |mem_22'?5_realified?5|)) 0)
+                (= (+ |mem_21'?21_realified?21| (- |mem_21'?4_realified?4|)) 0)
+                (= (+ |mem_20'?22_realified?22| (- |mem_20'?3_realified?3|)) 0)
+                (= (+ |j'?23_realified?23| (- |j'?12_realified?12|)) 0)
+                (= (+ |i'?26_realified?26| (- i?41_realified?41) -1) 0)
+                (= (+ |y'?24_realified?24| (- |y'?2_realified?2|)) 0)
+                (= (+ |x'?25_realified?25| (- |x'?1_realified?1|)) 0)
+                (= (+ term_to_project_onto11
+                        (- (+ |x'?25_realified?25| (- x?37_realified?37)))) 0)
+                (= (+ term_to_project_onto10
+                        (- (+ |y'?24_realified?24| (- y?36_realified?36)))) 0)
+                (= (+ term_to_project_onto9
+                        (- (+ |i'?26_realified?26| (- i?41_realified?41)))) 0)
+                (= (+ term_to_project_onto8
+                        (- (+ |j'?23_realified?23| (- j?39_realified?39)))) 0)
+                (= (+ term_to_project_onto7
+                        (- (+ |mem_20'?22_realified?22|
+                                (- mem_20?27_realified?27)))) 0)
+                (= (+ term_to_project_onto6
+                        (- (+ |mem_21'?21_realified?21|
+                                (- mem_21?28_realified?28)))) 0)
+                (= (+ term_to_project_onto5
+                        (- (+ |mem_22'?20_realified?20|
+                                (- mem_22?29_realified?29)))) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ |mem_20@pos'?19_realified?19|
+                                (- mem_20@pos?30_realified?30)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ |mem_21@pos'?18_realified?18|
+                                (- mem_21@pos?31_realified?31)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |mem_22@pos'?17_realified?17|
+                                (- mem_22@pos?32_realified?32)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |mem_20@width'?16_realified?16|
+                                (- mem_20@width?33_realified?33)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |mem_21@width'?15_realified?15|
+                                (- mem_21@width?34_realified?34)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |mem_22@width'?14_realified?14|
+                                (- mem_22@width?35_realified?35)))) 0))))
+(check-sat)

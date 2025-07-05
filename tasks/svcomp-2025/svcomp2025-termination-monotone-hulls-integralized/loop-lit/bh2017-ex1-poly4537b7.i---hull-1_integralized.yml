@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'bh2017-ex1-poly4537b7.i---hull-1_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

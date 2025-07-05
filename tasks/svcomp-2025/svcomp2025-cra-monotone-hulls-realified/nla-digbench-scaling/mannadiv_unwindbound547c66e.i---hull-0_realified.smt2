@@ -1,0 +1,52 @@
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((uninterp?1_realified?1 Real) (|tmp'?2_realified?2| Real)
+            (|y3'?3_realified?3| Real) (|y2'?4_realified?4| Real)
+            (|y1'?5_realified?5| Real) (|counter'?6_realified?6| Real)
+            (phi_y2?7_realified?7 Real) (phi_y1?8_realified?8 Real)
+            (y1?9_realified?9 Real) (y2?10_realified?10 Real)
+            (y3?11_realified?11 Real) (tmp?12_realified?12 Real)
+            (counter?13_realified?13 Real) (x2?14_realified?14 Real)
+            (x1?15_realified?15 Real))
+         (and (<= (- y1?9_realified?9) 0) (<= (- y2?10_realified?10) 0)
+                (<= (- y3?11_realified?11) 0)
+                (<= (- counter?13_realified?13) 0)
+                (<= (- x1?15_realified?15) 0)
+                (= (+ x1?15_realified?15 (- counter?13_realified?13)
+                        (- y3?11_realified?11)) 0)
+                (<= (+ counter?13_realified?13 -4) 0)
+                (= (+ (- x1?15_realified?15) y3?11_realified?11
+                        y2?10_realified?10 uninterp?1_realified?1) 0)
+                (or (<= (+ y3?11_realified?11 1) 0)
+                      (<= (+ (- y3?11_realified?11) 1) 0))
+                (or (and (or (< (+ (- x2?14_realified?14) y2?10_realified?10
+                                     1) 0)
+                               (< (- (+ (- x2?14_realified?14)
+                                          y2?10_realified?10 1)) 0))
+                           (= (+ (- phi_y1?8_realified?8) y1?9_realified?9) 0)
+                           (= (+ (- phi_y2?7_realified?7) y2?10_realified?10
+                                   1) 0))
+                      (and (= (+ (- x2?14_realified?14) y2?10_realified?10 1) 0)
+                             (= (+ (- phi_y1?8_realified?8) y1?9_realified?9
+                                     1) 0) (= (- phi_y2?7_realified?7) 0)))
+                (= (+ |tmp'?2_realified?2| (- counter?13_realified?13)) 0)
+                (= (+ |y3'?3_realified?3| (- y3?11_realified?11) 1) 0)
+                (= (+ |y2'?4_realified?4| (- phi_y2?7_realified?7)) 0)
+                (= (+ |y1'?5_realified?5| (- phi_y1?8_realified?8)) 0)
+                (= (+ |counter'?6_realified?6| (- counter?13_realified?13) -1) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ |counter'?6_realified?6|
+                                (- counter?13_realified?13)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |y1'?5_realified?5| (- y1?9_realified?9)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |y2'?4_realified?4| (- y2?10_realified?10)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |y3'?3_realified?3| (- y3?11_realified?11)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |tmp'?2_realified?2| (- tmp?12_realified?12)))) 0))))
+(check-sat)

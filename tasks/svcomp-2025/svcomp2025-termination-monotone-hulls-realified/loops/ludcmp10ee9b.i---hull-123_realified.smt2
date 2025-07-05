@@ -1,0 +1,139 @@
+(declare-const term_to_project_onto9 Real)
+(declare-const term_to_project_onto11 Real)
+(declare-const term_to_project_onto10 Real)
+(declare-const term_to_project_onto7 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto6 Real)
+(declare-const term_to_project_onto8 Real)
+(assert (exists
+         ((|mem_11@width'?1_realified?1| Real)
+            (|mem_10@width'?2_realified?2| Real)
+            (|mem_11@pos'?3_realified?3| Real)
+            (|mem_10@pos'?4_realified?4| Real) (|mem_11'?5_realified?5| Real)
+            (|mem_10'?6_realified?6| Real) (|w'?7?7| Real)
+            (|j'?8_realified?8| Real) (tr?9_realified?9 Real)
+            (store?10_realified?10 Real) (store?11_realified?11 Real)
+            (tr?12_realified?12 Real) (tr?13_realified?13 Real)
+            (store?14_realified?14 Real)
+            (phi_mem_11@width?15_realified?15 Real)
+            (phi_mem_10@width?16_realified?16 Real)
+            (phi_a.Top@width?17_realified?17 Real)
+            (store?18_realified?18 Real)
+            (phi_mem_11@pos?19_realified?19 Real)
+            (phi_mem_10@pos?20_realified?20 Real)
+            (phi_a.Top@pos?21_realified?21 Real) (store?22_realified?22 Real)
+            (phi_mem_11?23_realified?23 Real)
+            (phi_mem_10?24_realified?24 Real)
+            (phi_a.Top?25_realified?25 Real) (store?26_realified?26 Real)
+            (|a.Top@width'?27_realified?27| Real)
+            (|a.Top@pos'?28_realified?28| Real)
+            (|a.Top'?29_realified?29| Real) (mem_10?30_realified?30 Real)
+            (mem_11?31_realified?31 Real) (mem_10@pos?32_realified?32 Real)
+            (mem_11@pos?33_realified?33 Real)
+            (mem_10@width?34_realified?34 Real)
+            (mem_11@width?35_realified?35 Real) (w?36?36 Real)
+            (j?37_realified?37 Real) (n?38_realified?38 Real)
+            (i?39_realified?39 Real) (a.Top@width?40_realified?40 Real)
+            (a.Top@pos?41_realified?41 Real) (a.Top?42_realified?42 Real))
+         (and (<= (- j?37_realified?37) 0) (<= (+ (- n?38_realified?38) 1) 0)
+                (= i?39_realified?39 0) (= (+ (- n?38_realified?38) 5) 0)
+                (= i?39_realified?39 0)
+                (<= (+ (- n?38_realified?38) j?37_realified?37) 0)
+                (or (and (or (< (+ i?39_realified?39 (- j?37_realified?37)) 0)
+                               (< (- (+ i?39_realified?39
+                                          (- j?37_realified?37))) 0))
+                           (= (+ (- phi_a.Top?25_realified?25)
+                                   store?26_realified?26) 0)
+                           (= (+ (- phi_mem_10?24_realified?24)
+                                   mem_10?30_realified?30) 0)
+                           (= (+ (- phi_mem_11?23_realified?23)
+                                   mem_11?31_realified?31) 0)
+                           (= (+ (- phi_a.Top@pos?21_realified?21)
+                                   store?22_realified?22) 0)
+                           (= (+ (- phi_mem_10@pos?20_realified?20)
+                                   mem_10@pos?32_realified?32) 0)
+                           (= (+ (- phi_mem_11@pos?19_realified?19)
+                                   mem_11@pos?33_realified?33) 0)
+                           (= (+ (- phi_a.Top@width?17_realified?17)
+                                   store?18_realified?18) 0)
+                           (= (+ (- phi_mem_10@width?16_realified?16)
+                                   mem_10@width?34_realified?34) 0)
+                           (= (+ (- phi_mem_11@width?15_realified?15)
+                                   mem_11@width?35_realified?35) 0))
+                      (and (= (+ i?39_realified?39 (- j?37_realified?37)) 0)
+                             (= (+ store?14_realified?14
+                                     (- phi_a.Top?25_realified?25)) 0)
+                             (= (+ tr?13_realified?13
+                                     (- phi_mem_10?24_realified?24)
+                                     (* 400 i?39_realified?39)) 0)
+                             (= (+ tr?12_realified?12
+                                     (- phi_mem_11?23_realified?23)
+                                     (* 400 i?39_realified?39)) 0)
+                             (= (+ store?11_realified?11
+                                     (- phi_a.Top@pos?21_realified?21)) 0)
+                             (= (+ (- phi_mem_10@pos?20_realified?20)
+                                     (* 400 i?39_realified?39)) 0)
+                             (= (+ (- phi_mem_11@pos?19_realified?19)
+                                     (* 400 i?39_realified?39)) 0)
+                             (= (+ store?10_realified?10
+                                     (- phi_a.Top@width?17_realified?17)) 0)
+                             (= (+ (- phi_mem_10@width?16_realified?16) 1) 0)
+                             (= (+ (- phi_mem_11@width?15_realified?15) 1) 0)))
+                (= (+ |mem_11@width'?1_realified?1|
+                        (- phi_mem_11@width?15_realified?15)) 0)
+                (= (+ |mem_10@width'?2_realified?2|
+                        (- phi_mem_10@width?16_realified?16)) 0)
+                (= (+ |a.Top@width'?27_realified?27|
+                        (- phi_a.Top@width?17_realified?17)) 0)
+                (= (+ |mem_11@pos'?3_realified?3|
+                        (- phi_mem_11@pos?19_realified?19)) 0)
+                (= (+ |mem_10@pos'?4_realified?4|
+                        (- phi_mem_10@pos?20_realified?20)) 0)
+                (= (+ |a.Top@pos'?28_realified?28|
+                        (- phi_a.Top@pos?21_realified?21)) 0)
+                (= (+ |mem_11'?5_realified?5| (- phi_mem_11?23_realified?23)) 0)
+                (= (+ |mem_10'?6_realified?6| (- phi_mem_10?24_realified?24)) 0)
+                (= (+ (- tr?9_realified?9) (- w?36?36) |w'?7?7|) 0)
+                (= (+ |j'?8_realified?8| (- j?37_realified?37) -1) 0)
+                (= (+ |a.Top'?29_realified?29| (- phi_a.Top?25_realified?25)) 0)
+                (= (+ term_to_project_onto11
+                        (- (+ a.Top?42_realified?42
+                                (- |a.Top'?29_realified?29|)))) 0)
+                (= (+ term_to_project_onto10
+                        (- (+ j?37_realified?37 (- |j'?8_realified?8|)))) 0)
+                (= (+ term_to_project_onto9 (- (+ w?36?36 (- |w'?7?7|)))) 0)
+                (= (+ term_to_project_onto8
+                        (- (+ mem_10?30_realified?30
+                                (- |mem_10'?6_realified?6|)))) 0)
+                (= (+ term_to_project_onto7
+                        (- (+ mem_11?31_realified?31
+                                (- |mem_11'?5_realified?5|)))) 0)
+                (= (+ term_to_project_onto6
+                        (- (+ a.Top@pos?41_realified?41
+                                (- |a.Top@pos'?28_realified?28|)))) 0)
+                (= (+ term_to_project_onto5
+                        (- (+ mem_10@pos?32_realified?32
+                                (- |mem_10@pos'?4_realified?4|)))) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ mem_11@pos?33_realified?33
+                                (- |mem_11@pos'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ a.Top@width?40_realified?40
+                                (- |a.Top@width'?27_realified?27|)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ mem_10@width?34_realified?34
+                                (- |mem_10@width'?2_realified?2|)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ mem_11@width?35_realified?35
+                                (- |mem_11@width'?1_realified?1|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ i?39_realified?39 (- i?39_realified?39)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ n?38_realified?38 (- n?38_realified?38)))) 0))))
+(check-sat)

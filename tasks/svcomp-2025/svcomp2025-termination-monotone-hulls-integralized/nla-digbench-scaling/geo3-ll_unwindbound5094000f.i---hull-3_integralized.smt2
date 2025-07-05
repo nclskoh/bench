@@ -1,0 +1,43 @@
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto5_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (uninterp?3?3 Int)
+            (|tmp'?4?4| Int) (|c'?5?5| Int) (|y'?6?6| Int) (|x'?7?7| Int)
+            (|counter'?8?8| Int) (c?9?9 Int) (k?10?10 Int) (x?11?11 Int)
+            (az?12?12 Int) (y?13?13 Int) (tmp?14?14 Int) (counter?15?15 Int)
+            (z?16?16 Int) (a?17?17 Int))
+         (and (<= (+ (- c?9?9) 1) 0) (<= (- counter?15?15) 0)
+                (= (+ counter?15?15 (- c?9?9) 1) 0)
+                (<= (+ counter?15?15 -49) 0)
+                (= (+ (- uninterp?3?3) a?17?17 (- x?11?11) uninterp?2?2) 0)
+                (<= (+ (- k?10?10) c?9?9 1) 0)
+                (= (+ |tmp'?4?4| (- counter?15?15)) 0)
+                (= (+ |c'?5?5| (- c?9?9) -1) 0)
+                (= (+ |y'?6?6| (- uninterp?1?1)) 0)
+                (= (+ |x'?7?7| (- a?17?17) (- uninterp?2?2)) 0)
+                (= (+ |counter'?8?8| (- counter?15?15) -1) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ counter?15?15 (- |counter'?8?8|)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ x?11?11 (- |x'?7?7|)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ y?13?13 (- |y'?6?6|)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ c?9?9 (- |c'?5?5|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ tmp?14?14 (- |tmp'?4?4|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ a?17?17 (- a?17?17)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ z?16?16 (- z?16?16)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ az?12?12 (- az?12?12)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ k?10?10 (- k?10?10)))) 0))))

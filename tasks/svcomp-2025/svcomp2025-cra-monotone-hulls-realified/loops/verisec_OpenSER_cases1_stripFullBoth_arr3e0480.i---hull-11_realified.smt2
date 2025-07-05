@@ -1,0 +1,12 @@
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|start'?1_realified?1| Real) (tr?2_realified?2 Real)
+            (tr?3_realified?3 Real) (tr?4_realified?4 Real)
+            (start?5_realified?5 Real))
+         (and (or (= (+ tr?4_realified?4 -32) 0)
+                    (and (or (< (+ tr?3_realified?3 -32) 0)
+                               (< (- (+ tr?3_realified?3 -32)) 0))
+                           (= (+ tr?2_realified?2 -9) 0)))
+                (= (+ (- start?5_realified?5) |start'?1_realified?1| -1) 0)
+                (= (+ term_to_project_onto (- |start'?1_realified?1|)) 0))))
+(check-sat)

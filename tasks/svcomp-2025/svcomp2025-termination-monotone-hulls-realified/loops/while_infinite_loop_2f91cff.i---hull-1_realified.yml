@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'while_infinite_loop_2f91cff.i---hull-1_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

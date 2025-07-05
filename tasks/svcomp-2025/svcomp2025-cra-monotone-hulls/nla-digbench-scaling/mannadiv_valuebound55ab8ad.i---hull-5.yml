@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'mannadiv_valuebound55ab8ad.i---hull-5.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

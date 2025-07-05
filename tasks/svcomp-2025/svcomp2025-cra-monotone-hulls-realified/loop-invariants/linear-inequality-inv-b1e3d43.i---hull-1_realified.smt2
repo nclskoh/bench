@@ -1,0 +1,21 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((|i'?1_realified?1| Real) (|s'?2_realified?2| Real)
+            (|v'?3_realified?3| Real) (havoc?4_realified?4 Real)
+            (s?5_realified?5 Real) (v?6_realified?6 Real)
+            (i?7_realified?7 Real) (n?8_realified?8 Real))
+         (and (<= (- i?7_realified?7) 0)
+                (<= (+ (- n?8_realified?8) i?7_realified?7 1) 0)
+                (= (+ |i'?1_realified?1| (- i?7_realified?7) -1) 0)
+                (= (+ (- havoc?4_realified?4) (- s?5_realified?5)
+                        |s'?2_realified?2|) 0)
+                (= (+ |v'?3_realified?3| (- havoc?4_realified?4)) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |v'?3_realified?3| (- v?6_realified?6)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |s'?2_realified?2| (- s?5_realified?5)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |i'?1_realified?1| (- i?7_realified?7)))) 0))))
+(check-sat)

@@ -1,0 +1,64 @@
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto8_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto9_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto10_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const term_to_project_onto5_integralized Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (uninterp?3?3 Int)
+            (uninterp?4?4 Int) (uninterp?5?5 Int) (uninterp?6?6 Int)
+            (uninterp?7?7 Int) (uninterp?8?8 Int) (|k'?9?9| Int)
+            (|c'?10?10| Int) (q?11?11 Int) (s?12?12 Int) (r?13?13 Int)
+            (p?14?14 Int) (k?15?15 Int) (c?16?16 Int) (a?17?17 Int)
+            (b?18?18 Int) (yy?19?19 Int) (xy?20?20 Int) (y?21?21 Int)
+            (x?22?22 Int))
+         (and (<= (- k?15?15) 0) (<= (- c?16?16) 0) (<= (+ (- a?17?17) 1) 0)
+                (<= (+ (- b?18?18) 1) 0) (<= (+ (- y?21?21) 1) 0)
+                (<= (+ (- x?22?22) 1) 0)
+                (= (+ a?17?17 (- c?16?16) (- uninterp?8?8)) 0)
+                (= (+ (- uninterp?7?7) (- uninterp?6?6) a?17?17) 0)
+                (= (+ (- uninterp?5?5) (- uninterp?4?4) b?18?18) 0)
+                (= (+ uninterp?3?3 uninterp?2?2 (- uninterp?5?5)
+                        (- uninterp?4?4) (- uninterp?1?1) b?18?18) 0)
+                (<= (+ b?18?18 (- c?16?16)) 0)
+                (= (+ |k'?9?9| (- k?15?15) -1) 0)
+                (= (+ |c'?10?10| b?18?18 (- c?16?16)) 0)
+                (<= (+ 1 (- uninterp?1?1)) 0)
+                (<= (+ b?18?18 (- uninterp?1?1)) 0)
+                (<= (+ y?21?21 (- uninterp?1?1)) 0)
+                (<= (+ s?12?12 (- uninterp?4?4)) 0)
+                (<= (+ q?11?11 (- uninterp?5?5)) 0)
+                (<= (+ r?13?13 (- uninterp?6?6)) 0)
+                (<= (+ p?14?14 (- uninterp?7?7)) 0) (<= (- uninterp?8?8) 0)
+                (<= (+ k?15?15 (- uninterp?8?8)) 0)
+                (= (- (+ (- uninterp?3?3) (- uninterp?2?2) uninterp?1?1)) 0)
+                (= (+ term_to_project_onto10_integralized
+                        (- (+ c?16?16 (- |c'?10?10|)))) 0)
+                (= (+ term_to_project_onto9_integralized
+                        (- (+ k?15?15 (- |k'?9?9|)))) 0)
+                (= (+ term_to_project_onto8_integralized
+                        (- (+ x?22?22 (- x?22?22)))) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ y?21?21 (- y?21?21)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ xy?20?20 (- xy?20?20)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ yy?19?19 (- yy?19?19)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ b?18?18 (- b?18?18)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ a?17?17 (- a?17?17)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ p?14?14 (- p?14?14)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ r?13?13 (- r?13?13)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ s?12?12 (- s?12?12)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ q?11?11 (- q?11?11)))) 0))))

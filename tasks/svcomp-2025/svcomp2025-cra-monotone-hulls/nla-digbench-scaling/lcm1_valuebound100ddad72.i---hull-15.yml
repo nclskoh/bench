@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'lcm1_valuebound100ddad72.i---hull-15.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

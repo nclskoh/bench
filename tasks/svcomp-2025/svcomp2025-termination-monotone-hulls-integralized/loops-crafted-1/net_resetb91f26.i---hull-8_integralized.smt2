@@ -1,0 +1,94 @@
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto12_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto9_integralized Int)
+(declare-const term_to_project_onto8_integralized Int)
+(declare-const term_to_project_onto10_integralized Int)
+(declare-const term_to_project_onto5_integralized Int)
+(declare-const term_to_project_onto15_integralized Int)
+(declare-const term_to_project_onto14_integralized Int)
+(declare-const term_to_project_onto11_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto13_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(assert (exists
+         ((|param2@width'?1?1| Int) (|param1@width'?2?2| Int)
+            (|param0@width'?3?3| Int) (|return@width'?4?4| Int)
+            (|param2@pos'?5?5| Int) (|param1@pos'?6?6| Int)
+            (|param0@pos'?7?7| Int) (|return@pos'?8?8| Int)
+            (|param2'?9?9| Int) (|param1'?10?10| Int) (|param0'?11?11| Int)
+            (|return'?12?12| Int) (|tmp'?13?13| Int) (|i'?14?14| Int)
+            (|__tmpTR__int_1'?15?15| Int) (type_err?16?16 Int)
+            (type_err?17?17 Int) (havoc?18?18 Int) (type_err?19?19 Int)
+            (type_err?20?20 Int) (tr?21?21 Int) (tr?22?22 Int)
+            (__tmpTR__int_1?23?23 Int) (param2@width?24?24 Int)
+            (param1@width?25?25 Int) (param0@width?26?26 Int)
+            (param2@pos?27?27 Int) (param1@pos?28?28 Int)
+            (param0@pos?29?29 Int) (param2?30?30 Int) (param1?31?31 Int)
+            (param0?32?32 Int) (phi_tmp?33?33 Int) (phi_tmp?34?34 Int)
+            (af?35?35 Int) (return?36?36 Int) (return@pos?37?37 Int)
+            (return@width?38?38 Int) (tmp?39?39 Int) (batch_at?40?40 Int)
+            (i?41?41 Int))
+         (and (<= (+ (- batch_at?40?40) i?41?41 1) 0)
+                (or (and (<= (- i?41?41) 0)
+                           (or (and (<= (+ (- i?41?41) 256) 0)
+                                      (= (- phi_tmp?34?34) 0))
+                                 (and (<= (+ i?41?41 -255) 0)
+                                        (= (+ (- phi_tmp?34?34) 1) 0)))
+                           (= (+ (- phi_tmp?33?33) phi_tmp?34?34) 0))
+                      (and (<= (+ i?41?41 1) 0) (= (- phi_tmp?33?33) 0)))
+                (or (< phi_tmp?33?33 0) (< (- phi_tmp?33?33) 0))
+                (= (+ (- type_err?19?19) |param2@width'?1?1|) 0)
+                (= (+ |param1@width'?2?2| -1) 0)
+                (= (+ |param0@width'?3?3| -1) 0)
+                (= (+ (- type_err?16?16) |return@width'?4?4|) 0)
+                (= (+ (- type_err?20?20) |param2@pos'?5?5|) 0)
+                (= |param1@pos'?6?6| 0)
+                (= (+ |param0@pos'?7?7| (* -1016 i?41?41)) 0)
+                (= (+ (- type_err?17?17) |return@pos'?8?8|) 0)
+                (= (+ (- af?35?35) |param2'?9?9|) 0)
+                (= (+ (- tr?21?21) |param1'?10?10|) 0)
+                (= (+ (- tr?22?22) |param0'?11?11| (* -1016 i?41?41)) 0)
+                (= (+ (- havoc?18?18) |return'?12?12|) 0)
+                (= (+ |tmp'?13?13| (- phi_tmp?33?33)) 0)
+                (= (+ |i'?14?14| (- i?41?41) -1) 0)
+                (= (+ |__tmpTR__int_1'?15?15| (- havoc?18?18)) 0)
+                (= (+ term_to_project_onto15_integralized
+                        (- (+ __tmpTR__int_1?23?23
+                                (- |__tmpTR__int_1'?15?15|)))) 0)
+                (= (+ term_to_project_onto14_integralized
+                        (- (+ i?41?41 (- |i'?14?14|)))) 0)
+                (= (+ term_to_project_onto13_integralized
+                        (- (+ tmp?39?39 (- |tmp'?13?13|)))) 0)
+                (= (+ term_to_project_onto12_integralized
+                        (- (+ return?36?36 (- |return'?12?12|)))) 0)
+                (= (+ term_to_project_onto11_integralized
+                        (- (+ param0?32?32 (- |param0'?11?11|)))) 0)
+                (= (+ term_to_project_onto10_integralized
+                        (- (+ param1?31?31 (- |param1'?10?10|)))) 0)
+                (= (+ term_to_project_onto9_integralized
+                        (- (+ param2?30?30 (- |param2'?9?9|)))) 0)
+                (= (+ term_to_project_onto8_integralized
+                        (- (+ return@pos?37?37 (- |return@pos'?8?8|)))) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ param0@pos?29?29 (- |param0@pos'?7?7|)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ param1@pos?28?28 (- |param1@pos'?6?6|)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ param2@pos?27?27 (- |param2@pos'?5?5|)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ return@width?38?38 (- |return@width'?4?4|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ param0@width?26?26 (- |param0@width'?3?3|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ param1@width?25?25 (- |param1@width'?2?2|)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ param2@width?24?24 (- |param2@width'?1?1|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ batch_at?40?40 (- batch_at?40?40)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ af?35?35 (- af?35?35)))) 0))))

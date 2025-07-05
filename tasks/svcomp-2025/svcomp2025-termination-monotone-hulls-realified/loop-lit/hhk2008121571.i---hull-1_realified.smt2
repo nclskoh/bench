@@ -1,0 +1,11 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|cnt'?1_realified?1| Real) (|res'?2_realified?2| Real)
+            (res?3_realified?3 Real) (cnt?4_realified?4 Real))
+         (and (<= (- cnt?4_realified?4) 0) (<= (+ (- cnt?4_realified?4) 1) 0)
+                (= (+ |cnt'?1_realified?1| (- cnt?4_realified?4) 1) 0)
+                (= (+ (- res?3_realified?3) |res'?2_realified?2| -1) 0)
+                (= (+ term_to_project_onto0 (- res?3_realified?3)) 0)
+                (= (+ term_to_project_onto (- cnt?4_realified?4)) 0))))
+(check-sat)

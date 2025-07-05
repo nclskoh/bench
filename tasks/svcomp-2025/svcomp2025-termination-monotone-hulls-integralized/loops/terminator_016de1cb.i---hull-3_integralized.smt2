@@ -1,0 +1,5 @@
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists ((x?1?1 Int))
+         (and (<= (+ x?1?1 -99) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ x?1?1 (- x?1?1)))) 0))))

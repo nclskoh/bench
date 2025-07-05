@@ -1,0 +1,137 @@
+(declare-const term_to_project_onto5_integralized Int)
+(declare-const term_to_project_onto9_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto8_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(assert (exists
+         ((|__VERIFIER_assert__cond___14'?1?1| Int)
+            (|__VERIFIER_assert__cond___13'?2?2| Int)
+            (|__VERIFIER_assert__cond___12'?3?3| Int)
+            (|__VERIFIER_assert__cond___11'?4?4| Int)
+            (|main____CPAchecker_TMP_3'?5?5| Int)
+            (|__VERIFIER_assert__cond___10'?6?6| Int)
+            (|__VERIFIER_assert__cond___9'?7?7| Int) (|main__c'?8?8| Int)
+            (|main__cp'?9?9| Int)
+            (phi___VERIFIER_assert__cond___14?10?10 Int)
+            (phi___VERIFIER_assert__cond___13?11?11 Int)
+            (phi___VERIFIER_assert__cond___12?12?12 Int)
+            (phi___VERIFIER_assert__cond___11?13?13 Int)
+            (phi_main__c?14?14 Int) (havoc?15?15 Int)
+            (__VERIFIER_assert__cond___9?16?16 Int)
+            (__VERIFIER_assert__cond___10?17?17 Int)
+            (main____CPAchecker_TMP_3?18?18 Int)
+            (__VERIFIER_assert__cond___11?19?19 Int)
+            (__VERIFIER_assert__cond___12?20?20 Int)
+            (__VERIFIER_assert__cond___13?21?21 Int)
+            (__VERIFIER_assert__cond___14?22?22 Int)
+            (main__tokenlen?23?23 Int) (main__c?24?24 Int)
+            (main__urilen?25?25 Int) (main__cp?26?26 Int))
+         (and (<= (+ (- main__tokenlen?23?23) 1) 0) (<= (- main__c?24?24) 0)
+                (<= (+ (- main__urilen?25?25) 1) 0)
+                (<= (+ (- main__cp?26?26) 1) 0)
+                (or (<= (+ main__cp?26?26 (- main__urilen?25?25) 2) 0)
+                      (<= (+ (- main__cp?26?26) main__urilen?25?25) 0))
+                (<= (+ main__c?24?24 (- main__tokenlen?23?23) 2) 0)
+                (or (< (ite (<= (+ main__cp?26?26 (- main__urilen?25?25) 1) 0)
+                            1 0) 0)
+                      (< (- (ite (<= (+ main__cp?26?26 (- main__urilen?25?25)
+                                          1) 0)
+                                 1 0)) 0))
+                (or (< (ite (<= (- main__cp?26?26) 0) 1 0) 0)
+                      (< (- (ite (<= (- main__cp?26?26) 0) 1 0)) 0))
+                (or (and (= havoc?15?15 0)
+                           (= (+ (- phi_main__c?14?14) main__c?24?24) 0)
+                           (= (+ (- phi___VERIFIER_assert__cond___11?13?13)
+                                   __VERIFIER_assert__cond___11?19?19) 0)
+                           (= (+ (- phi___VERIFIER_assert__cond___12?12?12)
+                                   __VERIFIER_assert__cond___12?20?20) 0)
+                           (= (+ (- phi___VERIFIER_assert__cond___13?11?11)
+                                   __VERIFIER_assert__cond___13?21?21) 0)
+                           (= (+ (- phi___VERIFIER_assert__cond___14?10?10)
+                                   __VERIFIER_assert__cond___14?22?22) 0))
+                      (and (or (< havoc?15?15 0) (< (- havoc?15?15) 0))
+                             (or (< (ite (<= (+ main__c?24?24
+                                                  (- main__tokenlen?23?23) 2) 0)
+                                         1 0) 0)
+                                   (< (- (ite (<= (+ main__c?24?24
+                                                       (- main__tokenlen?23?23)
+                                                       2) 0)
+                                              1 0)) 0))
+                             (or (< (ite (<= (+ (- main__c?24?24) -1) 0) 1 0) 0)
+                                   (< (- (ite (<= (+ (- main__c?24?24) -1) 0)
+                                              1 0)) 0))
+                             (or (< (ite (<= (+ main__cp?26?26
+                                                  (- main__urilen?25?25) 1) 0)
+                                         1 0) 0)
+                                   (< (- (ite (<= (+ main__cp?26?26
+                                                       (- main__urilen?25?25)
+                                                       1) 0)
+                                              1 0)) 0))
+                             (or (< (ite (<= (- main__cp?26?26) 0) 1 0) 0)
+                                   (< (- (ite (<= (- main__cp?26?26) 0) 1 0)) 0))
+                             (= (+ (- phi_main__c?14?14) main__c?24?24 1) 0)
+                             (= (+ (ite (<= (+ main__c?24?24
+                                                 (- main__tokenlen?23?23) 2) 0)
+                                        1 0)
+                                     (- phi___VERIFIER_assert__cond___11?13?13)) 0)
+                             (= (+ (ite (<= (+ (- main__c?24?24) -1) 0) 1 0)
+                                     (- phi___VERIFIER_assert__cond___12?12?12)) 0)
+                             (= (+ (- phi___VERIFIER_assert__cond___13?11?11)
+                                     (ite (<= (+ main__cp?26?26
+                                                   (- main__urilen?25?25) 1) 0)
+                                          1 0)) 0)
+                             (= (+ (- phi___VERIFIER_assert__cond___14?10?10)
+                                     (ite (<= (- main__cp?26?26) 0) 1 0)) 0)))
+                (= (+ |__VERIFIER_assert__cond___14'?1?1|
+                        (- phi___VERIFIER_assert__cond___14?10?10)) 0)
+                (= (+ |__VERIFIER_assert__cond___13'?2?2|
+                        (- phi___VERIFIER_assert__cond___13?11?11)) 0)
+                (= (+ |__VERIFIER_assert__cond___12'?3?3|
+                        (- phi___VERIFIER_assert__cond___12?12?12)) 0)
+                (= (+ |__VERIFIER_assert__cond___11'?4?4|
+                        (- phi___VERIFIER_assert__cond___11?13?13)) 0)
+                (= (+ |main____CPAchecker_TMP_3'?5?5| (- havoc?15?15)) 0)
+                (= (+ |__VERIFIER_assert__cond___10'?6?6|
+                        (- (ite (<= (- main__cp?26?26) 0) 1 0))) 0)
+                (= (+ |__VERIFIER_assert__cond___9'?7?7|
+                        (- (ite (<= (+ main__cp?26?26 (- main__urilen?25?25)
+                                         1) 0)
+                                1 0))) 0)
+                (= (+ |main__c'?8?8| (- phi_main__c?14?14)) 0)
+                (= (+ |main__cp'?9?9| (- main__cp?26?26) -1) 0)
+                (= (+ term_to_project_onto9_integralized
+                        (- (+ main__cp?26?26 (- |main__cp'?9?9|)))) 0)
+                (= (+ term_to_project_onto8_integralized
+                        (- (+ main__c?24?24 (- |main__c'?8?8|)))) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ __VERIFIER_assert__cond___9?16?16
+                                (- |__VERIFIER_assert__cond___9'?7?7|)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ __VERIFIER_assert__cond___10?17?17
+                                (- |__VERIFIER_assert__cond___10'?6?6|)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ main____CPAchecker_TMP_3?18?18
+                                (- |main____CPAchecker_TMP_3'?5?5|)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ __VERIFIER_assert__cond___11?19?19
+                                (- |__VERIFIER_assert__cond___11'?4?4|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ __VERIFIER_assert__cond___12?20?20
+                                (- |__VERIFIER_assert__cond___12'?3?3|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ __VERIFIER_assert__cond___13?21?21
+                                (- |__VERIFIER_assert__cond___13'?2?2|)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ __VERIFIER_assert__cond___14?22?22
+                                (- |__VERIFIER_assert__cond___14'?1?1|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ main__urilen?25?25 (- main__urilen?25?25)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ main__tokenlen?23?23 (- main__tokenlen?23?23)))) 0))))
+(check-sat)

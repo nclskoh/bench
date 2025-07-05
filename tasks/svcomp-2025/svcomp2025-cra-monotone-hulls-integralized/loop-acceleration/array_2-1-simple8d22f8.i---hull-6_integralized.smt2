@@ -1,0 +1,25 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists
+         ((|tmp___0'?1?1| Int) (phi_B.4096?2?2 Int) (phi_B?3?3 Int)
+            (phi_B?4?4 Int) (|B.4096'?5?5| Int) (|B'?6?6| Int)
+            (B.4096?7?7 Int) (B?8?8 Int) (tmp___0?9?9 Int))
+         (and (= B?8?8 0) (<= (+ (- tmp___0?9?9) 1) 0) (= B?8?8 0)
+                (<= (+ tmp___0?9?9 -2047) 0)
+                (or (and (or (= (+ (- phi_B?4?4) B?8?8) 0)
+                               (= (- phi_B?4?4) 0))
+                           (= (+ (- phi_B?3?3) phi_B?4?4) 0)
+                           (= (+ (- phi_B.4096?2?2) B.4096?7?7) 0))
+                      (and (= (+ (- phi_B?3?3) B?8?8) 0)
+                             (= (- phi_B.4096?2?2) 0)))
+                (= (+ |tmp___0'?1?1| (- tmp___0?9?9) -1) 0)
+                (= (+ |B.4096'?5?5| (- phi_B.4096?2?2)) 0)
+                (= (+ |B'?6?6| (- phi_B?3?3)) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |B'?6?6| (- B?8?8)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |B.4096'?5?5| (- B.4096?7?7)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp___0'?1?1| (- tmp___0?9?9)))) 0))))
+(check-sat)

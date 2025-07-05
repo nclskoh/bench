@@ -1,0 +1,36 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists
+         ((uninterp?1?1 Int) (uninterp?2?2 Int) (uninterp?3?3 Int)
+            (|x'?4?4| Int) (phi_x?5?5 Int) (x?6?6 Int) (y?7?7 Int))
+         (and (<= (+ (- y?7?7) 1) 0) (<= (+ x?6?6 (- y?7?7) 1) 0)
+                (or (and (or (and (<= (+ (- (ite (and (<= (- y?7?7) 0)
+                                                        (<= (- y?7?7) 0))
+                                                 uninterp?3?3
+                                                 (- uninterp?2?2)))
+                                           (- uninterp?1?1) y?7?7) 0)
+                                    (< (- x?6?6) 0))
+                               (and (<= (- (+ (- (ite (and (<= (- y?7?7) 0)
+                                                             (<= (- y?7?7) 0))
+                                                      uninterp?3?3
+                                                      (- uninterp?2?2)))
+                                                (- uninterp?1?1) y?7?7)) 0)
+                                      (< x?6?6 0)))
+                           (= (+ (- phi_x?5?5) x?6?6 1) 0))
+                      (and (or (and (<= (+ (ite (and (<= (- y?7?7) 0)
+                                                       (<= (- y?7?7) 0))
+                                                uninterp?3?3 (- uninterp?2?2))
+                                             uninterp?1?1 x?6?6 (- y?7?7)) 0)
+                                      (< (- x?6?6) 0))
+                                 (and (<= (- (+ (ite (and (<= (- y?7?7) 0)
+                                                            (<= (- y?7?7) 0))
+                                                     uninterp?3?3
+                                                     (- uninterp?2?2))
+                                                  uninterp?1?1 x?6?6
+                                                  (- y?7?7))) 0) (< x?6?6 0)))
+                             (= (+ (- phi_x?5?5) uninterp?1?1) 0)))
+                (= (+ |x'?4?4| (- phi_x?5?5)) 0) (= (+ y?7?7 (- y?7?7)) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ x?6?6 (- |x'?4?4|)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ y?7?7 (- y?7?7)))) 0))))

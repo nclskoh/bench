@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'egcd2-ll_valuebound2a26323.i---hull-9_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

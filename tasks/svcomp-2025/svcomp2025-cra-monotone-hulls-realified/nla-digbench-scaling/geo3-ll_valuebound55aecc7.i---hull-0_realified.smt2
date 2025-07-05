@@ -1,0 +1,26 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((uninterp?1_realified?1 Real) (uninterp?2_realified?2 Real)
+            (uninterp?3_realified?3 Real) (|c'?4_realified?4| Real)
+            (|y'?5_realified?5| Real) (|x'?6_realified?6| Real)
+            (c?7_realified?7 Real) (x?8_realified?8 Real)
+            (y?9_realified?9 Real) (k?10_realified?10 Real)
+            (a?11_realified?11 Real) (z?12_realified?12 Real))
+         (and (<= (+ (- c?7_realified?7) 1) 0) (<= (- k?10_realified?10) 0)
+                (<= (- a?11_realified?11) 0) (<= (- z?12_realified?12) 0)
+                (= (+ (- uninterp?3_realified?3) (- x?8_realified?8)
+                        uninterp?2_realified?2 a?11_realified?11) 0)
+                (<= (+ (- k?10_realified?10) c?7_realified?7 1) 0)
+                (= (+ |c'?4_realified?4| (- c?7_realified?7) -1) 0)
+                (= (+ |y'?5_realified?5| (- uninterp?1_realified?1)) 0)
+                (= (+ |x'?6_realified?6| (- uninterp?2_realified?2)
+                        (- a?11_realified?11)) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |x'?6_realified?6| (- x?8_realified?8)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |y'?5_realified?5| (- y?9_realified?9)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |c'?4_realified?4| (- c?7_realified?7)))) 0))))
+(check-sat)

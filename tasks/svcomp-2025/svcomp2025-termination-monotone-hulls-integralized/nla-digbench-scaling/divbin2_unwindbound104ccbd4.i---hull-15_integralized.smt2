@@ -1,0 +1,20 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists
+         ((|tmp'?1?1| Int) (|b'?2?2| Int) (|counter'?3?3| Int) (b?4?4 Int)
+            (r?5?5 Int) (tmp?6?6 Int) (counter?7?7 Int))
+         (and (<= (+ (- b?4?4) 1) 0) (<= (- r?5?5) 0) (<= (- counter?7?7) 0)
+                (<= (+ counter?7?7 -9) 0) (<= (+ (- r?5?5) b?4?4) 0)
+                (= (+ |tmp'?1?1| (- counter?7?7)) 0)
+                (= (+ |b'?2?2| (* -2 b?4?4)) 0)
+                (= (+ |counter'?3?3| (- counter?7?7) -1) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ counter?7?7 (- |counter'?3?3|)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ b?4?4 (- |b'?2?2|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ tmp?6?6 (- |tmp'?1?1|)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ r?5?5 (- r?5?5)))) 0))))

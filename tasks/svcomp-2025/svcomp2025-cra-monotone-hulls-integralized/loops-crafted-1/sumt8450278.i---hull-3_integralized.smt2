@@ -1,0 +1,477 @@
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto5_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const term_to_project_onto8_integralized Int)
+(assert (exists
+         ((|v5'?1?1| Int) (|v4'?2?2| Int) (|v3'?3?3| Int) (|v2'?4?4| Int)
+            (|v1'?5?5| Int) (|l'?6?6| Int) (|j'?7?7| Int) (|k'?8?8| Int)
+            (|i'?9?9| Int) (phi_v5?10?10 Int) (phi_v4?11?11 Int)
+            (phi_v3?12?12 Int) (phi_v2?13?13 Int) (phi_v1?14?14 Int)
+            (phi_j?15?15 Int) (phi_k?16?16 Int) (phi_i?17?17 Int)
+            (phi_v4?18?18 Int) (phi_v3?19?19 Int) (phi_v2?20?20 Int)
+            (phi_v1?21?21 Int) (phi_j?22?22 Int) (phi_k?23?23 Int)
+            (phi_i?24?24 Int) (phi_v4?25?25 Int) (phi_v3?26?26 Int)
+            (phi_v2?27?27 Int) (phi_j?28?28 Int) (phi_k?29?29 Int)
+            (phi_i?30?30 Int) (phi_v4?31?31 Int) (phi_v3?32?32 Int)
+            (phi_j?33?33 Int) (phi_k?34?34 Int) (phi_i?35?35 Int)
+            (phi_v4?36?36 Int) (phi_j?37?37 Int) (phi_k?38?38 Int)
+            (phi_i?39?39 Int) (phi_j?40?40 Int) (phi_k?41?41 Int)
+            (phi_i?42?42 Int) (phi_j?43?43 Int) (phi_k?44?44 Int)
+            (v5?45?45 Int) (v1?46?46 Int) (v2?47?47 Int) (v3?48?48 Int)
+            (v4?49?49 Int) (i?50?50 Int) (j?51?51 Int) (k?52?52 Int)
+            (l?53?53 Int) (n?54?54 Int) (remainder?55 Int) (remainder?56 Int)
+            (remainder?57 Int) (remainder?58 Int) (remainder?59 Int)
+            (remainder?60 Int) (remainder?61 Int) (remainder?62 Int)
+            (remainder?63 Int) (remainder?64 Int) (remainder?65 Int)
+            (remainder?66 Int) (remainder?67 Int) (remainder?68 Int)
+            (quotient?69 Int) (quotient?70 Int) (quotient?71 Int)
+            (quotient?72 Int) (quotient?73 Int) (quotient?74 Int)
+            (quotient?75 Int) (quotient?76 Int) (quotient?77 Int)
+            (quotient?78 Int) (quotient?79 Int) (quotient?80 Int)
+            (quotient?81 Int) (quotient?82 Int))
+         (and (<= (- v5?45?45) 0) (<= (- v1?46?46) 0) (<= (- v2?47?47) 0)
+                (<= (- v3?48?48) 0) (<= (- v4?49?49) 0) (<= (- i?50?50) 0)
+                (<= (- j?51?51) 0) (<= (- k?52?52) 0) (<= (- l?53?53) 0)
+                (= (+ l?53?53 (- k?52?52) (- j?51?51) (- i?50?50)
+                        (- v4?49?49) (- v3?48?48) (- v2?47?47) (- v1?46?46)
+                        (- v5?45?45)) 0) (<= (+ (- n?54?54) l?53?53 1) 0)
+                (or (and (or (< (ite (and (<= (- l?53?53) 0)
+                                            (<= (- l?53?53) 0))
+                                     remainder?55 (- remainder?56)) 0)
+                               (< (- (ite (and (<= (- l?53?53) 0)
+                                                 (<= (- l?53?53) 0))
+                                          remainder?55 (- remainder?56))) 0))
+                           (or (and (or (< (ite (and (<= (- l?53?53) 0)
+                                                       (<= (- l?53?53) 0))
+                                                remainder?57 (- remainder?58)) 0)
+                                          (< (- (ite (and (<= (- l?53?53) 0)
+                                                            (<= (- l?53?53) 0))
+                                                     remainder?57
+                                                     (- remainder?58))) 0))
+                                      (or (and (or (< (ite (and (<= (- 
+                                                                    l?53?53) 0)
+                                                                  (<= 
+                                                                  (- 
+                                                                  l?53?53) 0))
+                                                           remainder?59
+                                                           (- remainder?60)) 0)
+                                                     (< (- (ite (and 
+                                                                (<= (- 
+                                                                    l?53?53) 0)
+                                                                  (<= 
+                                                                  (- 
+                                                                  l?53?53) 0))
+                                                                remainder?59
+                                                                (- remainder?60))) 0))
+                                                 (or (and (or (< (ite 
+                                                                 (and 
+                                                                 (<= 
+                                                                   (- 
+                                                                   l?53?53) 0)
+                                                                   (<= 
+                                                                   (- 
+                                                                   l?53?53) 0))
+                                                                 remainder?61
+                                                                 (- remainder?62)) 0)
+                                                                (< (- 
+                                                                   (ite 
+                                                                   (and 
+                                                                   (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                   remainder?61
+                                                                   (- 
+                                                                   remainder?62))) 0))
+                                                            (or (and 
+                                                                  (or 
+                                                                    (< 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?63
+                                                                    (- 
+                                                                    remainder?64)) 0)
+                                                                    (< 
+                                                                    (- 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?63
+                                                                    (- 
+                                                                    remainder?64))) 0))
+                                                                    (or 
+                                                                    (and 
+                                                                    (or 
+                                                                    (< 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?65
+                                                                    (- 
+                                                                    remainder?66)) 0)
+                                                                    (< 
+                                                                    (- 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?65
+                                                                    (- 
+                                                                    remainder?66))) 0))
+                                                                    (or 
+                                                                    (and 
+                                                                    (or 
+                                                                    (< 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?67
+                                                                    (- 
+                                                                    remainder?68)) 0)
+                                                                    (< 
+                                                                    (- 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?67
+                                                                    (- 
+                                                                    remainder?68))) 0))
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_k?44?44)
+                                                                    k?52?52 1) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_j?43?43)
+                                                                    j?51?51) 0))
+                                                                    (and 
+                                                                    (= 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?67
+                                                                    (- 
+                                                                    remainder?68)) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_k?44?44)
+                                                                    k?52?52) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_j?43?43)
+                                                                    j?51?51 1) 0)))
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_i?42?42)
+                                                                    i?50?50) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_k?41?41)
+                                                                    phi_k?44?44) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_j?40?40)
+                                                                    phi_j?43?43) 0))
+                                                                    (and 
+                                                                    (= 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?65
+                                                                    (- 
+                                                                    remainder?66)) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_i?42?42)
+                                                                    i?50?50 1) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_k?41?41)
+                                                                    k?52?52) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_j?40?40)
+                                                                    j?51?51) 0)))
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_i?39?39)
+                                                                    phi_i?42?42) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_k?38?38)
+                                                                    phi_k?41?41) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_j?37?37)
+                                                                    phi_j?40?40) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_v4?36?36)
+                                                                    v4?49?49) 0))
+                                                                  (and 
+                                                                  (= 
+                                                                    (ite 
+                                                                    (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?63
+                                                                    (- 
+                                                                    remainder?64)) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_i?39?39)
+                                                                    i?50?50) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_k?38?38)
+                                                                    k?52?52) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_j?37?37)
+                                                                    j?51?51) 0)
+                                                                    (= 
+                                                                    (+ 
+                                                                    (- 
+                                                                    phi_v4?36?36)
+                                                                    v4?49?49
+                                                                    1) 0)))
+                                                            (= (+ (- 
+                                                                    phi_i?35?35)
+                                                                    phi_i?39?39) 0)
+                                                            (= (+ (- 
+                                                                    phi_k?34?34)
+                                                                    phi_k?38?38) 0)
+                                                            (= (+ (- 
+                                                                    phi_j?33?33)
+                                                                    phi_j?37?37) 0)
+                                                            (= (+ (- 
+                                                                    phi_v3?32?32)
+                                                                    v3?48?48) 0)
+                                                            (= (+ (- 
+                                                                    phi_v4?31?31)
+                                                                    phi_v4?36?36) 0))
+                                                       (and (= (ite (and 
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0)
+                                                                    (<= 
+                                                                    (- 
+                                                                    l?53?53) 0))
+                                                                    remainder?61
+                                                                    (- 
+                                                                    remainder?62)) 0)
+                                                              (= (+ (- 
+                                                                    phi_i?35?35)
+                                                                    i?50?50) 0)
+                                                              (= (+ (- 
+                                                                    phi_k?34?34)
+                                                                    k?52?52) 0)
+                                                              (= (+ (- 
+                                                                    phi_j?33?33)
+                                                                    j?51?51) 0)
+                                                              (= (+ (- 
+                                                                    phi_v3?32?32)
+                                                                    v3?48?48
+                                                                    1) 0)
+                                                              (= (+ (- 
+                                                                    phi_v4?31?31)
+                                                                    v4?49?49) 0)))
+                                                 (= (+ (- phi_i?30?30)
+                                                         phi_i?35?35) 0)
+                                                 (= (+ (- phi_k?29?29)
+                                                         phi_k?34?34) 0)
+                                                 (= (+ (- phi_j?28?28)
+                                                         phi_j?33?33) 0)
+                                                 (= (+ (- phi_v2?27?27)
+                                                         v2?47?47) 0)
+                                                 (= (+ (- phi_v3?26?26)
+                                                         phi_v3?32?32) 0)
+                                                 (= (+ (- phi_v4?25?25)
+                                                         phi_v4?31?31) 0))
+                                            (and (= (ite (and (<= (- 
+                                                                  l?53?53) 0)
+                                                                (<= (- 
+                                                                    l?53?53) 0))
+                                                         remainder?59
+                                                         (- remainder?60)) 0)
+                                                   (= (+ (- phi_i?30?30)
+                                                           i?50?50) 0)
+                                                   (= (+ (- phi_k?29?29)
+                                                           k?52?52) 0)
+                                                   (= (+ (- phi_j?28?28)
+                                                           j?51?51) 0)
+                                                   (= (+ (- phi_v2?27?27)
+                                                           v2?47?47 1) 0)
+                                                   (= (+ (- phi_v3?26?26)
+                                                           v3?48?48) 0)
+                                                   (= (+ (- phi_v4?25?25)
+                                                           v4?49?49) 0)))
+                                      (= (+ (- phi_i?24?24) phi_i?30?30) 0)
+                                      (= (+ (- phi_k?23?23) phi_k?29?29) 0)
+                                      (= (+ (- phi_j?22?22) phi_j?28?28) 0)
+                                      (= (+ (- phi_v1?21?21) v1?46?46) 0)
+                                      (= (+ (- phi_v2?20?20) phi_v2?27?27) 0)
+                                      (= (+ (- phi_v3?19?19) phi_v3?26?26) 0)
+                                      (= (+ (- phi_v4?18?18) phi_v4?25?25) 0))
+                                 (and (= (ite (and (<= (- l?53?53) 0)
+                                                     (<= (- l?53?53) 0))
+                                              remainder?57 (- remainder?58)) 0)
+                                        (= (+ (- phi_i?24?24) i?50?50) 0)
+                                        (= (+ (- phi_k?23?23) k?52?52) 0)
+                                        (= (+ (- phi_j?22?22) j?51?51) 0)
+                                        (= (+ (- phi_v1?21?21) v1?46?46 1) 0)
+                                        (= (+ (- phi_v2?20?20) v2?47?47) 0)
+                                        (= (+ (- phi_v3?19?19) v3?48?48) 0)
+                                        (= (+ (- phi_v4?18?18) v4?49?49) 0)))
+                           (= (+ (- phi_i?17?17) phi_i?24?24) 0)
+                           (= (+ (- phi_k?16?16) phi_k?23?23) 0)
+                           (= (+ (- phi_j?15?15) phi_j?22?22) 0)
+                           (= (+ (- phi_v1?14?14) phi_v1?21?21) 0)
+                           (= (+ (- phi_v2?13?13) phi_v2?20?20) 0)
+                           (= (+ (- phi_v3?12?12) phi_v3?19?19) 0)
+                           (= (+ (- phi_v4?11?11) phi_v4?18?18) 0)
+                           (= (+ (- phi_v5?10?10) v5?45?45) 0))
+                      (and (= (ite (and (<= (- l?53?53) 0) (<= (- l?53?53) 0))
+                                   remainder?55 (- remainder?56)) 0)
+                             (= (+ (- phi_i?17?17) i?50?50) 0)
+                             (= (+ (- phi_k?16?16) k?52?52) 0)
+                             (= (+ (- phi_j?15?15) j?51?51) 0)
+                             (= (+ (- phi_v1?14?14) v1?46?46) 0)
+                             (= (+ (- phi_v2?13?13) v2?47?47) 0)
+                             (= (+ (- phi_v3?12?12) v3?48?48) 0)
+                             (= (+ (- phi_v4?11?11) v4?49?49) 0)
+                             (= (+ (- phi_v5?10?10) v5?45?45 1) 0)))
+                (= (+ phi_v5?10?10 phi_v4?11?11 phi_v3?12?12 phi_v2?13?13
+                        phi_v1?14?14 phi_j?15?15 phi_k?16?16 phi_i?17?17
+                        (- l?53?53) -1) 0)
+                (= (+ |v5'?1?1| (- phi_v5?10?10)) 0)
+                (= (+ |v4'?2?2| (- phi_v4?11?11)) 0)
+                (= (+ |v3'?3?3| (- phi_v3?12?12)) 0)
+                (= (+ |v2'?4?4| (- phi_v2?13?13)) 0)
+                (= (+ |v1'?5?5| (- phi_v1?14?14)) 0)
+                (= (+ |l'?6?6| (- l?53?53) -1) 0)
+                (= (+ |j'?7?7| (- phi_j?15?15)) 0)
+                (= (+ |k'?8?8| (- phi_k?16?16)) 0)
+                (= (+ |i'?9?9| (- phi_i?17?17)) 0)
+                (= (+ term_to_project_onto8_integralized (- v5?45?45)) 0)
+                (= (+ term_to_project_onto7_integralized (- v1?46?46)) 0)
+                (= (+ term_to_project_onto6_integralized (- v2?47?47)) 0)
+                (= (+ term_to_project_onto5_integralized (- v3?48?48)) 0)
+                (= (+ term_to_project_onto4_integralized (- v4?49?49)) 0)
+                (= (+ term_to_project_onto3_integralized (- i?50?50)) 0)
+                (= (+ term_to_project_onto2_integralized (- j?51?51)) 0)
+                (= (+ term_to_project_onto1_integralized (- k?52?52)) 0)
+                (= (+ term_to_project_onto0_integralized (- l?53?53)) 0)
+                (= (+ term_to_project_onto_integralized (- n?54?54)) 0)
+                (= (- l?53?53) (+ (* 2 quotient?82) remainder?68))
+                (<= 0 remainder?68)
+                (or (<= remainder?68 (+ 2 -1)) (<= remainder?68 (+ -2 -1)))
+                (= l?53?53 (+ (* 2 quotient?81) remainder?67))
+                (<= 0 remainder?67)
+                (or (<= remainder?67 (+ 2 -1)) (<= remainder?67 (+ -2 -1)))
+                (= (- l?53?53) (+ (* 3 quotient?80) remainder?66))
+                (<= 0 remainder?66)
+                (or (<= remainder?66 (+ 3 -1)) (<= remainder?66 (+ -3 -1)))
+                (= l?53?53 (+ (* 3 quotient?79) remainder?65))
+                (<= 0 remainder?65)
+                (or (<= remainder?65 (+ 3 -1)) (<= remainder?65 (+ -3 -1)))
+                (= (- l?53?53) (+ (* 4 quotient?78) remainder?64))
+                (<= 0 remainder?64)
+                (or (<= remainder?64 (+ 4 -1)) (<= remainder?64 (+ -4 -1)))
+                (= l?53?53 (+ (* 4 quotient?77) remainder?63))
+                (<= 0 remainder?63)
+                (or (<= remainder?63 (+ 4 -1)) (<= remainder?63 (+ -4 -1)))
+                (= (- l?53?53) (+ (* 5 quotient?76) remainder?62))
+                (<= 0 remainder?62)
+                (or (<= remainder?62 (+ 5 -1)) (<= remainder?62 (+ -5 -1)))
+                (= l?53?53 (+ (* 5 quotient?75) remainder?61))
+                (<= 0 remainder?61)
+                (or (<= remainder?61 (+ 5 -1)) (<= remainder?61 (+ -5 -1)))
+                (= (- l?53?53) (+ (* 6 quotient?74) remainder?60))
+                (<= 0 remainder?60)
+                (or (<= remainder?60 (+ 6 -1)) (<= remainder?60 (+ -6 -1)))
+                (= l?53?53 (+ (* 6 quotient?73) remainder?59))
+                (<= 0 remainder?59)
+                (or (<= remainder?59 (+ 6 -1)) (<= remainder?59 (+ -6 -1)))
+                (= (- l?53?53) (+ (* 7 quotient?72) remainder?58))
+                (<= 0 remainder?58)
+                (or (<= remainder?58 (+ 7 -1)) (<= remainder?58 (+ -7 -1)))
+                (= l?53?53 (+ (* 7 quotient?71) remainder?57))
+                (<= 0 remainder?57)
+                (or (<= remainder?57 (+ 7 -1)) (<= remainder?57 (+ -7 -1)))
+                (= (- l?53?53) (+ (* 8 quotient?70) remainder?56))
+                (<= 0 remainder?56)
+                (or (<= remainder?56 (+ 8 -1)) (<= remainder?56 (+ -8 -1)))
+                (= l?53?53 (+ (* 8 quotient?69) remainder?55))
+                (<= 0 remainder?55)
+                (or (<= remainder?55 (+ 8 -1)) (<= remainder?55 (+ -8 -1))))))
+(check-sat)

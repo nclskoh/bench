@@ -1,0 +1,23 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((|tmp'?1_realified?1| Real) (havoc?2_realified?2 Real)
+            (|cp'?3_realified?3| Real) (tmp?4_realified?4 Real)
+            (cp?5_realified?5 Real) (urilen?6_realified?6 Real))
+         (and (<= (+ (- cp?5_realified?5) 1) 0)
+                (<= (+ (- urilen?6_realified?6) 1) 0)
+                (or (<= (+ (- urilen?6_realified?6) cp?5_realified?5 2) 0)
+                      (<= (+ urilen?6_realified?6 (- cp?5_realified?5)) 0))
+                (= havoc?2_realified?2 0)
+                (<= (+ (- urilen?6_realified?6) cp?5_realified?5 1) 0)
+                (<= (- cp?5_realified?5) 0)
+                (= (+ |tmp'?1_realified?1| (- havoc?2_realified?2)) 0)
+                (= (+ |cp'?3_realified?3| (- cp?5_realified?5) -1) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ cp?5_realified?5 (- |cp'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ tmp?4_realified?4 (- |tmp'?1_realified?1|)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ urilen?6_realified?6 (- urilen?6_realified?6)))) 0))))
+(check-sat)

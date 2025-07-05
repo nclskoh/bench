@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'bubble_sort-17c103a.i---hull-16.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

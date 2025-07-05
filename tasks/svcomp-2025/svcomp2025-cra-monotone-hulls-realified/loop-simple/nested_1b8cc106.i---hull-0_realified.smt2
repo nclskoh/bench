@@ -1,0 +1,7 @@
+(declare-const term_to_project_onto Real)
+(assert (exists ((|a'?1_realified?1| Real) (a?2_realified?2 Real))
+         (and (<= (- a?2_realified?2) 0) (<= (+ a?2_realified?2 -5) 0)
+                (= (+ |a'?1_realified?1| (- a?2_realified?2) -1) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |a'?1_realified?1| (- a?2_realified?2)))) 0))))
+(check-sat)

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'fermat1-ll_unwindbound1512c92.i---hull-12.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

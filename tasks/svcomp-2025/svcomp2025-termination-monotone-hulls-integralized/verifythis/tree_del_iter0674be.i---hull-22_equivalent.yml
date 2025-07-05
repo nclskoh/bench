@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'tree_del_iter0674be.i---hull-22_equivalent.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

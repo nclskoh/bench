@@ -1,0 +1,45 @@
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(assert (exists
+         ((|a.Top@width'?1?1| Int) (|a.Top@pos'?2?2| Int) (|j'?3?3| Int)
+            (|a.Top'?4?4| Int) (store?5?5 Int) (store?6?6 Int)
+            (store?7?7 Int) (|w'?8_integralized?8| Int) (tr?9?9 Int)
+            (|k'?10?10| Int) (K?11?11 Int) (|w'?12_integralized?12| Int)
+            (|k'?13?13| Int) (a.Top@width?14?14 Int) (a.Top@pos?15?15 Int)
+            (a.Top?16?16 Int) (w?17_integralized?17 Int) (k?18?18 Int)
+            (j?19?19 Int) (i?20?20 Int) (n?21?21 Int))
+         (and (<= (+ (- j?19?19) 1) 0) (<= (- i?20?20) 0)
+                (<= (+ (- n?21?21) 1) 0) (<= (+ (- n?21?21) j?19?19) 0)
+                (= (+ (- |k'?10?10|) K?11?11) 0)
+                (or (and (= K?11?11 0)
+                           (= (+ (- |w'?8_integralized?8|) tr?9?9) 0)
+                           (= (- |k'?10?10|) 0))
+                      (and (<= (+ (- K?11?11) 1) 0) (<= (- i?20?20) 0)
+                             (<= (+ (- |k'?10?10|) 1) 0)
+                             (<= (+ |k'?10?10| (- i?20?20) -1) 0)))
+                (<= (- K?11?11) 0) (<= (- |k'?10?10|) 0) (<= (- i?20?20) 0)
+                (<= (+ (- |k'?10?10|) i?20?20 1) 0)
+                (= (+ (- store?5?5) |a.Top@width'?1?1|) 0)
+                (= (+ (- store?6?6) |a.Top@pos'?2?2|) 0)
+                (= (+ |w'?12_integralized?12| (- |w'?8_integralized?8|)) 0)
+                (= (+ |k'?13?13| (- |k'?10?10|)) 0)
+                (= (+ |j'?3?3| (- j?19?19) -1) 0)
+                (= (+ (- store?7?7) |a.Top'?4?4|) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ |a.Top'?4?4| (- a.Top?16?16)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ |j'?3?3| (- j?19?19)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ |k'?13?13| (- k?18?18)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ |w'?12_integralized?12|
+                                (- w?17_integralized?17)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |a.Top@pos'?2?2| (- a.Top@pos?15?15)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |a.Top@width'?1?1| (- a.Top@width?14?14)))) 0))))
+(check-sat)

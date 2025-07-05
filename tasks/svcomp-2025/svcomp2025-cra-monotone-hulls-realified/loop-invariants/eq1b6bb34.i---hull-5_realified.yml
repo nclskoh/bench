@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'eq1b6bb34.i---hull-5_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

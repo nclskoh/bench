@@ -1,0 +1,68 @@
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((|tmp___2'?1_realified?1| Real) (|tmp___1'?2_realified?2| Real)
+            (|tmp___0'?3_realified?3| Real) (|t'?4_realified?4| Real)
+            (havoc?5_realified?5 Real) (phi_tmp___1?6_realified?6 Real)
+            (phi_tmp___0?7_realified?7 Real) (phi_t?8_realified?8 Real)
+            (phi_t?9_realified?9 Real) (havoc?10_realified?10 Real)
+            (havoc?11_realified?11 Real) (tmp___2?12_realified?12 Real)
+            (tmp___0?13_realified?13 Real) (tmp___1?14_realified?14 Real)
+            (t?15_realified?15 Real) (tagbuf_len?16_realified?16 Real))
+         (and (<= (+ (- t?15_realified?15) 1) 0)
+                (<= (- tagbuf_len?16_realified?16) 0)
+                (or (< (+ (- tagbuf_len?16_realified?16) t?15_realified?15) 0)
+                      (< (- (+ (- tagbuf_len?16_realified?16)
+                                 t?15_realified?15)) 0))
+                (or (and (or (< havoc?11_realified?11 0)
+                               (< (- havoc?11_realified?11) 0))
+                           (or (and (= havoc?10_realified?10 0)
+                                      (= (+ (- phi_t?9_realified?9)
+                                              t?15_realified?15) 0))
+                                 (and (or (< havoc?10_realified?10 0)
+                                            (< (- havoc?10_realified?10) 0))
+                                        (<= (- t?15_realified?15) 0)
+                                        (<= (+ (- tagbuf_len?16_realified?16)
+                                                 t?15_realified?15) 0)
+                                        (or (< (+ (- tagbuf_len?16_realified?16)
+                                                    t?15_realified?15 1) 0)
+                                              (< (- (+ (- tagbuf_len?16_realified?16)
+                                                         t?15_realified?15 1)) 0))
+                                        (= (+ (- phi_t?9_realified?9)
+                                                t?15_realified?15 1) 0)))
+                           (= (+ (- phi_t?8_realified?8) phi_t?9_realified?9) 0)
+                           (= (+ (- phi_tmp___0?7_realified?7)
+                                   havoc?10_realified?10) 0)
+                           (= (+ (- phi_tmp___1?6_realified?6)
+                                   tmp___1?14_realified?14) 0))
+                      (and (= havoc?11_realified?11 0)
+                             (= havoc?5_realified?5 0)
+                             (= (+ (- phi_t?8_realified?8) t?15_realified?15) 0)
+                             (= (+ tmp___0?13_realified?13
+                                     (- phi_tmp___0?7_realified?7)) 0)
+                             (= (+ havoc?5_realified?5
+                                     (- phi_tmp___1?6_realified?6)) 0)))
+                (<= (- phi_t?8_realified?8) 0)
+                (<= (+ phi_t?8_realified?8 (- tagbuf_len?16_realified?16)) 0)
+                (= (+ |tmp___2'?1_realified?1| (- havoc?11_realified?11)) 0)
+                (= (+ |tmp___1'?2_realified?2| (- phi_tmp___1?6_realified?6)) 0)
+                (= (+ |tmp___0'?3_realified?3| (- phi_tmp___0?7_realified?7)) 0)
+                (= (+ |t'?4_realified?4| (- phi_t?8_realified?8) -1) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ t?15_realified?15 (- |t'?4_realified?4|)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ tmp___0?13_realified?13
+                                (- |tmp___0'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ tmp___1?14_realified?14
+                                (- |tmp___1'?2_realified?2|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ tmp___2?12_realified?12
+                                (- |tmp___2'?1_realified?1|)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ tagbuf_len?16_realified?16
+                                (- tagbuf_len?16_realified?16)))) 0))))
+(check-sat)

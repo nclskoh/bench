@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'mod3.c.v+lhb-reducer469357.i---hull-17_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

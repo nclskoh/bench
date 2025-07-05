@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'linear-inequality-inv-d2d2f34.i---hull-1_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

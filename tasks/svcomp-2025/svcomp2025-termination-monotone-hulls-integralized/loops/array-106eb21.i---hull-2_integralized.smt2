@@ -1,0 +1,57 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto5_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(assert (exists
+         ((|mem_11@width'?1?1| Int) (|mem_11@pos'?2?2| Int)
+            (|mem_11'?3?3| Int) (|menor'?4?4| Int) (|j'?5?5| Int)
+            (tr?6?6 Int) (tr?7?7 Int) (phi_mem_11@width?8?8 Int)
+            (phi_mem_11@pos?9?9 Int) (phi_mem_11?10?10 Int)
+            (phi_menor?11?11 Int) (tr?12?12 Int) (mem_11?13?13 Int)
+            (mem_11@pos?14?14 Int) (mem_11@width?15?15 Int) (menor?16?16 Int)
+            (array?17?17 Int) (array@pos?18?18 Int) (array@width?19?19 Int)
+            (j?20?20 Int) (SIZE?21?21 Int))
+         (and (= array@pos?18?18 0) (<= (+ (- array@width?19?19) 1) 0)
+                (<= (- j?20?20) 0) (<= (+ (- SIZE?21?21) 1) 0)
+                (= array@pos?18?18 0) (<= (+ (- SIZE?21?21) j?20?20 1) 0)
+                (or (and (<= (+ (- tr?12?12) menor?16?16 1) 0)
+                           (= (+ (- phi_menor?11?11) menor?16?16) 0)
+                           (= (+ (- phi_mem_11?10?10) mem_11?13?13) 0)
+                           (= (+ (- phi_mem_11@pos?9?9) mem_11@pos?14?14) 0)
+                           (= (+ (- phi_mem_11@width?8?8) mem_11@width?15?15) 0))
+                      (and (<= (+ tr?7?7 (- menor?16?16)) 0)
+                             (= (+ tr?6?6 (- phi_menor?11?11)) 0)
+                             (= (+ array?17?17 (- phi_mem_11?10?10)
+                                     (* 4 j?20?20)) 0)
+                             (= (+ (- phi_mem_11@pos?9?9) (* 4 j?20?20)
+                                     array@pos?18?18) 0)
+                             (= (+ (- phi_mem_11@width?8?8) array@width?19?19) 0)))
+                (= (+ |mem_11@width'?1?1| (- phi_mem_11@width?8?8)) 0)
+                (= (+ |mem_11@pos'?2?2| (- phi_mem_11@pos?9?9)) 0)
+                (= (+ |mem_11'?3?3| (- phi_mem_11?10?10)) 0)
+                (= (+ |menor'?4?4| (- phi_menor?11?11)) 0)
+                (= (+ |j'?5?5| (- j?20?20) -1) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ j?20?20 (- |j'?5?5|)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ menor?16?16 (- |menor'?4?4|)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ mem_11?13?13 (- |mem_11'?3?3|)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ mem_11@pos?14?14 (- |mem_11@pos'?2?2|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ mem_11@width?15?15 (- |mem_11@width'?1?1|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ SIZE?21?21 (- SIZE?21?21)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ array@width?19?19 (- array@width?19?19)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ array@pos?18?18 (- array@pos?18?18)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ array?17?17 (- array?17?17)))) 0))))
+(check-sat)

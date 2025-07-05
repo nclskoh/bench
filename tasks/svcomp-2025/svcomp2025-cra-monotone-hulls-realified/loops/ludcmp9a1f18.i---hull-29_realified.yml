@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'ludcmp9a1f18.i---hull-29_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

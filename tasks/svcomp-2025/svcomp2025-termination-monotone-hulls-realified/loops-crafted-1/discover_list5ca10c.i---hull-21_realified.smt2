@@ -1,0 +1,33 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|drlp@width'?1_realified?1| Real) (|drlp@pos'?2_realified?2| Real)
+            (|drlp'?3_realified?3| Real) (tr?4_realified?4 Real)
+            (tr?5_realified?5 Real) (drlp?6_realified?6 Real)
+            (drlp@pos?7_realified?7 Real) (drlp@width?8_realified?8 Real)
+            (func_code?9_realified?9 Real))
+         (and (<= (- drlp@pos?7_realified?7) 0)
+                (<= (+ (- drlp@width?8_realified?8) 1) 0)
+                (= (+ (- drlp@width?8_realified?8) 1) 0)
+                (<= (- tr?5_realified?5) 0)
+                (or (< (+ (- tr?4_realified?4) func_code?9_realified?9) 0)
+                      (< (- (+ (- tr?4_realified?4) func_code?9_realified?9)) 0))
+                (= (+ |drlp@width'?1_realified?1|
+                        (- drlp@width?8_realified?8)) 0)
+                (= (+ |drlp@pos'?2_realified?2| (- drlp@pos?7_realified?7)
+                        -12) 0)
+                (= (+ (- drlp?6_realified?6) |drlp'?3_realified?3| -12) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ drlp?6_realified?6 (- |drlp'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ drlp@pos?7_realified?7
+                                (- |drlp@pos'?2_realified?2|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ drlp@width?8_realified?8
+                                (- |drlp@width'?1_realified?1|)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ func_code?9_realified?9
+                                (- func_code?9_realified?9)))) 0))))
+(check-sat)

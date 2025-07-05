@@ -1,0 +1,4 @@
+(assert (exists
+         ((tmp?1?1 Int) (q?2?2 Int) (r?3?3 Int) (a?4?4 Int) (b?5?5 Int)
+            (counter?6?6 Int) (x?7?7 Int) (y?8?8 Int))
+         false))

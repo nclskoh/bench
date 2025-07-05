@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'id_build.i.v+lhb-reducerd25f75.i---hull-2.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

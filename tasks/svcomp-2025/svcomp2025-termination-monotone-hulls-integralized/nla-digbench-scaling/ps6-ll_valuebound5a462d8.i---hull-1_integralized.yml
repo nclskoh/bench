@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'ps6-ll_valuebound5a462d8.i---hull-1_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

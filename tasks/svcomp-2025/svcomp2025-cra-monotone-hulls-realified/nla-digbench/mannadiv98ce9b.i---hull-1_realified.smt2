@@ -1,0 +1,34 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((uninterp?1_realified?1 Real) (|y3'?2_realified?2| Real)
+            (|y2'?3_realified?3| Real) (|y1'?4_realified?4| Real)
+            (phi_y2?5_realified?5 Real) (phi_y1?6_realified?6 Real)
+            (y1?7_realified?7 Real) (y2?8_realified?8 Real)
+            (y3?9_realified?9 Real) (x2?10_realified?10 Real)
+            (x1?11_realified?11 Real))
+         (and (<= (- y1?7_realified?7) 0) (<= (- y2?8_realified?8) 0)
+                (<= (- y3?9_realified?9) 0) (<= (- x1?11_realified?11) 0)
+                (= (+ (- x1?11_realified?11) y3?9_realified?9
+                        y2?8_realified?8 uninterp?1_realified?1) 0)
+                (or (<= (+ y3?9_realified?9 1) 0)
+                      (<= (+ (- y3?9_realified?9) 1) 0))
+                (or (and (or (< (+ (- x2?10_realified?10) y2?8_realified?8 1) 0)
+                               (< (- (+ (- x2?10_realified?10)
+                                          y2?8_realified?8 1)) 0))
+                           (= (+ (- phi_y1?6_realified?6) y1?7_realified?7) 0)
+                           (= (+ (- phi_y2?5_realified?5) y2?8_realified?8 1) 0))
+                      (and (= (+ (- x2?10_realified?10) y2?8_realified?8 1) 0)
+                             (= (+ (- phi_y1?6_realified?6) y1?7_realified?7
+                                     1) 0) (= (- phi_y2?5_realified?5) 0)))
+                (= (+ |y3'?2_realified?2| (- y3?9_realified?9) 1) 0)
+                (= (+ |y2'?3_realified?3| (- phi_y2?5_realified?5)) 0)
+                (= (+ |y1'?4_realified?4| (- phi_y1?6_realified?6)) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |y1'?4_realified?4| (- y1?7_realified?7)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |y2'?3_realified?3| (- y2?8_realified?8)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |y3'?2_realified?2| (- y3?9_realified?9)))) 0))))
+(check-sat)

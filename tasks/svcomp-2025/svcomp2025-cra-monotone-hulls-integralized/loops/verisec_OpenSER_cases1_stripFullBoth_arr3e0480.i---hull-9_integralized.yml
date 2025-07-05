@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'verisec_OpenSER_cases1_stripFullBoth_arr3e0480.i---hull-9_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

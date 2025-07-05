@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'id_build.i.p+sep-reducer04e420.i---hull-13_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

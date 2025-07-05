@@ -1,0 +1,28 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(assert (exists
+         ((phi_return?1?1 Int) (phi_return@pos?2?2 Int)
+            (phi_return@width?3?3 Int) (|return@width'?4?4| Int)
+            (|return@pos'?5?5| Int) (|return'?6?6| Int)
+            (|return@width'?7?7| Int) (|return@pos'?8?8| Int)
+            (|return'?9?9| Int) (havoc?10?10 Int) (return?11?11 Int)
+            (return@pos?12?12 Int) (return@width?13?13 Int))
+         (and (or (and (= havoc?10?10 0)
+                         (= (+ (- phi_return?1?1) |return'?6?6|) 0)
+                         (= (+ (- phi_return@pos?2?2) |return@pos'?5?5|) 0)
+                         (= (+ (- phi_return@width?3?3) |return@width'?4?4|) 0))
+                    (and (= havoc?10?10 0)
+                           (= (+ return?11?11 (- phi_return?1?1)) 0)
+                           (= (+ return@pos?12?12 (- phi_return@pos?2?2)) 0)
+                           (= (+ return@width?13?13 (- phi_return@width?3?3)) 0)))
+                (= (+ |return@width'?7?7| (- phi_return@width?3?3)) 0)
+                (= (+ |return@pos'?8?8| (- phi_return@pos?2?2)) 0)
+                (= (+ |return'?9?9| (- phi_return?1?1)) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ return?11?11 (- |return'?9?9|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ return@pos?12?12 (- |return@pos'?8?8|)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ return@width?13?13 (- |return@width'?7?7|)))) 0))))
+(check-sat)

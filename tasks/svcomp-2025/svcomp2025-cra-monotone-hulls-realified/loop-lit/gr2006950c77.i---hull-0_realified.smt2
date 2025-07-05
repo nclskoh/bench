@@ -1,0 +1,19 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|y'?1_realified?1| Real) (|x'?2_realified?2| Real)
+            (phi_y?3_realified?3 Real) (x?4_realified?4 Real)
+            (y?5_realified?5 Real))
+         (and (<= (- x?4_realified?4) 0) (<= (- y?5_realified?5) 0)
+                (or (and (<= (+ (- x?4_realified?4) 50) 0)
+                           (= (+ (- phi_y?3_realified?3) y?5_realified?5 -1) 0))
+                      (and (<= (+ x?4_realified?4 -49) 0)
+                             (= (+ (- phi_y?3_realified?3) y?5_realified?5 1) 0)))
+                (<= (- phi_y?3_realified?3) 0)
+                (= (+ |y'?1_realified?1| (- phi_y?3_realified?3)) 0)
+                (= (+ |x'?2_realified?2| (- x?4_realified?4) -1) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |x'?2_realified?2| (- x?4_realified?4)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |y'?1_realified?1| (- y?5_realified?5)))) 0))))
+(check-sat)

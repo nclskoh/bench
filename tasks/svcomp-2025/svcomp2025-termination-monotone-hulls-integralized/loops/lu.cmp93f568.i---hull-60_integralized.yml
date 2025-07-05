@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'lu.cmp93f568.i---hull-60_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

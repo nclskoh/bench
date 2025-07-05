@@ -1,0 +1,88 @@
+(declare-const term_to_project_onto9 Real)
+(declare-const term_to_project_onto11 Real)
+(declare-const term_to_project_onto10 Real)
+(declare-const term_to_project_onto7 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto6 Real)
+(declare-const term_to_project_onto8 Real)
+(assert (exists
+         ((|tmp___1'?1_realified?1| Real) (|tmp___0'?2_realified?2| Real)
+            (|k'?3_realified?3| Real) (|c'?4_realified?4| Real)
+            (|s'?5_realified?5| Real) (|r'?6_realified?6| Real)
+            (|q'?7_realified?7| Real) (|p'?8_realified?8| Real)
+            (|b'?9_realified?9| Real) (|a'?10_realified?10| Real)
+            (|counter'?11_realified?11| Real) (K?12_realified?12 Real)
+            (k?13_realified?13 Real) (q?14_realified?14 Real)
+            (s?15_realified?15 Real) (r?16_realified?16 Real)
+            (p?17_realified?17 Real) (c?18_realified?18 Real)
+            (tmp___0?19_realified?19 Real) (a?20_realified?20 Real)
+            (b?21_realified?21 Real) (tmp___1?22_realified?22 Real)
+            (counter?23_realified?23 Real) (y?24_realified?24 Real)
+            (x?25_realified?25 Real))
+         (and (<= (+ (- a?20_realified?20) 1) 0)
+                (<= (+ (- b?21_realified?21) 1) 0)
+                (<= (- counter?23_realified?23) 0)
+                (<= (+ (- y?24_realified?24) 1) 0)
+                (<= (+ (- x?25_realified?25) 1) 0)
+                (<= counter?23_realified?23 0)
+                (or (<= (+ b?21_realified?21 1) 0)
+                      (<= (+ (- b?21_realified?21) 1) 0))
+                (<= K?12_realified?12 0) (= K?12_realified?12 0)
+                (<= (- K?12_realified?12) 0)
+                (<= (+ (- a?20_realified?20) 1) 0)
+                (<= (+ (- a?20_realified?20) 1) 0)
+                (<= (+ (- b?21_realified?21) 1) 0)
+                (<= (- counter?23_realified?23) 0)
+                (<= (+ (- y?24_realified?24) 1) 0)
+                (<= (+ (- x?25_realified?25) 1) 0)
+                (or (and (<= (+ counter?23_realified?23 1) 0)
+                           (<= (+ (- b?21_realified?21) a?20_realified?20 1) 0))
+                      (<= (- counter?23_realified?23) 0))
+                (= (+ |tmp___1'?1_realified?1| (- counter?23_realified?23)) 0)
+                (= (+ |tmp___0'?2_realified?2| (- counter?23_realified?23) -1) 0)
+                (= |k'?3_realified?3| 0)
+                (= (+ |c'?4_realified?4| (- a?20_realified?20)) 0)
+                (= (+ (- r?16_realified?16) |s'?5_realified?5|) 0)
+                (= (+ (- s?15_realified?15) |r'?6_realified?6|) 0)
+                (= (+ (- p?17_realified?17) |q'?7_realified?7|) 0)
+                (= (+ (- q?14_realified?14) |p'?8_realified?8|) 0)
+                (= (+ |b'?9_realified?9| (- a?20_realified?20)) 0)
+                (= (+ |a'?10_realified?10| (- b?21_realified?21)) 0)
+                (= (+ |counter'?11_realified?11| (- counter?23_realified?23)
+                        -2) 0)
+                (= (+ term_to_project_onto11
+                        (- (+ counter?23_realified?23
+                                (- |counter'?11_realified?11|)))) 0)
+                (= (+ term_to_project_onto10
+                        (- (+ a?20_realified?20 (- |a'?10_realified?10|)))) 0)
+                (= (+ term_to_project_onto9
+                        (- (+ b?21_realified?21 (- |b'?9_realified?9|)))) 0)
+                (= (+ term_to_project_onto8
+                        (- (+ p?17_realified?17 (- |p'?8_realified?8|)))) 0)
+                (= (+ term_to_project_onto7
+                        (- (+ q?14_realified?14 (- |q'?7_realified?7|)))) 0)
+                (= (+ term_to_project_onto6
+                        (- (+ r?16_realified?16 (- |r'?6_realified?6|)))) 0)
+                (= (+ term_to_project_onto5
+                        (- (+ s?15_realified?15 (- |s'?5_realified?5|)))) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ c?18_realified?18 (- |c'?4_realified?4|)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ k?13_realified?13 (- |k'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ tmp___0?19_realified?19
+                                (- |tmp___0'?2_realified?2|)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ tmp___1?22_realified?22
+                                (- |tmp___1'?1_realified?1|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ x?25_realified?25 (- x?25_realified?25)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ y?24_realified?24 (- y?24_realified?24)))) 0))))
+(check-sat)

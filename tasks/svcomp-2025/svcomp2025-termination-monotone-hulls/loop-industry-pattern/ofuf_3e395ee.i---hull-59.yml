@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'ofuf_3e395ee.i---hull-59.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

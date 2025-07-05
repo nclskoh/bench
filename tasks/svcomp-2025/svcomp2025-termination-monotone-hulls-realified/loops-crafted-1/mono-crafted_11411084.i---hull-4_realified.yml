@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'mono-crafted_11411084.i---hull-4_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

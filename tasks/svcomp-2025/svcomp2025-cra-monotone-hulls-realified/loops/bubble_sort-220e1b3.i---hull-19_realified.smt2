@@ -1,0 +1,113 @@
+(declare-const term_to_project_onto12 Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto14 Real)
+(declare-const term_to_project_onto13 Real)
+(declare-const term_to_project_onto10 Real)
+(declare-const term_to_project_onto8 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto7 Real)
+(declare-const term_to_project_onto6 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto9 Real)
+(declare-const term_to_project_onto11 Real)
+(assert (exists
+         ((|pos1@width'?1_realified?1| Real)
+            (|pos0@width'?2_realified?2| Real)
+            (|pos1@pos'?3_realified?3| Real) (|pos0@pos'?4_realified?4| Real)
+            (|__cil_tmp10'?5_realified?5| Real)
+            (|__cil_tmp9'?6_realified?6| Real) (|val1'?7_realified?7| Real)
+            (|val0'?8_realified?8| Real) (|pos1'?9_realified?9| Real)
+            (|pos0'?10_realified?10| Real) (type_err?11_realified?11 Real)
+            (type_err?12_realified?12 Real) (tr?13_realified?13 Real)
+            (tr?14_realified?14 Real) (|param0@width'?15_realified?15| Real)
+            (|return@width'?16_realified?16| Real)
+            (|param0@pos'?17_realified?17| Real)
+            (|return@pos'?18_realified?18| Real)
+            (|param0'?19_realified?19| Real) (|return'?20_realified?20| Real)
+            (tr?21_realified?21 Real) (type_err?22_realified?22 Real)
+            (type_err?23_realified?23 Real) (tr?24_realified?24 Real)
+            (val1?25_realified?25 Real) (val0?26_realified?26 Real)
+            (__cil_tmp10?27_realified?27 Real)
+            (__cil_tmp9?28_realified?28 Real) (pos1?29_realified?29 Real)
+            (pos1@pos?30_realified?30 Real) (pos1@width?31_realified?31 Real)
+            (pos0?32_realified?32 Real) (pos0@pos?33_realified?33 Real)
+            (pos0@width?34_realified?34 Real)
+            (return@width?35_realified?35 Real)
+            (return@pos?36_realified?36 Real) (return?37_realified?37 Real)
+            (param0@width?38_realified?38 Real)
+            (param0@pos?39_realified?39 Real) (param0?40_realified?40 Real))
+         (and (or (<= (+ (- tr?24_realified?24) tr?21_realified?21 1) 0)
+                    (<= (+ tr?24_realified?24 (- tr?21_realified?21) 1) 0))
+                (<= (+ (- tr?13_realified?13) tr?14_realified?14) 0)
+                (= (+ (- type_err?22_realified?22)
+                        |param0@width'?15_realified?15|) 0)
+                (= (+ (- type_err?11_realified?11)
+                        |return@width'?16_realified?16|) 0)
+                (= (+ |pos1@width'?1_realified?1|
+                        (- type_err?22_realified?22)) 0)
+                (= (+ |pos0@width'?2_realified?2|
+                        (- type_err?22_realified?22)) 0)
+                (= (+ (- type_err?23_realified?23)
+                        |param0@pos'?17_realified?17|) 0)
+                (= (+ (- type_err?12_realified?12)
+                        |return@pos'?18_realified?18|) 0)
+                (= (+ |pos1@pos'?3_realified?3| (- type_err?23_realified?23)) 0)
+                (= (+ |pos0@pos'?4_realified?4| (- type_err?23_realified?23)) 0)
+                (= (+ |param0'?19_realified?19| (- tr?24_realified?24)) 0)
+                (= (+ |return'?20_realified?20| (- tr?13_realified?13)) 0)
+                (= (+ |__cil_tmp10'?5_realified?5| (- tr?21_realified?21)) 0)
+                (= (+ |__cil_tmp9'?6_realified?6| (- tr?24_realified?24)) 0)
+                (= (+ |val1'?7_realified?7| (- tr?13_realified?13)) 0)
+                (= (+ |val0'?8_realified?8| (- tr?14_realified?14)) 0)
+                (= (+ |pos1'?9_realified?9| (- tr?24_realified?24)) 0)
+                (= (+ |pos0'?10_realified?10| (- tr?24_realified?24)) 0)
+                (= (+ term_to_project_onto14
+                        (- (+ |pos0'?10_realified?10|
+                                (- pos0?32_realified?32)))) 0)
+                (= (+ term_to_project_onto13
+                        (- (+ |pos1'?9_realified?9| (- pos1?29_realified?29)))) 0)
+                (= (+ term_to_project_onto12
+                        (- (+ |val0'?8_realified?8| (- val0?26_realified?26)))) 0)
+                (= (+ term_to_project_onto11
+                        (- (+ |val1'?7_realified?7| (- val1?25_realified?25)))) 0)
+                (= (+ term_to_project_onto10
+                        (- (+ |__cil_tmp9'?6_realified?6|
+                                (- __cil_tmp9?28_realified?28)))) 0)
+                (= (+ term_to_project_onto9
+                        (- (+ |__cil_tmp10'?5_realified?5|
+                                (- __cil_tmp10?27_realified?27)))) 0)
+                (= (+ term_to_project_onto8
+                        (- (+ |return'?20_realified?20|
+                                (- return?37_realified?37)))) 0)
+                (= (+ term_to_project_onto7
+                        (- (+ |param0'?19_realified?19|
+                                (- param0?40_realified?40)))) 0)
+                (= (+ term_to_project_onto6
+                        (- (+ |pos0@pos'?4_realified?4|
+                                (- pos0@pos?33_realified?33)))) 0)
+                (= (+ term_to_project_onto5
+                        (- (+ |pos1@pos'?3_realified?3|
+                                (- pos1@pos?30_realified?30)))) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ |return@pos'?18_realified?18|
+                                (- return@pos?36_realified?36)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ |param0@pos'?17_realified?17|
+                                (- param0@pos?39_realified?39)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |pos0@width'?2_realified?2|
+                                (- pos0@width?34_realified?34)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |pos1@width'?1_realified?1|
+                                (- pos1@width?31_realified?31)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |return@width'?16_realified?16|
+                                (- return@width?35_realified?35)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |param0@width'?15_realified?15|
+                                (- param0@width?38_realified?38)))) 0))))
+(check-sat)

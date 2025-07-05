@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'apache-get-tag.i.p+nlh-reducerf6ffc0.i---hull-17.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

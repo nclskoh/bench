@@ -1,0 +1,99 @@
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(assert (exists
+         ((|tmp___2'?1_realified?1| Real) (|tmp___1'?2_realified?2| Real)
+            (|tmp___0'?3_realified?3| Real) (|tmp'?4_realified?4| Real)
+            (|n'?5_realified?5| Real) (|m'?6_realified?6| Real)
+            (phi_n?7_realified?7 Real) (phi_n?8_realified?8 Real)
+            (havoc?9_realified?9 Real) (phi_tmp___1?10_realified?10 Real)
+            (phi_n?11_realified?11 Real) (havoc?12_realified?12 Real)
+            (phi_m?13_realified?13 Real) (phi_m?14_realified?14 Real)
+            (havoc?15_realified?15 Real) (phi_tmp?16_realified?16 Real)
+            (phi_m?17_realified?17 Real) (havoc?18_realified?18 Real)
+            (tmp___2?19_realified?19 Real) (tmp___1?20_realified?20 Real)
+            (tmp___0?21_realified?21 Real) (tmp?22_realified?22 Real)
+            (n?23_realified?23 Real) (m?24_realified?24 Real))
+         (and (<= (- n?23_realified?23) 0) (<= (- m?24_realified?24) 0)
+                (<= (+ m?24_realified?24 -60) 0)
+                (<= (+ n?23_realified?23 -60) 0)
+                (or (and (= havoc?18_realified?18 0)
+                           (= (+ (- phi_m?17_realified?17) m?24_realified?24) 0)
+                           (= (+ (- phi_tmp?16_realified?16)
+                                   tmp?22_realified?22) 0))
+                      (and (or (< havoc?18_realified?18 0)
+                                 (< (- havoc?18_realified?18) 0))
+                             (or (and (= havoc?15_realified?15 0)
+                                        (= (+ (- phi_m?14_realified?14)
+                                                m?24_realified?24) 0))
+                                   (and (or (< havoc?15_realified?15 0)
+                                              (< (- havoc?15_realified?15) 0))
+                                          (or (and (<= (+ m?24_realified?24
+                                                            -59) 0)
+                                                     (= (+ (- phi_m?13_realified?13)
+                                                             m?24_realified?24
+                                                             1) 0))
+                                                (and (<= (+ (- m?24_realified?24)
+                                                              60) 0)
+                                                       (= (+ m?24_realified?24
+                                                               -60) 0)
+                                                       (= (- phi_m?13_realified?13) 0)))
+                                          (= (+ phi_m?13_realified?13
+                                                  (- phi_m?14_realified?14)) 0)))
+                             (= (+ phi_m?14_realified?14
+                                     (- phi_m?17_realified?17)) 0)
+                             (= (+ havoc?15_realified?15
+                                     (- phi_tmp?16_realified?16)) 0)))
+                (or (and (= havoc?12_realified?12 0)
+                           (= (+ (- phi_n?11_realified?11) n?23_realified?23) 0)
+                           (= (+ (- phi_tmp___1?10_realified?10)
+                                   tmp___1?20_realified?20) 0))
+                      (and (or (< havoc?12_realified?12 0)
+                                 (< (- havoc?12_realified?12) 0))
+                             (or (and (= havoc?9_realified?9 0)
+                                        (= (+ (- phi_n?8_realified?8)
+                                                n?23_realified?23) 0))
+                                   (and (or (< havoc?9_realified?9 0)
+                                              (< (- havoc?9_realified?9) 0))
+                                          (or (and (<= (+ n?23_realified?23
+                                                            -59) 0)
+                                                     (= (+ (- phi_n?7_realified?7)
+                                                             n?23_realified?23
+                                                             1) 0))
+                                                (and (<= (+ (- n?23_realified?23)
+                                                              60) 0)
+                                                       (= (+ n?23_realified?23
+                                                               -60) 0)
+                                                       (= (- phi_n?7_realified?7) 0)))
+                                          (= (+ phi_n?7_realified?7
+                                                  (- phi_n?8_realified?8)) 0)))
+                             (= (+ phi_n?8_realified?8
+                                     (- phi_n?11_realified?11)) 0)
+                             (= (+ havoc?9_realified?9
+                                     (- phi_tmp___1?10_realified?10)) 0)))
+                (= (+ |tmp___2'?1_realified?1| (- havoc?12_realified?12)) 0)
+                (= (+ |tmp___1'?2_realified?2|
+                        (- phi_tmp___1?10_realified?10)) 0)
+                (= (+ |tmp___0'?3_realified?3| (- havoc?18_realified?18)) 0)
+                (= (+ |tmp'?4_realified?4| (- phi_tmp?16_realified?16)) 0)
+                (= (+ |n'?5_realified?5| (- phi_n?11_realified?11)) 0)
+                (= (+ |m'?6_realified?6| (- phi_m?17_realified?17)) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ |m'?6_realified?6| (- m?24_realified?24)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ |n'?5_realified?5| (- n?23_realified?23)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ |tmp'?4_realified?4| (- tmp?22_realified?22)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |tmp___0'?3_realified?3|
+                                (- tmp___0?21_realified?21)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |tmp___1'?2_realified?2|
+                                (- tmp___1?20_realified?20)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |tmp___2'?1_realified?1|
+                                (- tmp___2?19_realified?19)))) 0))))
+(check-sat)

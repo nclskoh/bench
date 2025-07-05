@@ -1,0 +1,20 @@
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(assert (exists
+         ((|tmp___0'?1?1| Int) (|x'?2?2| Int) (phi_x?3?3 Int) (phi_x?4?4 Int)
+            (havoc?5?5 Int) (tmp___0?6?6 Int) (x?7?7 Int))
+         (and (<= (- x?7?7) 0) (or (< havoc?5?5 0) (< (- havoc?5?5) 0))
+                (or (and (<= (+ x?7?7 -50) 0) (= (+ (- phi_x?4?4) x?7?7) 0))
+                      (and (<= (+ (- x?7?7) 51) 0)
+                             (= (+ (- phi_x?4?4) x?7?7 1) 0)))
+                (or (and (or (< phi_x?4?4 0) (< (- phi_x?4?4) 0))
+                           (= (+ (- phi_x?3?3) phi_x?4?4 -1) 0))
+                      (and (= phi_x?4?4 0)
+                             (= (+ (- phi_x?3?3) phi_x?4?4 1) 0)))
+                (= (+ |tmp___0'?1?1| (- havoc?5?5)) 0)
+                (= (+ |x'?2?2| (- phi_x?3?3)) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ |x'?2?2| (- x?7?7)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ |tmp___0'?1?1| (- tmp___0?6?6)))) 0))))
+(check-sat)

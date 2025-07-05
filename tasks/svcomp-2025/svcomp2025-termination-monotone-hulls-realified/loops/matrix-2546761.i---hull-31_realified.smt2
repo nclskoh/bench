@@ -1,0 +1,11 @@
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto Real)
+(assert (exists
+         ((|k'?1_realified?1| Real) (N_LIN?2_realified?2 Real)
+            (k?3_realified?3 Real))
+         (and (<= (- N_LIN?2_realified?2) 0) (<= (- k?3_realified?3) 0)
+                (<= (+ k?3_realified?3 (- N_LIN?2_realified?2) 1) 0)
+                (= (+ |k'?1_realified?1| (- k?3_realified?3) -1) 0)
+                (= (+ term_to_project_onto0 (- |k'?1_realified?1|)) 0)
+                (= (+ term_to_project_onto (- N_LIN?2_realified?2)) 0))))
+(check-sat)

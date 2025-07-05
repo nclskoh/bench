@@ -1,0 +1,47 @@
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((|tmp___0'?1_realified?1| Real) (|c'?2_realified?2| Real)
+            (|cp'?3_realified?3| Real) (phi_c?4_realified?4 Real)
+            (havoc?5_realified?5 Real) (tmp___0?6_realified?6 Real)
+            (c?7_realified?7 Real) (cp?8_realified?8 Real)
+            (tokenlen?9_realified?9 Real) (urilen?10_realified?10 Real))
+         (and (<= (- c?7_realified?7) 0) (<= (+ (- cp?8_realified?8) 1) 0)
+                (<= (+ (- tokenlen?9_realified?9) 1) 0)
+                (<= (+ (- urilen?10_realified?10) 1) 0)
+                (or (<= (+ (- urilen?10_realified?10) cp?8_realified?8 2) 0)
+                      (<= (+ urilen?10_realified?10 (- cp?8_realified?8)) 0))
+                (<= (+ (- tokenlen?9_realified?9) c?7_realified?7 2) 0)
+                (<= (+ (- urilen?10_realified?10) cp?8_realified?8 1) 0)
+                (<= (- cp?8_realified?8) 0)
+                (or (and (= havoc?5_realified?5 0)
+                           (= (+ (- phi_c?4_realified?4) c?7_realified?7) 0))
+                      (and (or (< havoc?5_realified?5 0)
+                                 (< (- havoc?5_realified?5) 0))
+                             (<= (+ (- tokenlen?9_realified?9)
+                                      c?7_realified?7 2) 0)
+                             (<= (+ (- c?7_realified?7) -1) 0)
+                             (<= (+ (- urilen?10_realified?10)
+                                      cp?8_realified?8 1) 0)
+                             (<= (- cp?8_realified?8) 0)
+                             (= (+ (- phi_c?4_realified?4) c?7_realified?7 1) 0)))
+                (= (+ |tmp___0'?1_realified?1| (- havoc?5_realified?5)) 0)
+                (= (+ |c'?2_realified?2| (- phi_c?4_realified?4)) 0)
+                (= (+ |cp'?3_realified?3| (- cp?8_realified?8) -1) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ cp?8_realified?8 (- |cp'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ c?7_realified?7 (- |c'?2_realified?2|)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ tmp___0?6_realified?6
+                                (- |tmp___0'?1_realified?1|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ urilen?10_realified?10
+                                (- urilen?10_realified?10)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ tokenlen?9_realified?9
+                                (- tokenlen?9_realified?9)))) 0))))
+(check-sat)

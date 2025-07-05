@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'string_concat-noarr80945b.i---hull-14_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

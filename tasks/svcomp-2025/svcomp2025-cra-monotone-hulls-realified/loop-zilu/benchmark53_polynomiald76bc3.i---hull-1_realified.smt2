@@ -1,0 +1,42 @@
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto0 Real)
+(assert (exists
+         ((|tmp___1'?1_realified?1| Real) (|y'?2_realified?2| Real)
+            (|x'?3_realified?3| Real) (phi_y?4_realified?4 Real)
+            (phi_x?5_realified?5 Real) (phi_x?6_realified?6 Real)
+            (phi_x?7_realified?7 Real) (havoc?8_realified?8 Real)
+            (tmp___1?9_realified?9 Real) (x?10_realified?10 Real)
+            (y?11_realified?11 Real))
+         (and (or (< havoc?8_realified?8 0) (< (- havoc?8_realified?8) 0))
+                (or (and (= x?10_realified?10 0)
+                           (or (and (<= y?11_realified?11 0)
+                                      (= (+ (- phi_x?7_realified?7)
+                                              x?10_realified?10 -1) 0))
+                                 (and (<= (+ (- y?11_realified?11) 1) 0)
+                                        (= (+ (- phi_x?7_realified?7)
+                                                x?10_realified?10 1) 0)))
+                           (= (+ (- phi_x?6_realified?6) phi_x?7_realified?7) 0))
+                      (and (or (< x?10_realified?10 0)
+                                 (< (- x?10_realified?10) 0))
+                             (= (+ (- phi_x?6_realified?6) x?10_realified?10) 0)))
+                (or (and (<= phi_x?6_realified?6 0)
+                           (= (+ (- phi_x?5_realified?5) phi_x?6_realified?6
+                                   -1) 0)
+                           (= (+ (- phi_y?4_realified?4) y?11_realified?11) 0))
+                      (and (<= (+ (- phi_x?6_realified?6) 1) 0)
+                             (= (+ (- phi_x?5_realified?5)
+                                     phi_x?6_realified?6) 0)
+                             (= (+ (- phi_y?4_realified?4) y?11_realified?11
+                                     1) 0)))
+                (= (+ |tmp___1'?1_realified?1| (- havoc?8_realified?8)) 0)
+                (= (+ |y'?2_realified?2| (- phi_y?4_realified?4)) 0)
+                (= (+ |x'?3_realified?3| (- phi_x?5_realified?5)) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ |x'?3_realified?3| (- x?10_realified?10)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ |y'?2_realified?2| (- y?11_realified?11)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ |tmp___1'?1_realified?1|
+                                (- tmp___1?9_realified?9)))) 0))))
+(check-sat)

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'array_4d23a37.i---hull-6_realified.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'SpamAssassin-loop.i.v+cfa-reduceraeed5f.i---hull-6_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

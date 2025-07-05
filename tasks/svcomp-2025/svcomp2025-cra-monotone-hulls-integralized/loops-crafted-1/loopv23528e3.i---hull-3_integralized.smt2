@@ -1,0 +1,17 @@
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(assert (exists
+         ((|k'?1?1| Int) (|j'?2?2| Int) (k?3?3 Int) (j?4?4 Int)
+            (remainder?5 Int) (remainder?6 Int) (quotient?7 Int)
+            (quotient?8 Int))
+         (and (= (ite (and (<= (- j?4?4) 0) (<= (- j?4?4) 0)) remainder?5
+                      (- remainder?6)) 0) (= (+ (- k?3?3) |k'?1?1| 4) 0)
+                (= (+ |j'?2?2| (- j?4?4) 4) 0)
+                (= (+ term_to_project_onto0_integralized (- k?3?3)) 0)
+                (= (+ term_to_project_onto_integralized (- j?4?4)) 0)
+                (= (- j?4?4) (+ (* 2 quotient?8) remainder?6))
+                (<= 0 remainder?6)
+                (or (<= remainder?6 (+ 2 -1)) (<= remainder?6 (+ -2 -1)))
+                (= j?4?4 (+ (* 2 quotient?7) remainder?5)) (<= 0 remainder?5)
+                (or (<= remainder?5 (+ 2 -1)) (<= remainder?5 (+ -2 -1))))))
+(check-sat)

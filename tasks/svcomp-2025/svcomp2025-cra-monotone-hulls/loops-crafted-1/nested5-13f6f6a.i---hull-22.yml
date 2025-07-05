@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'nested5-13f6f6a.i---hull-22.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

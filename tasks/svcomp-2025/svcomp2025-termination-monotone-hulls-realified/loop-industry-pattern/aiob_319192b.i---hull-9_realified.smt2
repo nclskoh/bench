@@ -1,0 +1,155 @@
+(declare-const term_to_project_onto14 Real)
+(declare-const term_to_project_onto3 Real)
+(declare-const term_to_project_onto16 Real)
+(declare-const term_to_project_onto15 Real)
+(declare-const term_to_project_onto12 Real)
+(declare-const term_to_project_onto10 Real)
+(declare-const term_to_project_onto0 Real)
+(declare-const term_to_project_onto1 Real)
+(declare-const term_to_project_onto7 Real)
+(declare-const term_to_project_onto9 Real)
+(declare-const term_to_project_onto8 Real)
+(declare-const term_to_project_onto5 Real)
+(declare-const term_to_project_onto4 Real)
+(declare-const term_to_project_onto2 Real)
+(declare-const term_to_project_onto6 Real)
+(declare-const term_to_project_onto11 Real)
+(declare-const term_to_project_onto Real)
+(declare-const term_to_project_onto13 Real)
+(assert (exists
+         ((|param3@width'?1_realified?1| Real)
+            (|param2@width'?2_realified?2| Real)
+            (|param1@width'?3_realified?3| Real)
+            (|param0@width'?4_realified?4| Real)
+            (|return@width'?5_realified?5| Real)
+            (|param3@pos'?6_realified?6| Real)
+            (|param2@pos'?7_realified?7| Real)
+            (|param1@pos'?8_realified?8| Real)
+            (|param0@pos'?9_realified?9| Real)
+            (|return@pos'?10_realified?10| Real)
+            (|param3'?11_realified?11| Real) (|param2'?12_realified?12| Real)
+            (|param1'?13_realified?13| Real) (|param0'?14_realified?14| Real)
+            (|return'?15_realified?15| Real) (|tmp'?16_realified?16| Real)
+            (|Id_MCDC_102'?17_realified?17| Real)
+            (|Id_MCDC_99'?18_realified?18| Real)
+            (type_err?19_realified?19 Real) (type_err?20_realified?20 Real)
+            (havoc?21_realified?21 Real) (type_err?22_realified?22 Real)
+            (type_err?23_realified?23 Real) (type_err?24_realified?24 Real)
+            (type_err?25_realified?25 Real) (type_err?26_realified?26 Real)
+            (type_err?27_realified?27 Real) (type_err?28_realified?28 Real)
+            (type_err?29_realified?29 Real) (tr?30_realified?30 Real)
+            (tr?31_realified?31 Real) (tr?32_realified?32 Real)
+            (tr?33_realified?33 Real) (phi_tmp?34_realified?34 Real)
+            (phi_tmp?35_realified?35 Real) (tr?36_realified?36 Real)
+            (tr?37_realified?37 Real) (param3@width?38_realified?38 Real)
+            (param2@width?39_realified?39 Real)
+            (param3@pos?40_realified?40 Real)
+            (param2@pos?41_realified?41 Real) (param3?42_realified?42 Real)
+            (param2?43_realified?43 Real) (tmp?44_realified?44 Real)
+            (Id_MCDC_99?45_realified?45 Real)
+            (Id_MCDC_102?46_realified?46 Real)
+            (return@width?47_realified?47 Real)
+            (return@pos?48_realified?48 Real) (return?49_realified?49 Real)
+            (param1@width?50_realified?50 Real)
+            (param0@width?51_realified?51 Real)
+            (param1@pos?52_realified?52 Real)
+            (param0@pos?53_realified?53 Real) (param1?54_realified?54 Real)
+            (param0?55_realified?55 Real))
+         (and (<= (- Id_MCDC_102?46_realified?46) 0)
+                (or (< tr?37_realified?37 0) (< (- tr?36_realified?36) 0))
+                (or (and (<= (- Id_MCDC_102?46_realified?46) 0)
+                           (or (and (<= (+ (- Id_MCDC_102?46_realified?46) 42) 0)
+                                      (= (- phi_tmp?35_realified?35) 0))
+                                 (and (<= (+ Id_MCDC_102?46_realified?46 -41) 0)
+                                        (= (+ (- phi_tmp?35_realified?35) 1) 0)))
+                           (= (+ (- phi_tmp?34_realified?34)
+                                   phi_tmp?35_realified?35) 0))
+                      (and (<= (+ Id_MCDC_102?46_realified?46 1) 0)
+                             (= (- phi_tmp?34_realified?34) 0)))
+                (or (< phi_tmp?34_realified?34 0)
+                      (< (- phi_tmp?34_realified?34) 0))
+                (<= (- havoc?21_realified?21) 0)
+                (= (+ (- type_err?22_realified?22)
+                        |param3@width'?1_realified?1|) 0)
+                (= (+ (- type_err?23_realified?23)
+                        |param2@width'?2_realified?2|) 0)
+                (= (+ (- type_err?24_realified?24)
+                        |param1@width'?3_realified?3|) 0)
+                (= (+ (- type_err?25_realified?25)
+                        |param0@width'?4_realified?4|) 0)
+                (= (+ (- type_err?19_realified?19)
+                        |return@width'?5_realified?5|) 0)
+                (= (+ (- type_err?26_realified?26)
+                        |param3@pos'?6_realified?6|) 0)
+                (= (+ (- type_err?27_realified?27)
+                        |param2@pos'?7_realified?7|) 0)
+                (= (+ (- type_err?28_realified?28)
+                        |param1@pos'?8_realified?8|) 0)
+                (= (+ (- type_err?29_realified?29)
+                        |param0@pos'?9_realified?9|) 0)
+                (= (+ (- type_err?20_realified?20)
+                        |return@pos'?10_realified?10|) 0)
+                (= (+ (- tr?30_realified?30) |param3'?11_realified?11|) 0)
+                (= (+ (- tr?31_realified?31) |param2'?12_realified?12|) 0)
+                (= (+ (- tr?32_realified?32) |param1'?13_realified?13|) 0)
+                (= (+ (- tr?33_realified?33) |param0'?14_realified?14|) 0)
+                (= (+ |return'?15_realified?15| (- havoc?21_realified?21)) 0)
+                (= (+ |tmp'?16_realified?16| (- phi_tmp?34_realified?34)) 0)
+                (= (+ |Id_MCDC_102'?17_realified?17|
+                        (- Id_MCDC_102?46_realified?46) -1) 0)
+                (= (+ |Id_MCDC_99'?18_realified?18|
+                        (- Id_MCDC_102?46_realified?46)) 0)
+                (= (+ term_to_project_onto16
+                        (- (+ Id_MCDC_99?45_realified?45
+                                (- |Id_MCDC_99'?18_realified?18|)))) 0)
+                (= (+ term_to_project_onto15
+                        (- (+ Id_MCDC_102?46_realified?46
+                                (- |Id_MCDC_102'?17_realified?17|)))) 0)
+                (= (+ term_to_project_onto14
+                        (- (+ tmp?44_realified?44 (- |tmp'?16_realified?16|)))) 0)
+                (= (+ term_to_project_onto13
+                        (- (+ return?49_realified?49
+                                (- |return'?15_realified?15|)))) 0)
+                (= (+ term_to_project_onto12
+                        (- (+ param0?55_realified?55
+                                (- |param0'?14_realified?14|)))) 0)
+                (= (+ term_to_project_onto11
+                        (- (+ param1?54_realified?54
+                                (- |param1'?13_realified?13|)))) 0)
+                (= (+ term_to_project_onto10
+                        (- (+ param2?43_realified?43
+                                (- |param2'?12_realified?12|)))) 0)
+                (= (+ term_to_project_onto9
+                        (- (+ param3?42_realified?42
+                                (- |param3'?11_realified?11|)))) 0)
+                (= (+ term_to_project_onto8
+                        (- (+ return@pos?48_realified?48
+                                (- |return@pos'?10_realified?10|)))) 0)
+                (= (+ term_to_project_onto7
+                        (- (+ param0@pos?53_realified?53
+                                (- |param0@pos'?9_realified?9|)))) 0)
+                (= (+ term_to_project_onto6
+                        (- (+ param1@pos?52_realified?52
+                                (- |param1@pos'?8_realified?8|)))) 0)
+                (= (+ term_to_project_onto5
+                        (- (+ param2@pos?41_realified?41
+                                (- |param2@pos'?7_realified?7|)))) 0)
+                (= (+ term_to_project_onto4
+                        (- (+ param3@pos?40_realified?40
+                                (- |param3@pos'?6_realified?6|)))) 0)
+                (= (+ term_to_project_onto3
+                        (- (+ return@width?47_realified?47
+                                (- |return@width'?5_realified?5|)))) 0)
+                (= (+ term_to_project_onto2
+                        (- (+ param0@width?51_realified?51
+                                (- |param0@width'?4_realified?4|)))) 0)
+                (= (+ term_to_project_onto1
+                        (- (+ param1@width?50_realified?50
+                                (- |param1@width'?3_realified?3|)))) 0)
+                (= (+ term_to_project_onto0
+                        (- (+ param2@width?39_realified?39
+                                (- |param2@width'?2_realified?2|)))) 0)
+                (= (+ term_to_project_onto
+                        (- (+ param3@width?38_realified?38
+                                (- |param3@width'?1_realified?1|)))) 0))))
+(check-sat)

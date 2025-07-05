@@ -1,0 +1,9 @@
+
+format_version: '2.0'
+
+input_files: 'egcd307c209.i---hull-8_integralized.smt2'
+
+properties:
+- property_file: ../properties/sat.prp
+  expected_verdict: true
+

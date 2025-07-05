@@ -1,0 +1,88 @@
+(declare-const term_to_project_onto1_integralized Int)
+(declare-const term_to_project_onto2_integralized Int)
+(declare-const term_to_project_onto8_integralized Int)
+(declare-const term_to_project_onto3_integralized Int)
+(declare-const term_to_project_onto4_integralized Int)
+(declare-const term_to_project_onto6_integralized Int)
+(declare-const term_to_project_onto0_integralized Int)
+(declare-const term_to_project_onto7_integralized Int)
+(declare-const term_to_project_onto_integralized Int)
+(declare-const term_to_project_onto5_integralized Int)
+(assert (exists
+         ((|main____CPAchecker_TMP_0___59'?1?1| Int)
+            (|main____CPAchecker_TMP_1___58'?2?2| Int)
+            (|__VERIFIER_assert__cond___270'?3?3| Int)
+            (|__VERIFIER_assert__cond___269'?4?4| Int)
+            (|main____CPAchecker_TMP_0___58'?5?5| Int)
+            (|main____CPAchecker_TMP_1___57'?6?6| Int)
+            (|__tmp_2390_0'?7?7| Int) (|__tmp_2390_1'?8?8| Int)
+            (havoc?9?9 Int) (|main__t'?10?10| Int)
+            (__VERIFIER_assert__cond___269?11?11 Int)
+            (__VERIFIER_assert__cond___270?12?12 Int)
+            (main____CPAchecker_TMP_1___58?13?13 Int)
+            (main____CPAchecker_TMP_0___59?14?14 Int)
+            (__tmp_2390_1?15?15 Int) (__tmp_2390_0?16?16 Int)
+            (main____CPAchecker_TMP_1___57?17?17 Int)
+            (main____CPAchecker_TMP_0___58?18?18 Int) (main__t?19?19 Int)
+            (main__tagbuf_len?20?20 Int))
+         (and (<= (+ (- __tmp_2390_1?15?15) 1) 0) (= __tmp_2390_0?16?16 0)
+                (<= (+ (- main____CPAchecker_TMP_1___57?17?17) 1) 0)
+                (= main____CPAchecker_TMP_0___58?18?18 0)
+                (<= (+ (- main__t?19?19) 1) 0)
+                (<= (+ (- main__tagbuf_len?20?20) 1) 0)
+                (= (+ (- main__t?19?19) __tmp_2390_1?15?15 1) 0)
+                (= main____CPAchecker_TMP_0___58?18?18 0)
+                (= __tmp_2390_0?16?16 0)
+                (or (< (ite (<= (- main__t?19?19) 0) 1 0) 0)
+                      (< (- (ite (<= (- main__t?19?19) 0) 1 0)) 0))
+                (or (< (ite (<= (+ (- main__tagbuf_len?20?20) main__t?19?19) 0)
+                            1 0) 0)
+                      (< (- (ite (<= (+ (- main__tagbuf_len?20?20)
+                                          main__t?19?19) 0)
+                                 1 0)) 0))
+                (or (< (+ (- main__tagbuf_len?20?20) main__t?19?19 1) 0)
+                      (< (- (+ (- main__tagbuf_len?20?20) main__t?19?19 1)) 0))
+                (= havoc?9?9 0)
+                (= (+ |main____CPAchecker_TMP_0___59'?1?1| (- havoc?9?9)) 0)
+                (= (+ |main____CPAchecker_TMP_1___58'?2?2| (- main__t?19?19)) 0)
+                (= (+ |__VERIFIER_assert__cond___270'?3?3|
+                        (- (ite (<= (+ (- main__tagbuf_len?20?20)
+                                         main__t?19?19) 0)
+                                1 0))) 0)
+                (= (+ |__VERIFIER_assert__cond___269'?4?4|
+                        (- (ite (<= (- main__t?19?19) 0) 1 0))) 0)
+                (= (+ |main____CPAchecker_TMP_0___58'?5?5|
+                        (- __tmp_2390_0?16?16)) 0)
+                (= (+ |main____CPAchecker_TMP_1___57'?6?6|
+                        (- __tmp_2390_1?15?15)) 0)
+                (= (+ |main__t'?10?10| (- main__t?19?19) -1) 0)
+                (= (+ |__tmp_2390_0'?7?7| (- havoc?9?9)) 0)
+                (= (+ |__tmp_2390_1'?8?8| (- main__t?19?19)) 0)
+                (= (+ term_to_project_onto8_integralized
+                        (- (+ __tmp_2390_1?15?15 (- |__tmp_2390_1'?8?8|)))) 0)
+                (= (+ term_to_project_onto7_integralized
+                        (- (+ __tmp_2390_0?16?16 (- |__tmp_2390_0'?7?7|)))) 0)
+                (= (+ term_to_project_onto6_integralized
+                        (- (+ main__t?19?19 (- |main__t'?10?10|)))) 0)
+                (= (+ term_to_project_onto5_integralized
+                        (- (+ main____CPAchecker_TMP_1___57?17?17
+                                (- |main____CPAchecker_TMP_1___57'?6?6|)))) 0)
+                (= (+ term_to_project_onto4_integralized
+                        (- (+ main____CPAchecker_TMP_0___58?18?18
+                                (- |main____CPAchecker_TMP_0___58'?5?5|)))) 0)
+                (= (+ term_to_project_onto3_integralized
+                        (- (+ __VERIFIER_assert__cond___269?11?11
+                                (- |__VERIFIER_assert__cond___269'?4?4|)))) 0)
+                (= (+ term_to_project_onto2_integralized
+                        (- (+ __VERIFIER_assert__cond___270?12?12
+                                (- |__VERIFIER_assert__cond___270'?3?3|)))) 0)
+                (= (+ term_to_project_onto1_integralized
+                        (- (+ main____CPAchecker_TMP_1___58?13?13
+                                (- |main____CPAchecker_TMP_1___58'?2?2|)))) 0)
+                (= (+ term_to_project_onto0_integralized
+                        (- (+ main____CPAchecker_TMP_0___59?14?14
+                                (- |main____CPAchecker_TMP_0___59'?1?1|)))) 0)
+                (= (+ term_to_project_onto_integralized
+                        (- (+ main__tagbuf_len?20?20
+                                (- main__tagbuf_len?20?20)))) 0))))
+(check-sat)

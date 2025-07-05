@@ -8,7 +8,7 @@ import subprocess
 
 def make_directories(inroot, outroot):
     print(f"inroot: {inroot}")
-    for root, dirs, files in os.walk(inroot):
+    for root, dirs, _files in os.walk(inroot):
         print(f"root = {root}")
         for d in dirs:
             try:

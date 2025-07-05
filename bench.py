@@ -10,6 +10,43 @@ import types
 import statistics
 from collections import defaultdict
 
+# benchexec's result format:
+# {tool}.{time}.results.{rundefinition}.{task-suite}.xml.bz
+def benchexec_filename(tool, task_suite, rundefinition):
+    f"{tool}.*.{rundefinition}.{task_suite}.xml.bz2"
+
+def all_results(tool, task_suite, rundefinition):
+    search_string = f"{result_dir}/{benchexec_filename(tool, task_suite, rundefinition)}"
+    results = glob.glob(search_string)
+    results.sort()
+    print(f"For ({tool}, {rundefinition}, {task_suite}): found results: {results}")
+    return results
+
+def has_result(tool, task_suite, rundefinition):
+    return len(all_results(tool, task_suite, rundefinition)) > 0
+
+def recent_result(tool, task_suite, rundefinition, which_run=1):
+    return all_results(tool, task_suite, rundefinition)[-which_run]
+
+def recent_result_data(tools, suites, num_runs_to_fetch=1):
+    multirun_data = []
+    for run in range(num_runs_to_fetch):
+        data = []
+        for suite in suites:
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                p = subprocess.run(['table-generator',
+                                    '-f', 'csv',
+                                    '-o', tmp_dir,
+                                    '-x', 'simplecsv.xml',
+                                    '-q']
+                                   + list(map(lambda x: recent_result(x, suite, which_run=run), tools)))
+                table = os.path.join(tmp_dir, "simplecsv.table.csv")
+                # strip 3 rows of header info
+                data += list(map(lambda row: row.rstrip().split('\t'),
+                                 open(table).readlines()))[3:]
+        multirun_data.append(data)
+    return multirun_data
+
 # Configuration -- can be reconfigured via the command line
 tools = ['ComPACT', 'CPAchecker', 'UAutomizer', '2ls', 'Termite']
 suites = ['Termination', 'bitprecise', 'recursive', 'polybench']
@@ -32,26 +69,17 @@ table_end = "</table>"
 #  column 3i + 2: category (whether that result is correct)
 #  column 3i + 3: time (s)
 
-
 def get_name(row):
     return row[0]
-
 
 def get_result(row, index):
     return row[3 * index + 1]
 
-
 def get_category(row, index):
     return row[3 * index + 2]
 
-
 def get_time(row, index):
     return float(row[3 * index + 3])
-
-
-def has_result(tool, suite, rundefinition):
-    return len(glob.glob(f"{result_dir}/{tool}.*.{rundefinition}.{suite}.xml.bz2")) > 0
-
 
 def run():
     print(f"{tools}, {rundefinitions}, {suites}")
@@ -81,37 +109,6 @@ def run():
                     runstring = " ".join(run_cmd)
                     print(f"Running command: {runstring}")
                     subprocess.run(run_cmd, env=my_env)
-
-
-def recent_result(tool, suite, which_run=1):
-    results = glob.glob("results/%s.*.%s.xml.bz2" % (tool, suite))
-    results.sort()
-    if len(results) == 0:
-        print("No results for %s on suite %s" % (tool, suite))
-        exit(-1)
-    else:
-        return results[-which_run]
-
-
-def recent_result_data(tools, suites, num_runs_to_fetch=1):
-    multirun_data = []
-    for run in range(num_runs_to_fetch):
-        data = []
-        for suite in suites:
-            with tempfile.TemporaryDirectory() as tmp_dir:
-                p = subprocess.run(['table-generator',
-                                    '-f', 'csv',
-                                    '-o', tmp_dir,
-                                    '-x', 'simplecsv.xml',
-                                    '-q']
-                                   + list(map(lambda x: recent_result(x, suite, which_run=run), tools)))
-                table = os.path.join(tmp_dir, "simplecsv.table.csv")
-                # strip 3 rows of header info
-                data += list(map(lambda row: row.rstrip().split('\t'),
-                                 open(table).readlines()))[3:]
-        multirun_data.append(data)
-    return multirun_data
-
 
 def summarize_result(tool, suite, average_over_runs=1):
     multirun_data = recent_result_data(

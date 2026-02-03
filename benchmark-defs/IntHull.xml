@@ -35,6 +35,10 @@
     <includesfile>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/ReachSafety-Loops-Termination.set</includesfile>
   </tasks>
 
+  <tasks name="lira-more-precise-than-real-relaxation">
+    <includesfile>../tasks/svcomp-2025/lira-more-precise-than-real-relaxation.set</includesfile>
+  </tasks>
+
   <rundefinition name="lira-convex-hull-pc">
     <option name="-lira-convex-hull-pc" />
   </rundefinition>

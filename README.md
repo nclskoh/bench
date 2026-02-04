@@ -78,7 +78,7 @@ PYTHONPATH=./:$PYTHONPATH PATH=<path-to-bigtop>:$PATH python bench.py run --rund
 
 To compute convex hulls on LIRA formulas
 (note that running FK on real relaxation here is actually redundant, 
-and running CCH_R answers the next question on the trade-off between precision and runtime):
+and running `CCH_R` answers the next question on the trade-off between precision and runtime):
 ```
 PYTHONPATH=./:$PYTHONPATH PATH=<path-to-bigtop>:$PATH python ./bench.py run --rundefinitions lira-convex-hull-pc-lplh,lira-convex-hull-pc,lira-convex-hull-real-relaxation-lw,lira-convex-hull-real-relaxation-fmcad15 --tools IntHull --suites cra-monotone-svcomp,termination-monotone-svcomp
 ```

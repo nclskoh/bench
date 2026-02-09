@@ -1,9 +1,6 @@
+
 Bench
 =====
-
-This repository contains scripts to run benchmarks in the experiments section of
-"Convex Hulls for Linear Integer-Real Arithmetic".
-See `README-convex.hulls.md`.
 
 This directory contains [benchexec](https://github.com/sosy-lab/benchexec)
 scripts to simplify benchmarking and generating tables and plots.

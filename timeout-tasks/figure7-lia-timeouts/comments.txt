@@ -1,0 +1,7 @@
+The following tasks did NOT timeout when running GC-hull-then-project.
+
+loop-new/count_by_k1a7e0d.i---hull-2_integralized.smt2
+loop-new/count_by_k1a7e0d.i---hull-3_integralized.smt2
+loop-new/count_by_k3ddcb0.i---hull-0_integralized.smt2
+loop-new/count_by_k3ddcb0.i---hull-1_integralized.smt2
+

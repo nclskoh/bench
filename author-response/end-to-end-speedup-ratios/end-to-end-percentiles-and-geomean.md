@@ -5,7 +5,7 @@ counts (#correct, total time, #timeouts) for the safety and termination
 end-to-end analyses -- it does not report per-task speedup ratios or their
 percentiles/geomean. This file fills that gap by computing per-task
 cputime-ratio statistics for the same runs, in the same style as
-`popl-results/speedup-ratios-extended/extended-percentiles-summary.md`.
+`author-response/speedup-ratios-extended/extended-percentiles-summary.md`.
 
 ## IMPORTANT CAVEAT: most tasks are sub-second
 

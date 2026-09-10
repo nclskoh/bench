@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE result 
+  PUBLIC '+//IDN sosy-lab.org//DTD BenchExec result 3.12//EN' 
+  'https://www.sosy-lab.org/benchexec/result-3.12.dtd'>
+<result benchmarkname="IntHull" date="2025-07-04 19:08:19 EDT" starttime="2025-07-04T19:09:19.165940-04:00" tool="Projection of integer hull" version="1.0" toolmodule="tools.inthull" generator="BenchExec 3.30" displayName="Compute the projection of the integer hull of existential formulas in the theory of linear integer-real arithmetic." timelimit="30s" options="-lra-convex-hull-lw" block="cra-monotone-svcomp-realified" name="lra-convex-hull-lw.cra-monotone-svcomp-realified" endtime="2025-07-04T19:42:40.097821-04:00">
+
+  <columns>
+
+    <column title="status" />
+
+    <column title="cputime" />
+
+    <column title="walltime" />
+
+  </columns>
+
+  <systeminfo hostname="frame">
+
+    <os name="Linux-6.11.0-28-generic-x86_64-with-glibc2.39" />
+
+    <cpu model="Intel Core Ultra 5 125H" cores="18" frequency="4500000000Hz" turboboostActive="true" />
+
+    <ram size="33084030976B" />
+
+    <environment>
+
+      <var name="CAML_LD_LIBRARY_PATH">/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/stublibs:/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/ocaml/stublibs:/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/ocaml</var>
+
+      <var name="COLORTERM">truecolor</var>
+
+      <var name="DBUS_SESSION_BUS_ADDRESS">unix:path=/run/user/1000/bus</var>
+
+      <var name="DESKTOP_SESSION">ubuntu</var>
+
+      <var name="DISPLAY">:0</var>
+
+      <var name="GDMSESSION">ubuntu</var>
+
+      <var name="GNOME_DESKTOP_SESSION_ID">this-is-deprecated</var>
+
+      <var name="GNOME_KEYRING_CONTROL">/run/user/1000/keyring</var>
+
+      <var name="GNOME_SETUP_DISPLAY">:1</var>
+
+      <var name="GNOME_SHELL_SESSION_MODE">ubuntu</var>
+
+      <var name="GNOME_TERMINAL_SCREEN">/org/gnome/Terminal/screen/cec75f08_dd57_48a5_8fb0_e783a137cc22</var>
+
+      <var name="GNOME_TERMINAL_SERVICE">:1.99</var>
+
+      <var name="GSM_SKIP_SSH_AGENT_WORKAROUND">true</var>
+
+      <var name="GTK_MODULES">gail:atk-bridge</var>
+
+      <var name="LANG">en_US.UTF-8</var>
+
+      <var name="LESS">-R</var>
+
+      <var name="LOGNAME">diagram</var>
+
+      <var name="LSCOLORS">Gxfxcxdxbxegedabagacad</var>
+
+      <var name="LS_COLORS">rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:</var>
+
+      <var name="MANPATH">:/home/diagram/.nvm/versions/node/v22.16.0/share/man:/home/diagram/.opam/ocaml-base-compiler.5.3.0/man</var>
+
+      <var name="MEMORY_PRESSURE_WATCH">/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure</var>
+
+      <var name="MEMORY_PRESSURE_WRITE">c29tZSAyMDAwMDAgMjAwMDAwMAA=</var>
+
+      <var name="NVM_BIN">/home/diagram/.nvm/versions/node/v22.16.0/bin</var>
+
+      <var name="NVM_CD_FLAGS">-q</var>
+
+      <var name="NVM_DIR">/home/diagram/.nvm</var>
+
+      <var name="NVM_INC">/home/diagram/.nvm/versions/node/v22.16.0/include/node</var>
+
+      <var name="OCAMLTOP_INCLUDE_PATH">/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/toplevel:</var>
+
+      <var name="OCAML_TOPLEVEL_PATH">/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/toplevel</var>
+
+      <var name="OLDPWD">/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/popl-results</var>
+
+      <var name="OPAMNOENVNOTICE">true</var>
+
+      <var name="OPAM_SWITCH_PREFIX">/home/diagram/.opam/ocaml-base-compiler.5.3.0</var>
+
+      <var name="PAGER">less</var>
+
+      <var name="PATH">/home/diagram/src/research/projects/duet/duet-nk-popl-local-abstraction/_build/default/srk:/home/diagram/.opam/ocaml-base-compiler.5.3.0/bin:/home/diagram/.nvm/versions/node/v22.16.0/bin:/home/diagram/bin:/home/diagram/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/diagram/src/research/projects/duet</var>
+
+      <var name="PWD">/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025</var>
+
+      <var name="PYTHONPATH">/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025</var>
+
+      <var name="QTWEBENGINE_DICTIONARIES_PATH">/usr/share/hunspell-bdic/</var>
+
+      <var name="QT_ACCESSIBILITY">1</var>
+
+      <var name="QT_IM_MODULE">ibus</var>
+
+      <var name="SESSION_MANAGER">local/frame:@/tmp/.ICE-unix/3055,unix/frame:/tmp/.ICE-unix/3055</var>
+
+      <var name="SHELL">/usr/bin/zsh</var>
+
+      <var name="SHLVL">1</var>
+
+      <var name="SSH_AUTH_SOCK">/run/user/1000/keyring/ssh</var>
+
+      <var name="SYSTEMD_EXEC_PID">3269</var>
+
+      <var name="TERM">xterm-256color</var>
+
+      <var name="USER">diagram</var>
+
+      <var name="USERNAME">diagram</var>
+
+      <var name="VTE_VERSION">7600</var>
+
+      <var name="WAYLAND_DISPLAY">wayland-0</var>
+
+      <var name="XAUTHORITY">/run/user/1000/.mutter-Xwaylandauth.RNS182</var>
+
+      <var name="XDG_CURRENT_DESKTOP">ubuntu:GNOME</var>
+
+      <var name="XDG_DATA_DIRS">/usr/local/share/:/usr/share/:/var/lib/snapd/desktop</var>
+
+      <var name="XDG_MENU_PREFIX">gnome-</var>
+
+      <var name="XDG_RUNTIME_DIR">/run/user/1000</var>
+
+      <var name="XDG_SESSION_CLASS">user</var>
+
+      <var name="XDG_SESSION_DESKTOP">ubuntu</var>
+
+      <var name="XDG_SESSION_TYPE">wayland</var>
+
+      <var name="XMODIFIERS">@im=ibus</var>
+
+      <var name="ZSH">/home/diagram/.oh-my-zsh</var>
+
+      <var name="_">/usr/bin/python</var>
+
+    </environment>
+
+  </systeminfo>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-24_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-24_realified.smt2]">
+
+    <column title="cputime" value="0.190938s" />
+
+    <column title="memory" value="44244992B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.19747620899579488s" />
+
+    <column title="blkio-read" value="466944B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000264" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000389" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:34.420621-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-25_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-25_realified.smt2]">
+
+    <column title="cputime" value="0.229073s" />
+
+    <column title="memory" value="44593152B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.2367997939873021s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000117" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000171" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:34.818930-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-26_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-26_realified.smt2]">
+
+    <column title="cputime" value="0.471501s" />
+
+    <column title="memory" value="51978240B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.4782342460239306s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000126" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000113" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:35.238035-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-27_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-27_realified.smt2]">
+
+    <column title="cputime" value="0.468489s" />
+
+    <column title="memory" value="51970048B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.47422161398571916s" />
+
+    <column title="blkio-read" value="471040B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000138" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000121" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:35.908577-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-28_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-28_realified.smt2]">
+
+    <column title="cputime" value="0.314479s" />
+
+    <column title="memory" value="48734208B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.3204839800018817s" />
+
+    <column title="blkio-read" value="430080B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00004" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000185" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:36.573532-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-29_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-29_realified.smt2]">
+
+    <column title="cputime" value="0.329131s" />
+
+    <column title="memory" value="48783360B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.3356064239924308s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000249" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000195" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:37.092802-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-24_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-24_realified.smt2]">
+
+    <column title="cputime" value="0.197127s" />
+
+    <column title="memory" value="44232704B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.2032733990054112s" />
+
+    <column title="blkio-read" value="475136B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000066" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000203" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:48.306688-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-25_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-25_realified.smt2]">
+
+    <column title="cputime" value="0.193122s" />
+
+    <column title="memory" value="44470272B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.19955660798586905s" />
+
+    <column title="blkio-read" value="475136B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000129" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000474" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:48.696436-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-26_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-26_realified.smt2]">
+
+    <column title="cputime" value="0.474778s" />
+
+    <column title="memory" value="51965952B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.4806099080014974s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000053" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000194" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:49.091311-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-27_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-27_realified.smt2]">
+
+    <column title="cputime" value="0.483484s" />
+
+    <column title="memory" value="51970048B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.4907479340035934s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000228" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000299" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:49.771016-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-28_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-28_realified.smt2]">
+
+    <column title="cputime" value="0.307476s" />
+
+    <column title="memory" value="48807936B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.3131899629952386s" />
+
+    <column title="blkio-read" value="471040B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000038" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000075" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:50.462626-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-29_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-29_realified.smt2]">
+
+    <column title="cputime" value="0.346832s" />
+
+    <column title="memory" value="49004544B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.35346026500337757s" />
+
+    <column title="blkio-read" value="471040B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000141" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000294" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:18:51.006686-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-24_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-24_realified.smt2]">
+
+    <column title="cputime" value="0.200414s" />
+
+    <column title="memory" value="44453888B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.2054004600213375s" />
+
+    <column title="blkio-read" value="466944B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000066" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000303" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:02.198707-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-25_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-25_realified.smt2]">
+
+    <column title="cputime" value="0.187532s" />
+
+    <column title="memory" value="44326912B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.19352635799441487s" />
+
+    <column title="blkio-read" value="475136B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000217" hidden="true" />
+
+    <column title="pressure-io-some" value="0.00187" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:02.589620-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-26_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-26_realified.smt2]">
+
+    <column title="cputime" value="0.46975s" />
+
+    <column title="memory" value="52224000B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.4762391149997711s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00024" hidden="true" />
+
+    <column title="pressure-io-some" value="0.00089" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:02.967521-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-27_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-27_realified.smt2]">
+
+    <column title="cputime" value="0.4828s" />
+
+    <column title="memory" value="51937280B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.4892228829849046s" />
+
+    <column title="blkio-read" value="446464B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00011" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000046" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:03.638247-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-28_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-28_realified.smt2]">
+
+    <column title="cputime" value="0.330083s" />
+
+    <column title="memory" value="48791552B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.3361805370077491s" />
+
+    <column title="blkio-read" value="462848B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000152" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000438" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:04.328524-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-29_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-29_realified.smt2]">
+
+    <column title="cputime" value="0.329045s" />
+
+    <column title="memory" value="48881664B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.33543852099683136s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000077" hidden="true" />
+
+    <column title="pressure-io-some" value="0.0005" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:04.855573-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-24_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-24_realified.smt2]">
+
+    <column title="cputime" value="0.200326s" />
+
+    <column title="memory" value="44642304B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.20661917500547133s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000037" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000095" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:15.937487-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-25_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-25_realified.smt2]">
+
+    <column title="cputime" value="0.200073s" />
+
+    <column title="memory" value="44220416B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.20542757998919114s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000073" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000273" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:16.342365-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-26_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-26_realified.smt2]">
+
+    <column title="cputime" value="0.498271s" />
+
+    <column title="memory" value="51924992B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.5048584720061626s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000166" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000472" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:16.737258-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-27_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-27_realified.smt2]">
+
+    <column title="cputime" value="0.472275s" />
+
+    <column title="memory" value="51970048B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.4786069260153454s" />
+
+    <column title="blkio-read" value="475136B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000114" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000585" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:17.448003-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-28_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-28_realified.smt2]">
+
+    <column title="cputime" value="0.328907s" />
+
+    <column title="memory" value="48812032B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.33505787400645204s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000135" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000978" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:18.122279-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-29_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-29_realified.smt2]">
+
+    <column title="cputime" value="0.334637s" />
+
+    <column title="memory" value="49135616B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.34141268601524644s" />
+
+    <column title="blkio-read" value="462848B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000336" hidden="true" />
+
+    <column title="pressure-io-some" value="0.001079" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:18.655349-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-24_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-24_realified.smt2]">
+
+    <column title="cputime" value="0.191571s" />
+
+    <column title="memory" value="44269568B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.19745848499587737s" />
+
+    <column title="blkio-read" value="462848B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000354" hidden="true" />
+
+    <column title="pressure-io-some" value="0.001557" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:29.904615-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-25_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-25_realified.smt2]">
+
+    <column title="cputime" value="0.185487s" />
+
+    <column title="memory" value="44191744B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.19024811498820782s" />
+
+    <column title="blkio-read" value="475136B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000064" hidden="true" />
+
+    <column title="pressure-io-some" value="0.001157" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:30.301699-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-26_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-26_realified.smt2]">
+
+    <column title="cputime" value="0.459688s" />
+
+    <column title="memory" value="51945472B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.46535115101141855s" />
+
+    <column title="blkio-read" value="462848B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000091" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000039" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:30.687677-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-27_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-27_realified.smt2]">
+
+    <column title="cputime" value="0.499695s" />
+
+    <column title="memory" value="52457472B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.5070874219818506s" />
+
+    <column title="blkio-read" value="471040B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000506" hidden="true" />
+
+    <column title="pressure-io-some" value="0.00001" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:31.349660-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-28_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-28_realified.smt2]">
+
+    <column title="cputime" value="0.344096s" />
+
+    <column title="memory" value="49156096B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.3503156100050546s" />
+
+    <column title="blkio-read" value="462848B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000193" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000423" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:32.048506-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-29_realified.yml" files="[../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-29_realified.smt2]">
+
+    <column title="cputime" value="0.326937s" />
+
+    <column title="memory" value="48721920B" />
+
+    <column title="status" value="done" />
+
+    <column title="walltime" value="0.3332978390099015s" />
+
+    <column title="blkio-read" value="479232B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="missing" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000356" hidden="true" />
+
+    <column title="pressure-io-some" value="0.001404" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-04T19:19:32.587436-04:00" hidden="true" />
+
+  </run>
+
+  <column title="cputime" value="761.1242010000001s" />
+
+  <column title="walltime" value="2001.1679625880206s" />
+
+</result>

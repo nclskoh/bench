@@ -1,0 +1,13 @@
+Free/Total fraction statistics (n=20515 files)
+geomean: 0.282
+percentile_0: 0.000
+percentile_1: 0.058
+percentile_5: 0.167
+percentile_10: 0.200
+percentile_25: 0.250
+percentile_50: 0.300
+percentile_75: 0.333
+percentile_90: 0.375
+percentile_95: 0.400
+percentile_99: 0.400
+percentile_100: 0.500

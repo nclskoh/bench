@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!DOCTYPE table PUBLIC "+//IDN sosy-lab.org//DTD BenchExec table 1.10//EN" "https://www.sosy-lab.org/benchexec/table-1.10.dtd">
+<table>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/filtered-popl-results/filtered-lira-hulls-results/filtered-IntHull.2025-07-03_11-07-28.results.lira-convex-hull-pc-lplh.cra-monotone-svcomp.xml.bz2" />
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/filtered-popl-results/filtered-lira-hulls-results/filtered-IntHull.2025-07-03_15-52-08.results.lira-convex-hull-pc-lplh.termination-monotone-svcomp.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/filtered-popl-results/filtered-lira-hulls-results/filtered-IntHull.2025-07-03_14-43-50.results.lira-convex-hull-real-relaxation-lw.cra-monotone-svcomp.xml.bz2" />
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/filtered-popl-results/filtered-lira-hulls-results/filtered-IntHull.2025-07-03_19-58-25.results.lira-convex-hull-real-relaxation-lw.termination-monotone-svcomp.xml.bz2" />
+</union>
+</table>

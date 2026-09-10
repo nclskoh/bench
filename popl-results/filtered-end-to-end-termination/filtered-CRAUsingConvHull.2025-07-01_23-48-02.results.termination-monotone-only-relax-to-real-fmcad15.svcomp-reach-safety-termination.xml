@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE result 
+  PUBLIC '+//IDN sosy-lab.org//DTD BenchExec result 3.12//EN' 
+  'https://www.sosy-lab.org/benchexec/result-3.12.dtd'>
+<result benchmarkname="CRAUsingConvHull" date="2025-07-01 23:48:02 EDT" starttime="2025-07-01T23:48:05.993557-04:00" tool="CRA" version="" toolmodule="tools.cra" generator="BenchExec 3.30" displayName="Prove safety or termination using convex hull primitive" timelimit="300s" options="-termination -monotone -termination-no-phase -termination-no-attractor -termination-no-dta -termination-no-exp -theory LIRA -algo-for-lira-convhull fmcad15" block="svcomp-reach-safety-termination" name="termination-monotone-only-relax-to-real-fmcad15.svcomp-reach-safety-termination" endtime="2025-07-01T23:51:38.796871-04:00">
+
+  <columns>
+
+    <column title="status" />
+
+    <column title="cputime" />
+
+    <column title="walltime" />
+
+  </columns>
+
+  <systeminfo hostname="frame">
+
+    <os name="Linux-6.11.0-26-generic-x86_64-with-glibc2.39" />
+
+    <cpu model="Intel Core Ultra 5 125H" cores="18" frequency="4500000000Hz" turboboostActive="true" />
+
+    <ram size="33084129280B" />
+
+    <environment>
+
+      <var name="CAML_LD_LIBRARY_PATH">/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/stublibs:/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/ocaml/stublibs:/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/ocaml</var>
+
+      <var name="COLORTERM">truecolor</var>
+
+      <var name="DBUS_SESSION_BUS_ADDRESS">unix:path=/run/user/1000/bus</var>
+
+      <var name="DESKTOP_SESSION">ubuntu</var>
+
+      <var name="DISPLAY">:0</var>
+
+      <var name="GDMSESSION">ubuntu</var>
+
+      <var name="GNOME_DESKTOP_SESSION_ID">this-is-deprecated</var>
+
+      <var name="GNOME_KEYRING_CONTROL">/run/user/1000/keyring</var>
+
+      <var name="GNOME_SETUP_DISPLAY">:1</var>
+
+      <var name="GNOME_SHELL_SESSION_MODE">ubuntu</var>
+
+      <var name="GNOME_TERMINAL_SCREEN">/org/gnome/Terminal/screen/fc20c4b2_15c0_4efa_92c8_1b8018ad00ea</var>
+
+      <var name="GNOME_TERMINAL_SERVICE">:1.146</var>
+
+      <var name="GSM_SKIP_SSH_AGENT_WORKAROUND">true</var>
+
+      <var name="GTK_MODULES">gail:atk-bridge</var>
+
+      <var name="LANG">en_US.UTF-8</var>
+
+      <var name="LESS">-R</var>
+
+      <var name="LOGNAME">diagram</var>
+
+      <var name="LSCOLORS">Gxfxcxdxbxegedabagacad</var>
+
+      <var name="LS_COLORS">rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:</var>
+
+      <var name="MANPATH">:/home/diagram/.nvm/versions/node/v22.16.0/share/man:/home/diagram/.opam/ocaml-base-compiler.5.3.0/man</var>
+
+      <var name="MEMORY_PRESSURE_WATCH">/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure</var>
+
+      <var name="MEMORY_PRESSURE_WRITE">c29tZSAyMDAwMDAgMjAwMDAwMAA=</var>
+
+      <var name="NVM_BIN">/home/diagram/.nvm/versions/node/v22.16.0/bin</var>
+
+      <var name="NVM_CD_FLAGS">-q</var>
+
+      <var name="NVM_DIR">/home/diagram/.nvm</var>
+
+      <var name="NVM_INC">/home/diagram/.nvm/versions/node/v22.16.0/include/node</var>
+
+      <var name="OCAMLTOP_INCLUDE_PATH">/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/toplevel:</var>
+
+      <var name="OCAML_TOPLEVEL_PATH">/home/diagram/.opam/ocaml-base-compiler.5.3.0/lib/toplevel</var>
+
+      <var name="OLDPWD">/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/tasks</var>
+
+      <var name="OPAMNOENVNOTICE">true</var>
+
+      <var name="OPAM_SWITCH_PREFIX">/home/diagram/.opam/ocaml-base-compiler.5.3.0</var>
+
+      <var name="PAGER">less</var>
+
+      <var name="PATH">/home/diagram/src/research/projects/duet/duet-nk-popl-local-abstraction/_build/default/duet:/home/diagram/.opam/ocaml-base-compiler.5.3.0/bin:/home/diagram/.nvm/versions/node/v22.16.0/bin:/home/diagram/bin:/home/diagram/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/diagram/src/research/projects/duet</var>
+
+      <var name="PWD">/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025</var>
+
+      <var name="PYTHONPATH">/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025</var>
+
+      <var name="QTWEBENGINE_DICTIONARIES_PATH">/usr/share/hunspell-bdic/</var>
+
+      <var name="QT_ACCESSIBILITY">1</var>
+
+      <var name="QT_IM_MODULE">ibus</var>
+
+      <var name="SESSION_MANAGER">local/frame:@/tmp/.ICE-unix/3048,unix/frame:/tmp/.ICE-unix/3048</var>
+
+      <var name="SHELL">/usr/bin/zsh</var>
+
+      <var name="SHLVL">1</var>
+
+      <var name="SSH_AUTH_SOCK">/run/user/1000/keyring/ssh</var>
+
+      <var name="SYSTEMD_EXEC_PID">3256</var>
+
+      <var name="TERM">xterm-256color</var>
+
+      <var name="USER">diagram</var>
+
+      <var name="USERNAME">diagram</var>
+
+      <var name="VTE_VERSION">7600</var>
+
+      <var name="WAYLAND_DISPLAY">wayland-0</var>
+
+      <var name="XAUTHORITY">/run/user/1000/.mutter-Xwaylandauth.88JQ72</var>
+
+      <var name="XDG_CURRENT_DESKTOP">ubuntu:GNOME</var>
+
+      <var name="XDG_DATA_DIRS">/usr/local/share/:/usr/share/:/var/lib/snapd/desktop</var>
+
+      <var name="XDG_MENU_PREFIX">gnome-</var>
+
+      <var name="XDG_RUNTIME_DIR">/run/user/1000</var>
+
+      <var name="XDG_SESSION_CLASS">user</var>
+
+      <var name="XDG_SESSION_DESKTOP">ubuntu</var>
+
+      <var name="XDG_SESSION_TYPE">wayland</var>
+
+      <var name="XMODIFIERS">@im=ibus</var>
+
+      <var name="ZSH">/home/diagram/.oh-my-zsh</var>
+
+      <var name="_">/usr/bin/python</var>
+
+    </environment>
+
+  </systeminfo>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/insertion_sort-1-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/insertion_sort-1-2.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="4.250077s" />
+
+    <column title="memory" value="148824064B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="4.165067713940516s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000489" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:48:09.340505-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/string-1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/string-1.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="2.618489s" />
+
+    <column title="memory" value="146280448B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="2.5314243140164763s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000402" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:48:18.120160-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/string-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/string-2.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="2.560852s" />
+
+    <column title="memory" value="138567680B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="2.481982246041298s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00039" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:48:20.802544-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/veris.c_OpenSER_cases1_stripFullBoth_arr.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/veris.c_OpenSER_cases1_stripFullBoth_arr.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="74.562133s" />
+
+    <column title="memory" value="469565440B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="74.49081579700578s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.009943" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:48:30.754428-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/verisec_OpenSER_cases1_stripFullBoth_arr.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loops/verisec_OpenSER_cases1_stripFullBoth_arr.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="66.067562s" />
+
+    <column title="memory" value="438009856B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="65.9985889979871s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.006622" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:49:46.323422-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-1-simple.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-1-simple.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.564234s" />
+
+    <column title="memory" value="59908096B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.5272505090106279s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000187" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:54.486122-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-1.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.464126s" />
+
+    <column title="memory" value="60194816B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.3807140119606629s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000466" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:55.159378-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-2-simple.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-2-simple.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.575654s" />
+
+    <column title="memory" value="59441152B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.5389704450499266s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000134" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:55.688560-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_2-2.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.450512s" />
+
+    <column title="memory" value="59850752B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.3703930339543149s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000337" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:56.380371-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_3-1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_3-1.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.358018s" />
+
+    <column title="memory" value="60235776B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.2777856079628691s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000437" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:56.902160-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_3-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_3-2.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.359597s" />
+
+    <column title="memory" value="59846656B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.27758775500115007s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00044" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:57.320550-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_4.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/array_4.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.380386s" />
+
+    <column title="memory" value="59744256B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="0.3032335590105504s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000372" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:57.747137-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/functions_1-1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/functions_1-1.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.351931s" />
+
+    <column title="memory" value="57532416B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.2737112669274211s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000404" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:58.500652-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/functions_1-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/functions_1-2.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.356031s" />
+
+    <column title="memory" value="57602048B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.2750032760668546s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000306" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:50:58.906213-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/simple_2-1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/simple_2-1.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.188582s" />
+
+    <column title="memory" value="57454592B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.15340173698496073s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000294" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:00.584472-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/simple_2-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-acceleration/simple_2-2.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.188285s" />
+
+    <column title="memory" value="56926208B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.1505324800964445s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000343" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:00.879535-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_1-1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_1-1.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.223115s" />
+
+    <column title="memory" value="59621376B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.17907187598757446s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000268" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:03.186411-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_1-2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_1-2.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="false">
+
+    <column title="cputime" value="0.199077s" />
+
+    <column title="memory" value="59170816B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="0.16464711900334805s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000233" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:03.497084-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_2.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.216624s" />
+
+    <column title="memory" value="59228160B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.1766187020111829s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000314" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:03.802105-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_3.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_3.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.312909s" />
+
+    <column title="memory" value="59138048B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.27471987600438297s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000228" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:04.113406-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_4.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_array_index_value_4.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.598372s" />
+
+    <column title="memory" value="60268544B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.5175029429374263s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000282" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:04.527164-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_vardep_1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_vardep_1.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.194998s" />
+
+    <column title="memory" value="57405440B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.15901063394267112s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000202" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:05.189119-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_vardep_2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-crafted/simple_vardep_2.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.200977s" />
+
+    <column title="memory" value="57098240B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.16050128103233874s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00034" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:05.493395-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/SpamAssassin-loop.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/SpamAssassin-loop.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="false">
+
+    <column title="cputime" value="1.293812s" />
+
+    <column title="memory" value="83980288B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="1.2525669829919934s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000464" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:06.422364-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/fragtest_simple.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/fragtest_simple.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.336028s" />
+
+    <column title="memory" value="57286656B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.3033346050651744s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000193" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:08.965240-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/heapsort.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/heapsort.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="1.682325s" />
+
+    <column title="memory" value="113913856B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="1.646070062997751s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000638" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:09.760186-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/large_const.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/large_const.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.360027s" />
+
+    <column title="memory" value="57155584B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.3187163780676201s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000231" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:12.205454-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/string_concat-noarr.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-invgen/string_concat-noarr.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="false">
+
+    <column title="cputime" value="0.319107s" />
+
+    <column title="memory" value="57643008B" />
+
+    <column title="status" value="unknown" />
+
+    <column title="walltime" value="0.2795180040411651s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="unknown" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000232" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:15.249396-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-lit/css2003.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-lit/css2003.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.198369s" />
+
+    <column title="memory" value="57274368B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.16313397302292287s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00016" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:19.300568-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_1.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_1.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.190796s" />
+
+    <column title="memory" value="56733696B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.15098605502862483s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00021" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:24.536293-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_1_variant.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_1_variant.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.188613s" />
+
+    <column title="memory" value="56815616B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.1520638989750296s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000258" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:24.827346-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_2.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_2.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.184237s" />
+
+    <column title="memory" value="57200640B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.1471265860600397s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000348" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:25.126454-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_k.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_k.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.1896s" />
+
+    <column title="memory" value="57004032B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.15703003096859902s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000271" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:25.405155-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_nondet.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-new/count_by_nondet.i]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="0.192428s" />
+
+    <column title="memory" value="58056704B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="0.15606249298434705s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000226" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:25.712394-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-simple/deep-nested.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-simple/deep-nested.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="2.041753s" />
+
+    <column title="memory" value="128950272B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="2.0040369970956817s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000281" hidden="true" />
+
+    <column title="pressure-io-some" value="0.000033" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:30.694605-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-simple/nested_5.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-simple/nested_5.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="1.152473s" />
+
+    <column title="memory" value="103575552B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="1.1242415960878134s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.000364" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:34.810351-04:00" hidden="true" />
+
+  </run>
+
+  <run name="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-simple/nested_6.yml" files="[../tasks/svcomp-2025/svcomp2025-reach-safety-loops/loop-simple/nested_6.c]" properties="termination" propertyFile="../tasks/svcomp-2025/svcomp2025-reach-safety-loops/properties/termination.prp" expectedVerdict="true">
+
+    <column title="cputime" value="2.650362s" />
+
+    <column title="memory" value="140386304B" />
+
+    <column title="status" value="true" />
+
+    <column title="walltime" value="2.6135989039903507s" />
+
+    <column title="blkio-read" value="0B" hidden="true" />
+
+    <column title="blkio-write" value="0B" hidden="true" />
+
+    <column title="category" value="correct" hidden="true" />
+
+    <column title="pressure-cpu-some" value="0.00071" hidden="true" />
+
+    <column title="pressure-io-some" value="0" hidden="true" />
+
+    <column title="pressure-memory-some" value="0" hidden="true" />
+
+    <column title="returnvalue" value="0" hidden="true" />
+
+    <column title="starttime" value="2025-07-01T23:51:36.073963-04:00" hidden="true" />
+
+  </run>
+
+  <column title="cputime" value="200.437087s" />
+
+  <column title="walltime" value="212.80652003304567s" />
+
+</result>

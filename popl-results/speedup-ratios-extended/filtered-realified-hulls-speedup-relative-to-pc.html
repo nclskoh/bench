@@ -1,0 +1,148 @@
+<html>
+<head>
+    <title>Speedups</title>
+</head>
+<body>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 12px 8px; /* space between columns, space between rows */
+            width: 100%;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: center;
+        }
+    </style>
+    <h1>Log Speedups</h1>
+	<table>
+                <thead>
+                    <tr>
+                        <th>Percentiles and geomean speedup</th> <th>IntHull::lira-convex-hull-pc-lplh</th> <th>IntHull::lira-convex-hull-pc</th>
+                    </tr>
+                </thead>
+		<tbody>
+			<tr><td>0</td> <td>0.692</td> <td>1.0</td></tr>
+			<tr><td>1</td> <td>0.692</td> <td>1.0</td></tr>
+			<tr><td>5</td> <td>0.714</td> <td>1.0</td></tr>
+			<tr><td>10</td> <td>0.732</td> <td>1.0</td></tr>
+			<tr><td>15</td> <td>0.759</td> <td>1.0</td></tr>
+			<tr><td>20</td> <td>0.774</td> <td>1.0</td></tr>
+			<tr><td>25</td> <td>0.779</td> <td>1.0</td></tr>
+			<tr><td>30</td> <td>0.789</td> <td>1.0</td></tr>
+			<tr><td>35</td> <td>0.802</td> <td>1.0</td></tr>
+			<tr><td>40</td> <td>0.811</td> <td>1.0</td></tr>
+			<tr><td>45</td> <td>0.819</td> <td>1.0</td></tr>
+			<tr><td>50</td> <td>0.823</td> <td>1.0</td></tr>
+			<tr><td>55</td> <td>0.833</td> <td>1.0</td></tr>
+			<tr><td>60</td> <td>0.851</td> <td>1.0</td></tr>
+			<tr><td>65</td> <td>0.864</td> <td>1.0</td></tr>
+			<tr><td>70</td> <td>0.903</td> <td>1.0</td></tr>
+			<tr><td>75</td> <td>0.917</td> <td>1.0</td></tr>
+			<tr><td>80</td> <td>0.943</td> <td>1.0</td></tr>
+			<tr><td>85</td> <td>0.955</td> <td>1.0</td></tr>
+			<tr><td>90</td> <td>0.982</td> <td>1.0</td></tr>
+			<tr><td>91</td> <td>0.982</td> <td>1.0</td></tr>
+			<tr><td>92</td> <td>0.983</td> <td>1.0</td></tr>
+			<tr><td>93</td> <td>0.986</td> <td>1.0</td></tr>
+			<tr><td>94</td> <td>0.988</td> <td>1.0</td></tr>
+			<tr><td>95</td> <td>1.015</td> <td>1.0</td></tr>
+			<tr><td>96</td> <td>1.015</td> <td>1.0</td></tr>
+			<tr><td>97</td> <td>1.041</td> <td>1.0</td></tr>
+			<tr><td>98</td> <td>1.042</td> <td>1.0</td></tr>
+			<tr><td>99</td> <td>1.076</td> <td>1.0</td></tr>
+			<tr><td>99.99999</td> <td>1.076</td> <td>1.0</td></tr>
+			<tr><td>>=1 proportion</td> <td>5.06%</td> <td>100.00%</td></tr>
+			<tr><td>geomean</td> <td>0.841</td> <td>1.000</td></tr>
+			<tr><td>#tasks</td> <td>79</td> <td>79</td></tr>
+		</tbody>
+	</table>	<table>
+                <thead>
+                    <tr>
+                        <th>Task files</th> <th>IntHull::lira-convex-hull-pc-lplh</th> <th>IntHull::lira-convex-hull-pc</th>
+                    </tr>
+                </thead>
+		<tbody>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-26_realified.yml</td> <td>0.692</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-27_realified.yml</td> <td>0.857</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-63_realified.yml</td> <td>0.796</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-26_realified.yml</td> <td>0.777</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-29_realified.yml</td> <td>0.697</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-25_realified.yml</td> <td>0.877</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-29_realified.yml</td> <td>0.853</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-28_realified.yml</td> <td>0.819</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-29_realified.yml</td> <td>0.819</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-28_realified.yml</td> <td>0.839</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-64_realified.yml</td> <td>0.903</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-25_realified.yml</td> <td>0.944</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-26_realified.yml</td> <td>0.714</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-65_realified.yml</td> <td>0.965</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-63_realified.yml</td> <td>0.812</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-28_realified.yml</td> <td>0.802</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-26_realified.yml</td> <td>0.822</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-24_realified.yml</td> <td>0.786</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-25_realified.yml</td> <td>0.913</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-25_realified.yml</td> <td>0.988</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-62_realified.yml</td> <td>0.823</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-27_realified.yml</td> <td>0.748</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-24_realified.yml</td> <td>0.943</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-24_realified.yml</td> <td>1.076</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-28_realified.yml</td> <td>0.755</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-63_realified.yml</td> <td>0.779</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-27_realified.yml</td> <td>0.759</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-27_realified.yml</td> <td>0.821</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-24_realified.yml</td> <td>1.015</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-25_realified.yml</td> <td>0.917</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-26_realified.yml</td> <td>0.736</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-27_realified.yml</td> <td>0.777</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-29_realified.yml</td> <td>0.822</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-24_realified.yml</td> <td>0.982</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-65_realified.yml</td> <td>0.956</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-63_realified.yml</td> <td>0.777</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-24_realified.yml</td> <td>0.943</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-25_realified.yml</td> <td>0.864</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-26_realified.yml</td> <td>0.804</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-28_realified.yml</td> <td>0.763</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-25_realified.yml</td> <td>0.836</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-64_realified.yml</td> <td>0.953</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-24_realified.yml</td> <td>0.960</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-29_realified.yml</td> <td>0.872</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-26_realified.yml</td> <td>0.851</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-25_realified.yml</td> <td>0.730</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-27_realified.yml</td> <td>0.799</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-24_realified.yml</td> <td>0.919</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-29_realified.yml</td> <td>0.789</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-62_realified.yml</td> <td>0.830</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-28_realified.yml</td> <td>0.759</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-27_realified.yml</td> <td>0.785</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-26_realified.yml</td> <td>0.768</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-28_realified.yml</td> <td>0.986</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-64_realified.yml</td> <td>1.041</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_1d5f2f7.i---hull-28_realified.yml</td> <td>0.774</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-25_realified.yml</td> <td>0.983</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-27_realified.yml</td> <td>0.839</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_503d11a.i---hull-29_realified.yml</td> <td>0.732</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-62_realified.yml</td> <td>0.811</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-24_realified.yml</td> <td>0.935</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-29_realified.yml</td> <td>0.911</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_38d9e41.i---hull-29_realified.yml</td> <td>0.706</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-65_realified.yml</td> <td>0.864</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-62_realified.yml</td> <td>0.812</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-26_realified.yml</td> <td>0.823</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_124a27b.i---hull-64_realified.yml</td> <td>1.042</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_4e80f52.i---hull-27_realified.yml</td> <td>0.781</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-63_realified.yml</td> <td>0.797</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-65_realified.yml</td> <td>0.943</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_27195b2.i---hull-24_realified.yml</td> <td>0.955</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_3e395ee.i---hull-29_realified.yml</td> <td>0.825</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-62_realified.yml</td> <td>0.716</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-26_realified.yml</td> <td>0.808</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_58abe66.i---hull-64_realified.yml</td> <td>0.916</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-cra-monotone-hulls-realified/loop-industry-pattern/ofuf_4a8b1f6.i---hull-28_realified.yml</td> <td>0.715</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-27_realified.yml</td> <td>0.802</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-28_realified.yml</td> <td>0.833</td> <td>1.000</td></tr>
+			<tr><td>../tasks/svcomp-2025/svcomp2025-termination-monotone-hulls-realified/loop-industry-pattern/ofuf_2e26a7f.i---hull-25_realified.yml</td> <td>0.891</td> <td>1.000</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

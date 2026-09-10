@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!DOCTYPE table PUBLIC "+//IDN sosy-lab.org//DTD BenchExec table 1.10//EN" "https://www.sosy-lab.org/benchexec/table-1.10.dtd">
+<table>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-CRAUsingConvHull.2025-07-02_04-21-07.results.cra-monotone-lira-pc.svcomp-reach-safety.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-CRAUsingConvHull.2025-07-02_10-02-49.results.cra-monotone-lira-pc-lplh.svcomp-reach-safety.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-CRAUsingConvHull.2025-07-02_10-38-11.results.cra-monotone-relax-to-real-lw.svcomp-reach-safety.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-CRAUsingConvHull.2025-07-02_10-59-02.results.cra-monotone-relax-to-real-fmcad15.svcomp-reach-safety.xml.bz2" />
+</union>
+</table>

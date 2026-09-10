@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!DOCTYPE table PUBLIC "+//IDN sosy-lab.org//DTD BenchExec table 1.10//EN" "https://www.sosy-lab.org/benchexec/table-1.10.dtd">
+<table>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-02_13-51-26.results.lira-convex-hull-pc.cra-monotone-svcomp-integralized.xml.bz2" />
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-02_20-54-20.results.lira-convex-hull-pc.termination-monotone-svcomp-integralized.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-03_22-15-48.results.lira-convex-hull-pc-lplh.cra-monotone-svcomp-integralized.xml.bz2" />
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-03_22-47-06.results.lira-convex-hull-pc-lplh.termination-monotone-svcomp-integralized.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-02_17-17-48.results.lia-convex-hull-lia-lplh.cra-monotone-svcomp-integralized.xml.bz2" />
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-03_00-47-05.results.lia-convex-hull-lia-lplh.termination-monotone-svcomp-integralized.xml.bz2" />
+</union>
+<union>
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-02_17-48-46.results.lia-convex-hull-hull-then-project-gc.cra-monotone-svcomp-integralized.xml.bz2" />
+<result filename="/home/diagram/src/research/projects/duet/bench-nk-local-abstraction-popl-2025/scratch/filtered-IntHull.2025-07-03_01-29-01.results.lia-convex-hull-hull-then-project-gc.termination-monotone-svcomp-integralized.xml.bz2" />
+</union>
+</table>

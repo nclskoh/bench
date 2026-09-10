@@ -9,9 +9,13 @@ This directory (`author-response/`) sits at the repo root, alongside
 - **`author-response/end_to_end_nontrivial_stats.py`**
   Computes per-task speedup-ratio percentiles and geomean for the
   end-to-end safety/termination results (Figure `fig:statistics-end-to-end`),
-  both over all tasks and restricted to "nontrivial" tasks (at least one
-  algorithm took >=1s cputime, matching the paper's Q1-Q3 filtering
-  criterion). Location-independent -- resolves the repo root from its own
+  both over all (raw, unfiltered) tasks and over the official filtered
+  task set already produced by `filter_and_speedups.py filter-and-tabulate`
+  in `popl-results/filtered-end-to-end-safety/` and
+  `popl-results/filtered-end-to-end-termination/` (the >=1s-nontrivial
+  filter, matching the paper's Q1-Q3 criterion). Reads the filtered
+  numbers directly from those bz2 files rather than reimplementing the
+  filter. Location-independent -- resolves the repo root from its own
   file path, so it can be run from any directory.
 - **`author-response/lia_speedup_vs_free_total_ratio.py`**
   Joins the per-task speedup ratios from Figure `fig:statistics-lia`
@@ -54,14 +58,17 @@ high tail (which already had `91`-`99` in steps of 1).
   - `end-to-end-safety-speedup.html`, `end-to-end-termination-speedup.html`
     -- full percentile tables and per-task ratio dumps for CCH-LIRA and
     CCH-LRA vs FK, generated via `filter_and_speedups.py speedup` against
-    the raw data in `popl-results/end-to-end-results/` (not moved -- it's
-    original benchmark output, not something generated in this response).
-  - `end-to-end-percentiles-and-geomean.md` -- summary tables (all-tasks
-    vs nontrivial-only, per the >=1s filter) plus the key finding: most
-    end-to-end tasks are sub-second for every algorithm, so the
-    unfiltered geomean (~0.9-1.3x) understates CCH's real advantage on
-    tasks that matter -- restricting to nontrivial tasks raises geomean
-    to 3.5-9.1x.
+    the **official filtered** results in
+    `popl-results/filtered-end-to-end-safety/` and
+    `popl-results/filtered-end-to-end-termination/` (187 and 37 tasks
+    respectively -- not the raw, unfiltered `popl-results/end-to-end-results/`,
+    which was used in an earlier draft of this analysis).
+  - `end-to-end-percentiles-and-geomean.md` -- summary tables (all
+    774/148 raw tasks vs the 187/37 officially filtered tasks) plus the
+    key finding: most end-to-end tasks are sub-second for every
+    algorithm, so the unfiltered geomean (~0.9-1.3x) understates CCH's
+    real advantage -- restricting to the official filtered set roughly
+    doubles the geomean to ~1.8-2.2x.
 
 - **`author-response/speedup-vs-variables/lia-speedup-vs-free-total-ratio.html`**
   -- correlation summary (Pearson/Spearman, raw and log-scale) and full
@@ -81,6 +88,12 @@ they are:
   number in the paper's Figures 2-4.
 - `popl-results/end-to-end-results/` -- raw BenchExec results for the
   end-to-end safety/termination runs (Figure 5).
+- `popl-results/filtered-end-to-end-safety/`, `popl-results/filtered-end-to-end-termination/`
+  -- the official >=1s-nontrivial-filtered versions of the above (187 and
+  37 tasks respectively), produced by `filter_and_speedups.py
+  filter-and-tabulate`. Used as the source for
+  `end-to-end-speedup-ratios/*.html` and the "filtered" columns in
+  `end-to-end-percentiles-and-geomean.md`.
 - `filtered-popl-results/` -- the filtered BenchExec results (task counts
   and timeout counts), verified to match the paper's Section 5.1/5.2
   claims exactly, including the 127/1631, 673/1631, and 574/807 timeout

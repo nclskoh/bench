@@ -3,151 +3,167 @@
 The paper's Figure 5 (`fig:statistics-end-to-end`) reports only aggregate
 counts (#correct, total time, #timeouts) for the safety and termination
 end-to-end analyses -- it does not report per-task speedup ratios or their
-percentiles/geomean. This file fills that gap by computing per-task
+percentiles/geomean. This file fills that gap, computing per-task
 cputime-ratio statistics for the same runs, in the same style as
 `author-response/speedup-ratios-extended/extended-percentiles-summary.md`.
 
-## IMPORTANT CAVEAT: most tasks are sub-second
+## Filtering: using the official filtered task set
 
 Section 5.1 of the paper explicitly restricts the Q1-Q3 hullmark-task
 comparisons to tasks that are "nontrivial in the sense that at least one
-algorithm required at least one second." **The end-to-end safety and
-termination tasks were never filtered this way** -- Figure 5 covers all
-774 safety / 148 termination tasks regardless of runtime. Checking the
-underlying cputimes directly:
+algorithm required at least one second." The raw end-to-end results in
+`popl-results/end-to-end-results/` were never filtered this way, but an
+already-generated official filtered version of these results exists at
+`popl-results/filtered-end-to-end-safety/` and
+`popl-results/filtered-end-to-end-termination/` (produced by
+`filter_and_speedups.py filter-and-tabulate`, the same tool used to
+produce `filtered-popl-results/` for Q1-Q3). This file uses that official
+filtered set directly rather than re-deriving a filter -- so the numbers
+below are guaranteed to match whatever filtering criterion actually
+produced those files, rather than reimplementing it.
 
-| Metric | Safety (774 tasks) | Termination (148 tasks) |
+| Metric | Safety | Termination |
 |---|---|---|
-| Trivial (all of CCH-LIRA, CCH-LRA, FK less than 1s) | 667 (86%) | 137 (93%) |
-| Nontrivial (at least one algorithm 1s or more) | 107 (14%) | 11 (7%) |
+| Raw/unfiltered task count | 774 | 148 |
+| Official filtered task count | 187 (24%) | 37 (25%) |
 
-So **86-93% of tasks have sub-second cputime for every algorithm being
-compared**, meaning their speedup ratios are dominated by measurement
-noise/overhead rather than a real algorithmic effect. The tables below
-report both the unfiltered ("all tasks") and the nontrivial-only
-statistics side by side; the nontrivial numbers are the ones comparable in
-spirit to Q1-Q3, though sample sizes are much smaller (107 and,
-especially, 11 -- percentiles on 11 points are not very meaningful, only
-the geomean and endpoints should be read as indicative).
+Note this filtered set is based on a 4-way "at least one algorithm >= 1s"
+check across CCH-LIRA, CCH-LRA, FK, *and* LPPCONE-LIRA (the polytopal
+expansion baseline used in Q2, which is filtered against here even though
+it's not one of the two ratios reported below) -- so it is a strict
+superset of what a 3-way check over just {CCH-LIRA, CCH-LRA, FK} would
+give. It is still true that the large majority of tasks (76-75%) are
+trivial (sub-second) for every algorithm being compared, even under this
+broader definition of "nontrivial."
 
 ## Source data
 
-Located under `popl-results/end-to-end-results/`:
+Located under `popl-results/`:
 
-- **Safety** (774 tasks): `svcomp2025-cra-monotone-results/`, tool
+- **Safety** (774 raw / 187 filtered tasks): `end-to-end-results/svcomp2025-cra-monotone-results/`
+  (raw) and `filtered-end-to-end-safety/` (official filtered), tool
   `CRAUsingConvHull`, suite `svcomp-reach-safety`.
   - CCH-LIRA: rundef `cra-monotone-lira-pc-lplh`
   - CCH-LRA: rundef `cra-monotone-relax-to-real-lw`
   - FK (baseline): rundef `cra-monotone-relax-to-real-fmcad15`
-- **Termination** (148 tasks): `svcomp2025-termination-results/`, same
+- **Termination** (148 raw / 37 filtered tasks): `end-to-end-results/svcomp2025-termination-results/`
+  (raw) and `filtered-end-to-end-termination/` (official filtered), same
   tool, suite `svcomp-reach-safety-termination`.
   - CCH-LIRA: rundef `termination-monotone-only-lira-pc-lplh`
   - CCH-LRA: rundef `termination-monotone-only-relax-to-real-lw`
   - FK (baseline): rundef `termination-monotone-only-relax-to-real-fmcad15`
 
-"All tasks" numbers computed via `filter_and_speedups.py speedup` (see
-`end-to-end-safety-speedup.html` / `end-to-end-termination-speedup.html`
-in this directory). "Nontrivial" numbers computed directly from the raw
-cputime columns, filtering to tasks where at least one of CCH-LIRA,
-CCH-LRA, or FK took 1s or more of cputime, then computing the same percentiles
-independently for each pairwise comparison.
+"All tasks" numbers computed via `filter_and_speedups.py speedup` against
+the raw directories (see `end-to-end-safety-speedup.html` /
+`end-to-end-termination-speedup.html` in this directory, which are
+themselves generated against the **filtered** directories -- see below).
+"Filtered" numbers below come from the same `filter_and_speedups.py
+speedup` run, pointed at `popl-results/filtered-end-to-end-safety/` and
+`popl-results/filtered-end-to-end-termination/` with `--prefix filtered-`.
+Both are reproduced by `author-response/end_to_end_nontrivial_stats.py`,
+which computes the "all tasks" side from the raw directories itself (for
+comparison) and reads the "filtered" side directly from the official
+filtered bz2 files (no reimplemented filtering logic).
 
-## Safety -- 774 tasks vs FK (107 nontrivial)
+## Safety -- 774 raw / 187 filtered tasks vs FK
+
+File: `end-to-end-safety-speedup.html` (generated against the **filtered** directory)
 
 ### CCH-LIRA vs FK
 
-| Percentile | All tasks (n=774) | Nontrivial only (n=107) |
+| Percentile | All tasks (n=774) | Official filtered (n=187) |
 |---|---|---|
 | 0 (min) | 0.001x | 0.001x |
 | 1 | 0.386x | 0.030x |
-| 5 | 0.566x | 0.154x |
-| 10 | 0.580x | 0.899x |
-| 25 | 0.612x | 1.391x |
-| 50 (median) | 0.786x | 2.720x |
-| 75 | 1.081x | 5.886x |
-| 90 | 1.951x | 67.575x |
-| 95 | 3.594x | 129.069x |
+| 5 | 0.566x | 0.552x |
+| 10 | 0.580x | 0.594x |
+| 25 | 0.612x | 0.943x |
+| 50 (median) | 0.786x | 1.345x |
+| 75 | 1.081x | 2.950x |
+| 90 | 1.951x | 23.019x |
+| 95 | 3.594x | 69.264x |
 | 99 | 106.275x | 174.946x |
 | 100 (max) | 374.196x | 374.196x |
-| Geomean | **0.976x** | **3.516x** |
-| Improvement rate | 36.95% | 88.79% |
+| Geomean | **0.976x** | **1.982x** |
+| Improvement rate | 36.95% | 71.12% |
 
 ### CCH-LRA vs FK
 
-| Percentile | All tasks (n=774) | Nontrivial only (n=107) |
+| Percentile | All tasks (n=774) | Official filtered (n=187) |
 |---|---|---|
-| 0 (min) | 0.474x | 0.580x |
-| 1 | 0.515x | 0.690x |
-| 5 | 0.539x | 0.781x |
-| 10 | 0.557x | 1.273x |
-| 25 | 0.593x | 1.530x |
-| 50 | 0.658x | 2.795x |
-| 75 | 0.963x | 7.178x |
-| 90 | 1.675x | 59.803x |
-| 95 | 3.538x | 100.287x |
+| 0 (min) | 0.474x | 0.481x |
+| 1 | 0.515x | 0.504x |
+| 5 | 0.539x | 0.541x |
+| 10 | 0.557x | 0.558x |
+| 25 | 0.593x | 0.614x |
+| 50 | 0.658x | 1.320x |
+| 75 | 0.963x | 3.059x |
+| 90 | 1.675x | 19.554x |
+| 95 | 3.538x | 62.536x |
 | 99 | 65.787x | 136.161x |
 | 100 | 209.659x | 209.659x |
-| Geomean | **0.901x** | **4.358x** |
-| Improvement rate | 23.64% | 94.39% |
+| Geomean | **0.901x** | **1.977x** |
+| Improvement rate | 23.64% | 58.82% |
 
-## Termination -- 148 tasks vs FK (11 nontrivial)
+## Termination -- 148 raw / 37 filtered tasks vs FK
+
+File: `end-to-end-termination-speedup.html` (generated against the **filtered** directory)
 
 ### CCH-LIRA vs FK
 
-| Percentile | All tasks (n=148) | Nontrivial only (n=11) |
+| Percentile | All tasks (n=148) | Official filtered (n=37) |
 |---|---|---|
 | 0 (min) | 0.001x | 0.001x |
 | 1 | 0.812x | 0.001x |
-| 5 | 0.971x | 0.001x |
-| 10 | 0.983x | 4.191x |
-| 25 | 1.005x | 4.351x |
-| 50 | 1.048x | 6.571x |
-| 75 | 1.222x | 9.572x |
-| 90 | 2.368x | 94.658x |
-| 95 | 5.701x | 104.015x |
+| 5 | 0.971x | 0.934x |
+| 10 | 0.983x | 1.003x |
+| 25 | 1.005x | 1.022x |
+| 50 | 1.048x | 1.259x |
+| 75 | 1.222x | 4.191x |
+| 90 | 2.368x | 8.623x |
+| 95 | 5.701x | 94.658x |
 | 99 | 94.658x | 104.015x |
 | 100 | 104.015x | 104.015x |
-| Geomean | **1.247x** | **4.476x** |
-| Improvement rate | 81.76% | 90.91% |
+| Geomean | **1.247x** | **1.817x** |
+| Improvement rate | 81.76% | 94.59% |
 
 ### CCH-LRA vs FK
 
-| Percentile | All tasks (n=148) | Nontrivial only (n=11) |
+| Percentile | All tasks (n=148) | Official filtered (n=37) |
 |---|---|---|
-| 0 (min) | 0.935x | 0.976x |
-| 1 | 0.941x | 0.976x |
-| 5 | 0.966x | 0.976x |
-| 10 | 0.979x | 4.276x |
-| 25 | 1.005x | 4.542x |
-| 50 | 1.042x | 6.420x |
-| 75 | 1.207x | 10.027x |
-| 90 | 2.421x | 112.117x |
-| 95 | 5.794x | 123.833x |
+| 0 (min) | 0.935x | 0.974x |
+| 1 | 0.941x | 0.974x |
+| 5 | 0.966x | 0.975x |
+| 10 | 0.979x | 0.979x |
+| 25 | 1.005x | 1.017x |
+| 50 | 1.042x | 1.244x |
+| 75 | 1.207x | 4.276x |
+| 90 | 2.421x | 8.629x |
+| 95 | 5.794x | 112.117x |
 | 99 | 112.117x | 123.833x |
 | 100 | 123.833x | 123.833x |
-| Geomean | **1.317x** | **9.122x** |
-| Improvement rate | 77.70% | 90.91% |
+| Geomean | **1.317x** | **2.210x** |
+| Improvement rate | 77.70% | 83.78% |
 
 ## Notable observations
 
-- **Restricting to nontrivial tasks reverses/strengthens the story
-  substantially.** On the unfiltered task set, CCH looks roughly at parity
-  with (safety) or modestly faster than (termination) FK on a per-task
-  basis. Once sub-second, noise-dominated tasks are excluded, CCH's
-  geomean speedup jumps to 3.5-4.5x (safety) and 4.5-9.1x (termination).
-  This is consistent with FK's larger absolute total-time and timeout
-  counts in the paper's Figure 5 being driven by real algorithmic
-  differences on the *slow* tasks specifically, while the sub-second bulk
-  of tasks is just noise that dilutes the aggregate ratio toward 1x.
-- **Sample sizes for the nontrivial subset are small**, especially for
-  termination (n=11). Percentile values there should be read loosely --
-  e.g., "p1 = 0.001x" for termination nontrivial CCH-LIRA is a single
-  data point among 11, likely the one genuinely bad case where CCH-LIRA
-  blew up on a specific formula while FK stayed fast (worth a manual
-  look, not necessarily noise, since qualifying as "nontrivial" here
-  means *some* algorithm's absolute time was 1s or more).
-- Suggests that if a per-task speedup number is reported for the
-  end-to-end experiments (analogous to Q1-Q3), it should be computed on
-  the same nontrivial-task-filtered basis to be an apples-to-apples
-  comparison with Q1-Q3's methodology -- the unfiltered numbers
-  materially understate CCH's advantage here.
+- **Restricting to the official filtered task set roughly doubles the
+  geomean speedup** in every comparison: safety CCH-LIRA 0.976x -> 1.982x,
+  CCH-LRA 0.901x -> 1.977x; termination CCH-LIRA 1.247x -> 1.817x, CCH-LRA
+  1.317x -> 2.210x. This is a smaller jump than an earlier ad hoc 3-way
+  filter suggested (which had estimated 3.5-9.1x), because the official
+  filtered set uses a broader 4-way "nontrivial" criterion (including
+  LPPCONE-LIRA) and so retains more sub-second, noise-influenced tasks
+  than a tighter 3-way filter would -- 187/774 (24%) and 37/148 (25%) of
+  tasks pass the official filter, versus 107/774 (14%) and 11/148 (7%)
+  under the narrower 3-way check. The direction of the effect (unfiltered
+  numbers understate CCH's advantage) is confirmed either way; the
+  magnitude depends on exactly how "nontrivial" is defined.
+- Both directions of asymmetry from before persist: safety still shows
+  CCH below parity with FK on the unfiltered set (geomean < 1) but clearly
+  ahead once restricted to genuinely time-consuming tasks; termination
+  shows CCH ahead of FK in both cases, more so after filtering.
+- Sample size for the filtered termination set (n=37) is still modest;
+  percentile values there, especially the extreme low end (p1 = 0.001x,
+  a single data point), should be read as indicative rather than
+  statistically robust.

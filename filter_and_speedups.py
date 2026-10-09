@@ -8,6 +8,8 @@ import shutil
 import tempfile
 import os
 import math
+import sys
+import contextlib
 
 COLUMNS = [
     "cputime",
@@ -519,12 +521,17 @@ if __name__ == "__main__":
         print(f"Wrote HTML to file {args.output_html_file}")
 
     elif args.command == "dump-more-precise":
-        more_precise_tasks = all_filtered_tasks(
-            tools, rundefinitions, suites, 
-            pc_lplh_more_precise, "status", args.results_dir, args.input_prefix
-        )
-        for task in more_precise_tasks:
-            print(task)
+        # Progress messages go to stderr so that stdout is exactly the .set file.
+        with contextlib.redirect_stdout(sys.stderr):
+            more_precise_tasks = all_filtered_tasks(
+                tools, rundefinitions, suites, 
+                pc_lplh_more_precise, "status", args.results_dir, args.input_prefix
+            )
+        # Result rows are named relative to benchmark-defs/ ("../tasks/svcomp-2025/<dir>/x.yml"), but BenchExec
+        # resolves the paths in a .set file relative to the .set file itself (tasks/svcomp-2025/), so emit "./<dir>/x.yml".
+        task_prefix = "../tasks/svcomp-2025/"
+        for task in sorted(more_precise_tasks):
+            print("./" + task[len(task_prefix):] if task.startswith(task_prefix) else task)
 
     else:
         parser.print_usage()

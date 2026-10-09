@@ -93,11 +93,12 @@ first run the following to compare hulls.
 PYTHONPATH=../:$PYTHONPATH PATH=<path-to-bigtop>:$PATH python ./bench.py run --rundefinitions compare-lira-convex-hull-pc-lplh-vs-real-relaxation-lw --tools IntHull --suites cra-monotone-svcomp,termination-monotone-svcomp
 ```
 
-Without changing the name `results.table.html` in the directory,
-run the following to extract the list of YML files for LIRA-sensitive tasks and dump it to a `.set` file.
+Run the following to extract the list of YML files for LIRA-sensitive tasks and dump it to a `.set` file
+(it reads the `.xml.bz2` files in `--results-dir`; progress messages go to stderr, and the paths in the output
+are relative to the `.set` file's directory, `tasks/svcomp-2025/`, so write it there to use it as a suite).
 
 ```
-python ./filter_and_speedups.py --tools IntHull --rundefinitions compare-lira-convex-hull-pc-lplh-vs-real-relaxation-lw --suites cra-monotone-svcomp,termination-monotone-svcomp dump-more-precise --results-dir ./results > lira-more-precise-than-real-relaxation.set
+python ./filter_and_speedups.py --tools IntHull --rundefinitions compare-lira-convex-hull-pc-lplh-vs-real-relaxation-lw --suites cra-monotone-svcomp,termination-monotone-svcomp dump-more-precise --results-dir ./results > tasks/svcomp-2025/lira-more-precise-than-real-relaxation.set
 ```
 
 The current `results/results.table.html` is also `popl-results/precision-results/compare_hulls.results.table.html`.

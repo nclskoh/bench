@@ -68,7 +68,7 @@ if __name__ == '__main__':
     parser.add_argument("--indir", help="root directory of SVComp")
     parser.add_argument("--outdir", help = "directoy to dump hulls in")
     parser.add_argument("--cmd", help="{cra | termination}")
-    parser.add_argument("--timeout", help="timeout in seconds", default=300) # 5 minutes
+    parser.add_argument("--timeout", type=int, help="timeout in seconds", default=300) # 5 minutes
     parser.add_argument("--mappings")
     args = parser.parse_args()
     if args.cmd != "cra" and args.cmd != "termination":

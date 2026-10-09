@@ -26,6 +26,11 @@ Usage
    Runs selected tools on selected benchmark suites.  By default, runs are cached.
    * `--timeout` specifies timeout in seconds
    * `--no-cache` forces the run, even if a result is in the cache
+   * `--no-container` runs `benchexec` without its container isolation.
+     By default, `bench.py` runs each task in a BenchExec container with `/` read-only
+     and `/home` overlaid (writes are discarded). Containers need unprivileged user
+     namespaces and cgroup access, which are often unavailable, e.g., inside Docker.
+     `--no-container` still needs cgroups (for CPU-time limits and measurement).
 * `scatter`
    Generate scatter plot data along with accompanying LaTeX code.  Two tools must be
    specified using `--tools`

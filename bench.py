@@ -13,7 +13,7 @@ from collections import defaultdict
 # benchexec's result format:
 # {tool}.{time}.results.{rundefinition}.{task-suite}.xml.bz
 def benchexec_filename(tool, task_suite, rundefinition):
-    f"{tool}.*.{rundefinition}.{task_suite}.xml.bz2"
+    return f"{tool}.*.{rundefinition}.{task_suite}.xml.bz2"
 
 def all_results(tool, task_suite, rundefinition):
     search_string = f"{result_dir}/{benchexec_filename(tool, task_suite, rundefinition)}"
@@ -51,8 +51,13 @@ def recent_result_data(tools, suites, num_runs_to_fetch=1):
 tools = ['ComPACT', 'CPAchecker', 'UAutomizer', '2ls', 'Termite']
 suites = ['Termination', 'bitprecise', 'recursive', 'polybench']
 rundefinitions = []
-result_dir = "result"
+result_dir = "results"   # where benchexec writes its output by default
 timeout = 600
+# BenchExec isolates each run in a container by default. bench.py makes / read-only and
+# overlays /home (see run()), since tools and tasks live under /home. Containers need
+# unprivileged user namespaces and cgroup access, which are often unavailable (e.g., in Docker);
+# --no-container turns the isolation off.
+use_container = True
 cache = True
 replace_cached = False
 num_runs = 1
@@ -103,8 +108,11 @@ def run():
                     run_cmd = run_cmd + ["-r", f"{rundef}"]
                     run_cmd = run_cmd + ["-W", f"{timeout}"]
                     run_cmd = run_cmd + ["-t", f"{suite}"]
-                    run_cmd = run_cmd + ["--read-only-dir", "/"]
-                    run_cmd = run_cmd + ["--overlay-dir", "/home"]
+                    if use_container:
+                        run_cmd = run_cmd + ["--read-only-dir", "/"]
+                        run_cmd = run_cmd + ["--overlay-dir", "/home"]
+                    else:
+                        run_cmd = run_cmd + ["--no-container"]
                     run_cmd = run_cmd + [f"benchmark-defs/{tool}.xml"]
                     runstring = " ".join(run_cmd)
                     print(f"Running command: {runstring}")
@@ -396,13 +404,14 @@ def make_table():
         tmp = open(tmp_file, "w")
         tmp.write(table_begin)
         for tool in tools:
-            tmp.write("<union>\n")
-            for suite in suites:
-                tmp.write('<result filename="')
-                tmp.write(os.path.join(
-                    os.getcwd(), recent_result(tool, suite)))
-                tmp.write('" />\n')
-            tmp.write("</union>\n")
+            for rundef in rundefinitions:
+                tmp.write("<union>\n")
+                for suite in suites:
+                    tmp.write('<result filename="')
+                    tmp.write(os.path.join(
+                        os.getcwd(), recent_result(tool, suite, rundef)))
+                    tmp.write('" />\n')
+                tmp.write("</union>\n")
         tmp.write(table_end)
         tmp.close()
         os.system("table-generator -x %s -o results" % tmp_file)
@@ -570,6 +579,9 @@ if __name__ == "__main__":
             opts = opts[2:]
         elif (opts[0] == "--no-cache"):
             cache = False
+            opts = opts[1:]
+        elif (opts[0] == "--no-container"):
+            use_container = False
             opts = opts[1:]
         elif (opts[0] == "--replace-cached"):
             cache = False
